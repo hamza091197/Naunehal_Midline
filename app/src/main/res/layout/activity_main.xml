@@ -354,6 +354,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:layout_weight="1"
+                            android:padding="15dp"
                             android:text="@string/hh0501" />
 
                         <RadioButton
@@ -362,6 +363,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:layout_weight="1"
+                            android:padding="15dp"
                             android:text="@string/hh0502" />
 
                         <RadioButton
@@ -370,6 +372,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="2dp"
                             android:layout_weight="1"
+                            android:padding="15dp"
                             android:text="@string/hh0503" />
                     </RadioGroup>
                 </LinearLayout>

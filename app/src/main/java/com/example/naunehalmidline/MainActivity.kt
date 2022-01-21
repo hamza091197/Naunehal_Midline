@@ -9,7 +9,10 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityMainBinding
+import com.validatorcrawler.aliazaz.Clear
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -318,7 +321,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnEnd.setOnClickListener {
-            createDialog()
+           createDialog()
+
+
         }
 
 
@@ -333,7 +338,12 @@ class MainActivity : AppCompatActivity() {
             setPositiveButton("Yes") { dialog, id ->
                 //Action for "Delete".
                 Log.e("click", "Positive")
-                startActivity(Intent(this@MainActivity, MainActivity::class.java))
+
+                lifecycleScope.launch {
+                    val def = launch {  Clear.clearAllFields(binding.GrpName) }
+                    def.join()
+                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                }
             }
             setNegativeButton("Cancel") { dialog, which ->
                 //Action for "Cancel".

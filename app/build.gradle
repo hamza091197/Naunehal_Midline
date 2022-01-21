@@ -10,9 +10,9 @@ android {
     buildToolsVersion "30.0.3"
 
 
-buildFeatures{
-    dataBinding = true
-}
+    buildFeatures {
+        dataBinding = true
+    }
 
     defaultConfig {
         applicationId "com.example.naunehalmidline"
@@ -51,6 +51,8 @@ dependencies {
 
 
     implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
+
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.3'
 
 
     def roomVersion = "2.3.0"
