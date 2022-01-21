@@ -13,10 +13,8 @@ class SecondActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
         binding.callback
 
-        val actionBar = supportActionBar
-
-        actionBar!!.title = "Second"
-
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        /*val actionBar = supportActionBar
+        actionBar?.title = "Second"
+        actionBar?.setDisplayHomeAsUpEnabled(true)*/
     }
 }

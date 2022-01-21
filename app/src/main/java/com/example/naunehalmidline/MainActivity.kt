@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -23,8 +24,6 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.btnContinue.setOnClickListener {
-
-
 
 
             /*if (binding.hh01.text.toString().trim().isEmpty()){
@@ -299,64 +298,56 @@ class MainActivity : AppCompatActivity() {
             }*/
 
 
-            if (binding.hh26.checkedRadioButtonId == -1){
+            if (binding.hh26.checkedRadioButtonId == -1) {
                 binding.hh2601.requestFocus()
                 binding.hh2601.error = "RadioButton Not Selected"
-            }
-            else {
+            } else {
                 binding.hh2601.error = null
             }
-
 
 
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
 
 
-
-           /* val intent = intent
-            finish()
-            startActivity(intent)*/
+            /* val intent = intent
+             finish()
+             startActivity(intent)*/
 
 
         }
 
         binding.btnEnd.setOnClickListener {
             createDialog()
-
         }
 
 
         binding.hh01.transformIntoDatePicker(this, "dd/MM/yyyy", Date())
     }
 
-        fun createDialog() {
-            val dialog = AlertDialog.Builder(this@MainActivity)
-            dialog.setCancelable(false)
-            dialog.setTitle("Alert Dialog")
-            dialog.setMessage("Are you sure you want to delete this entry?")
-            dialog.setPositiveButton("Delete") { dialog, id ->
+    private fun createDialog() {
+        AlertDialog.Builder(this@MainActivity).apply {
+            setCancelable(true)
+            setTitle("Alert Dialog")
+            setMessage("Are you sure you want to clear this form?")
+            setPositiveButton("Yes") { dialog, id ->
                 //Action for "Delete".
+                Log.e("click", "Positive")
+                startActivity(Intent(this@MainActivity, MainActivity::class.java))
             }
-                .setNegativeButton("Cancel ") { dialog, which ->
-                    //Action for "Cancel".
-
-                    val intent = intent
-                    finish()
-                    startActivity(intent)
-                }
-
-            val alert = dialog.create()
-            alert.show()
-
-
-        }
+            setNegativeButton("Cancel") { dialog, which ->
+                //Action for "Cancel".
+                Log.e("click", "Negative")
+            }
+        }.create().show()
+    }
 
 
     private fun EditText.transformIntoDatePicker(
         context: Context,
         format: String,
-        maxDate: Date? = null) {
+        maxDate: Date? = null
+    ) {
         isFocusableInTouchMode = false
         isClickable = true
         isFocusable = false
