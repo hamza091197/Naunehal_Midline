@@ -1363,7 +1363,7 @@
                 android:layout_marginStart="12dp"
                 android:background="@color/blue"
                 android:textColor="@color/white"
-                android:text="Save" />
+                android:text="Second" />
         </LinearLayout>
     </ScrollView>
 </layout>
