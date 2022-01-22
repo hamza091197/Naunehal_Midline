@@ -75,6 +75,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -149,6 +150,7 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
+                                style="@style/EditTextNum"
                                 android:id="@+id/hh0201"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -173,6 +175,7 @@
                                 android:text="@string/hh0202" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
+                                style="@style/EditTextNum"
                                 android:id="@+id/hh0202"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -280,6 +283,7 @@
                     </LinearLayout>
 
                     <EditText
+                        style="@style/textInputName"
                         android:id="@+id/hh04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -391,6 +395,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -481,6 +486,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh08"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -528,6 +534,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh09"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -575,6 +582,7 @@
                     </LinearLayout>
 
                     <EditText
+                        style="@style/textInputName"
                         android:id="@+id/hh10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -677,6 +685,7 @@
                     </LinearLayout>
 
                     <EditText
+                        style="@style/textInputName"
                         android:id="@+id/hh12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -720,6 +729,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -902,6 +912,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1156,6 +1167,7 @@
                     </LinearLayout>
 
                     <EditText
+                        style="@style/textInputName"
                         android:id="@+id/hh19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1346,6 +1358,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh21"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1394,6 +1407,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1441,6 +1455,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh23"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1488,6 +1503,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh24"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1535,6 +1551,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh25"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
