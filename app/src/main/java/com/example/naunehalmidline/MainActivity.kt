@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -32,272 +33,272 @@ class MainActivity : AppCompatActivity() {
         binding.btnContinue.setOnClickListener {
 
 
-            /*if (binding.hh01.text.toString().trim().isEmpty()){
+           if (binding.hh01.text.toString().trim().isEmpty()){
                 binding.hh01.requestFocus()
                 binding.hh01.error = "Enter Date of Interview"
                 return@setOnClickListener
             }
 
 
+            /*
+                       if(binding.hh0201.text.toString().trim().isEmpty()){
+                           binding.hh0201.requestFocus()
+                           binding.hh0201.error = "Hours"
+                           return@setOnClickListener
+                       }
 
-            if(binding.hh0201.text.toString().trim().isEmpty()){
-                binding.hh0201.requestFocus()
-                binding.hh0201.error = "Hours"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh0201.isRangeTextValidate){
-                binding.hh0201.requestFocus()
-                binding.hh0201.error = "The range is from 1 to 23"
-                return@setOnClickListener
-            }
-
-
-            if  (binding.hh0202.text.toString().trim().isEmpty()){
-                binding.hh0202.requestFocus()
-                binding.hh0202.error = "Hours"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh0202.isRangeTextValidate){
-                binding.hh0202.requestFocus()
-                binding.hh0202.error = "The range is from 1 to 59"
-                return@setOnClickListener
-            }
-
-            if (binding.hh03.text.toString().trim().isEmpty()){
-                binding.hh03.requestFocus()
-                binding.hh03.error = "Code of Interviewer"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh03.isRangeTextValidate){
-                binding.hh03.requestFocus()
-                binding.hh03.error = "The range is from 1 to 9999"
-                return@setOnClickListener
-            }
-
-            if (binding.hh04.text.toString().trim().isEmpty()){
-                binding.hh04.requestFocus()
-                binding.hh04.error = "Name of Interviewer"
-                return@setOnClickListener
-            }
-
-            if (binding.hh05.checkedRadioButtonId == -1){
-                binding.hh0501.requestFocus()
-                binding.hh0501.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-            else {
-                binding.hh0501.error = null
-            }
-
-            if (binding.hh06.text.toString().trim().isEmpty()){
-                binding.hh06.requestFocus()
-                binding.hh06.error = "Enter Union Council"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh06.isRangeTextValidate){
-                binding.hh06.requestFocus()
-                binding.hh06.error = "The range is from 1 to 999"
-                return@setOnClickListener
-            }
-
-            if (binding.hh07.text.toString().trim().isEmpty()){
-                binding.hh07.requestFocus()
-                binding.hh07.error = "Enter Block, Street, Colony, Village Name"
-                return@setOnClickListener
-            }
-
-            if (binding.hh08.text.toString().trim().isEmpty()){
-                binding.hh08.requestFocus()
-                binding.hh08.error = "Cluster Number"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh08.isRangeTextValidate){
-                binding.hh08.requestFocus()
-                binding.hh08.error = "The range is from 1 99999"
-                return@setOnClickListener
-            }
-
-            if (binding.hh09.text.toString().trim().isEmpty()){
-                binding.hh09.requestFocus()
-                binding.hh09.error = "Enter Household number"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh09.isRangeTextValidate){
-                binding.hh09.requestFocus()
-                binding.hh09.error = "The range is from 1 to 9999"
-                return@setOnClickListener
-            }
-
-            if (binding.hh10.text.toString().trim().isEmpty()){
-                binding.hh10.requestFocus()
-                binding.hh10.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
-
-            if(binding.hh11.checkedRadioButtonId == -1){
-                binding.hh1102.requestFocus()
-                binding.hh1102.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-            else {
-                binding.hh1102.error = null
-            }
-
-            if (binding.hh12.text.toString().trim().isEmpty()){
-                binding.hh12.requestFocus()
-                binding.hh12.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
-
-            if (binding.hh13.text.toString().trim().isEmpty()){
-                binding.hh13.requestFocus()
-                binding.hh13.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
-
-            if (!binding.hh13.isRangeTextValidate){
-                binding.hh13.requestFocus()
-                binding.hh13.error = "the range is from 15 to 99"
-                return@setOnClickListener
-            }
-
-            if (binding.hh14.checkedRadioButtonId == -1){
-                binding.hh1402.requestFocus()
-                binding.hh1402.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-            else {
-                binding.hh1402.error = null
-            }
+                       if (!binding.hh0201.isRangeTextValidate){
+                           binding.hh0201.requestFocus()
+                           binding.hh0201.error = "The range is from 1 to 23"
+                           return@setOnClickListener
+                       }
 
 
-            if (binding.hh15.checkedRadioButtonId == -1){
-                binding.hh1501.requestFocus()
-                binding.hh1501.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-            else {
-                binding.hh1501.error = null
-            }
+                       if  (binding.hh0202.text.toString().trim().isEmpty()){
+                           binding.hh0202.requestFocus()
+                           binding.hh0202.error = "Hours"
+                           return@setOnClickListener
+                       }
+
+                       if (!binding.hh0202.isRangeTextValidate){
+                           binding.hh0202.requestFocus()
+                           binding.hh0202.error = "The range is from 1 to 59"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh03.text.toString().trim().isEmpty()){
+                           binding.hh03.requestFocus()
+                           binding.hh03.error = "Code of Interviewer"
+                           return@setOnClickListener
+                       }
+
+                       if (!binding.hh03.isRangeTextValidate){
+                           binding.hh03.requestFocus()
+                           binding.hh03.error = "The range is from 1 to 9999"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh04.text.toString().trim().isEmpty()){
+                           binding.hh04.requestFocus()
+                           binding.hh04.error = "Name of Interviewer"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh05.checkedRadioButtonId == -1){
+                           binding.hh0501.requestFocus()
+                           binding.hh0501.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+                       else {
+                           binding.hh0501.error = null
+                       }
+
+                       if (binding.hh06.text.toString().trim().isEmpty()){
+                           binding.hh06.requestFocus()
+                           binding.hh06.error = "Enter Union Council"
+                           return@setOnClickListener
+                       }
+
+                       if (!binding.hh06.isRangeTextValidate){
+                           binding.hh06.requestFocus()
+                           binding.hh06.error = "The range is from 1 to 999"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh07.text.toString().trim().isEmpty()){
+                           binding.hh07.requestFocus()
+                           binding.hh07.error = "Enter Block, Street, Colony, Village Name"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh08.text.toString().trim().isEmpty()){
+                           binding.hh08.requestFocus()
+                           binding.hh08.error = "Cluster Number"
+                           return@setOnClickListener
+                       }
+
+                       if (!binding.hh08.isRangeTextValidate){
+                           binding.hh08.requestFocus()
+                           binding.hh08.error = "The range is from 1 99999"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh09.text.toString().trim().isEmpty()){
+                           binding.hh09.requestFocus()
+                           binding.hh09.error = "Enter Household number"
+                           return@setOnClickListener
+                       }
+
+                       if (!binding.hh09.isRangeTextValidate){
+                           binding.hh09.requestFocus()
+                           binding.hh09.error = "The range is from 1 to 9999"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh10.text.toString().trim().isEmpty()){
+                           binding.hh10.requestFocus()
+                           binding.hh10.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
+
+                       if(binding.hh11.checkedRadioButtonId == -1){
+                           binding.hh1102.requestFocus()
+                           binding.hh1102.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+                       else {
+                           binding.hh1102.error = null
+                       }
+
+                       if (binding.hh12.text.toString().trim().isEmpty()){
+                           binding.hh12.requestFocus()
+                           binding.hh12.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh13.text.toString().trim().isEmpty()){
+                           binding.hh13.requestFocus()
+                           binding.hh13.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
+
+                       if (!binding.hh13.isRangeTextValidate){
+                           binding.hh13.requestFocus()
+                           binding.hh13.error = "the range is from 15 to 99"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh14.checkedRadioButtonId == -1){
+                           binding.hh1402.requestFocus()
+                           binding.hh1402.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+                       else {
+                           binding.hh1402.error = null
+                       }
 
 
-            if (binding.hh16.text.toString().trim().isEmpty()){
-                binding.hh16.requestFocus()
-                binding.hh16.error = ""
-                return@setOnClickListener
-            }
-
-            if (!binding.hh16.isRangeTextValidate){
-                binding.hh16.requestFocus()
-                binding.hh16.error = "The range is from 1 to 17"
-                return@setOnClickListener
-            }
-
-            if (binding.hh17.checkedRadioButtonId == -1){
-                binding.hh1701.requestFocus()
-                binding.hh1701.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-            else {
-                binding.hh1701.error = null
-            }
-
-            if (binding.hh18.checkedRadioButtonId == -1){
-                binding.hh1801.requestFocus()
-                binding.hh1801.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-
-            else {
-                binding.hh1801.error = null
-            }
-
-            if (binding.hh19.text.toString().trim().isEmpty()){
-                binding.hh19.requestFocus()
-                binding.hh19.error = "Enter Name of Head of Household"
-                return@setOnClickListener
-            }
-
-            if (binding.hh20.checkedRadioButtonId == -1){
-                binding.hh2001.requestFocus()
-                binding.hh2001.error = "RadioButton Not Selected"
-                return@setOnClickListener
-            }
-
-            else {
-                binding.hh2001.error = null
-            }
-
-            if (binding.hh21.text.toString().trim().isEmpty()){
-                binding.hh21.requestFocus()
-                binding.hh21.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
+                       if (binding.hh15.checkedRadioButtonId == -1){
+                           binding.hh1501.requestFocus()
+                           binding.hh1501.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+                       else {
+                           binding.hh1501.error = null
+                       }
 
 
-            if (!binding.hh21.isRangeTextValidate){
-                binding.hh21.requestFocus()
-                binding.hh21.error = "The range is from 1 to 60"
-                return@setOnClickListener
-            }
+                       if (binding.hh16.text.toString().trim().isEmpty()){
+                           binding.hh16.requestFocus()
+                           binding.hh16.error = ""
+                           return@setOnClickListener
+                       }
 
-            if (binding.hh22.text.toString().trim().isEmpty()){
-                binding.hh22.requestFocus()
-                binding.hh22.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
+                       if (!binding.hh16.isRangeTextValidate){
+                           binding.hh16.requestFocus()
+                           binding.hh16.error = "The range is from 1 to 17"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh17.checkedRadioButtonId == -1){
+                           binding.hh1701.requestFocus()
+                           binding.hh1701.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+                       else {
+                           binding.hh1701.error = null
+                       }
+
+                       if (binding.hh18.checkedRadioButtonId == -1){
+                           binding.hh1801.requestFocus()
+                           binding.hh1801.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+
+                       else {
+                           binding.hh1801.error = null
+                       }
+
+                       if (binding.hh19.text.toString().trim().isEmpty()){
+                           binding.hh19.requestFocus()
+                           binding.hh19.error = "Enter Name of Head of Household"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh20.checkedRadioButtonId == -1){
+                           binding.hh2001.requestFocus()
+                           binding.hh2001.error = "RadioButton Not Selected"
+                           return@setOnClickListener
+                       }
+
+                       else {
+                           binding.hh2001.error = null
+                       }
+
+                       if (binding.hh21.text.toString().trim().isEmpty()){
+                           binding.hh21.requestFocus()
+                           binding.hh21.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
 
 
-            if (!binding.hh22.isRangeTextValidate){
-                binding.hh22.requestFocus()
-                binding.hh22.error = "The range is from 1 to 20"
-                return@setOnClickListener
-            }
+                       if (!binding.hh21.isRangeTextValidate){
+                           binding.hh21.requestFocus()
+                           binding.hh21.error = "The range is from 1 to 60"
+                           return@setOnClickListener
+                       }
 
-            if (binding.hh23.text.toString().trim().isEmpty()){
-                binding.hh23.requestFocus()
-                binding.hh23.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
-
-
-            if (!binding.hh23.isRangeTextValidate){
-                binding.hh23.requestFocus()
-                binding.hh23.error = "The range is from 1 to 20"
-                return@setOnClickListener
-            }
-
-            if (binding.hh24.text.toString().trim().isEmpty()){
-                binding.hh24.requestFocus()
-                binding.hh24.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
+                       if (binding.hh22.text.toString().trim().isEmpty()){
+                           binding.hh22.requestFocus()
+                           binding.hh22.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
 
 
-            if (!binding.hh24.isRangeTextValidate){
-                binding.hh24.requestFocus()
-                binding.hh24.error = "The range is from 1 to 20"
-                return@setOnClickListener
-            }
+                       if (!binding.hh22.isRangeTextValidate){
+                           binding.hh22.requestFocus()
+                           binding.hh22.error = "The range is from 1 to 20"
+                           return@setOnClickListener
+                       }
 
-            if (binding.hh25.text.toString().trim().isEmpty()){
-                binding.hh25.requestFocus()
-                binding.hh25.error = "Enter Date of Interview"
-                return@setOnClickListener
-            }
+                       if (binding.hh23.text.toString().trim().isEmpty()){
+                           binding.hh23.requestFocus()
+                           binding.hh23.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
 
 
-            if (!binding.hh25.isRangeTextValidate){
-                binding.hh25.requestFocus()
-                binding.hh25.error = "The range is from 1 to 20"
-                return@setOnClickListener
-            }*/
+                       if (!binding.hh23.isRangeTextValidate){
+                           binding.hh23.requestFocus()
+                           binding.hh23.error = "The range is from 1 to 20"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh24.text.toString().trim().isEmpty()){
+                           binding.hh24.requestFocus()
+                           binding.hh24.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
+
+
+                       if (!binding.hh24.isRangeTextValidate){
+                           binding.hh24.requestFocus()
+                           binding.hh24.error = "The range is from 1 to 20"
+                           return@setOnClickListener
+                       }
+
+                       if (binding.hh25.text.toString().trim().isEmpty()){
+                           binding.hh25.requestFocus()
+                           binding.hh25.error = "Enter Date of Interview"
+                           return@setOnClickListener
+                       }
+
+
+                       if (!binding.hh25.isRangeTextValidate){
+                           binding.hh25.requestFocus()
+                           binding.hh25.error = "The range is from 1 to 20"
+                           return@setOnClickListener
+                       }*/
 
 
             if (binding.hh26.checkedRadioButtonId == -1) {
@@ -345,7 +346,8 @@ class MainActivity : AppCompatActivity() {
                 lifecycleScope.launch {
                     val def = launch {  Clear.clearAllFields(binding.GrpName) }
                     def.join()
-                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
+                    /*startActivity(Intent(this@MainActivity, MainActivity::class.java))*/
+                    binding.Grp.fullScroll(View.FOCUS_UP)
                 }
             }
             setNegativeButton("Cancel") { dialog, which ->
