@@ -47,7 +47,7 @@
     </style>
 
     <style name="quesNum">
-        <item name="android:background">#F688A2</item>
+        <item name="android:background">#F83160</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:padding">12dp</item>
