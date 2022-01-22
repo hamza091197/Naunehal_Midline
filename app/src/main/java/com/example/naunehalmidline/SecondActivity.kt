@@ -16,5 +16,10 @@ class SecondActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar?.title = "Child Basic Information"
         actionBar?.setDisplayHomeAsUpEnabled(true)
+
+        /*binding.btnThird.setOnClickListener {
+
+
+        }*/
     }
 }

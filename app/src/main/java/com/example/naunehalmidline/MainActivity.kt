@@ -308,8 +308,7 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
+
 
 
            /*  val intent = intent
@@ -317,6 +316,11 @@ class MainActivity : AppCompatActivity() {
              startActivity(intent)*/
 
 
+        }
+
+        binding.btnSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
 
         binding.btnEnd.setOnClickListener {
