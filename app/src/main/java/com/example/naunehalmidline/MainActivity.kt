@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         binding.callback
 
 
+        val actionBar = supportActionBar
+        actionBar?.title = "Identification Information (HH)"
+
         binding.btnContinue.setOnClickListener {
 
 
@@ -35,11 +38,7 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (!binding.hh01.isRangeTextValidate){
-                binding.hh01.requestFocus()
-                binding.hh01.error = "The range is from 0 to 0"
-                return@setOnClickListener
-            }
+
 
             if(binding.hh0201.text.toString().trim().isEmpty()){
                 binding.hh0201.requestFocus()
@@ -313,7 +312,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
 
-            /* val intent = intent
+           /*  val intent = intent
              finish()
              startActivity(intent)*/
 
