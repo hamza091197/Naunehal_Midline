@@ -13,6 +13,7 @@
     <color name="ticker_red">#64dd17</color>
     <color name="dullWhile">#f2f2f2</color>
     <color name="dullWhiteOverlay">#99E7E6E6</color>
+    <color name="colorPrimaryBeta1">#f7311b92</color>
     <color name="gray">#757575</color>
     <color name="blackOverlay">#66000000</color>
     <color name="yellow">#FFA726</color>

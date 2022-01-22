@@ -6,8 +6,48 @@
 
     </style>
 
+    <style name="textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+        <!--        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>-->
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <style name="ii_textviewhint">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:drawable">@drawable/textview_background_grad</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+    <style name="HeadingTitle" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/colorSecondary</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
     <style name="quesNum">
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:background">#F688A2</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:padding">12dp</item>
@@ -18,6 +58,42 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="EditTextNum" parent="@style/textInput">
+        <item name="android:inputType">number</item>
+    </style>
+
+
+
+
+
+    <style name="textInputName" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="textInput">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColorHint">@color/black_overlay</item>
+        <item name="android:background">@drawable/et_style</item>
+        <item name="android:inputType">textPostalAddress</item>
+        <item name="android:textDirection">ltr</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="android:imeOptions">actionNext</item>
+    </style>
+
 
     <!--Card View Start-->
     <style name="cardView">
@@ -34,4 +110,55 @@
         <item name="windowNoTitle">true</item>
     </style>
     <!--Card View End-->
+
+    <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <!--        <item name="android:button">@color/colorPrimary</item>-->
+        <item name="android:elevation">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:padding">13dp</item>
+    </style>
+
+    <style name="hradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="vradiogroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="radiobutton0" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:background">@drawable/bottom_options</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="buttons_bottom">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="btnNext" parent="@style/buttons_bottom">
+        <item name="android:background">@color/colorPrimaryBeta1</item>
+    </style>
+
+    <style name="btnEnd" parent="@style/buttons_bottom">
+        <item name="android:background">@color/red</item>
+    </style>
 </resources>

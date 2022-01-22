@@ -34,12 +34,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:background="@color/lime"
-                        android:padding="20dp"
                         android:text="@string/hh01_title1"
-                        android:textSize="20sp"
-                        android:textStyle="bold|italic" />
+                        style="@style/HeadingTitle"
+                        android:textSize="25sp"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -234,6 +231,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
                         android:id="@+id/hh03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

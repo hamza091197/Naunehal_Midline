@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/bottom.xml" value="0.20625" />
+        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/bottom_options.xml" value="0.2203125" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/btn_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/et_style.xml" value="0.2203125" />
+        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/textview_background_grad.xml" value="0.2203125" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/font/roboto.xml" value="0.23076923076923078" />
-        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_main.xml" value="0.10053859964093358" />
-        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_second.xml" value="0.16258351893095768" />
+        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_second.xml" value="0.25" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_third.xml" value="0.25" />
       </map>
     </option>
