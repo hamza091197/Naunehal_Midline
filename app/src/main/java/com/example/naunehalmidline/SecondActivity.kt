@@ -1,10 +1,15 @@
 package com.example.naunehalmidline
 
+import android.app.PendingIntent.getActivity
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -23,7 +28,29 @@ class SecondActivity : AppCompatActivity() {
         val actionBar = supportActionBar
         actionBar?.title = "Child Basic Information"
         actionBar?.setDisplayHomeAsUpEnabled(true)
+        /*supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#146775")))*/
 
+
+       /* binding.cb01.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+                if (binding.cb1096.isClickable && binding.cb1096x.text.toString().trim().isEmpty()){
+                    binding.cb1096x.error = "Empty EditText"
+                }
+            }
+
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+
+
+            }
+        })*/
 
         binding.btnContinue.setOnClickListener { 
             
@@ -54,7 +81,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb04dd.isRangeTextValidate){
+            if (!binding.cb04dd.isRangeTextValidate){
                 binding.cb04dd.requestFocus()
                 binding.cb04dd.error = "The range is from 1 to 29"
                 return@setOnClickListener
@@ -66,7 +93,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb04mm.isRangeTextValidate){
+            if (!binding.cb04mm.isRangeTextValidate){
                 binding.cb04mm.requestFocus()
                 binding.cb04mm.error = "The range is from 1 to 11"
                 return@setOnClickListener
@@ -78,7 +105,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb04yy.isRangeTextValidate){
+            if (!binding.cb04yy.isRangeTextValidate){
                 binding.cb04yy.requestFocus()
                 binding.cb04yy.error = "The range is from 2015 to 2021"
                 return@setOnClickListener
@@ -90,7 +117,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb0501.isRangeTextValidate){
+            if (!binding.cb0501.isRangeTextValidate){
                 binding.cb0501.requestFocus()
                 binding.cb0501.error = "The range is from 1 to 5"
                 return@setOnClickListener
@@ -102,7 +129,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb0502.isRangeTextValidate){
+            if (!binding.cb0502.isRangeTextValidate){
                 binding.cb0502.requestFocus()
                 binding.cb0502.error = "The range is from 1 to 11"
                 return@setOnClickListener
@@ -123,7 +150,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb15.isRangeTextValidate){
+            if (!binding.cb15.isRangeTextValidate){
                 binding.cb15.requestFocus()
                 binding.cb15.error = "The range is from 0.5 to 9.0"
                 return@setOnClickListener
@@ -150,7 +177,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb08.isRangeTextValidate){
+            if (!binding.cb08.isRangeTextValidate){
                 binding.cb08.requestFocus()
                 binding.cb08.error = "The range is from 12 to 99"
                 return@setOnClickListener
@@ -162,7 +189,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb09.isRangeTextValidate){
+            if (!binding.cb09.isRangeTextValidate){
                 binding.cb09.requestFocus()
                 binding.cb09.error = "The range is from 1 to 17"
                 return@setOnClickListener
@@ -178,13 +205,15 @@ class SecondActivity : AppCompatActivity() {
             }
 
             if (binding.cb10.checkedRadioButtonId == -1){
-                binding.cb1001.requestFocus()
+                binding.cb10.requestFocus()
                 binding.cb1001.error = "RadioButton Not Selected"
                 return@setOnClickListener
             }
 
+
+
             if (binding.cb11.checkedRadioButtonId == -1){
-                binding.cb1102.requestFocus()
+                binding.cb11.requestFocus()
                 binding.cb1102.error = "RadioButton Not Selected"
                 return@setOnClickListener
             }
@@ -198,7 +227,7 @@ class SecondActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.cb13.isRangeTextValidate){
+            if (!binding.cb13.isRangeTextValidate){
                 binding.cb13.requestFocus()
                 binding.cb13.error = "The range is from 1 to 17"
                 return@setOnClickListener
@@ -213,15 +242,42 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb1401.error = null
             }
 
+            /*if (binding.cb1496.isClickable &&
+                binding.cb1496x.text.toString().trim().isEmpty()){
+                binding.cb1496x.requestFocus()
+                binding.cb1496x.error = "Other Please Specify"
+                return@setOnClickListener
+            }
+            else {
+                binding.cb1496x.error = null
+            }*/
+
             val refresh = Intent(this, SecondActivity::class.java)
             startActivity(refresh)
-
-
         }
         binding.btnEnd.setOnClickListener {
             createDialog()
 
 
+        }
+        Child_Basic_Information()
+    }
+    private fun Child_Basic_Information() {
+
+        binding.cb10.setOnCheckedChangeListener { radioGroup, i ->
+            if (binding.cb1096.isClickable && binding.cb1096x.text.toString().trim().isEmpty()) {
+                binding.cb1096x.error = "Empty EditText"
+            } else {
+                binding.cb1096x.error = null
+            }
+        }
+
+        binding.cb14.setOnCheckedChangeListener { radioGroup, i ->
+            if (binding.cb1496.isClickable && binding.cb1496x.text.toString().trim().isEmpty()) {
+                binding.cb1496x.error = "Empty EditText"
+            } else {
+                binding.cb1496x.error = null
+            }
         }
     }
 

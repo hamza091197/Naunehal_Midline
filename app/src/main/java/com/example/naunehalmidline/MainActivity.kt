@@ -1,12 +1,15 @@
 package com.example.naunehalmidline
 
 import android.app.DatePickerDialog
+import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.View
 import android.widget.EditText
+import android.widget.SearchView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -329,6 +332,20 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.hh01.transformIntoDatePicker(this, "dd/MM/yyyy", Date())
+
+        Child_Basic_Information()
+    }
+
+    private fun Child_Basic_Information() {
+
+        binding.hh17.setOnCheckedChangeListener { radioGroup, i ->
+            if (binding.hh1796.isClickable && binding.hh1796x.text.toString().trim().isEmpty()) {
+                binding.hh1796x.error = "Empty EditText"
+            } else {
+                binding.hh1796x.error = null
+            }
+        }
+        
     }
 
     private fun createDialog() {
@@ -385,5 +402,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
+
+
 
 }

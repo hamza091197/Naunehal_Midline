@@ -55,6 +55,8 @@ dependencies {
     implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.3'
 
 
+
+
     def roomVersion = "2.3.0"
 
     implementation("androidx.room:room-runtime:$roomVersion")
