@@ -252,7 +252,7 @@ class SecondActivity : AppCompatActivity() {
 
 
 
-            if (binding.cb1496.isClickable &&
+            if (binding.cb1496.isChecked &&
                 binding.cb1496x.text.toString().trim().isEmpty()){
                 binding.cb1496x.requestFocus()
                 binding.cb1496x.error = "Other Please Specify"
@@ -269,8 +269,8 @@ class SecondActivity : AppCompatActivity() {
             updateSecond()
         }
 
-        binding.fab.setOnClickListener {
-            RoomExplorer.show(this, ContactDatabase::class.java, "secondDB")
+        binding.fab2.setOnClickListener {
+            RoomExplorer.show(this, SecondDatabase::class.java, "secondDB")
         }
 
         binding.btnEnd.setOnClickListener {
@@ -278,12 +278,12 @@ class SecondActivity : AppCompatActivity() {
 
 
         }
-        Child_Basic_Information()
+        /*Child_Basic_Information()*/
     }
-    private fun Child_Basic_Information() {
+    /*private fun Child_Basic_Information() {
 
         binding.cb10.setOnCheckedChangeListener { radioGroup, i ->
-            if (binding.cb1096.isClickable && binding.cb1096x.text.toString().trim().isEmpty()) {
+            if (binding.cb1096.isChecked && binding.cb1096x.text.toString().trim().isEmpty()) {
                 binding.cb1096x.error = "Empty EditText"
             } else {
                 binding.cb1096x.error = null
@@ -297,7 +297,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb1496x.error = null
             }
         }
-    }
+    }*/
 
     private fun createDialog() {
         AlertDialog.Builder(this@SecondActivity).apply {
