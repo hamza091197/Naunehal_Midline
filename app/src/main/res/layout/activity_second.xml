@@ -15,6 +15,7 @@
 
 
     <ScrollView
+        android:id="@+id/Grp_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -1063,6 +1064,35 @@
                         android:text="@string/cb11" />
 
                 </LinearLayout>
+
+                    <RadioGroup
+                        style="@style/hradiogroup"
+                        android:id="@+id/cb11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+
+                            android:id="@+id/cb1101"
+                            android:text="@string/cb0301"
+                            android:layout_width="0dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/cb1102"
+                            android:layout_marginEnd="2dp"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:text="@string/cb0302"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            />
+                    </RadioGroup>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
