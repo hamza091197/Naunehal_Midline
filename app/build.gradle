@@ -54,7 +54,7 @@ dependencies {
 
     implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.3'
 
-
+    implementation 'com.wajahatkarim3:roomexplorer:0.0.2'
 
 
     def roomVersion = "2.3.0"

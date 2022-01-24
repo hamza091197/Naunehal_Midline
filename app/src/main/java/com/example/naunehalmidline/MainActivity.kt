@@ -14,20 +14,28 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
+import androidx.room.RoomDatabase
 import com.example.naunehalmidline.databinding.ActivityMainBinding
+import com.example.naunehalmidline.main.Contact
+import com.example.naunehalmidline.main.ContactDatabase
 import com.validatorcrawler.aliazaz.Clear
+import com.wajahatkarim3.roomexplorer.RoomExplorer
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var database: ContactDatabase
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.callback
+        database = ContactDatabase.getDatabase(this)
 
 
         val actionBar = supportActionBar
@@ -302,6 +310,8 @@ class MainActivity : AppCompatActivity() {
                 binding.hh2601.error = null
             }
 
+
+
             /*val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)*/
 
@@ -312,12 +322,17 @@ class MainActivity : AppCompatActivity() {
             val refresh = Intent(this, MainActivity::class.java)
             startActivity(refresh)
 
+            insertContact()
+            updateContact()
+
         }
 
 
 
 
-
+        binding.fab.setOnClickListener {
+            RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
+        }
 
         binding.btnSecond.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
@@ -334,6 +349,8 @@ class MainActivity : AppCompatActivity() {
         binding.hh01.transformIntoDatePicker(this, "dd/MM/yyyy", Date())
 
         Child_Basic_Information()
+
+
     }
 
     private fun Child_Basic_Information() {
@@ -404,7 +421,237 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    fun insertContact() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ContactDao().insert(
+                    Contact(
+                        0,
+                        hh01 = binding.hh01.text.toString(),
+                        hh0201 = binding.hh0201.text.toString(),
+                        hh0202 = binding.hh0202.text.toString(),
+                        hh03 = binding.hh03.text.toString(),
+                        hh04 = binding.hh04.text.toString(),
+                        hh06 = binding.hh06.text.toString(),
+                        hh07 = binding.hh07.text.toString(),
+                        hh08 = binding.hh08.text.toString(),
+                        hh09 = binding.hh09.text.toString(),
+                        hh10 = binding.hh10.text.toString(),
+                        hh12 = binding.hh12.text.toString(),
+                        hh13 = binding.hh13.text.toString(),
+                        hh16 = binding.hh16.text.toString(),
+                        hh19 = binding.hh19.text.toString(),
+                        hh1796x = binding.hh1796x.text.toString(),
+                        hh2096x = binding.hh2096x.text.toString(),
+                        hh21 = binding.hh21.text.toString(),
+                        hh22 = binding.hh22.text.toString(),
+                        hh23 = binding.hh23.text.toString(),
+                        hh24 = binding.hh24.text.toString(),
+                        hh25 = binding.hh25.text.toString(),
+                        hh2696x = binding.hh2696x.text.toString(),
 
+                        hh05 = (when  {
+                            binding.hh0501.isChecked -> "1"
+                            binding.hh0502.isChecked -> "2"
+                            binding.hh0503.isChecked -> "3"
+                            else -> "-1"
+                        }),
 
+                        hh11 = (when {
+                            binding.hh1101.isChecked -> "1"
+                            binding.hh1102.isChecked -> "2"
+                            else -> "-1"
+                        }),
 
+                        hh14 = (when {
+                            binding.hh1401.isChecked -> "1"
+                            binding.hh1402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        hh15 = (when {
+                            binding.hh1501.isChecked -> "1"
+                            binding.hh1502.isChecked -> "2"
+                            binding.hh1503.isChecked -> "3"
+                            binding.hh1504.isChecked -> "4"
+                            binding.hh1505.isChecked -> "5"
+                            else -> "-1"
+                        }),
+
+                        hh17 = (when {
+                            binding.hh1701.isChecked -> "1"
+                            binding.hh1702.isChecked -> "2"
+                            binding.hh1703.isChecked -> "3"
+                            binding.hh1704.isChecked -> "4"
+                            binding.hh1705.isChecked -> "5"
+                            binding.hh1706.isChecked -> "6"
+                            binding.hh1707.isChecked -> "7"
+                            binding.hh1708.isChecked -> "8"
+                            binding.hh1709.isChecked -> "9"
+                            binding.hh1710.isChecked -> "10"
+                            binding.hh1711.isChecked -> "11"
+                            binding.hh1712.isChecked -> "12"
+                            binding.hh1713.isChecked -> "13"
+                            else -> "-1"
+                        }),
+
+                        hh18 = (when {
+                            binding.hh1801.isChecked -> "1"
+                            binding.hh1802.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        hh20 = (when {
+                            binding.hh2001.isChecked -> "1"
+                            binding.hh2002.isChecked -> "2"
+                            binding.hh2003.isChecked -> "3"
+                            binding.hh2004.isChecked -> "4"
+                            binding.hh2005.isChecked -> "5"
+                            binding.hh2006.isChecked -> "6"
+                            binding.hh2007.isChecked -> "7"
+                            binding.hh2008.isChecked -> "8"
+                            binding.hh2009.isChecked -> "9"
+                            binding.hh2010.isChecked -> "10"
+                            binding.hh2011.isChecked -> "11"
+                            binding.hh2012.isChecked -> "12"
+                            binding.hh2013.isChecked -> "13"
+                            else -> "-1"
+                        }),
+
+                        hh26 = (when {
+                            binding.hh2601.isChecked -> "1"
+                            binding.hh2602.isChecked -> "2"
+                            binding.hh2603.isChecked -> "3"
+                            binding.hh2604.isChecked -> "4"
+                            binding.hh2605.isChecked -> "5"
+                            binding.hh2606.isChecked -> "6"
+                            binding.hh2607.isChecked -> "7"
+                            else -> "-1"
+                        }),
+                    )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateContact() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ContactDao().update(
+                    Contact(
+                        0,
+                        hh01 = binding.hh01.text.toString(),
+                        hh0201 = binding.hh0201.text.toString(),
+                        hh0202 = binding.hh0202.text.toString(),
+                        hh03 = binding.hh03.text.toString(),
+                        hh04 = binding.hh04.text.toString(),
+                        hh06 = binding.hh06.text.toString(),
+                        hh07 = binding.hh07.text.toString(),
+                        hh08 = binding.hh08.text.toString(),
+                        hh09 = binding.hh09.text.toString(),
+                        hh10 = binding.hh10.text.toString(),
+                        hh12 = binding.hh12.text.toString(),
+                        hh13 = binding.hh13.text.toString(),
+                        hh16 = binding.hh16.text.toString(),
+                        hh19 = binding.hh19.text.toString(),
+                        hh1796x = binding.hh1796x.text.toString(),
+                        hh2096x = binding.hh2096x.text.toString(),
+                        hh21 = binding.hh21.text.toString(),
+                        hh22 = binding.hh22.text.toString(),
+                        hh23 = binding.hh23.text.toString(),
+                        hh24 = binding.hh24.text.toString(),
+                        hh25 = binding.hh25.text.toString(),
+                        hh2696x = binding.hh2696x.text.toString(),
+
+                        hh05 = (when  {
+                            binding.hh0501.isChecked -> "1"
+                            binding.hh0502.isChecked -> "2"
+                            binding.hh0503.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+                        hh11 = (when {
+                            binding.hh1101.isChecked -> "1"
+                            binding.hh1102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        hh14 = (when {
+                            binding.hh1401.isChecked -> "1"
+                            binding.hh1402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        hh15 = (when {
+                            binding.hh1501.isChecked -> "1"
+                            binding.hh1502.isChecked -> "2"
+                            binding.hh1503.isChecked -> "3"
+                            binding.hh1504.isChecked -> "4"
+                            binding.hh1505.isChecked -> "5"
+                            else -> "-1"
+                        }),
+
+                        hh17 = (when {
+                            binding.hh1701.isChecked -> "1"
+                            binding.hh1702.isChecked -> "2"
+                            binding.hh1703.isChecked -> "3"
+                            binding.hh1704.isChecked -> "4"
+                            binding.hh1705.isChecked -> "5"
+                            binding.hh1706.isChecked -> "6"
+                            binding.hh1707.isChecked -> "7"
+                            binding.hh1708.isChecked -> "8"
+                            binding.hh1709.isChecked -> "9"
+                            binding.hh1710.isChecked -> "10"
+                            binding.hh1711.isChecked -> "11"
+                            binding.hh1712.isChecked -> "12"
+                            binding.hh1713.isChecked -> "13"
+                            else -> "-1"
+                        }),
+
+                        hh18 = (when {
+                            binding.hh1801.isChecked -> "1"
+                            binding.hh1802.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        hh20 = (when {
+                            binding.hh2001.isChecked -> "1"
+                            binding.hh2002.isChecked -> "2"
+                            binding.hh2003.isChecked -> "3"
+                            binding.hh2004.isChecked -> "4"
+                            binding.hh2005.isChecked -> "5"
+                            binding.hh2006.isChecked -> "6"
+                            binding.hh2007.isChecked -> "7"
+                            binding.hh2008.isChecked -> "8"
+                            binding.hh2009.isChecked -> "9"
+                            binding.hh2010.isChecked -> "10"
+                            binding.hh2011.isChecked -> "11"
+                            binding.hh2012.isChecked -> "12"
+                            binding.hh2013.isChecked -> "13"
+                            else -> "-1"
+                        }),
+
+                        hh26 = (when {
+                            binding.hh2601.isChecked -> "1"
+                            binding.hh2602.isChecked -> "2"
+                            binding.hh2603.isChecked -> "3"
+                            binding.hh2604.isChecked -> "4"
+                            binding.hh2605.isChecked -> "5"
+                            binding.hh2606.isChecked -> "6"
+                            binding.hh2607.isChecked -> "7"
+                            else -> "-1"
+                        }),
+                    )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
 }

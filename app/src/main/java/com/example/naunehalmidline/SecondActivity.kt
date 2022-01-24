@@ -14,16 +14,24 @@ import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySecondBinding
+import com.example.naunehalmidline.main.Contact
+import com.example.naunehalmidline.main.ContactDatabase
+import com.example.naunehalmidline.second.Second
+import com.example.naunehalmidline.second.SecondDatabase
 import com.validatorcrawler.aliazaz.Clear
+import com.wajahatkarim3.roomexplorer.RoomExplorer
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SecondActivity : AppCompatActivity() {
-
+    lateinit var database: SecondDatabase
     lateinit var binding: ActivitySecondBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
         binding.callback
+        database = SecondDatabase.getDatabase(this)
 
         val actionBar = supportActionBar
         actionBar?.title = "Child Basic Information"
@@ -54,7 +62,7 @@ class SecondActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener { 
             
-            if (binding.cb01.text.toString().trim().isEmpty()){
+            /*if (binding.cb01.text.toString().trim().isEmpty()){
                 binding.cb01.requestFocus()
                 binding.cb01.error = " Line no"
                 return@setOnClickListener
@@ -231,7 +239,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb13.requestFocus()
                 binding.cb13.error = "The range is from 1 to 17"
                 return@setOnClickListener
-            }
+            }*/
 
             if (binding.cb14.checkedRadioButtonId == -1){
                 binding.cb14.requestFocus()
@@ -242,7 +250,9 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb1401.error = null
             }
 
-            /*if (binding.cb1496.isClickable &&
+
+
+            if (binding.cb1496.isClickable &&
                 binding.cb1496x.text.toString().trim().isEmpty()){
                 binding.cb1496x.requestFocus()
                 binding.cb1496x.error = "Other Please Specify"
@@ -250,11 +260,19 @@ class SecondActivity : AppCompatActivity() {
             }
             else {
                 binding.cb1496x.error = null
-            }*/
+            }
 
             val refresh = Intent(this, SecondActivity::class.java)
             startActivity(refresh)
+
+            insertSecond()
+            updateSecond()
         }
+
+        binding.fab.setOnClickListener {
+            RoomExplorer.show(this, ContactDatabase::class.java, "secondDB")
+        }
+
         binding.btnEnd.setOnClickListener {
             createDialog()
 
@@ -302,6 +320,216 @@ class SecondActivity : AppCompatActivity() {
                 Log.e("click", "Negative")
             }
         }.create().show()
+    }
+
+    fun insertSecond() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.SecondDao().insert(
+                    Second(
+                        0,
+                        cb01 = binding.cb01.text.toString(),
+                        cb02 = binding.cb02.text.toString(),
+                        cb04dd = binding.cb04dd.text.toString(),
+                        cb04mm = binding.cb04mm.text.toString(),
+                        cb04yy = binding.cb04yy.text.toString(),
+                        cb0501 = binding.cb0501.text.toString(),
+                        cb0502 = binding.cb0502.text.toString(),
+                        cb15 = binding.cb15.text.toString(),
+                        cb07 = binding.cb07.text.toString(),
+                        cb08 = binding.cb08.text.toString(),
+                        cb09 = binding.cb09.text.toString(),
+                        cb12 = binding.cb12.text.toString(),
+                        cb13 = binding.cb13.text.toString(),
+                        cb1496x = binding.cb1496x.text.toString(),
+                        cb1096x = binding.cb1096x.text.toString(),
+
+                       cb03 = (when  {
+                            binding.cb0301.isChecked -> "1"
+                            binding.cb0302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cb06 = (when {
+                            binding.cb0601.isChecked -> "1"
+                            binding.cb0602.isChecked -> "2"
+                            binding.cb0603.isChecked -> "3"
+                            binding.cb0696.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        cb17 = (when {
+                            binding.cb1701.isChecked -> "1"
+                            binding.cb1702.isChecked -> "2"
+                            binding.cb1703.isChecked -> "3"
+                            binding.cb1704.isChecked -> "4"
+                            binding.cb1705.isChecked -> "5"
+                            binding.cb1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cb16 = (when {
+                            binding.cb1601.isChecked -> "1"
+                            binding.cb1602.isChecked -> "2"
+                            binding.cb1603.isChecked -> "3"
+
+                            else -> "-1"
+                        }),
+
+                        cb10 = (when {
+                            binding.cb1001.isChecked -> "1"
+                            binding.cb1002.isChecked -> "2"
+                            binding.cb1003.isChecked -> "3"
+                            binding.cb1004.isChecked -> "4"
+                            binding.cb1005.isChecked -> "5"
+                            binding.cb1006.isChecked -> "6"
+                            binding.cb1007.isChecked -> "7"
+                            binding.cb1008.isChecked -> "8"
+                            binding.cb1009.isChecked -> "9"
+                            binding.cb1010.isChecked -> "10"
+                            binding.cb1011.isChecked -> "11"
+                            binding.cb1012.isChecked -> "12"
+                            binding.cb1013.isChecked -> "13"
+                            binding.cb1096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cb11 = (when  {
+                            binding.cb1101.isChecked -> "1"
+                            binding.cb1102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cb14 = (when {
+                            binding.cb1401.isChecked -> "1"
+                            binding.cb1402.isChecked -> "2"
+                            binding.cb1403.isChecked -> "3"
+                            binding.cb1404.isChecked -> "4"
+                            binding.cb1405.isChecked -> "5"
+                            binding.cb1406.isChecked -> "6"
+                            binding.cb1407.isChecked -> "7"
+                            binding.cb1408.isChecked -> "8"
+                            binding.cb1409.isChecked -> "9"
+                            binding.cb1410.isChecked -> "10"
+                            binding.cb1411.isChecked -> "11"
+                            binding.cb1412.isChecked -> "12"
+                            binding.cb1413.isChecked -> "13"
+                            binding.cb1496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+                    )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateSecond() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.SecondDao().update(
+                    Second(
+                        0,
+                        cb01 = binding.cb01.text.toString(),
+                        cb02 = binding.cb02.text.toString(),
+                        cb04dd = binding.cb04dd.text.toString(),
+                        cb04mm = binding.cb04mm.text.toString(),
+                        cb04yy = binding.cb04yy.text.toString(),
+                        cb0501 = binding.cb0501.text.toString(),
+                        cb0502 = binding.cb0502.text.toString(),
+                        cb15 = binding.cb15.text.toString(),
+                        cb07 = binding.cb07.text.toString(),
+                        cb08 = binding.cb08.text.toString(),
+                        cb09 = binding.cb09.text.toString(),
+                        cb12 = binding.cb12.text.toString(),
+                        cb13 = binding.cb13.text.toString(),
+                        cb1496x = binding.cb1496x.text.toString(),
+                        cb1096x = binding.cb1096x.text.toString(),
+
+                        cb03 = (when  {
+                            binding.cb0301.isChecked -> "1"
+                            binding.cb0302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cb06 = (when {
+                            binding.cb0601.isChecked -> "1"
+                            binding.cb0602.isChecked -> "2"
+                            binding.cb0603.isChecked -> "3"
+                            binding.cb0696.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        cb17 = (when {
+                            binding.cb1701.isChecked -> "1"
+                            binding.cb1702.isChecked -> "2"
+                            binding.cb1703.isChecked -> "3"
+                            binding.cb1704.isChecked -> "4"
+                            binding.cb1705.isChecked -> "5"
+                            binding.cb1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cb16 = (when {
+                            binding.cb1601.isChecked -> "1"
+                            binding.cb1602.isChecked -> "2"
+                            binding.cb1603.isChecked -> "3"
+
+                            else -> "-1"
+                        }),
+
+                        cb10 = (when {
+                            binding.cb1001.isChecked -> "1"
+                            binding.cb1002.isChecked -> "2"
+                            binding.cb1003.isChecked -> "3"
+                            binding.cb1004.isChecked -> "4"
+                            binding.cb1005.isChecked -> "5"
+                            binding.cb1006.isChecked -> "6"
+                            binding.cb1007.isChecked -> "7"
+                            binding.cb1008.isChecked -> "8"
+                            binding.cb1009.isChecked -> "9"
+                            binding.cb1010.isChecked -> "10"
+                            binding.cb1011.isChecked -> "11"
+                            binding.cb1012.isChecked -> "12"
+                            binding.cb1013.isChecked -> "13"
+                            binding.cb1096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cb11 = (when  {
+                            binding.cb1101.isChecked -> "1"
+                            binding.cb1102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cb14 = (when {
+                            binding.cb1401.isChecked -> "1"
+                            binding.cb1402.isChecked -> "2"
+                            binding.cb1403.isChecked -> "3"
+                            binding.cb1404.isChecked -> "4"
+                            binding.cb1405.isChecked -> "5"
+                            binding.cb1406.isChecked -> "6"
+                            binding.cb1407.isChecked -> "7"
+                            binding.cb1408.isChecked -> "8"
+                            binding.cb1409.isChecked -> "9"
+                            binding.cb1410.isChecked -> "10"
+                            binding.cb1411.isChecked -> "11"
+                            binding.cb1412.isChecked -> "12"
+                            binding.cb1413.isChecked -> "13"
+                            binding.cb1496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+                    )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
     }
 
 }

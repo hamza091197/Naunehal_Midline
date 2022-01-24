@@ -1711,6 +1711,15 @@
                 android:background="@color/green"
                 android:textColor="@color/white"
                 android:text="Second" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_baseline_add_24"
+                />
         </LinearLayout>
     </ScrollView>
 </layout>
