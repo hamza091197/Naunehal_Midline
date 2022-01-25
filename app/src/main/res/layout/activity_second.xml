@@ -77,7 +77,6 @@
 
                 </LinearLayout>
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        style="@style/EditTextNum"
                         android:id="@+id/cb01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -89,7 +88,8 @@
                         app:maxValue="99"
                         app:minValue="1"
                         app:type="range"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        style="@style/EditTextNum"/>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -130,10 +130,10 @@
                 </LinearLayout>
                     <EditText
                         style="@style/textInputName"
+                        android:gravity="center"
                         android:id="@+id/cb02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                         android:hint="@string/cb02"
                          />
@@ -1401,7 +1401,7 @@
                 android:layout_marginStart="12dp"
                 android:background="@color/blue"
                 android:textColor="@color/white"
-                android:text="Second" />
+                android:text="Third" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_2"

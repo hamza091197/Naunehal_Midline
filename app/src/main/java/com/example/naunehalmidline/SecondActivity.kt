@@ -269,6 +269,11 @@ class SecondActivity : AppCompatActivity() {
             updateSecond()
         }
 
+        binding.btnThird.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.fab2.setOnClickListener {
             RoomExplorer.show(this, SecondDatabase::class.java, "secondDB")
         }
