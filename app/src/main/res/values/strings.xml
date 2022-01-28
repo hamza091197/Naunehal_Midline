@@ -427,8 +427,8 @@
     <string name="im10a11">Repeated campaigns</string>
     <string name="im10a12">Contents of vaccine not halal</string>
     <string name="im10a13">Vaccine leads to infertility</string>
-    <string name="im10a98">Don’t know</string>
-    <string name="im10a96">Don’t know</string>
+    <string name="im10a98">Dont know</string>
+    <string name="im10a96">Other</string>
     <string name="im10_2">No </string>
     <string name="im10_3">Dont know</string>
     <string name="im11">Were the first polio drops received in the first two weeks after birth?</string>

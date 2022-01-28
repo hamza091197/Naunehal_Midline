@@ -30,7 +30,7 @@ class ThirdActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.cs01.text.toString().trim().isEmpty()){
+            /*if (binding.cs01.text.toString().trim().isEmpty()){
                 binding.cs01.requestFocus()
                 binding.cs01.error = "Child's Line no"
                 return@setOnClickListener
@@ -59,7 +59,7 @@ class ThirdActivity : AppCompatActivity() {
 
             if (binding.cs02b.text.toString().trim().isEmpty()){
                 binding.cs02b.requestFocus()
-                binding.cs02b.error = "Chil's Line no"
+                binding.cs02b.error = "Name of the respondent"
                 return@setOnClickListener
             }
 
@@ -97,7 +97,7 @@ class ThirdActivity : AppCompatActivity() {
             }
             else {
                 binding.cs0602.error = null
-            }
+            }*/
 
             if (binding.cs07.checkedRadioButtonId == -1){
                 binding.cs0701.requestFocus()
@@ -108,7 +108,8 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs0701.error = null
             }
 
-            if (binding.cs07962x.text.toString().trim().isEmpty()){
+            if (binding.cs07962.isChecked &&
+                binding.cs07962x.text.toString().trim().isEmpty()){
                 binding.cs07962x.requestFocus()
                 binding.cs07962x.error = "Other PLease Specify"
                 return@setOnClickListener
@@ -131,14 +132,15 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs0801.error = null
             }
 
-            if (binding.cs0896x.text.toString().trim().isEmpty()){
+            if (binding.cs0896.isChecked &&
+                binding.cs0896x.text.toString().trim().isEmpty()){
                 binding.cs0896x.requestFocus()
                 binding.cs0896x.error = "Other PLease Specify"
                 return@setOnClickListener
             }
 
             if (binding.cs08a.checkedRadioButtonId == -1){
-                binding.cs08a02.requestFocus()
+                binding.cs08a.requestFocus()
                 binding.cs08a02.error = "RadioButton Not Selected"
                 return@setOnClickListener
             }
@@ -147,7 +149,7 @@ class ThirdActivity : AppCompatActivity() {
             }
 
             if (binding.cs09.checkedRadioButtonId == -1){
-                binding.cs0901.requestFocus()
+                binding.cs09.requestFocus()
                 binding.cs0901.error = "RadioButton Not Selected"
                 return@setOnClickListener
             }
@@ -155,7 +157,8 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs0901.error = null
             }
 
-            if (binding.cs0996x.text.toString().trim().isEmpty()){
+            if (binding.cs0996.isChecked &&
+                binding.cs0996x.text.toString().trim().isEmpty()){
                 binding.cs0996x.requestFocus()
                 binding.cs0996x.error = "Other PLease Specify"
                 return@setOnClickListener
@@ -215,7 +218,8 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs1501.error = null
             }
 
-            if (binding.cs1596x.text.toString().trim().isEmpty()){
+            if (binding.cs1596.isChecked &&
+                binding.cs1596x.text.toString().trim().isEmpty()){
                 binding.cs1596x.requestFocus()
                 binding.cs1596x.error = "Other Please Specify"
                 return@setOnClickListener
@@ -239,14 +243,16 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs1701.error = null
             }
 
-            if (binding.cs17961x.text.toString().trim().isEmpty()){
+            if (binding.cs17961.isChecked &&
+                binding.cs17961x.text.toString().trim().isEmpty()){
                 binding.cs17961x.requestFocus()
                 binding.cs17961x.error = "Other Please Specify"
                 return@setOnClickListener
             }
 
 
-            if (binding.cs17962x.text.toString().trim().isEmpty()){
+            if (binding.cs17962.isChecked &&
+                binding.cs17962x.text.toString().trim().isEmpty()){
                 binding.cs17962x.requestFocus()
                 binding.cs17962x.error = "Other Please Specify"
                 return@setOnClickListener
@@ -279,7 +285,8 @@ class ThirdActivity : AppCompatActivity() {
             }
 
 
-            if (binding.cs1896x.text.toString().trim().isEmpty()){
+            if (binding.cs1896.isChecked &&
+                binding.cs1896x.text.toString().trim().isEmpty()){
                 binding.cs1896x.requestFocus()
                 binding.cs1896x.error = "Other Please Specify"
                 return@setOnClickListener
@@ -294,7 +301,8 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs1901.error = null
             }
 
-            if (binding.cs1996x.text.toString().trim().isEmpty()){
+            if (binding.cs1996.isChecked &&
+                binding.cs1996x.text.toString().trim().isEmpty()){
                 binding.cs1996x.requestFocus()
                 binding.cs1996x.error = "Other Please Specify"
                 return@setOnClickListener
