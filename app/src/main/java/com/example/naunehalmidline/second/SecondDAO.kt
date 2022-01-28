@@ -7,14 +7,15 @@ import androidx.room.*
 interface SecondDAO {
 
     @Insert
-    suspend fun insert(second: Second)
+     fun insert(second: Second)
 
     @Update
-    suspend fun update(second: Second)
+     fun update(second: Second)
 
-    @Delete
-    suspend fun delete(second: Second)
+   /* @Delete
+    fun delete(second: Second)*/
 
     @Query("Select * FROM Second")
-    fun getcontact() : LiveData<Second>
+    fun getcontact() : LiveData<List<Second>>
+
 }

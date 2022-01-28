@@ -10,8 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NaunehalMidline">
         <activity
-            android:name=".ThirdActivity"
+            android:name=".trial"
             android:exported="false" />
+        <activity
+            android:name=".FourthActivity2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FourthActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SecondActivity"
             android:exported="false"

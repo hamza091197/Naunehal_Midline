@@ -36,6 +36,7 @@
                     android:orientation="vertical" >
 
                     <TextView
+                        android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/cb01_title1"
@@ -46,13 +47,14 @@
             <!-- cb01  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcb01"
-                style="@style/cardView"
-                >
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" ><LinearLayout
+                    android:orientation="vertical" >
+
+                    <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bottom"
@@ -65,12 +67,11 @@
                         android:text="cb01"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:text="@string/cb01" />
@@ -117,12 +118,11 @@
                         android:text="cb02"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:text="@string/cb02" />
@@ -164,12 +164,11 @@
                         android:text="cb03"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:text="@string/cb03" />
@@ -177,7 +176,6 @@
                 </LinearLayout>
 
                     <RadioGroup
-                        style="@style/hradiogroup"
                         android:id="@+id/cb03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -188,20 +186,13 @@
                         android:id="@+id/cb0301"
                         android:text="@string/cb0301"
                         android:layout_width="0dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_weight="1"
-                            android:padding="15dp"
-                        android:layout_height="wrap_content"
+                            style="@style/hradiogroup"
                         />
 
                         <RadioButton
                         android:id="@+id/cb0302"
-                        android:layout_marginEnd="2dp"
-                        android:layout_weight="1"
-                        android:padding="15dp"
                         android:text="@string/cb0302"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                            style="@style/hradiogroup"
                         />
                     </RadioGroup>
                 </LinearLayout>
@@ -231,7 +222,7 @@
                         android:text="cb04"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
@@ -368,12 +359,11 @@
                             android:text="cb05"  />
 
                         <TextView
-                            
+                            style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center_vertical"
                             android:padding="15dp"
-                            android:textSize="15sp"
                             android:textStyle="bold"
                             android:fontFamily="@font/roboto"
                             android:text="@string/cb05" />
@@ -482,9 +472,8 @@
                         android:text="cb06"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -554,9 +543,8 @@
                         android:text="cb15"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -603,9 +591,8 @@
                         android:text="cb17"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -688,9 +675,8 @@
                         android:text="cb07"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -746,9 +732,8 @@
                         android:text="cb08"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -795,9 +780,8 @@
                         android:text="cb09"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -844,9 +828,8 @@
                         android:text="cb16"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -855,7 +838,6 @@
 
                 </LinearLayout>
                     <RadioGroup
-                        style="@style/hradiogroup"
                         android:id="@+id/cb16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -865,21 +847,13 @@
 
                             android:id="@+id/cb1601"
                             android:text="@string/cb1601"
-                            android:layout_width="0dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_weight="1"
-                            android:padding="15dp"
-                            android:layout_height="wrap_content"
+                            style="@style/hradiogroup"
                             />
 
                         <RadioButton
                             android:id="@+id/cb1602"
-                            android:layout_marginEnd="2dp"
-                            android:layout_weight="1"
-                            android:padding="15dp"
                             android:text="@string/cb1602"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            style="@style/hradiogroup"
                             />
 
                         <RadioButton
@@ -920,9 +894,8 @@
                         android:text="cb10"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -1025,8 +998,7 @@
                         android:id="@+id/cb1013"
                         android:text="@string/cb1013"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        />
+                        android:layout_height="wrap_content" />
 
                         <RadioButton
                         android:id="@+id/cb1096"
@@ -1044,7 +1016,9 @@
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                             android:tag="cb1096"
                             android:text="@{cb1096.checked ? cb1096x.getText().toString() : ``}"
-                            android:visibility="@{cb1096.checked ? View.VISIBLE : View.GONE}" />/></RadioGroup> </LinearLayout>
+                            android:visibility="@{cb1096.checked ? View.VISIBLE : View.GONE}" />/>
+
+                    </RadioGroup> </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- cb11  Radio   -->
@@ -1056,7 +1030,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" ><LinearLayout
+                    android:orientation="vertical" >
+
+                    <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bottom"
@@ -1069,9 +1045,8 @@
                         android:text="cb11"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -1081,7 +1056,6 @@
                 </LinearLayout>
 
                     <RadioGroup
-                        style="@style/hradiogroup"
                         android:id="@+id/cb11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1091,22 +1065,13 @@
 
                             android:id="@+id/cb1101"
                             android:text="@string/cb0301"
-                            android:layout_width="0dp"
-                            android:layout_marginEnd="2dp"
-                            android:layout_weight="1"
-                            android:padding="15dp"
-                            android:layout_height="wrap_content"
+                            style="@style/hradiogroup"
                             />
 
                         <RadioButton
                             android:id="@+id/cb1102"
-                            android:layout_marginEnd="2dp"
-                            android:layout_weight="1"
-                            android:padding="15dp"
                             android:text="@string/cb0302"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            />
+                            style="@style/hradiogroup"/>
                     </RadioGroup>
 
                 </LinearLayout>
@@ -1123,6 +1088,7 @@
                     android:orientation="vertical" >
 
                     <TextView
+                        android:textSize="20sp"
                         style="@style/HeadingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1140,7 +1106,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" ><LinearLayout
+                    android:orientation="vertical" >
+
+                    <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bottom"
@@ -1153,9 +1121,8 @@
                         android:text="cb12"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -1198,9 +1165,8 @@
                         android:text="cb13"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"
@@ -1245,9 +1211,8 @@
                         android:text="cb14"  />
 
                     <TextView
-                        
+                        style="@style/textview"
                         android:padding="15dp"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/roboto"
                         android:layout_width="match_parent"

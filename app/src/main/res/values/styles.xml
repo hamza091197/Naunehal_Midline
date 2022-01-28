@@ -10,11 +10,11 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/dullWhiteOverlay</item>
         <!--        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>-->
         <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:drawable">@drawable/textview_background_grad</item>
         <item name="android:typeface">normal</item>
         <item name="android:padding">8dp</item>
@@ -59,8 +59,23 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="subtextview">
+        <item name="android:background">#F83160</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="EditTextNum" parent="@style/textInput">
         <item name="android:inputType">number</item>
+        <item name="android:background">@color/dullWhiteOverlay</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 
@@ -71,9 +86,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
-        <item name="android:background">@drawable/et_style</item>
+        <item name="android:drawable">@drawable/et_style</item>
+        <item name="android:background">@color/dullWhiteOverlay</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:padding">4dp</item>
         <item name="android:singleLine">true</item>
         <item name="android:typeface">sans</item>
@@ -97,7 +113,7 @@
 
     <!--Card View Start-->
     <style name="cardView">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/dullWhiteOverlay</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">8dp</item>
@@ -112,7 +128,7 @@
     <!--Card View End-->
 
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/white</item>
@@ -123,12 +139,18 @@
     </style>
 
     <style name="hradiogroup">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginEnd">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@color/dullWhiteOverlay</item>
+        <item name="android:padding">15dp</item>
     </style>
 
     <style name="vradiogroup">
+        <item name="android:background">@color/dullWhiteOverlay</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
@@ -139,8 +161,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">15sp</item>
         <item name="android:clickable">true</item>
+        <item name="android:background">@color/dullWhiteOverlay</item>
         <item name="android:drawablePadding">16dp</item>
-        <item name="android:background">@drawable/bottom_options</item>
         <item name="android:padding">4dp</item>
     </style>
 

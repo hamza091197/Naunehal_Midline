@@ -7,14 +7,15 @@ import androidx.room.*
 interface ContactDAO {
 
     @Insert
-    suspend fun insert(contact: Contact)
+    fun insert(contact: Contact)
 
     @Update
-    suspend fun update(contact: Contact)
+    fun update(contact: Contact)
 
-    @Delete
-    suspend fun delete(contact: Contact)
+    /*@Delete
+    fun delete(contact: Contact)*/
 
     @Query("Select * FROM Contact")
-    fun getcontact() : LiveData<Contact>
+    fun getcontact() : LiveData<List<Contact>>
+
 }

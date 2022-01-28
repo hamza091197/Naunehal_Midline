@@ -1,31 +1,50 @@
 package com.example.naunehalmidline
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.CheckBox
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySecondBinding
 import com.example.naunehalmidline.databinding.ActivityThirdBinding
+import com.example.naunehalmidline.main.Contact
+import com.example.naunehalmidline.main.ContactDatabase
+import com.example.naunehalmidline.third.Third
+import com.example.naunehalmidline.third.ThirdDatabase
+import com.wajahatkarim3.roomexplorer.RoomExplorer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ThirdActivity : AppCompatActivity() {
+    lateinit var database: ThirdDatabase
     lateinit var binding: ActivityThirdBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_third)
         binding.callback
+        database = ThirdDatabase.getDatabase(this)
 
         binding.btnContinue.setOnClickListener {
 
             if (binding.cs01.text.toString().trim().isEmpty()){
                 binding.cs01.requestFocus()
-                binding.cs01.error = "Chil's Line no"
+                binding.cs01.error = "Child's Line no"
                 return@setOnClickListener
             }
 
             if (!binding.cs01.isRangeTextValidate){
                 binding.cs01.requestFocus()
                 binding.cs01.error = "The range is from 1 to 99"
+                return@setOnClickListener
+            }
+
+            if (binding.cs02.text.toString().trim().isEmpty()){
+                binding.cs02.requestFocus()
+                binding.cs02.error = "Name of Child"
                 return@setOnClickListener
             }
 
@@ -299,6 +318,502 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs2101.error = null
             }
 
+            val refresh = Intent(this, ThirdActivity::class.java)
+            startActivity(refresh)
+
+            insertThird()
+            updateThird()
+
         }
+
+        binding.fab3.setOnClickListener {
+            RoomExplorer.show(this, ThirdDatabase::class.java, "thirdDB")
+        }
+
+        binding.btnFourth.setOnClickListener {
+            val intent = Intent(this, FourthActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
+
+    fun insertThird() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ThirdDao().insert(
+                    Third(
+                        0,
+                        cs01 = binding.cs01.text.toString(),
+                        cs02 = binding.cs02.text.toString(),
+                        cs02b = binding.cs02b.text.toString(),
+                        cs08b = binding.cs08b.text.toString(),
+                        cs17b = binding.cs17b.text.toString(),
+                        cs07961x = binding.cs07961x.text.toString(),
+                        cs07962x = binding.cs07962x.text.toString(),
+                        cs0896x = binding.cs0896x.text.toString(),
+                        cs0996x = binding.cs0996x.text.toString(),
+                        cs1596x = binding.cs1596x.text.toString(),
+                        cs17961x = binding.cs17961x.text.toString(),
+                        cs17962x = binding.cs17962x.text.toString(),
+                        cs1896x = binding.cs1896x.text.toString(),
+                        cs1996x = binding.cs1996x.text.toString(),
+
+                        cs02a = (when  {
+                            binding.cs02a01.isChecked -> "1"
+                            binding.cs02a02.isChecked -> "2"
+                            binding.cs02a03.isChecked -> "3"
+                            binding.cs02a04.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        cs03 = (when {
+                            binding.cs0301.isChecked -> "1"
+                            binding.cs0302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs04 = (when {
+                            binding.cs0401.isChecked -> "1"
+                            binding.cs0402.isChecked -> "2"
+                            binding.cs0403.isChecked -> "3"
+                            binding.cs0404.isChecked -> "4"
+                            binding.cs0405.isChecked -> "5"
+                            binding.cs0498.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cs05 = (when {
+                            binding.cs0501.isChecked -> "1"
+                            binding.cs0502.isChecked -> "2"
+                            binding.cs0503.isChecked -> "3"
+                            binding.cs0504.isChecked -> "4"
+                            binding.cs0505.isChecked -> "5"
+                            binding.cs0598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cs06 = (when {
+                            binding.cs0601.isChecked -> "1"
+                            binding.cs0602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+
+                        cs07 = (when {
+                            binding.cs0701.isChecked -> "1"
+                            binding.cs0702.isChecked -> "2"
+                            binding.cs0703.isChecked -> "3"
+                            binding.cs0704.isChecked -> "4"
+                            binding.cs0706.isChecked -> "6"
+                            binding.cs0707.isChecked -> "7"
+                            binding.cs0708.isChecked -> "8"
+                            binding.cs0709.isChecked -> "9"
+                            binding.cs0710.isChecked -> "10"
+                            binding.cs0711.isChecked -> "11"
+                            binding.cs0712.isChecked -> "12"
+                            binding.cs0713.isChecked -> "13"
+                            binding.cs07962.isChecked -> "962"
+                            binding.cs0714.isChecked -> "14"
+                            else -> "-1"
+                        }),
+
+                        cs08 = (when {
+                            binding.cs0801.isChecked -> "1"
+                            binding.cs0802.isChecked -> "2"
+                            binding.cs0803.isChecked -> "3"
+                            binding.cs0804.isChecked -> "4"
+                            binding.cs0805.isChecked -> "5"
+                            binding.cs0806.isChecked -> "6"
+                            binding.cs0807.isChecked -> "7"
+                            binding.cs0808.isChecked -> "8"
+                            binding.cs0809.isChecked -> "9"
+                            binding.cs0810.isChecked -> "10"
+                            binding.cs0896.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs08a = (when {
+                            binding.cs08a01.isChecked -> "1"
+                            binding.cs08a02.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs09 = (when {
+                            binding.cs0901.isChecked -> "1"
+                            binding.cs0902.isChecked -> "2"
+                            binding.cs0903.isChecked -> "3"
+                            binding.cs0905.isChecked -> "5"
+                            binding.cs0906.isChecked -> "6"
+                            binding.cs0996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs10 = (when {
+                            binding.cs1001.isChecked -> "1"
+                            binding.cs1002.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs11 = (when {
+                            binding.cs1101.isChecked -> "1"
+                            binding.cs1102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs12 = (when {
+                            binding.cs1201.isChecked -> "1"
+                            binding.cs1202.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs13 = (when {
+                            binding.cs1301.isChecked -> "1"
+                            binding.cs1302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs14 = (when {
+                            binding.cs1401.isChecked -> "1"
+                            binding.cs1402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs15 = (when {
+                            binding.cs1501.isChecked -> "1"
+                            binding.cs1502.isChecked -> "2"
+                            binding.cs1503.isChecked -> "3"
+                            binding.cs1596.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs16 = (when {
+                            binding.cs1601.isChecked -> "1"
+                            binding.cs1602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs17 = (when {
+                            binding.cs1701.isChecked -> "1"
+                            binding.cs1702.isChecked -> "2"
+                            binding.cs1703.isChecked -> "3"
+                            binding.cs1704.isChecked -> "4"
+                            binding.cs1706.isChecked -> "6"
+                            binding.cs1707.isChecked -> "7"
+                            binding.cs1708.isChecked -> "8"
+                            binding.cs1709.isChecked -> "9"
+                            binding.cs1710.isChecked -> "10"
+                            binding.cs1711.isChecked -> "11"
+                            binding.cs1712.isChecked -> "12"
+                            binding.cs1713.isChecked -> "13"
+                            binding.cs1714.isChecked -> "14"
+                            binding.cs17962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        cs17a = (when {
+                            binding.cs1701.isChecked -> "1"
+                            binding.cs1702.isChecked -> "2"
+                            binding.cs1703.isChecked -> "3"
+                            binding.cs1704.isChecked -> "4"
+                            binding.cs1706.isChecked -> "6"
+                            binding.cs1707.isChecked -> "7"
+                            binding.cs1708.isChecked -> "8"
+                            binding.cs1709.isChecked -> "9"
+                            binding.cs1710.isChecked -> "10"
+                            binding.cs1711.isChecked -> "11"
+                            binding.cs1712.isChecked -> "12"
+                            binding.cs1713.isChecked -> "13"
+                            binding.cs1714.isChecked -> "14"
+                            binding.cs17962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        cs18 = (when {
+                            binding.cs1802.isChecked -> "2"
+                            binding.cs1803.isChecked -> "3"
+                            binding.cs1804.isChecked -> "4"
+                            binding.cs1805.isChecked -> "5"
+                            binding.cs1806.isChecked -> "6"
+                            binding.cs1807.isChecked -> "7"
+                            binding.cs1808.isChecked -> "8"
+                            binding.cs1896.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs19 = (when {
+                            binding.cs1901.isChecked -> "1"
+                            binding.cs1902.isChecked -> "2"
+                            binding.cs1903.isChecked -> "3"
+                            binding.cs1905.isChecked -> "5"
+                            binding.cs1906.isChecked -> "6"
+                            binding.cs1996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs20 = (when {
+                            binding.cs2001.isChecked -> "1"
+                            binding.cs2002.isChecked -> "2"
+                            binding.cs2098.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cs21 = (when {
+                            binding.cs2101.isChecked -> "1"
+                            binding.cs2102.isChecked -> "2"
+                            binding.cs2103.isChecked -> "3"
+                            binding.cs2104.isChecked -> "4"
+                            binding.cs2105.isChecked -> "5"
+                            else -> "-1"
+                        }),
+
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateThird() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ThirdDao().update(
+                    Third(
+                        0,
+                        cs01 = binding.cs01.text.toString(),
+                        cs02 = binding.cs02.text.toString(),
+                        cs02b = binding.cs02b.text.toString(),
+                        cs08b = binding.cs08b.text.toString(),
+                        cs17b = binding.cs17b.text.toString(),
+                        cs07961x = binding.cs07961x.text.toString(),
+                        cs07962x = binding.cs07962x.text.toString(),
+                        cs0896x = binding.cs0896x.text.toString(),
+                        cs0996x = binding.cs0996x.text.toString(),
+                        cs1596x = binding.cs1596x.text.toString(),
+                        cs17961x = binding.cs17961x.text.toString(),
+                        cs17962x = binding.cs17962x.text.toString(),
+                        cs1896x = binding.cs1896x.text.toString(),
+                        cs1996x = binding.cs1996x.text.toString(),
+
+                        cs02a = (when  {
+                            binding.cs02a01.isChecked -> "1"
+                            binding.cs02a02.isChecked -> "2"
+                            binding.cs02a03.isChecked -> "3"
+                            binding.cs02a04.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        cs03 = (when {
+                            binding.cs0301.isChecked -> "1"
+                            binding.cs0302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs04 = (when {
+                            binding.cs0401.isChecked -> "1"
+                            binding.cs0402.isChecked -> "2"
+                            binding.cs0403.isChecked -> "3"
+                            binding.cs0404.isChecked -> "4"
+                            binding.cs0405.isChecked -> "5"
+                            binding.cs0498.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cs05 = (when {
+                            binding.cs0501.isChecked -> "1"
+                            binding.cs0502.isChecked -> "2"
+                            binding.cs0503.isChecked -> "3"
+                            binding.cs0504.isChecked -> "4"
+                            binding.cs0505.isChecked -> "5"
+                            binding.cs0598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cs06 = (when {
+                            binding.cs0601.isChecked -> "1"
+                            binding.cs0602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+
+                        cs07 = (when {
+                            binding.cs0701.isChecked -> "1"
+                            binding.cs0702.isChecked -> "2"
+                            binding.cs0703.isChecked -> "3"
+                            binding.cs0704.isChecked -> "4"
+                            binding.cs0706.isChecked -> "6"
+                            binding.cs0707.isChecked -> "7"
+                            binding.cs0708.isChecked -> "8"
+                            binding.cs0709.isChecked -> "9"
+                            binding.cs0710.isChecked -> "10"
+                            binding.cs0711.isChecked -> "11"
+                            binding.cs0712.isChecked -> "12"
+                            binding.cs0713.isChecked -> "13"
+                            binding.cs07962.isChecked -> "962"
+                            binding.cs0714.isChecked -> "14"
+                            else -> "-1"
+                        }),
+
+                        cs08 = (when {
+                            binding.cs0801.isChecked -> "1"
+                            binding.cs0802.isChecked -> "2"
+                            binding.cs0803.isChecked -> "3"
+                            binding.cs0804.isChecked -> "4"
+                            binding.cs0805.isChecked -> "5"
+                            binding.cs0806.isChecked -> "6"
+                            binding.cs0807.isChecked -> "7"
+                            binding.cs0808.isChecked -> "8"
+                            binding.cs0809.isChecked -> "9"
+                            binding.cs0810.isChecked -> "10"
+                            binding.cs0896.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs08a = (when {
+                            binding.cs08a01.isChecked -> "1"
+                            binding.cs08a02.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs09 = (when {
+                            binding.cs0901.isChecked -> "1"
+                            binding.cs0902.isChecked -> "2"
+                            binding.cs0903.isChecked -> "3"
+                            binding.cs0905.isChecked -> "5"
+                            binding.cs0906.isChecked -> "6"
+                            binding.cs0996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs10 = (when {
+                            binding.cs1001.isChecked -> "1"
+                            binding.cs1002.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs11 = (when {
+                            binding.cs1101.isChecked -> "1"
+                            binding.cs1102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs12 = (when {
+                            binding.cs1201.isChecked -> "1"
+                            binding.cs1202.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs13 = (when {
+                            binding.cs1301.isChecked -> "1"
+                            binding.cs1302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs14 = (when {
+                            binding.cs1401.isChecked -> "1"
+                            binding.cs1402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs15 = (when {
+                            binding.cs1501.isChecked -> "1"
+                            binding.cs1502.isChecked -> "2"
+                            binding.cs1503.isChecked -> "3"
+                            binding.cs1596.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs16 = (when {
+                            binding.cs1601.isChecked -> "1"
+                            binding.cs1602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        cs17 = (when {
+                            binding.cs1701.isChecked -> "1"
+                            binding.cs1702.isChecked -> "2"
+                            binding.cs1703.isChecked -> "3"
+                            binding.cs1704.isChecked -> "4"
+                            binding.cs1706.isChecked -> "6"
+                            binding.cs1707.isChecked -> "7"
+                            binding.cs1708.isChecked -> "8"
+                            binding.cs1709.isChecked -> "9"
+                            binding.cs1710.isChecked -> "10"
+                            binding.cs1711.isChecked -> "11"
+                            binding.cs1712.isChecked -> "12"
+                            binding.cs1713.isChecked -> "13"
+                            binding.cs1714.isChecked -> "14"
+                            binding.cs17962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        cs17a = (when {
+                            binding.cs1701.isChecked -> "1"
+                            binding.cs1702.isChecked -> "2"
+                            binding.cs1703.isChecked -> "3"
+                            binding.cs1704.isChecked -> "4"
+                            binding.cs1706.isChecked -> "6"
+                            binding.cs1707.isChecked -> "7"
+                            binding.cs1708.isChecked -> "8"
+                            binding.cs1709.isChecked -> "9"
+                            binding.cs1710.isChecked -> "10"
+                            binding.cs1711.isChecked -> "11"
+                            binding.cs1712.isChecked -> "12"
+                            binding.cs1713.isChecked -> "13"
+                            binding.cs1714.isChecked -> "14"
+                            binding.cs17962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        cs18 = (when {
+                            binding.cs1802.isChecked -> "2"
+                            binding.cs1803.isChecked -> "3"
+                            binding.cs1804.isChecked -> "4"
+                            binding.cs1805.isChecked -> "5"
+                            binding.cs1806.isChecked -> "6"
+                            binding.cs1807.isChecked -> "7"
+                            binding.cs1808.isChecked -> "8"
+                            binding.cs1896.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs19 = (when {
+                            binding.cs1901.isChecked -> "1"
+                            binding.cs1902.isChecked -> "2"
+                            binding.cs1903.isChecked -> "3"
+                            binding.cs1905.isChecked -> "5"
+                            binding.cs1906.isChecked -> "6"
+                            binding.cs1996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        cs20 = (when {
+                            binding.cs2001.isChecked -> "1"
+                            binding.cs2002.isChecked -> "2"
+                            binding.cs2098.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        cs21 = (when {
+                            binding.cs2101.isChecked -> "1"
+                            binding.cs2102.isChecked -> "2"
+                            binding.cs2103.isChecked -> "3"
+                            binding.cs2104.isChecked -> "4"
+                            binding.cs2105.isChecked -> "5"
+                            else -> "-1"
+                        }),
+
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
     }
 }
