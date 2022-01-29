@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <import type="android.view.View" />
+
         <variable
             name="callback"
             type="com.example.naunehalmidline.FourthActivity" />
@@ -20,19 +24,19 @@
 
             <!-- im1_title1  Title   -->
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/HeadingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:text="@string/im1_title1"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:textSize="20sp"
-                        style="@style/HeadingTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im1_title1" />
-
-                </LinearLayout>
+            </LinearLayout>
 
 
             <!-- im01  Radio   -->
@@ -43,19 +47,19 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im01"/>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im01" />
 
                         <TextView
                             style="@style/textview"
@@ -64,21 +68,22 @@
                             android:text="@string/im01" />
 
                     </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im01"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                            style="@style/hradiogroup"
                             android:id="@+id/im01_1"
-                            android:text="@string/im01_1"/>
+                            style="@style/hradiogroup"
+                            android:text="@string/im01_1" />
 
                         <RadioButton
-                        android:id="@+id/im01_2"
-                        android:text="@string/im01_2"
-                            style="@style/hradiogroup" />
+                            android:id="@+id/im01_2"
+                            style="@style/hradiogroup"
+                            android:text="@string/im01_2" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -95,39 +100,40 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im02"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im02" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im02" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im02" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im02"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/im02_1"
-                        android:text="@string/im02_1"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/im02_1"
+                            style="@style/hradiogroup"
+                            android:text="@string/im02_1" />
 
                         <RadioButton
-                        android:id="@+id/im02_2"
-                        android:text="@string/im02_2"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/im02_2"
+                            style="@style/hradiogroup"
+                            android:text="@string/im02_2" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -141,82 +147,83 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im03"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im03" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im03" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im03" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/im03"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                        android:id="@+id/im03_1"
-                        android:text="@string/im03_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_1" />
 
                         <RadioButton
-                        android:id="@+id/im03_2"
-                        android:text="@string/im03_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_2" />
 
                         <RadioButton
-                        android:id="@+id/im03_3"
-                        android:text="@string/im03_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_3" />
 
                         <RadioButton
-                        android:id="@+id/im03_4"
-                        android:text="@string/im03_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_4" />
 
                         <RadioButton
-                        android:id="@+id/im03_5"
-                        android:text="@string/im03_5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_5" />
 
                         <RadioButton
-                        android:id="@+id/im03_6"
-                        android:text="@string/im03_6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_6" />
 
                         <RadioButton
-                        android:id="@+id/im03_96"
-                        android:text="@string/im03_96"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im03_96"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im03_96" />
 
 
                         <EditText
                             android:id="@+id/im03_96x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/im03_96"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/im03_96"
                             android:tag="im03_96"
                             android:text="@{im0396.checked ? im0396x.getText().toString() : ``}"
                             android:visibility="@{im0396.checked ? View.VISIBLE : View.GONE}" />
@@ -260,8 +267,7 @@
                     </LinearLayout>
 
 
-                    <androidx.cardview.widget.CardView
-                        style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -269,8 +275,8 @@
                             android:orientation="vertical">
 
 
-
                             <LinearLayout
+                                android:layout_marginBottom="20dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
@@ -278,16 +284,16 @@
                                 <TextView
                                     style="@style/subtextview"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="match_parent"
-                                    android:text="Day"/>
+                                    android:layout_weight="1"
+                                    android:text="Day" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:background="@color/dullWhiteOverlay"
                                     android:id="@+id/im04_dd"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/dullWhiteOverlay"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"
@@ -300,7 +306,6 @@
                                     app:type="range" />
 
 
-
                             </LinearLayout>
 
                             <LinearLayout
@@ -311,16 +316,16 @@
                                 <TextView
                                     style="@style/subtextview"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="Month" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:background="@color/dullWhiteOverlay"
                                     android:id="@+id/im04_mm"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/dullWhiteOverlay"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"
@@ -342,16 +347,16 @@
                                 <TextView
                                     style="@style/subtextview"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="Years" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:background="@color/dullWhiteOverlay"
                                     android:id="@+id/im04_yy"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/dullWhiteOverlay"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"
@@ -368,30 +373,27 @@
                     </androidx.cardview.widget.CardView>
 
 
-
-
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
 
-
             <!-- im05_title1  Title   -->
 
 
-                <LinearLayout
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/HeadingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:text="@string/im05_title1"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:textSize="20sp"
-                        style="@style/HeadingTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_title1" />
-
-                </LinearLayout>
+            </LinearLayout>
 
 
             <!-- im05_01  Input-Numeric   -->
@@ -448,11 +450,11 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_01_dd"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -473,11 +475,11 @@
                                 android:text="@string/im05_01_mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_01_mm"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -496,11 +498,11 @@
                                 android:text="@string/im05_01_yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_01_yy"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -512,10 +514,7 @@
                         </LinearLayout>
 
 
-
                     </androidx.cardview.widget.CardView>
-
-
 
 
                 </LinearLayout>
@@ -577,11 +576,11 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_02_dd"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -602,11 +601,11 @@
                                 android:text="@string/im05_02_mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_02_mm"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -625,11 +624,11 @@
                                 android:text="@string/im05_02_yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_02_yy"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -700,11 +699,11 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_03_dd"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -725,11 +724,11 @@
                                 android:text="@string/im05_03_mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_03_mm"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -748,11 +747,11 @@
                                 android:text="@string/im05_03_yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_03_yy"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -764,10 +763,7 @@
                         </LinearLayout>
 
 
-
                     </androidx.cardview.widget.CardView>
-
-
 
 
                 </LinearLayout>
@@ -829,11 +825,11 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_04_dd"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -854,11 +850,11 @@
                                 android:text="@string/im05_04_mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_04_mm"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -877,11 +873,11 @@
                                 android:text="@string/im05_04_yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_04_yy"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -893,10 +889,7 @@
                         </LinearLayout>
 
 
-
                     </androidx.cardview.widget.CardView>
-
-
 
 
                 </LinearLayout>
@@ -957,11 +950,11 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_05_dd"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -982,11 +975,11 @@
                                 android:text="@string/im05_05_mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_05_mm"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -1005,11 +998,11 @@
                                 android:text="@string/im05_05_yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_05_yy"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -1021,10 +1014,7 @@
                         </LinearLayout>
 
 
-
                     </androidx.cardview.widget.CardView>
-
-
 
 
                 </LinearLayout>
@@ -1085,11 +1075,11 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_06_dd"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -1110,11 +1100,11 @@
                                 android:text="@string/im05_06_mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_06_mm"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -1133,11 +1123,11 @@
                                 android:text="@string/im05_06_yy" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:background="@color/dullWhiteOverlay"
                                 android:id="@+id/im05_06_yy"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/dullWhiteOverlay"
                                 android:gravity="center"
                                 android:hint="##"
                                 android:inputType="number"
@@ -1149,16 +1139,12 @@
                         </LinearLayout>
 
 
-
                     </androidx.cardview.widget.CardView>
-
-
 
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
 
             <!-- im05_07  Title   -->
@@ -1169,23 +1155,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_07" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_07" />
 
                     <TextView
-                    android:text="@string/im05_07_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_07_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_07_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_07_dd"
                         android:hint="@string/im05_07_dd"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1194,15 +1180,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_07_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_07_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_07_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_07_mm"
                         android:hint="@string/im05_07_mm"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1211,15 +1197,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_07_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_07_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_07_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_07_yy"
                         android:hint="@string/im05_07_yy"
                         android:inputType="number"
                         android:maxLength="4"
@@ -1238,22 +1224,22 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_08" />
-
-                    <TextView
-                    android:text="@string/im05_08_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="@string/im05_08" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_08_dd" />
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/im05_08_dd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="@string/im05_08_dd"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1262,15 +1248,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_08_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_08_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_08_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_08_mm"
                         android:hint="@string/im05_08_mm"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1279,15 +1265,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_08_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_08_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_08_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_08_yy"
                         android:hint="@string/im05_08_yy"
                         android:inputType="number"
                         android:maxLength="4"
@@ -1306,23 +1292,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_09" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_09" />
 
                     <TextView
-                    android:text="@string/im05_09_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_09_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_09_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_09_dd"
                         android:hint="@string/im05_09_dd"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1331,15 +1317,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_09_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_09_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_09_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_09_mm"
                         android:hint="@string/im05_09_mm"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1348,15 +1334,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_09_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_09_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_09_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_09_yy"
                         android:hint="@string/im05_09_yy"
                         android:inputType="number"
                         android:maxLength="4"
@@ -1375,23 +1361,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_10" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_10" />
 
                     <TextView
-                    android:text="@string/im05_10_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_10_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_10_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_10_dd"
                         android:hint="@string/im05_10_dd"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1400,15 +1386,15 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_10_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_10_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_10_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_10_mm"
                         android:hint="@string/im05_10_mm"
                         android:inputType="number"
                         android:maxLength="2"
@@ -1417,21 +1403,21 @@
                         app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_10_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_10_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_10_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_10_yy"
                         android:hint="@string/im05_10_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1444,63 +1430,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_11" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_11" />
 
                     <TextView
-                    android:text="@string/im05_11_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_11_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_11_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_11_dd"
                         android:hint="@string/im05_11_dd"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_11_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_11_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_11_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_11_mm"
                         android:hint="@string/im05_11_mm"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_11_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_11_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_11_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_11_yy"
                         android:hint="@string/im05_11_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1513,63 +1499,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_12" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_12" />
 
                     <TextView
-                    android:text="@string/im05_12_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_12_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_12_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_12_dd"
                         android:hint="@string/im05_12_dd"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_12_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_12_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_12_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_12_mm"
                         android:hint="@string/im05_12_mm"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_12_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_12_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_12_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_12_yy"
                         android:hint="@string/im05_12_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1582,63 +1568,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_13" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_13" />
 
                     <TextView
-                    android:text="@string/im05_13_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_13_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_13_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_13_dd"
                         android:hint="@string/im05_13_dd"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_13_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_13_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_13_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_13_mm"
                         android:hint="@string/im05_13_mm"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_13_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_13_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_13_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_13_yy"
                         android:hint="@string/im05_13_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1651,63 +1637,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_14" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_14" />
 
                     <TextView
-                    android:text="@string/im05_14_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_14_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_14_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_14_dd"
                         android:hint="@string/im05_14_dd"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_14_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_14_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_14_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_14_mm"
                         android:hint="@string/im05_14_mm"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_14_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_14_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_14_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_14_yy"
                         android:hint="@string/im05_14_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1720,63 +1706,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_15" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_15" />
 
                     <TextView
-                    android:text="@string/im05_15_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_15_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_15_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_15_dd"
                         android:hint="@string/im05_15_dd"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_15_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_15_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_15_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_15_mm"
                         android:hint="@string/im05_15_mm"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_15_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_15_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_15_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_15_yy"
                         android:hint="@string/im05_15_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1788,63 +1774,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/im05_16" />
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_16" />
 
                     <TextView
-                    android:text="@string/im05_16_dd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_16_dd" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_16_dd"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_16_dd"
                         android:hint="@string/im05_16_dd"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="31"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_16_mm"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_16_mm" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_16_mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_16_mm"
                         android:hint="@string/im05_16_mm"
                         android:inputType="number"
                         android:maxLength="2"
                         app:maxValue="12"
                         app:minValue="1"
-                        app:type="range"/>
+                        app:type="range" />
 
                     <TextView
-                        android:text="@string/im05_16_yy"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/im05_16_yy" />
 
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/im05_16_yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/im05_16_yy"
                         android:hint="@string/im05_16_yy"
                         android:inputType="number"
                         android:maxLength="4"
                         app:maxValue="2020"
                         app:minValue="2015"
-                        app:type="range"/>
+                        app:type="range" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1857,42 +1843,43 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im07"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im07" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im07" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im07" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im07"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/im07_1"
-                        android:text="@string/im07_1"
-                            style="@style/hradiogroup" />
+                            android:id="@+id/im07_1"
+                            style="@style/hradiogroup"
+                            android:text="@string/im07_1" />
 
                         <RadioButton
-                        android:id="@+id/im07_2"
-                        android:text="@string/im07_2"
-                            style="@style/hradiogroup" />
+                            android:id="@+id/im07_2"
+                            style="@style/hradiogroup"
+                            android:text="@string/im07_2" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1906,49 +1893,48 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im08"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im08" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im08" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im08" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im08"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/im08_1"
-                        android:text="@string/im08_1"
+                            android:id="@+id/im08_1"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im08_1" />
 
                         <RadioButton
-                        android:id="@+id/im08_2"
-                        android:text="@string/im08_2"
+                            android:id="@+id/im08_2"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im08_2" />
 
                         <RadioButton
-                        android:id="@+id/im08_3"
-                        android:text="@string/im08_3"
-                            style="@style/hradiogroup" />
+                            android:id="@+id/im08_3"
+                            style="@style/hradiogroup"
+                            android:text="@string/im08_3" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1962,51 +1948,50 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im08a"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im08a" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im08a" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im08a" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im08a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/im08a_1"
-                        android:text="@string/im08a_1"
+                            android:id="@+id/im08a_1"
                             style="@style/hradiogroup"
+                            android:text="@string/im08a_1"
 
-/>
-
-                        <RadioButton
-                        android:id="@+id/im08a_2"
-                        android:text="@string/im08a_2"
-                            style="@style/hradiogroup"
-/>
+                            />
 
                         <RadioButton
-                        android:id="@+id/im08a_3"
-                        android:text="@string/im08a_3"
+                            android:id="@+id/im08a_2"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im08a_2" />
+
+                        <RadioButton
+                            android:id="@+id/im08a_3"
+                            style="@style/hradiogroup"
+                            android:text="@string/im08a_3" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -2020,27 +2005,28 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im08b"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im08b" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im08b" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im08b" />
+
+                    </LinearLayout>
+
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/im08b"
                         android:layout_width="match_parent"
@@ -2058,142 +2044,141 @@
             <!-- im08c  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVim08c"
-                style="@style/cardView"
-                >
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im08c"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im08c" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im08c" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im08c" />
+
+                    </LinearLayout>
 
                     <LinearLayout
-                        style="@style/checkbox"
                         android:id="@+id/im08ccheck"
+                        style="@style/checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:tag="0">
 
                         <CheckBox
-                        android:id="@+id/im08c01"
-                        android:text="@string/im08c01"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c01" />
 
                         <CheckBox
-                        android:id="@+id/im08c02"
-                        android:text="@string/im08c02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c02" />
 
                         <CheckBox
-                        android:id="@+id/im08c03"
-                        android:text="@string/im08c03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c03" />
 
                         <CheckBox
-                        android:id="@+id/im08c04"
-                        android:text="@string/im08c04"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c04" />
 
                         <CheckBox
-                        android:id="@+id/im08c05"
-                        android:text="@string/im08c05"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c05" />
 
                         <CheckBox
-                        android:id="@+id/im08c06"
-                        android:text="@string/im08c06"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c06" />
 
                         <CheckBox
-                        android:id="@+id/im08c07"
-                        android:text="@string/im08c07"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c07" />
 
                         <CheckBox
-                        android:id="@+id/im08c08"
-                        android:text="@string/im08c08"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c08" />
 
                         <CheckBox
-                        android:id="@+id/im08c09"
-                        android:text="@string/im08c09"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c09" />
 
 
                         <CheckBox
-                        android:id="@+id/im08c10"
-                        android:text="@string/im08c10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c10" />
 
                         <CheckBox
-                        android:id="@+id/im08c11"
-                        android:text="@string/im08c11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c11" />
 
                         <CheckBox
-                        android:id="@+id/im08c12"
-                        android:text="@string/im08c12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c12" />
 
                         <CheckBox
-                        android:id="@+id/im08c13"
-                        android:text="@string/im08c13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im08c13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c13" />
 
                         <CheckBox
-                        android:id="@+id/im08c98"
-                        android:text="@string/im08c98"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im08c98"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im08c98" />
 
                         <CheckBox
-                        android:id="@+id/im0896"
-                        android:text="@string/im0896"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im0896"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im0896" />
 
                         <EditText
                             android:id="@+id/im0896x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/im0896"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/im0896"
                             android:tag="im0896"
                             android:text="@{im0896.checked ? im0896x.getText().toString() : ``}"
-                            android:visibility="@{im0896.checked ? View.VISIBLE : View.GONE}"/>
+                            android:visibility="@{im0896.checked ? View.VISIBLE : View.GONE}" />
 
                     </LinearLayout>
 
@@ -2208,53 +2193,50 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im09"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im09" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im09" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im09" />
+
+                    </LinearLayout>
 
 
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im09"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/im09_1"
-                        android:text="@string/im09_1"
+                            android:id="@+id/im09_1"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im09_1" />
 
 
                         <RadioButton
-                        android:id="@+id/im09_2"
-                        android:text="@string/im09_2"
+                            android:id="@+id/im09_2"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im09_2" />
 
                         <RadioButton
-                        android:id="@+id/im09_3"
-                        android:text="@string/im09_3"
+                            android:id="@+id/im09_3"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im09_3" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -2268,50 +2250,48 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im10"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im10" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im10" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im10" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/im10"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/im10_1"
-                        android:text="@string/im10_1"
+                            android:id="@+id/im10_1"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im10_1" />
 
                         <RadioButton
-                        android:id="@+id/im10_2"
-                        android:text="@string/im10_2"
+                            android:id="@+id/im10_2"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im10_2" />
 
                         <RadioButton
-                        android:id="@+id/im10_3"
-                        android:text="@string/im10_3"
+                            android:id="@+id/im10_3"
                             style="@style/hradiogroup"
-/>
+                            android:text="@string/im10_3" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -2325,136 +2305,137 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="im10a"/>
-
-                    <TextView
-                        style="@style/textview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/im10a" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="im10a" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/im10a" />
+
+                    </LinearLayout>
+
                     <LinearLayout
-                        style="@style/checkbox"
                         android:id="@+id/im10acheck"
+                        style="@style/checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:tag="0">
 
                         <CheckBox
-                        android:id="@+id/im10a01"
-                        android:text="@string/im10a01"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im10a01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a01" />
 
                         <CheckBox
-                        android:id="@+id/im10a02"
-                        android:text="@string/im10a02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im10a02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a02" />
 
                         <CheckBox
-                        android:id="@+id/im10a03"
-                        android:text="@string/im10a03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a03" />
 
                         <CheckBox
-                        android:id="@+id/im10a04"
-                        android:text="@string/im10a04"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a04" />
 
                         <CheckBox
-                        android:id="@+id/im10a05"
-                        android:text="@string/im10a05"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a05"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a05" />
 
 
                         <CheckBox
-                        android:id="@+id/im10a06"
-                        android:text="@string/im10a06"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a06" />
 
                         <CheckBox
-                        android:id="@+id/im10a07"
-                        android:text="@string/im10a07"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im10a07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a07" />
 
                         <CheckBox
-                        android:id="@+id/im10a08"
-                        android:text="@string/im10a08"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a08" />
 
                         <CheckBox
-                        android:id="@+id/im10a09"
-                        android:text="@string/im10a09"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a09" />
 
                         <CheckBox
-                        android:id="@+id/im10a10"
-                        android:text="@string/im10a10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im10a10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a10" />
 
                         <CheckBox
-                        android:id="@+id/im10a11"
-                        android:text="@string/im10a11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a11" />
 
                         <CheckBox
-                        android:id="@+id/im10a12"
-                        android:text="@string/im10a12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a12" />
 
                         <CheckBox
-                        android:id="@+id/im10a13"
-                        android:text="@string/im10a13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a13" />
 
                         <CheckBox
-                        android:id="@+id/im10a98"
-                        android:text="@string/im10a98"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                            android:id="@+id/im10a98"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a98" />
 
                         <CheckBox
-                        android:id="@+id/im10a96"
-                        android:text="@string/im10a96"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/im10a96"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/im10a96" />
 
 
                         <EditText
                             android:id="@+id/im10a96x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/im10a96"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/im10a96"
                             android:tag="im10a96"
                             android:text="@{im10a96.checked ? im10a96x.getText().toString() : ``}"
-                            android:visibility="@{im10a96.checked ? View.VISIBLE : View.GONE}"/>
+                            android:visibility="@{im10a96.checked ? View.VISIBLE : View.GONE}" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -2474,8 +2455,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:background="@color/red"
-                    android:textColor="@color/white"
-                    android:text="Cancel" />
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
 
 
                 <Button
@@ -2484,8 +2465,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:background="@color/green"
-                    android:textColor="@color/white"
-                    android:text="Save" />
+                    android:text="Save"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <Button
@@ -2494,8 +2475,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Fourth 2" />
+                android:text="Fourth 2"
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </ScrollView>

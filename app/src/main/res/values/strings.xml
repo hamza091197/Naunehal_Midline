@@ -440,7 +440,7 @@
     <string name="im12a">How many times was Polio vaccine received during a large campaign? </string>
     <string name="im12a1">Number of times</string>
     <string name="im12_98">Don’t know</string>
-    <string name="im1298">Dont know</string>
+    <string name="im12a98">Dont know</string>
     <string name="im13">The last time (name) received the polio drops, did (he/she) also get an injection to protect against polio?   Probe to ensure that both were given, drops and injection</string>
     <string name="im13_1">Yes </string>
     <string name="im13_2">No  </string>

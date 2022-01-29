@@ -25,7 +25,7 @@ class FourthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.im01.checkedRadioButtonId == -1){
+            /*if (binding.im01.checkedRadioButtonId == -1){
                 binding.im01.requestFocus()
                 binding.im012.error = "RadioButton Not Selected"
                 return@setOnClickListener
@@ -42,7 +42,7 @@ class FourthActivity : AppCompatActivity() {
             }
             else {
                 binding.im022.error = null
-            }
+            }*/
 
             if (binding.im03.checkedRadioButtonId == -1){
                 binding.im03.requestFocus()
@@ -84,26 +84,26 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.im0501Dd.text.toString() == "44" ||
-                binding.im0501Dd.text.toString() == "66" ||
-                binding.im0501Dd.text.toString() == "88" ||
-                binding.im0501Dd.text.toString() == "97"){
-                binding.im0501Mm.text = null
-                binding.im0501Yy.text = null
-                binding.im0501Mm.error = null
-                binding.im0501Yy.error = null
-                return@setOnClickListener
-            } else
-            {
-                binding.im0501Mm.error = "Enter months"
-                binding.im0501Yy.error = "Years"
-            }
-
             if (!binding.im0501Dd.isRangeTextValidate){
                 binding.im0501Dd.requestFocus()
                 binding.im0501Dd.error = "The range is from 1 to 31"
                 return@setOnClickListener
             }
+
+            if (binding.im0501Dd.text.toString() == "44" ||
+                binding.im0501Dd.text.toString() == "66" ||
+                binding.im0501Dd.text.toString() == "88" ||
+                binding.im0501Dd.text.toString() == "97"){
+                binding.im0501Mm.error = null
+                binding.im0501Yy.error = null
+            } else
+            {
+                binding.im0501Mm.error = "Enter Months"
+                binding.im0501Yy.error = "Enter Years"
+                return@setOnClickListener
+            }
+
+
 
             if (binding.im0501Mm.text.toString().trim().isEmpty()){
                 binding.im0501Mm.requestFocus()

@@ -339,6 +339,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnFourthtwo.setOnClickListener {
+            val intent = Intent(this, FourthActivity2::class.java)
+            startActivity(intent)
+        }
+
         binding.btnEnd.setOnClickListener {
             createDialog()
 

@@ -11,7 +11,7 @@
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/ic_search.xml" value="0.33046875" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/drawable/textview_background_grad.xml" value="0.2203125" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/font/roboto.xml" value="0.23076923076923078" />
-        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_fourth.xml" value="0.6597222222222222" />
+        <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_fourth.xml" value="0.33" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_fourth2.xml" value="0.5" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_main.xml" value="0.1726872246696035" />
         <entry key="..\:/Users/HamzaKhalid/AndroidStudioProjects/NaunehalMidline/app/src/main/res/layout/activity_second.xml" value="0.22606689734717417" />
@@ -26,5 +26,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="Naunehal_Midline.app" />
+      </set>
+    </option>
   </component>
 </project>
