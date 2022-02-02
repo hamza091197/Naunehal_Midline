@@ -886,21 +886,21 @@
     </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:id="@+id/skip_23a"
+            android:id="@+id/skip_231"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="@{im231.checked ? View.GONE : View.VISIBLE}">
 
             <LinearLayout
-                android:id="@+id/skip_23b"
+                android:id="@+id/skip_232"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="@{im232.checked ? View.GONE : View.VISIBLE}">
 
                 <LinearLayout
-                    android:id="@+id/skip_23a"
+                    android:id="@+id/skip_233"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

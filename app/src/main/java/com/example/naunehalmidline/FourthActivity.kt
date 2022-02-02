@@ -15,6 +15,7 @@ class FourthActivity : AppCompatActivity() {
     lateinit var binding: ActivityFourthBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityFourthBinding.inflate(layoutInflater)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fourth)
         binding.callback
 

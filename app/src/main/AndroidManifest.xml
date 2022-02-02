@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NaunehalMidline">
-
+        <activity
+            android:name=".FifthActivity"
+            android:exported="false" />
         <activity
             android:name=".FourthActivity2"
             android:exported="false"
