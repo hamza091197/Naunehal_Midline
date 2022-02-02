@@ -886,11 +886,18 @@
     </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:id="@+id/skip_23"
+            android:id="@+id/skip_23a"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="@{im232.checked ? View.GONE : View.VISIBLE}">
+
+            <LinearLayout
+                android:id="@+id/skip_23b"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="@{im233.checked ? View.GONE : View.VISIBLE}">
 
     <!-- im23a  Radio   -->
     <androidx.cardview.widget.CardView
@@ -972,60 +979,125 @@
                     android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                     android:tag="im23a_96"
                     android:text="@{im23a96.checked ? im23a96x.getText().toString() : ``}"
-                    android:visibility="@{im23a96.checked ? View.VISIBLE : View.GONE}"/></RadioGroup> </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- im23b  Title   -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/fldGrpCVim23b"
-        style="@style/cardView">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/im23b" />
-
-            <TextView
-                android:text="@string/im23b_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"  />
-
-
-            <com.edittextpicker.aliazaz.EditTextPicker
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/im23b_1"
-                android:hint="@string/im23b_1"
-                android:inputType="number"
-                android:maxLength="2"
-                app:maxValue="10"
-                app:minValue="1"
-                app:type="range"/>
-
-            <TextView
-                android:text="@string/im23b_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"  />
-
-
-            <com.edittextpicker.aliazaz.EditTextPicker
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/im23b_2"
-                android:hint="@string/im23b_2"
-                android:inputType="number"
-                android:maxLength="2"
-                app:maxValue="59"
-                app:minValue="1"
-                app:type="range"/>
-
+                    android:visibility="@{im23a96.checked ? View.VISIBLE : View.GONE}"/>
+            </RadioGroup>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+                <!-- im23b  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVim23b"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="im23b" />
+
+                            <TextView
+                                style="@style/textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center_vertical"
+                                android:paddingStart="10dp"
+                                android:text="@string/im23b"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/cardView">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_marginBottom="2dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/subtextview"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="Day" />
+
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        android:id="@+id/im23b1"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@color/dullWhiteOverlay"
+                                        android:gravity="center"
+                                        android:hint="##"
+                                        android:inputType="number"
+                                        android:maxLength="2"
+                                        android:paddingStart="10dp"
+                                        app:defaultValue="999"
+                                        app:maxValue="10"
+                                        app:minValue="1"
+                                        app:required="true"
+                                        app:type="range" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_marginBottom="2dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/subtextview"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Month" />
+
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        android:id="@+id/im23b2"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@color/dullWhiteOverlay"
+                                        android:gravity="center"
+                                        android:hint="##"
+                                        android:inputType="number"
+                                        android:maxLength="2"
+                                        android:paddingStart="10dp"
+                                        app:defaultValue="999"
+                                        app:maxValue="60"
+                                        app:minValue="1"
+                                        app:required="true"
+                                        app:type="range" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
     <!-- im24  Radio   -->
     <androidx.cardview.widget.CardView
@@ -1254,7 +1326,7 @@
     </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
+        </LinearLayout>
     <!--EndButton LinearLayout-->
     <LinearLayout
         android:layout_width="match_parent"
