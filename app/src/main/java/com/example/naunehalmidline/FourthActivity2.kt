@@ -146,6 +146,7 @@ class FourthActivity2 : AppCompatActivity() {
 
 
             })
+
         binding.im23.setOnCheckedChangeListener { radioGroup, i ->
             if (binding.im234.isChecked){
                 binding.im23a.clearCheck()
