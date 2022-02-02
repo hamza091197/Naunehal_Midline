@@ -274,6 +274,7 @@ class FourthActivity : AppCompatActivity() {
         }
 
         im()
+
     }
     private fun im(){
         binding.im0501Dd.addTextChangedListener(object : TextWatcher {
@@ -336,9 +337,65 @@ class FourthActivity : AppCompatActivity() {
             }
         })
 
-        if (binding.im022.isChecked){
-            binding.im03.clearCheck()
-            binding.im0396x.text = null
+        binding.im02.setOnCheckedChangeListener { radioGroup, i ->
+            if (binding.im021.isChecked) {
+                binding.im03.clearCheck()
+                binding.im0396x.text = null
+                binding.im04Dd.text = null
+                binding.im04Mm.text = null
+                binding.im04Yy.text = null
+                binding.im0501Dd.text = null
+                binding.im0501Mm.text = null
+                binding.im0501Yy.text = null
+                binding.im0502Dd.text = null
+                binding.im0502Mm.text = null
+                binding.im0502Yy.text = null
+                binding.im0503Dd.text = null
+                binding.im0503Mm.text = null
+                binding.im0503Yy.text = null
+                binding.im0504Dd.text = null
+                binding.im0504Mm.text = null
+                binding.im0504Yy.text = null
+                binding.im0505Dd.text = null
+                binding.im0505Mm.text = null
+                binding.im0505Yy.text = null
+                binding.im0506Dd.text = null
+                binding.im0506Mm.text = null
+                binding.im0506Yy.text = null
+                binding.im0507Dd.text = null
+                binding.im0507Mm.text = null
+                binding.im0507Yy.text = null
+                binding.im0508Dd.text = null
+                binding.im0508Mm.text = null
+                binding.im0508Yy.text = null
+                binding.im0509Dd.text = null
+                binding.im0509Mm.text = null
+                binding.im0509Yy.text = null
+                binding.im0510Dd.text = null
+                binding.im0510Mm.text = null
+                binding.im0510Yy.text = null
+                binding.im0511Dd.text = null
+                binding.im0511Mm.text = null
+                binding.im0511Yy.text = null
+                binding.im0512Dd.text = null
+                binding.im0512Mm.text = null
+                binding.im0512Yy.text = null
+                binding.im0513Dd.text = null
+                binding.im0513Mm.text = null
+                binding.im0513Yy.text = null
+                binding.im0514Dd.text = null
+                binding.im0514Mm.text = null
+                binding.im0514Yy.text = null
+                binding.im0515Dd.text = null
+                binding.im0515Mm.text = null
+                binding.im0515Yy.text = null
+                binding.im0516Dd.text = null
+                binding.im0516Mm.text = null
+                binding.im0516Yy.text = null
+                binding.im07.clearCheck()
+                binding.im08.clearCheck()
+            }
         }
     }
+
     }

@@ -885,6 +885,13 @@
                     android:visibility="@{im236.checked ? View.VISIBLE : View.GONE}"/></RadioGroup> </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+        <LinearLayout
+            android:id="@+id/skip_23"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{im232.checked ? View.GONE : View.VISIBLE}">
+
     <!-- im23a  Radio   -->
     <androidx.cardview.widget.CardView
         android:id="@+id/fldGrpCVim23a"
@@ -1245,6 +1252,8 @@
             </RadioGroup>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
 
     <!--EndButton LinearLayout-->
     <LinearLayout
