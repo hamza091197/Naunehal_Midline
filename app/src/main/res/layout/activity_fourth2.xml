@@ -890,14 +890,21 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="@{im232.checked ? View.GONE : View.VISIBLE}">
+            android:visibility="@{im231.checked ? View.GONE : View.VISIBLE}">
 
             <LinearLayout
                 android:id="@+id/skip_23b"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="@{im233.checked ? View.GONE : View.VISIBLE}">
+                android:visibility="@{im232.checked ? View.GONE : View.VISIBLE}">
+
+                <LinearLayout
+                    android:id="@+id/skip_23a"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{im233.checked ? View.GONE : View.VISIBLE}">
 
     <!-- im23a  Radio   -->
     <androidx.cardview.widget.CardView
@@ -1325,6 +1332,8 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+            <!--Skip 23 end-->
+        </LinearLayout>
         </LinearLayout>
         </LinearLayout>
     <!--EndButton LinearLayout-->

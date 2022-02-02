@@ -149,7 +149,19 @@ class FourthActivity2 : AppCompatActivity() {
 
             })
         binding.im23.setOnCheckedChangeListener { radioGroup, i ->
-            if (binding.im232.isChecked && binding.im233.isChecked()){
+            if (binding.im234.isChecked){
+                binding.im23a.clearCheck()
+                binding.im23a96x.text = null
+                binding.im23b1.text = null
+                binding.im23b2.text = null
+                binding.im24.clearCheck()
+                binding.im2496x.text = null
+                binding.im25.clearCheck()
+            }
+        }
+
+        binding.im23.setOnCheckedChangeListener { radioGroup, i ->
+            if (binding.im236.isChecked){
                 binding.im23a.clearCheck()
                 binding.im23a96x.text = null
                 binding.im23b1.text = null
