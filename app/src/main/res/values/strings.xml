@@ -583,7 +583,7 @@
     <string name="pd08b">During your last pregnancy, did you receive any tetanus injections?</string>
     <string name="pd08b01">Yes</string>
     <string name="pd08b02">No</string>
-    <string name="pd08b98">Don't know</string>
+    <string name="pd08b98">Dont know</string>
     <string name="pd08c">How many times did you receive tetanus injection?</string>
     <string name="pd09">Have you ever taken any iron folic acid (IFA) while you were pregnant?</string>
     <string name="pd10">How often did you take IFA during pregnancy?</string>
@@ -603,7 +603,7 @@
     <string name="pd1202">Nurse</string>
     <string name="pd1203">Midwife</string>
     <string name="pd1204">LHV</string>
-    <string name="pd1205">سی ایم ڈبلیو</string>
+    <string name="pd1205">CMW</string>
     <string name="pd12_title2">OTHER PERSON</string>
     <string name="pd1206">Dai-TBA</string>
     <string name="pd1207">Lady Health Worker</string>
@@ -665,7 +665,7 @@
     <string name="pd23">After the cord was cut and until it fell off, was anything applied to the cord?</string>
     <string name="pd2301">Yes</string>
     <string name="pd2302">No</string>
-    <string name="pd2398">Don't know</string>
+    <string name="pd2398">Dont know</string>
     <string name="pd24">What was applied to the cord? [Multiple responses]</string>
     <string name="pd2401">Chlorhexidine</string>
     <string name="pd2402">Other antiseptic (alcohol, spirit, gentian violet, Dettol)</string>

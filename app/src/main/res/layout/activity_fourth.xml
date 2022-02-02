@@ -30,10 +30,10 @@
 
                 <TextView
                     style="@style/HeadingTitle"
+                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/im1_title1"
-                    android:textSize="20sp" />
+                    android:text="@string/im1_title1" />
 
             </LinearLayout>
 
@@ -368,8 +368,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -526,8 +526,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -673,8 +673,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -819,8 +819,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -966,8 +966,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1111,8 +1111,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1256,8 +1256,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1401,8 +1401,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1546,8 +1546,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1690,8 +1690,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1835,8 +1835,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -1979,8 +1979,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -2123,8 +2123,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -2267,8 +2267,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -2411,8 +2411,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -2555,8 +2555,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 
@@ -2699,8 +2699,8 @@
                                     android:maxLength="4"
                                     android:paddingStart="10dp"
                                     app:defaultValue="999"
-                                    app:maxValue="2015"
-                                    app:minValue="2020"
+                                    app:maxValue="2020"
+                                    app:minValue="2015"
                                     app:required="true"
                                     app:type="range" />
 

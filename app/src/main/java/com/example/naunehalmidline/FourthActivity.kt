@@ -115,38 +115,9 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.im0501Dd.text.toString() == "44" ||
-                binding.im0501Dd.text.toString() == "66" ||
-                binding.im0501Dd.text.toString() == "88" ||
-                binding.im0501Dd.text.toString() == "97"){
-                binding.im0501Mm.error = null
-                binding.im0501Yy.error = null
-
-
-            } else
-            {
-                binding.im0501Mm.error = "Enter Months"
-                binding.im0501Yy.error = "Enter Years"
-                return@setOnClickListener
-            }
-
             if (binding.im0502Dd.text.toString().trim().isEmpty()){
                 binding.im0502Dd.requestFocus()
                 binding.im0502Dd.error = "Enter Day"
-                return@setOnClickListener
-            }
-
-            if (binding.im0502Dd.text.toString() == "44" ||
-                binding.im0502Dd.text.toString() == "66" ||
-                binding.im0502Dd.text.toString() == "88" ||
-                binding.im0502Dd.text.toString() == "97"){
-                binding.im0502Mm.error = null
-                binding.im0502Yy.error = null
-
-            } else
-            {
-                binding.im0502Mm.error = "Enter months"
-                binding.im0502Yy.error = "Enter Years"
                 return@setOnClickListener
             }
 
@@ -272,6 +243,34 @@ class FourthActivity : AppCompatActivity() {
                 binding.im10a96x.error = "Other"
                 return@setOnClickListener
             }
+
+            if (binding.im0501Dd.text.toString() == "44" ||
+                binding.im0501Dd.text.toString() == "66" ||
+                binding.im0501Dd.text.toString() == "88" ||
+                binding.im0501Dd.text.toString() == "97"){
+                binding.im0501Mm.error = null
+                binding.im0501Yy.error = null
+            } else
+            {
+                binding.im0501Mm.error = "Enter Months"
+                binding.im0501Yy.error = "Enter Years"
+                return@setOnClickListener
+            }
+            
+            if (binding.im0502Dd.text.toString() == "44" ||
+                binding.im0502Dd.text.toString() == "66" ||
+                binding.im0502Dd.text.toString() == "88" ||
+                binding.im0502Dd.text.toString() == "97"){
+                binding.im0502Mm.error = null
+                binding.im0502Yy.error = null
+
+            } else
+            {
+                binding.im0502Mm.error = "Enter months"
+                binding.im0502Yy.error = "Enter Years"
+                return@setOnClickListener
+            }
+
         }
 
         im()
@@ -290,20 +289,24 @@ class FourthActivity : AppCompatActivity() {
                 // TODO Auto-generated method stub
             }
             override fun afterTextChanged(s: Editable) {
+                /*fun rand(start: Int, end: Int): Int {
+                    require(start <= end) { "Illegal Argument" }
+                    return (Math.random() * (end - start + 1)).toInt() + start
+                }*/
 
-                if (binding.im0501Dd.text.toString() == "44" ||
-                    binding.im0501Dd.text.toString() == "66" ||
-                    binding.im0501Dd.text.toString() == "88" ||
-                    binding.im0501Dd.text.toString() == "97"){
-                    binding.im0501Mm.text = null
+
+
+              /*  if (binding.im0501Dd.text.toString() == "44-97"){
+                   binding.im0501Mm.text = null
                     binding.im0501Yy.text = null
                     binding.im0501Mm.setEnabled(false)
                     binding.im0501Yy.setEnabled(false)
+                    binding.im0501Dd.rangedefaultvalue = binding.im0501Dd.text.toString().toFloat()
                 }
                 else {
                     binding.im0501Mm.setEnabled(true)
                     binding.im0501Yy.setEnabled(true)
-                }
+                }*/
 
             }
         })

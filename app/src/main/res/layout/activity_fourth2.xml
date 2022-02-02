@@ -111,9 +111,6 @@
 
             </LinearLayout>
 
-
-
-
                 <com.edittextpicker.aliazaz.EditTextPicker
                     android:id="@+id/im12_1x"
                     android:layout_width="match_parent"

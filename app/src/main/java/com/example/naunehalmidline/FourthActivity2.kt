@@ -75,6 +75,7 @@ class FourthActivity2 : AppCompatActivity() {
         binding.im1298.setOnCheckedChangeListener { compoundButton, b ->
 
             if (binding.im1298.isChecked){
+                binding.im121x.error = null
                 binding.im121x.text = null
                 binding.im121x.setEnabled(false)
 
@@ -84,9 +85,6 @@ class FourthActivity2 : AppCompatActivity() {
             }
 
         }
-
-
-
 
         binding.im121x.addTextChangedListener(
             object : TextWatcher{
