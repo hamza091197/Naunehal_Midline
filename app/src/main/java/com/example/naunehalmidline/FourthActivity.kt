@@ -90,21 +90,6 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            if (binding.im0501Dd.text.toString() == "44" ||
-                binding.im0501Dd.text.toString() == "66" ||
-                binding.im0501Dd.text.toString() == "88" ||
-                binding.im0501Dd.text.toString() == "97"){
-                binding.im0501Mm.error = null
-                binding.im0501Yy.error = null
-            } else
-            {
-                binding.im0501Mm.error = "Enter Months"
-                binding.im0501Yy.error = "Enter Years"
-                return@setOnClickListener
-            }
-
-
-
             if (binding.im0501Mm.text.toString().trim().isEmpty()){
                 binding.im0501Mm.requestFocus()
                 binding.im0501Mm.error = "Enter Month"
@@ -129,6 +114,20 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (binding.im0501Dd.text.toString() == "44" ||
+                binding.im0501Dd.text.toString() == "66" ||
+                binding.im0501Dd.text.toString() == "88" ||
+                binding.im0501Dd.text.toString() == "97"){
+                binding.im0501Mm.error = null
+                binding.im0501Yy.error = null
+
+
+            } else
+            {
+                binding.im0501Mm.error = "Enter Months"
+                binding.im0501Yy.error = "Enter Years"
+                return@setOnClickListener
+            }
 
             if (binding.im0502Dd.text.toString().trim().isEmpty()){
                 binding.im0502Dd.requestFocus()
@@ -140,15 +139,14 @@ class FourthActivity : AppCompatActivity() {
                 binding.im0502Dd.text.toString() == "66" ||
                 binding.im0502Dd.text.toString() == "88" ||
                 binding.im0502Dd.text.toString() == "97"){
-                binding.im0502Mm.text = null
-                binding.im0502Yy.text = null
                 binding.im0502Mm.error = null
                 binding.im0502Yy.error = null
-                return@setOnClickListener
+
             } else
             {
                 binding.im0502Mm.error = "Enter months"
-                binding.im0502Yy.error = "Years"
+                binding.im0502Yy.error = "Enter Years"
+                return@setOnClickListener
             }
 
             if (!binding.im0502Dd.isRangeTextValidate){
@@ -337,5 +335,10 @@ class FourthActivity : AppCompatActivity() {
 
             }
         })
+
+        if (binding.im022.isChecked){
+            binding.im03.clearCheck()
+            binding.im0396x.text = null
+        }
     }
     }
