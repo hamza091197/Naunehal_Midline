@@ -693,8 +693,7 @@
             <!-- pd08a  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVpd08a"
-                style="@style/cardView"
-                >
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -727,6 +726,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:tag="0">
+
                         <CheckBox
                         android:id="@+id/pd08a01"
                         android:text="@string/pd08a01"

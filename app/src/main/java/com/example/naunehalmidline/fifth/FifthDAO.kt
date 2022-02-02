@@ -7,15 +7,15 @@ import androidx.room.*
 interface FifthDAO {
 
     @Insert
-     fun insert(second: Second)
+     fun insert(fifth: Fifth)
 
     @Update
-     fun update(second: Second)
+     fun update(fifth: Fifth)
 
    /* @Delete
-    fun delete(second: Second)*/
+    fun delete(fifth: Fifth)*/
 
-    @Query("Select * FROM Second")
-    fun getcontact() : LiveData<List<Second>>
+    @Query("Select * FROM Fifth")
+    fun getcontact() : LiveData<List<Fifth>>
 
 }

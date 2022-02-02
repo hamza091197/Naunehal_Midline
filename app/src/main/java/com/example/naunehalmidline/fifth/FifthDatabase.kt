@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Second::class], version = 1)
+@Database(entities = [Fifth::class], version = 1)
 abstract class FifthDatabase : RoomDatabase() {
-    abstract fun SecondDao(): SecondDAO
+    abstract fun FifthDao(): FifthDAO
 
 
     companion object {
@@ -26,7 +26,7 @@ abstract class FifthDatabase : RoomDatabase() {
                     Instance = Room.databaseBuilder(
                         context.applicationContext,
                         FifthDatabase::class.java,
-                        "secondDB"
+                        "fifthDB"
                     ).build()
 
                 }

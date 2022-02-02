@@ -1,21 +1,33 @@
 package com.example.naunehalmidline
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.CheckBox
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityFifthBinding
+import com.example.naunehalmidline.fifth.Fifth
+import com.example.naunehalmidline.fifth.FifthDatabase
+import com.example.naunehalmidline.third.Third
+import com.example.naunehalmidline.third.ThirdDatabase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class FifthActivity : AppCompatActivity() {
     lateinit var binding: ActivityFifthBinding
+    lateinit var database: FifthDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fifth)
         binding.callback
 
+        database = FifthDatabase.getDatabase(this)
         binding.btnContinue.setOnClickListener {
 
             if (binding.pd01.text.toString().trim().isEmpty()){
@@ -404,6 +416,12 @@ class FifthActivity : AppCompatActivity() {
             else {
                 binding.pd2401.error = null
             }
+
+            val refresh = Intent(this, FifthActivity::class.java)
+            startActivity(refresh)
+
+            insertFifth()
+            updateFifth()
         }
 
         binding.pd0798.setOnCheckedChangeListener { compoundButton, b ->
@@ -443,6 +461,467 @@ class FifthActivity : AppCompatActivity() {
 
 
             })
+    }
+
+
+    fun insertFifth() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.FifthDao().insert(
+                    Fifth(
+                        0,
+                        pd01 = binding.pd01.text.toString(),
+                        pd02 = binding.pd02.text.toString(),
+                        pd0596x = binding.pd0596x.text.toString(),
+                        pd06961x = binding.pd06961x.text.toString(),
+                        pd06962x = binding.pd06962x.text.toString(),
+                        pd0701x = binding.pd0701x.text.toString(),
+                        pd08a96x = binding.pd08a96x.text.toString(),
+                        pd08c = binding.pd08c.text.toString(),
+                        pd1101 = binding.pd1101.text.toString(),
+                        pd1102 = binding.pd1102.text.toString(),
+                        pd1296x = binding.pd1296x.text.toString(),
+                        pd13961x = binding.pd13961x.text.toString(),
+                        pd13962x = binding.pd13962x.text.toString(),
+                        pd1496x = binding.pd1496x.text.toString(),
+                        pd1696x = binding.pd1696x.text.toString(),
+                        pd1701 = binding.pd1701.text.toString(),
+                        pd1702 = binding.pd1702.text.toString(),
+                        pd1703 = binding.pd1703.text.toString(),
+                        pd18 = binding.pd18.text.toString(),
+                        pd2096x = binding.pd2096x.text.toString(),
+                        pd2101 = binding.pd2101.text.toString(),
+                        pd2102 = binding.pd2102.text.toString(),
+                        pd2103 = binding.pd2103.text.toString(),
+                        pd22 = binding.pd22.text.toString(),
+
+                        pd03 = (when {
+                            binding.pd0301.isChecked -> "1"
+                            binding.pd0302.isChecked -> "2"
+                            binding.pd0303.isChecked -> "3"
+                            binding.pd0304.isChecked -> "4"
+                           else -> "-1"
+                        }),
+
+                        pd04 = (when  {
+                            binding.pd0401.isChecked -> "1"
+                            binding.pd0402.isChecked -> "2"
+                            binding.pd0498.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd05 = (when {
+                            binding.pd0501.isChecked -> "1"
+                            binding.pd0502.isChecked -> "2"
+                            binding.pd0503.isChecked -> "3"
+                            binding.pd0504.isChecked -> "4"
+                            binding.pd0506.isChecked -> "6"
+                            binding.pd0507.isChecked -> "7"
+                            binding.pd0508.isChecked -> "8"
+                            binding.pd0509.isChecked -> "9"
+                            binding.pd0596.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd06 = (when {
+                            binding.pd0601.isChecked -> "1"
+                            binding.pd0602.isChecked -> "2"
+                            binding.pd0603.isChecked -> "3"
+                            binding.pd0604.isChecked -> "4"
+                            binding.pd0605.isChecked -> "5"
+                            binding.pd0607.isChecked -> "7"
+                            binding.pd0608.isChecked -> "8"
+                            binding.pd0609.isChecked -> "9"
+                            binding.pd0610.isChecked -> "10"
+                            binding.pd06962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        pd07 = (when {
+                            binding.pd0798.isChecked -> "1"
+                            else -> "-1"
+                        }),
+
+                        pd08 = (when {
+                            binding.pd0801.isChecked -> "1"
+                            binding.pd0802.isChecked -> "2"
+                            binding.pd0803.isChecked -> "3"
+                            binding.pd0805.isChecked -> "5"
+                            binding.pd0806.isChecked -> "6"
+                            else -> "-1"
+                        }),
+
+                        pd08a = (when {
+                            binding.pd08a01.isChecked -> "1"
+                            binding.pd08a02.isChecked -> "2"
+                            binding.pd08a03.isChecked -> "3"
+                            binding.pd08a04.isChecked -> "4"
+                            binding.pd08a06.isChecked -> "6"
+                            binding.pd08a07.isChecked -> "7"
+                            binding.pd08a08.isChecked -> "8"
+                            binding.pd08a09.isChecked -> "9"
+                            binding.pd08a96.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd08b = (when {
+                            binding.pd08b01.isChecked -> "1"
+                            binding.pd08b02.isChecked -> "2"
+                            binding.pd08b98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd09 = (when {
+                            binding.pd0901.isChecked -> "1"
+                            binding.pd0902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        pd10 = (when {
+                            binding.pd1001.isChecked -> "1"
+                            binding.pd1002.isChecked -> "2"
+                            binding.pd1003.isChecked -> "3"
+                            binding.pd1005.isChecked -> "5"
+                            else -> "-1"
+                        }),
+
+                        pd12 = (when {
+                            binding.pd1201.isChecked -> "1"
+                            binding.pd1202.isChecked -> "2"
+                            binding.pd1203.isChecked -> "3"
+                            binding.pd1205.isChecked -> "5"
+                            binding.pd1206.isChecked -> "6"
+                            binding.pd1207.isChecked -> "7"
+                            binding.pd1296.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd13 = (when {
+                            binding.pd1301.isChecked -> "1"
+                            binding.pd1302.isChecked -> "2"
+                            binding.pd1303.isChecked -> "3"
+                            binding.pd1305.isChecked -> "5"
+                            binding.pd1306.isChecked -> "6"
+                            binding.pd13961.isChecked -> "961"
+                            binding.pd1307.isChecked -> "7"
+                            binding.pd13962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        pd14 = (when {
+                            binding.pd1401.isChecked -> "1"
+                            binding.pd1402.isChecked -> "2"
+                            binding.pd1403.isChecked -> "3"
+                            binding.pd1404.isChecked -> "4"
+                            binding.pd1405.isChecked -> "5"
+                            binding.pd1496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd15 = (when {
+                            binding.pd1501.isChecked -> "1"
+                            binding.pd1502.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        pd16 = (when {
+                            binding.pd1601.isChecked -> "1"
+                            binding.pd1602.isChecked -> "2"
+                            binding.pd1603.isChecked -> "3"
+                            binding.pd1604.isChecked -> "4"
+                            binding.pd1605.isChecked -> "5"
+                            binding.pd1606.isChecked -> "6"
+                            binding.pd1607.isChecked -> "7"
+                            binding.pd1696.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd17 = (when {
+                            binding.pd1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd19 = (when {
+                            binding.pd1901.isChecked -> "1"
+                            binding.pd1902.isChecked -> "2"
+                            binding.pd1998.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd20 = (when {
+                            binding.pd2001.isChecked -> "1"
+                            binding.pd2002.isChecked -> "2"
+                            binding.pd2003.isChecked -> "3"
+                            binding.pd2004.isChecked -> "4"
+                            binding.pd2005.isChecked -> "5"
+                            binding.pd2006.isChecked -> "6"
+                            binding.pd2007.isChecked -> "7"
+                            binding.pd2096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd21 = (when {
+                            binding.pd2198.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd23 = (when {
+                            binding.pd2301.isChecked -> "1"
+                            binding.pd2302.isChecked -> "2"
+                            binding.pd2398.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd24 = (when {
+                            binding.pd2401.isChecked -> "1"
+                            binding.pd2402.isChecked -> "2"
+                            binding.pd2403.isChecked -> "3"
+                            binding.pd2404.isChecked -> "4"
+                            binding.pd2405.isChecked -> "5"
+                            binding.pd2406.isChecked -> "6"
+                            binding.pd2496.isChecked -> "96"
+                            binding.pd2498.isChecked -> "98"
+                           else -> "-1"
+                        }),
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateFifth() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.FifthDao().update(
+                    Fifth(
+                        0,
+                        pd01 = binding.pd01.text.toString(),
+                        pd02 = binding.pd02.text.toString(),
+                        pd0596x = binding.pd0596x.text.toString(),
+                        pd06961x = binding.pd06961x.text.toString(),
+                        pd06962x = binding.pd06962x.text.toString(),
+                        pd0701x = binding.pd0701x.text.toString(),
+                        pd08a96x = binding.pd08a96x.text.toString(),
+                        pd08c = binding.pd08c.text.toString(),
+                        pd1101 = binding.pd1101.text.toString(),
+                        pd1102 = binding.pd1102.text.toString(),
+                        pd1296x = binding.pd1296x.text.toString(),
+                        pd13961x = binding.pd13961x.text.toString(),
+                        pd13962x = binding.pd13962x.text.toString(),
+                        pd1496x = binding.pd1496x.text.toString(),
+                        pd1696x = binding.pd1696x.text.toString(),
+                        pd1701 = binding.pd1701.text.toString(),
+                        pd1702 = binding.pd1702.text.toString(),
+                        pd1703 = binding.pd1703.text.toString(),
+                        pd18 = binding.pd18.text.toString(),
+                        pd2096x = binding.pd2096x.text.toString(),
+                        pd2101 = binding.pd2101.text.toString(),
+                        pd2102 = binding.pd2102.text.toString(),
+                        pd2103 = binding.pd2103.text.toString(),
+                        pd22 = binding.pd22.text.toString(),
+
+                        pd03 = (when {
+                            binding.pd0301.isChecked -> "1"
+                            binding.pd0302.isChecked -> "2"
+                            binding.pd0303.isChecked -> "3"
+                            binding.pd0304.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        pd04 = (when  {
+                            binding.pd0401.isChecked -> "1"
+                            binding.pd0402.isChecked -> "2"
+                            binding.pd0498.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd05 = (when {
+                            binding.pd0501.isChecked -> "1"
+                            binding.pd0502.isChecked -> "2"
+                            binding.pd0503.isChecked -> "3"
+                            binding.pd0504.isChecked -> "4"
+                            binding.pd0506.isChecked -> "6"
+                            binding.pd0507.isChecked -> "7"
+                            binding.pd0508.isChecked -> "8"
+                            binding.pd0509.isChecked -> "9"
+                            binding.pd0596.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd06 = (when {
+                            binding.pd0601.isChecked -> "1"
+                            binding.pd0602.isChecked -> "2"
+                            binding.pd0603.isChecked -> "3"
+                            binding.pd0604.isChecked -> "4"
+                            binding.pd0605.isChecked -> "5"
+                            binding.pd0607.isChecked -> "7"
+                            binding.pd0608.isChecked -> "8"
+                            binding.pd0609.isChecked -> "9"
+                            binding.pd0610.isChecked -> "10"
+                            binding.pd06962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        pd07 = (when {
+                            binding.pd0798.isChecked -> "1"
+                            else -> "-1"
+                        }),
+
+                        pd08 = (when {
+                            binding.pd0801.isChecked -> "1"
+                            binding.pd0802.isChecked -> "2"
+                            binding.pd0803.isChecked -> "3"
+                            binding.pd0805.isChecked -> "5"
+                            binding.pd0806.isChecked -> "6"
+                            else -> "-1"
+                        }),
+
+                        pd08a = (when {
+                            binding.pd08a01.isChecked -> "1"
+                            binding.pd08a02.isChecked -> "2"
+                            binding.pd08a03.isChecked -> "3"
+                            binding.pd08a04.isChecked -> "4"
+                            binding.pd08a06.isChecked -> "6"
+                            binding.pd08a07.isChecked -> "7"
+                            binding.pd08a08.isChecked -> "8"
+                            binding.pd08a09.isChecked -> "9"
+                            binding.pd08a96.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd08b = (when {
+                            binding.pd08b01.isChecked -> "1"
+                            binding.pd08b02.isChecked -> "2"
+                            binding.pd08b98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd09 = (when {
+                            binding.pd0901.isChecked -> "1"
+                            binding.pd0902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        pd10 = (when {
+                            binding.pd1001.isChecked -> "1"
+                            binding.pd1002.isChecked -> "2"
+                            binding.pd1003.isChecked -> "3"
+                            binding.pd1005.isChecked -> "5"
+                            else -> "-1"
+                        }),
+
+                        pd12 = (when {
+                            binding.pd1201.isChecked -> "1"
+                            binding.pd1202.isChecked -> "2"
+                            binding.pd1203.isChecked -> "3"
+                            binding.pd1205.isChecked -> "5"
+                            binding.pd1206.isChecked -> "6"
+                            binding.pd1207.isChecked -> "7"
+                            binding.pd1296.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd13 = (when {
+                            binding.pd1301.isChecked -> "1"
+                            binding.pd1302.isChecked -> "2"
+                            binding.pd1303.isChecked -> "3"
+                            binding.pd1305.isChecked -> "5"
+                            binding.pd1306.isChecked -> "6"
+                            binding.pd13961.isChecked -> "961"
+                            binding.pd1307.isChecked -> "7"
+                            binding.pd13962.isChecked -> "962"
+                            else -> "-1"
+                        }),
+
+                        pd14 = (when {
+                            binding.pd1401.isChecked -> "1"
+                            binding.pd1402.isChecked -> "2"
+                            binding.pd1403.isChecked -> "3"
+                            binding.pd1404.isChecked -> "4"
+                            binding.pd1405.isChecked -> "5"
+                            binding.pd1496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd15 = (when {
+                            binding.pd1501.isChecked -> "1"
+                            binding.pd1502.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        pd16 = (when {
+                            binding.pd1601.isChecked -> "1"
+                            binding.pd1602.isChecked -> "2"
+                            binding.pd1603.isChecked -> "3"
+                            binding.pd1604.isChecked -> "4"
+                            binding.pd1605.isChecked -> "5"
+                            binding.pd1606.isChecked -> "6"
+                            binding.pd1607.isChecked -> "7"
+                            binding.pd1696.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd17 = (when {
+                            binding.pd1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd19 = (when {
+                            binding.pd1901.isChecked -> "1"
+                            binding.pd1902.isChecked -> "2"
+                            binding.pd1998.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd20 = (when {
+                            binding.pd2001.isChecked -> "1"
+                            binding.pd2002.isChecked -> "2"
+                            binding.pd2003.isChecked -> "3"
+                            binding.pd2004.isChecked -> "4"
+                            binding.pd2005.isChecked -> "5"
+                            binding.pd2006.isChecked -> "6"
+                            binding.pd2007.isChecked -> "7"
+                            binding.pd2096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        pd21 = (when {
+                            binding.pd2198.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd23 = (when {
+                            binding.pd2301.isChecked -> "1"
+                            binding.pd2302.isChecked -> "2"
+                            binding.pd2398.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        pd24 = (when {
+                            binding.pd2401.isChecked -> "1"
+                            binding.pd2402.isChecked -> "2"
+                            binding.pd2403.isChecked -> "3"
+                            binding.pd2404.isChecked -> "4"
+                            binding.pd2405.isChecked -> "5"
+                            binding.pd2406.isChecked -> "6"
+                            binding.pd2496.isChecked -> "96"
+                            binding.pd2498.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
     }
 
 }
