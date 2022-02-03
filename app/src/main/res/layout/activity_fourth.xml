@@ -142,8 +142,7 @@
                 android:id="@+id/skip_08"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="@{im022.checked ? View.GONE : View.VISIBLE}">
+                android:layout_height="wrap_content">
 
             <!-- im03  Radio   -->
             <androidx.cardview.widget.CardView

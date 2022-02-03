@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NaunehalMidline">
         <activity
+            android:name=".SixthActivity"
+            android:exported="false" />
+        <activity
             android:name=".FifthActivity"
             android:exported="false" />
         <activity

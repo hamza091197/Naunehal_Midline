@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <data>
-        <import type="android.view.View"/>
+
+        <import type="android.view.View" />
+
         <variable
             name="callback"
-            type="com.example.naunehalmidline.ThirdActivity"/>
+            type="com.example.naunehalmidline.ThirdActivity" />
     </data>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout android:id="@+id/GrpName"
+        <LinearLayout
+            android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -25,44 +31,45 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"><LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs01"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs01"/>
-
-                </LinearLayout>
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:gravity="center"
-                        style="@style/EditTextNum"
-                        app:defaultValue="999"
-                        android:id="@+id/cs01"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs01" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs01"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/cs01"
+                        style="@style/EditTextNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:hint="@string/cs01"
                         android:inputType="number"
                         android:maxLength="2"
+                        app:defaultValue="999"
                         app:maxValue="99"
                         app:minValue="1"
-                        app:type="range"
-                         />
+                        app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -100,8 +107,8 @@
                     </LinearLayout>
 
                     <EditText
-                        style="@style/textInputName"
                         android:id="@+id/cs02"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
@@ -119,60 +126,63 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"><LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs02a"/>
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs02a"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs02a" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs02a"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs02a"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        
+
                         <RadioButton
-                        android:id="@+id/cs02a01"
-                        android:text="@string/cs02a01"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs02a01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs02a01" />
+
                         <RadioButton
-                        android:id="@+id/cs02a02"
-                        android:text="@string/cs02a02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs02a02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs02a02" />
+
                         <RadioButton
-                        android:id="@+id/cs02a03"
-                        android:text="@string/cs02a03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs02a03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs02a03" />
+
                         <RadioButton
-                        android:id="@+id/cs02a04"
-                        android:text="@string/cs02a04"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                    
-                    </RadioGroup> 
+                            android:id="@+id/cs02a04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs02a04" />
+
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -210,8 +220,8 @@
                     </LinearLayout>
 
                     <EditText
-                        style="@style/textInputName"
                         android:id="@+id/cs02b"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
@@ -230,30 +240,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs03"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs03"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs03" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs03"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs03"
                         android:layout_width="match_parent"
@@ -261,14 +272,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs0301"
-                        android:text="@string/cs0301"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs0301"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs0301" />
 
                         <RadioButton
-                        android:id="@+id/cs0302"
-                        android:text="@string/cs0302"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs0302"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs0302" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -285,69 +296,70 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs04"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs04"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs04" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs04"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs04"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                        android:id="@+id/cs0401"
-                        android:text="@string/cs0401"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0401"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0401" />
 
                         <RadioButton
-                        android:id="@+id/cs0402"
-                        android:text="@string/cs0402"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0402"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0402" />
 
                         <RadioButton
-                        android:id="@+id/cs0403"
-                        android:text="@string/cs0403"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0403"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0403" />
 
                         <RadioButton
-                        android:id="@+id/cs0404"
-                        android:text="@string/cs0404"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0404"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0404" />
 
                         <RadioButton
-                        android:id="@+id/cs0405"
-                        android:text="@string/cs0405"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0405"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0405" />
 
                         <RadioButton
-                        android:id="@+id/cs0498"
-                        android:text="@string/cs0498"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0498"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0498" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -364,69 +376,70 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs05"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        android:textStyle="bold"
-                        style="@style/textview"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs05"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs05" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs05"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs05"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                        android:id="@+id/cs0501"
-                        android:text="@string/cs0501"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0501"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0501" />
 
                         <RadioButton
-                        android:id="@+id/cs0502"
-                        android:text="@string/cs0502"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0502"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0502" />
 
                         <RadioButton
-                        android:id="@+id/cs0503"
-                        android:text="@string/cs0503"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0503"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0503" />
 
                         <RadioButton
-                        android:id="@+id/cs0504"
-                        android:text="@string/cs0504"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0504"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0504" />
 
                         <RadioButton
-                        android:id="@+id/cs0505"
-                        android:text="@string/cs0505"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0505"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0505" />
 
                         <RadioButton
-                        android:id="@+id/cs0598"
-                        android:text="@string/cs0598"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0598"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0598" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -443,28 +456,29 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs06"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:layout_height="match_parent"
-                        android:text="@string/cs06"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs06" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs06"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs06"
                         android:layout_width="match_parent"
@@ -472,14 +486,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs0601"
-                        android:text="@string/cs0601"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs0601"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs0601" />
 
                         <RadioButton
-                        android:id="@+id/cs0602"
-                        android:text="@string/cs0602"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs0602"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs0602" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -496,162 +510,162 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs07"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        android:textStyle="bold"
-                        style="@style/textview"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs07"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs07" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs07"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs07"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                        android:id="@+id/cs0701"
-                        android:text="@string/cs0701"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0701"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0701" />
 
                         <RadioButton
-                        android:id="@+id/cs0703"
-                        android:text="@string/cs0703"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0703"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0703" />
 
                         <RadioButton
-                        android:id="@+id/cs0704"
-                        android:text="@string/cs0704"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0704"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0704" />
 
                         <RadioButton
-                        android:id="@+id/cs0706"
-                        android:text="@string/cs0706"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0706"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0706" />
 
                         <RadioButton
-                        android:id="@+id/cs0707"
-                        android:text="@string/cs0707"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs0707"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0707" />
 
                         <RadioButton
-                        android:id="@+id/cs07961"
-                        android:text="@string/cs07961"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs07961"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs07961" />
 
 
                         <EditText
                             android:id="@+id/cs07961x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs07961"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs07961"
                             android:tag="cs07961"
                             android:text="@{cs07961.checked ? cs07961x.getText().toString() : ``}"
-                            android:visibility="@{cs07961.checked ? View.VISIBLE : View.GONE}"/>
+                            android:visibility="@{cs07961.checked ? View.VISIBLE : View.GONE}" />
 
                         <TextView
-                            android:textSize="20sp"
                             style="@style/HeadingTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
                             android:text="@string/titel2"
-                            android:layout_marginTop="12dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:textSize="20sp" />
 
                         <TextView
-                            android:textSize="20sp"
                             style="@style/HeadingTitle"
-                            android:text="@string/title1"
-                            android:layout_marginTop="12dp"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/title1"
+                            android:textSize="20sp" />
 
                         <RadioButton
                             android:id="@+id/cs0702"
-                            android:text="@string/cs0702"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0702" />
 
                         <RadioButton
                             android:id="@+id/cs0708"
-                            android:text="@string/cs0708"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0708" />
 
                         <RadioButton
                             android:id="@+id/cs0709"
-                            android:text="@string/cs0709"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0709" />
 
                         <RadioButton
                             android:id="@+id/cs0710"
-                            android:text="@string/cs0710"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0710" />
 
                         <RadioButton
                             android:id="@+id/cs0711"
-                            android:text="@string/cs0711"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0711" />
 
                         <RadioButton
                             android:id="@+id/cs0712"
-                            android:text="@string/cs0712"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0712" />
 
                         <RadioButton
                             android:id="@+id/cs0713"
-                            android:text="@string/cs0713"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0713" />
 
                         <RadioButton
                             android:id="@+id/cs07962"
-                            android:text="@string/cs07962"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs07962" />
 
 
                         <EditText
                             android:id="@+id/cs07962x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs07962"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs07962"
                             android:tag="cs07962"
                             android:text="@{cs07962.checked ? cs07962x.getText().toString() : ``}"
-                            android:visibility="@{cs07962.checked ? View.VISIBLE : View.GONE}"/>
+                            android:visibility="@{cs07962.checked ? View.VISIBLE : View.GONE}" />
 
                         <RadioButton
                             android:id="@+id/cs0714"
-                            android:text="@string/cs0714"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0714" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -668,131 +682,132 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs08"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs08"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs08" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs08"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <LinearLayout
-                        style="@style/checkbox"
                         android:id="@+id/cs08check"
+                        style="@style/checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:tag="0">
 
                         <CheckBox
-                        android:id="@+id/cs0801"
-                        android:text="@string/cs0801"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0801"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0801" />
+
                         <TextView
-                            android:textSize="20sp"
                             style="@style/HeadingTitle"
-                        android:text="@string/cs08_title1"
-                        android:layout_marginTop="12dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/cs08_title1"
+                            android:textSize="20sp" />
+
                         <CheckBox
-                        android:id="@+id/cs0802"
-                        android:text="@string/cs0802"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0802"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0802" />
+
                         <CheckBox
-                        android:id="@+id/cs0803"
-                        android:text="@string/cs0803"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0803"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0803" />
+
                         <CheckBox
-                        android:id="@+id/cs0804"
-                        android:text="@string/cs0804"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0804"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0804" />
+
                         <CheckBox
-                        android:id="@+id/cs0805"
-                        android:text="@string/cs0805"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0805"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0805" />
+
                         <TextView
-                            android:textSize="20sp"
                             style="@style/HeadingTitle"
-                        android:text="@string/cs08_title2"
-                        android:layout_marginTop="12dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/cs08_title2"
+                            android:textSize="20sp" />
+
                         <CheckBox
-                        android:id="@+id/cs0806"
-                        android:text="@string/cs0806"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0806"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0806" />
+
                         <CheckBox
-                        android:id="@+id/cs0807"
-                        android:text="@string/cs0807"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0807"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0807" />
+
                         <RadioButton
-                        android:id="@+id/cs0808"
-                        android:text="@string/cs0808"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs0808"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0808" />
+
                         <CheckBox
-                        android:id="@+id/cs0809"
-                        android:text="@string/cs0809"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0809"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0809" />
+
                         <CheckBox
-                        android:id="@+id/cs0810"
-                        android:text="@string/cs0810"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0810"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0810" />
+
                         <CheckBox
-                        android:id="@+id/cs0896"
-                        android:text="@string/cs0896"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
-                        
+                            android:id="@+id/cs0896"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0896" />
+
+
                         <EditText
                             android:id="@+id/cs0896x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs0896"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs0896"
                             android:tag="cs0896"
                             android:text="@{cs0896.checked ? cs0896x.getText().toString() : ``}"
-                            android:visibility="@{cs0896.checked ? View.VISIBLE : View.GONE}"/>
-                    
-                    </LinearLayout> 
-                
+                            android:visibility="@{cs0896.checked ? View.VISIBLE : View.GONE}" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -807,46 +822,46 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs08a"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs08a"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs08a" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs08a"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/cs08a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
-                        
+
                         <RadioButton
-                        android:id="@+id/cs08a01"
-                        android:text="@string/cs08a01"
-                            style="@style/hradiogroup"/>
-                        
+                            android:id="@+id/cs08a01"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs08a01" />
+
                         <RadioButton
-                        android:id="@+id/cs08a02"
-                        android:text="@string/cs08a02"
-                            style="@style/hradiogroup"/>
-                    
-                    </RadioGroup> 
+                            android:id="@+id/cs08a02"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs08a02" />
+
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -859,44 +874,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs08b"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs08b"/>
-
-                </LinearLayout>
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:gravity="center"
-                        style="@style/EditTextNum"
-                        app:defaultValue="999"
-                        android:id="@+id/cs08b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs08b" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs08b"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/cs08b"
+                        style="@style/EditTextNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
                         android:maxLength="2"
+                        app:defaultValue="999"
                         app:maxValue="15"
                         app:minValue="1"
-                        app:type="range"/> 
-                
+                        app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -909,82 +925,83 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs09"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs09"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs09" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs09"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs09"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        
+
                         <RadioButton
-                        android:id="@+id/cs0901"
-                        android:text="@string/cs0901"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs0901"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0901" />
+
                         <RadioButton
-                        android:id="@+id/cs0902"
-                        android:text="@string/cs0902"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs0902"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0902" />
+
                         <RadioButton
-                        android:id="@+id/cs0903"
-                        android:text="@string/cs0903"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs0903"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0903" />
+
                         <RadioButton
-                        android:id="@+id/cs0905"
-                        android:text="@string/cs0905"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs0905"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0905" />
+
                         <RadioButton
-                        android:id="@+id/cs0906"
-                        android:text="@string/cs0906"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs0906"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0906" />
+
                         <RadioButton
-                        android:id="@+id/cs0996"
-                        android:text="@string/cs0996"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs0996"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs0996" />
+
                         <EditText
                             android:id="@+id/cs0996x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs0996"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs0996"
                             android:tag="cs0996"
                             android:text="@{cs0996.checked ? cs0996x.getText().toString() : ``}"
-                            android:visibility="@{cs0996.checked ? View.VISIBLE : View.GONE}"/>
-                    
+                            android:visibility="@{cs0996.checked ? View.VISIBLE : View.GONE}" />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -997,29 +1014,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"><LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs10"/>
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs10"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs10" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs10"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs10"
                         android:layout_width="match_parent"
@@ -1027,14 +1047,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs1001"
-                        android:text="@string/cs1001"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1001"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1001" />
 
                         <RadioButton
-                        android:id="@+id/cs1002"
-                        android:text="@string/cs1002"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1002"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1002" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1051,28 +1071,29 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs11"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        android:textStyle="bold"
-                        style="@style/textview"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs11"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs11" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs11"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs11"
                         android:layout_width="match_parent"
@@ -1080,14 +1101,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs1101"
-                        android:text="@string/cs1101"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1101"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1101" />
 
                         <RadioButton
-                        android:id="@+id/cs1102"
-                        android:text="@string/cs1102"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1102"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1102" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1104,28 +1125,29 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs12"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs12"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs12" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs12"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs12"
                         android:layout_width="match_parent"
@@ -1133,14 +1155,14 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs1201"
-                        android:text="@string/cs1201"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1201"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1201" />
 
                         <RadioButton
-                        android:id="@+id/cs1202"
-                        android:text="@string/cs1202"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1202"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1202" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1157,43 +1179,44 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs13"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs13"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs13" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs13"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs13"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs1301"
-                        android:text="@string/cs1301"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1301"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1301" />
 
                         <RadioButton
-                        android:id="@+id/cs1302"
-                        android:text="@string/cs1302"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1302"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1302" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1210,43 +1233,44 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs14"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs14"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs14" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs14"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs14"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs1401"
-                        android:text="@string/cs1401"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1401"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1401" />
 
                         <RadioButton
-                        android:id="@+id/cs1402"
-                        android:text="@string/cs1402"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1402"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1402" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1263,67 +1287,68 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs15"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs15"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs15" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs15"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs15"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                        android:id="@+id/cs1501"
-                        android:text="@string/cs1501"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1501"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1501" />
 
                         <RadioButton
-                        android:id="@+id/cs1502"
-                        android:text="@string/cs1502"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1502"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1502" />
 
                         <RadioButton
-                        android:id="@+id/cs1503"
-                        android:text="@string/cs1503"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1503"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1503" />
 
                         <RadioButton
-                        android:id="@+id/cs1596"
-                        android:text="@string/cs1596"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1596"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1596" />
 
                         <EditText
                             android:id="@+id/cs1596x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs1596"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs1596"
                             android:tag="cs1596"
                             android:text="@{cs1596.checked ? cs1596x.getText().toString() : ``}"
-                            android:visibility="@{cs1596.checked ? View.VISIBLE : View.GONE}"/>
+                            android:visibility="@{cs1596.checked ? View.VISIBLE : View.GONE}" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1340,44 +1365,44 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs16"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs16"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs16" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs16"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                     <RadioGroup
                         android:id="@+id/cs16"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
-                        android:id="@+id/cs1601"
-                        android:text="@string/cs1601"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1601"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1601" />
 
                         <RadioButton
-                        android:id="@+id/cs1602"
-                        android:text="@string/cs1602"
-                            style="@style/hradiogroup"/>
+                            android:id="@+id/cs1602"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs1602" />
 
                     </RadioGroup>
                 </LinearLayout>
@@ -1394,158 +1419,158 @@
                     android:orientation="vertical">
 
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs17"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs17"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs17" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs17"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs17"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                        android:id="@+id/cs1701"
-                        android:text="@string/cs1701"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1701"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1701" />
 
                         <RadioButton
-                        android:id="@+id/cs1702"
-                        android:text="@string/cs1702"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1702"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1702" />
 
                         <RadioButton
-                        android:id="@+id/cs1703"
-                        android:text="@string/cs1703"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1703"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1703" />
 
                         <RadioButton
-                        android:id="@+id/cs1704"
-                        android:text="@string/cs1704"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                            android:id="@+id/cs1704"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1704" />
 
                         <RadioButton
-                        android:id="@+id/cs17961"
-                        android:text="@string/cs17961"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
-                        
+                            android:id="@+id/cs17961"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs17961" />
+
+
                         <EditText
                             android:id="@+id/cs17961x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs17961"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs17961"
                             android:tag="cs17961"
                             android:text="@{cs17961.checked ? cs17961x.getText().toString() : ``}"
-                            android:visibility="@{cs17961.checked ? View.VISIBLE : View.GONE}"/>
+                            android:visibility="@{cs17961.checked ? View.VISIBLE : View.GONE}" />
 
 
                         <TextView
-                            android:textSize="20sp"
                             style="@style/HeadingTitle"
-                            android:text="@string/title2"
-                            android:layout_marginTop="12dp"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
-
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/title2"
+                            android:textSize="20sp" />
 
 
                         <RadioButton
                             android:id="@+id/cs1706"
-                            android:text="@string/cs1706"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1706" />
+
                         <RadioButton
                             android:id="@+id/cs1707"
-                            android:text="@string/cs1707"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1707" />
+
                         <RadioButton
                             android:id="@+id/cs1708"
-                            android:text="@string/cs1708"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1708" />
+
                         <RadioButton
                             android:id="@+id/cs1709"
-                            android:text="@string/cs1709"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1709" />
+
                         <RadioButton
                             android:id="@+id/cs1710"
-                            android:text="@string/cs1710"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1710" />
+
                         <RadioButton
                             android:id="@+id/cs1711"
-                            android:text="@string/cs1711"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1711" />
+
                         <RadioButton
                             android:id="@+id/cs1712"
-                            android:text="@string/cs1712"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1712" />
+
                         <RadioButton
                             android:id="@+id/cs1713"
-                            android:text="@string/cs1713"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1713" />
+
                         <RadioButton
                             android:id="@+id/cs1714"
-                            android:text="@string/cs1714"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/> 
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1714" />
+
                         <RadioButton
                             android:id="@+id/cs17962"
-                            android:text="@string/cs17962"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"/>
-                        
-                        
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs17962" />
+
+
                         <EditText
                             android:id="@+id/cs17962x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs17962"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs17962"
                             android:tag="cs17962"
                             android:text="@{cs17962.checked ? cs17962x.getText().toString() : ``}"
-                            android:visibility="@{cs17962.checked ? View.VISIBLE : View.GONE}"/>
-                    
-                    </RadioGroup> 
+                            android:visibility="@{cs17962.checked ? View.VISIBLE : View.GONE}" />
+
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1558,47 +1583,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs17a"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs17a"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs17a" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs17a"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        android:orientation="horizontal"
                         android:id="@+id/cs17a"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
                         <RadioButton
-                        android:id="@+id/cs17a01"
-                        android:text="@string/cs17a01"
-                            style="@style/hradiogroup"/>
-                        
+                            android:id="@+id/cs17a01"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs17a01" />
+
                         <RadioButton
-                        android:id="@+id/cs17a02"
-                        android:text="@string/cs17a02"
-                            style="@style/hradiogroup"/>
-                    
-                    </RadioGroup> 
+                            android:id="@+id/cs17a02"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs17a02" />
+
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1611,44 +1637,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs17b"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs17b"/>
-
-                </LinearLayout>
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:gravity="center"
-                        style="@style/EditTextNum"
-                        app:defaultValue="999"
-                        android:id="@+id/cs17b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs17b" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs17b"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/cs17b"
+                        style="@style/EditTextNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
                         android:maxLength="2"
+                        app:defaultValue="999"
                         app:maxValue="15"
                         app:minValue="1"
-                        app:type="range"/> 
-                
+                        app:type="range" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1661,98 +1688,99 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs18"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs18"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs18" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs18"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <LinearLayout
-                        style="@style/checkbox"
                         android:id="@+id/cs18check"
+                        style="@style/checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:tag="0">
-                        
+
                         <CheckBox
-                        android:id="@+id/cs1802"
-                        android:text="@string/cs1802"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1802"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1802" />
+
                         <CheckBox
-                        android:id="@+id/cs1803"
-                        android:text="@string/cs1803"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1803"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1803" />
+
                         <CheckBox
-                        android:id="@+id/cs1804"
-                        android:text="@string/cs1804"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1804"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1804" />
+
                         <CheckBox
-                        android:id="@+id/cs1805"
-                        android:text="@string/cs1805"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1805"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1805" />
+
                         <CheckBox
-                        android:id="@+id/cs1806"
-                        android:text="@string/cs1806"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1806"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1806" />
+
                         <CheckBox
-                        android:id="@+id/cs1807"
-                        android:text="@string/cs1807"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1807"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1807" />
+
                         <CheckBox
-                        android:id="@+id/cs1808"
-                        android:text="@string/cs1808"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
+                            android:id="@+id/cs1808"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1808" />
+
                         <CheckBox
-                        android:id="@+id/cs1896"
-                        android:text="@string/cs1896"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
-                        
+                            android:id="@+id/cs1896"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1896" />
+
+
                         <EditText
                             android:id="@+id/cs1896x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs1896"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs1896"
                             android:tag="cs1896"
                             android:text="@{cs1896.checked ? cs1896x.getText().toString() : ``}"
-                            android:visibility="@{cs1896.checked ? View.VISIBLE : View.GONE}"/>
-                    
-                    </LinearLayout> 
+                            android:visibility="@{cs1896.checked ? View.VISIBLE : View.GONE}" />
+
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1765,84 +1793,85 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs19"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs19"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs19" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs19"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs19"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        
+
                         <RadioButton
-                        android:id="@+id/cs1901"
-                        android:text="@string/cs1901"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs1901"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1901" />
+
                         <RadioButton
-                        android:id="@+id/cs1902"
-                        android:text="@string/cs1902"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs1902"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1902" />
+
                         <RadioButton
-                        android:id="@+id/cs1903"
-                        android:text="@string/cs1903"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs1903"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1903" />
+
                         <RadioButton
-                        android:id="@+id/cs1905"
-                        android:text="@string/cs1905"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs1905"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1905" />
+
                         <RadioButton
-                        android:id="@+id/cs1906"
-                        android:text="@string/cs1906"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs1906"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1906" />
+
                         <RadioButton
-                        android:id="@+id/cs1996"
-                        android:text="@string/cs1996"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                        
-                        
+                            android:id="@+id/cs1996"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs1996" />
+
+
                         <EditText
                             android:id="@+id/cs1996x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/cs1996"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/cs1996"
                             android:tag="cs1996"
                             android:text="@{cs1996.checked ? cs1996x.getText().toString() : ``}"
-                            android:visibility="@{cs1996.checked ? View.VISIBLE : View.GONE}"/>
-                    
-                    </RadioGroup> 
+                            android:visibility="@{cs1996.checked ? View.VISIBLE : View.GONE}" />
+
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1855,51 +1884,52 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs20"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs20"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs20" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs20"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
                         android:id="@+id/cs20"
-                        android:orientation="horizontal"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
                         <RadioButton
-                        android:id="@+id/cs2001"
-                        android:text="@string/cs2001"
-                            style="@style/hradiogroup"/>
-                        
+                            android:id="@+id/cs2001"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs2001" />
+
                         <RadioButton
-                        android:id="@+id/cs2002"
-                        android:text="@string/cs2002"
-                            style="@style/hradiogroup"/>
-                        
+                            android:id="@+id/cs2002"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs2002" />
+
                         <RadioButton
-                        android:id="@+id/cs2098"
-                        android:text="@string/cs2098"
-                            style="@style/hradiogroup"/>
-                    
+                            android:id="@+id/cs2098"
+                            style="@style/hradiogroup"
+                            android:text="@string/cs2098" />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1913,85 +1943,86 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    
+
                     <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bottom"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/quesNum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="cs21"/>
-
-                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:padding="15dp"
-                        style="@style/textview"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/roboto"
-                        android:text="@string/cs21"/>
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="cs21" />
+
+                        <TextView
+                            style="@style/textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto"
+                            android:padding="15dp"
+                            android:text="@string/cs21"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/cs21"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        
+
                         <RadioButton
-                        android:id="@+id/cs2101"
-                        android:text="@string/cs2101"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs2101"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs2101" />
+
                         <RadioButton
-                        android:id="@+id/cs2102"
-                        android:text="@string/cs2102"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs2102"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs2102" />
+
                         <RadioButton
-                        android:id="@+id/cs2103"
-                        android:text="@string/cs2103"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs2103"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs2103" />
+
                         <RadioButton
-                        android:id="@+id/cs2104"
-                        android:text="@string/cs2104"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                        
+                            android:id="@+id/cs2104"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs2104" />
+
                         <RadioButton
-                        android:id="@+id/cs2105"
-                        android:text="@string/cs2105"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/> 
-                    
-                    </RadioGroup> 
+                            android:id="@+id/cs2105"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cs2105" />
+
+                    </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
-            
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="24dp"
                 android:orientation="horizontal">
-                
+
                 <Button
                     android:id="@+id/btn_End"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:background="@color/red"
-                    android:textColor="@color/white"
-                    android:text="Cancel"/>
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
 
 
                 <Button
@@ -2000,9 +2031,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:background="@color/green"
-                    android:textColor="@color/white"
-                    android:text="Save"/>
-
+                    android:text="Save"
+                    android:textColor="@color/white" />
 
 
             </LinearLayout>
@@ -2013,8 +2043,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Fourth"/>
+                android:text="Fourth"
+                android:textColor="@color/white" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_3"
@@ -2022,7 +2052,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_baseline_add_24"/>
+                android:src="@drawable/ic_baseline_add_24" />
         </LinearLayout>
     </ScrollView>
 </layout>
