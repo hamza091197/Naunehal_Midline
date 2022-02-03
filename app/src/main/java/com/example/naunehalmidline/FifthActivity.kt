@@ -15,6 +15,7 @@ import com.example.naunehalmidline.fifth.Fifth
 import com.example.naunehalmidline.fifth.FifthDatabase
 import com.example.naunehalmidline.third.Third
 import com.example.naunehalmidline.third.ThirdDatabase
+import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -422,6 +423,10 @@ class FifthActivity : AppCompatActivity() {
 
             insertFifth()
             updateFifth()
+        }
+
+        binding.fab5.setOnClickListener {
+            RoomExplorer.show(this, FifthDatabase::class.java, "fifthDB")
         }
 
         binding.pd0798.setOnCheckedChangeListener { compoundButton, b ->

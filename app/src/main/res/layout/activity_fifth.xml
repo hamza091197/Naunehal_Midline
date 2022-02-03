@@ -2366,6 +2366,7 @@
                     android:background="@color/red"
                     android:textColor="@color/white"
                     android:text="Cancel" />
+
                 <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="wrap_content"
@@ -2375,6 +2376,14 @@
                     android:textColor="@color/white"
                     android:text="Save" />
             </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_baseline_add_24"/>
         </LinearLayout>
     </ScrollView>
 </layout>
