@@ -538,22 +538,26 @@
             <RadioGroup
                 android:id="@+id/im18"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
 
                 <RadioButton
+                    style="@style/hradiogroup"
                     android:id="@+id/im18_1"
                     android:text="@string/im18_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <RadioButton
+                    style="@style/hradiogroup"
                     android:id="@+id/im18_2"
                     android:text="@string/im18_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 
                 <RadioButton
+                    style="@style/hradiogroup"
                     android:id="@+id/im18_3"
                     android:text="@string/im18_3"
                     android:layout_width="match_parent"

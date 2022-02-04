@@ -77,6 +77,7 @@
         <item name="android:inputType">number</item>
         <item name="android:background">@color/dullWhiteOverlay</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
         <item name="colorControlNormal">@android:color/darker_gray</item>
         <item name="colorControlActivated">@android:color/holo_orange_dark</item>
     </style>
