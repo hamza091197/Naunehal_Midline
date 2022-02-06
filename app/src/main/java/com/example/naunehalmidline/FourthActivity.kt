@@ -769,6 +769,18 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }*/
 
+            if (binding.im0501Dd.text.toString() == "44" || binding.im0501Dd.text.toString() == ){
+                binding.im0501Mm.isEnabled = false
+                binding.im0501Yy.isEnabled = false
+                binding.im0501Mm.error = null
+                binding.im0501Mm.error = null
+            }
+            else{
+                binding.im0501Mm.error = "Enter Months"
+                binding.im0501Yy.error = "Enter Years"
+                return@setOnClickListener
+            }
+
             if (binding.im0502Dd.text.toString() == "44" ||
                 binding.im0502Dd.text.toString() == "66" ||
                 binding.im0502Dd.text.toString() == "88" ||
