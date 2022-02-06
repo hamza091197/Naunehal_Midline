@@ -159,6 +159,510 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (binding.im0503Dd.text.toString().trim().isEmpty()) {
+                binding.im0503Dd.requestFocus()
+                binding.im0503Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0503Dd.isRangeTextValidate) {
+                binding.im0503Dd.requestFocus()
+                binding.im0503Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0503Mm.text.toString().trim().isEmpty()) {
+                binding.im0503Mm.requestFocus()
+                binding.im0503Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0503Mm.isRangeTextValidate) {
+                binding.im0503Mm.requestFocus()
+                binding.im0503Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0503Yy.text.toString().trim().isEmpty()) {
+                binding.im0503Yy.requestFocus()
+                binding.im0503Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0503Yy.isRangeTextValidate) {
+                binding.im0503Yy.requestFocus()
+                binding.im0503Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0504Dd.text.toString().trim().isEmpty()) {
+                binding.im0504Dd.requestFocus()
+                binding.im0504Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0504Dd.isRangeTextValidate) {
+                binding.im0504Dd.requestFocus()
+                binding.im0504Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0504Mm.text.toString().trim().isEmpty()) {
+                binding.im0504Mm.requestFocus()
+                binding.im0504Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0504Mm.isRangeTextValidate) {
+                binding.im0504Mm.requestFocus()
+                binding.im0504Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0504Yy.text.toString().trim().isEmpty()) {
+                binding.im0504Yy.requestFocus()
+                binding.im0504Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0504Yy.isRangeTextValidate) {
+                binding.im0504Yy.requestFocus()
+                binding.im0504Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0505Dd.text.toString().trim().isEmpty()) {
+                binding.im0505Dd.requestFocus()
+                binding.im0505Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0505Dd.isRangeTextValidate) {
+                binding.im0505Dd.requestFocus()
+                binding.im0505Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0505Mm.text.toString().trim().isEmpty()) {
+                binding.im0505Mm.requestFocus()
+                binding.im0505Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0505Mm.isRangeTextValidate) {
+                binding.im0505Mm.requestFocus()
+                binding.im0505Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0505Yy.text.toString().trim().isEmpty()) {
+                binding.im0505Yy.requestFocus()
+                binding.im0505Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0505Yy.isRangeTextValidate) {
+                binding.im0505Yy.requestFocus()
+                binding.im0505Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0506Dd.text.toString().trim().isEmpty()) {
+                binding.im0506Dd.requestFocus()
+                binding.im0506Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0506Dd.isRangeTextValidate) {
+                binding.im0506Dd.requestFocus()
+                binding.im0506Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0506Mm.text.toString().trim().isEmpty()) {
+                binding.im0506Mm.requestFocus()
+                binding.im0506Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0506Mm.isRangeTextValidate) {
+                binding.im0506Mm.requestFocus()
+                binding.im0506Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0506Yy.text.toString().trim().isEmpty()) {
+                binding.im0506Yy.requestFocus()
+                binding.im0506Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0506Yy.isRangeTextValidate) {
+                binding.im0506Yy.requestFocus()
+                binding.im0506Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0507Dd.text.toString().trim().isEmpty()) {
+                binding.im0507Dd.requestFocus()
+                binding.im0507Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0507Dd.isRangeTextValidate) {
+                binding.im0507Dd.requestFocus()
+                binding.im0507Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0507Mm.text.toString().trim().isEmpty()) {
+                binding.im0507Mm.requestFocus()
+                binding.im0507Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0507Mm.isRangeTextValidate) {
+                binding.im0507Mm.requestFocus()
+                binding.im0507Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0507Yy.text.toString().trim().isEmpty()) {
+                binding.im0507Yy.requestFocus()
+                binding.im0507Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0507Yy.isRangeTextValidate) {
+                binding.im0507Yy.requestFocus()
+                binding.im0507Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0508Dd.text.toString().trim().isEmpty()) {
+                binding.im0508Dd.requestFocus()
+                binding.im0508Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0508Dd.isRangeTextValidate) {
+                binding.im0508Dd.requestFocus()
+                binding.im0508Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0508Mm.text.toString().trim().isEmpty()) {
+                binding.im0508Mm.requestFocus()
+                binding.im0508Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0508Mm.isRangeTextValidate) {
+                binding.im0508Mm.requestFocus()
+                binding.im0508Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0508Yy.text.toString().trim().isEmpty()) {
+                binding.im0508Yy.requestFocus()
+                binding.im0508Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0508Yy.isRangeTextValidate) {
+                binding.im0508Yy.requestFocus()
+                binding.im0508Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0509Dd.text.toString().trim().isEmpty()) {
+                binding.im0509Dd.requestFocus()
+                binding.im0509Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0509Dd.isRangeTextValidate) {
+                binding.im0509Dd.requestFocus()
+                binding.im0509Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0509Mm.text.toString().trim().isEmpty()) {
+                binding.im0509Mm.requestFocus()
+                binding.im0509Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0509Mm.isRangeTextValidate) {
+                binding.im0509Mm.requestFocus()
+                binding.im0509Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0509Yy.text.toString().trim().isEmpty()) {
+                binding.im0509Yy.requestFocus()
+                binding.im0509Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0509Yy.isRangeTextValidate) {
+                binding.im0509Yy.requestFocus()
+                binding.im0509Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0510Dd.text.toString().trim().isEmpty()) {
+                binding.im0510Dd.requestFocus()
+                binding.im0510Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0510Dd.isRangeTextValidate) {
+                binding.im0510Dd.requestFocus()
+                binding.im0510Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0510Mm.text.toString().trim().isEmpty()) {
+                binding.im0510Mm.requestFocus()
+                binding.im0510Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0510Mm.isRangeTextValidate) {
+                binding.im0510Mm.requestFocus()
+                binding.im0510Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0510Yy.text.toString().trim().isEmpty()) {
+                binding.im0510Yy.requestFocus()
+                binding.im0510Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0510Yy.isRangeTextValidate) {
+                binding.im0510Yy.requestFocus()
+                binding.im0510Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0511Dd.text.toString().trim().isEmpty()) {
+                binding.im0511Dd.requestFocus()
+                binding.im0511Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0511Dd.isRangeTextValidate) {
+                binding.im0511Dd.requestFocus()
+                binding.im0511Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0511Mm.text.toString().trim().isEmpty()) {
+                binding.im0511Mm.requestFocus()
+                binding.im0511Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0511Mm.isRangeTextValidate) {
+                binding.im0511Mm.requestFocus()
+                binding.im0511Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0511Yy.text.toString().trim().isEmpty()) {
+                binding.im0511Yy.requestFocus()
+                binding.im0511Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0511Yy.isRangeTextValidate) {
+                binding.im0511Yy.requestFocus()
+                binding.im0511Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0512Dd.text.toString().trim().isEmpty()) {
+                binding.im0512Dd.requestFocus()
+                binding.im0512Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0512Dd.isRangeTextValidate) {
+                binding.im0512Dd.requestFocus()
+                binding.im0512Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0512Mm.text.toString().trim().isEmpty()) {
+                binding.im0512Mm.requestFocus()
+                binding.im0512Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0512Mm.isRangeTextValidate) {
+                binding.im0512Mm.requestFocus()
+                binding.im0512Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0512Yy.text.toString().trim().isEmpty()) {
+                binding.im0512Yy.requestFocus()
+                binding.im0512Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0512Yy.isRangeTextValidate) {
+                binding.im0512Yy.requestFocus()
+                binding.im0512Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0513Dd.text.toString().trim().isEmpty()) {
+                binding.im0513Dd.requestFocus()
+                binding.im0513Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0513Dd.isRangeTextValidate) {
+                binding.im0513Dd.requestFocus()
+                binding.im0513Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0513Mm.text.toString().trim().isEmpty()) {
+                binding.im0513Mm.requestFocus()
+                binding.im0513Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0513Mm.isRangeTextValidate) {
+                binding.im0513Mm.requestFocus()
+                binding.im0513Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0513Yy.text.toString().trim().isEmpty()) {
+                binding.im0513Yy.requestFocus()
+                binding.im0513Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0513Yy.isRangeTextValidate) {
+                binding.im0513Yy.requestFocus()
+                binding.im0513Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0514Dd.text.toString().trim().isEmpty()) {
+                binding.im0514Dd.requestFocus()
+                binding.im0514Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0514Dd.isRangeTextValidate) {
+                binding.im0514Dd.requestFocus()
+                binding.im0514Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0514Mm.text.toString().trim().isEmpty()) {
+                binding.im0514Mm.requestFocus()
+                binding.im0514Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0514Mm.isRangeTextValidate) {
+                binding.im0514Mm.requestFocus()
+                binding.im0514Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0514Yy.text.toString().trim().isEmpty()) {
+                binding.im0514Yy.requestFocus()
+                binding.im0514Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0514Yy.isRangeTextValidate) {
+                binding.im0514Yy.requestFocus()
+                binding.im0514Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0515Dd.text.toString().trim().isEmpty()) {
+                binding.im0515Dd.requestFocus()
+                binding.im0515Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0515Dd.isRangeTextValidate) {
+                binding.im0515Dd.requestFocus()
+                binding.im0515Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0515Mm.text.toString().trim().isEmpty()) {
+                binding.im0515Mm.requestFocus()
+                binding.im0515Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0515Mm.isRangeTextValidate) {
+                binding.im0515Mm.requestFocus()
+                binding.im0515Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0515Yy.text.toString().trim().isEmpty()) {
+                binding.im0515Yy.requestFocus()
+                binding.im0515Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0515Yy.isRangeTextValidate) {
+                binding.im0515Yy.requestFocus()
+                binding.im0515Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+
+            if (binding.im0516Dd.text.toString().trim().isEmpty()) {
+                binding.im0516Dd.requestFocus()
+                binding.im0516Dd.error = "Enter Day"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0516Dd.isRangeTextValidate) {
+                binding.im0516Dd.requestFocus()
+                binding.im0516Dd.error = "The range is from 1 to 31"
+                return@setOnClickListener
+            }
+
+            if (binding.im0516Mm.text.toString().trim().isEmpty()) {
+                binding.im0516Mm.requestFocus()
+                binding.im0516Mm.error = "Enter Month"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0516Mm.isRangeTextValidate) {
+                binding.im0516Mm.requestFocus()
+                binding.im0516Mm.error = "The range is from 1 to 12"
+                return@setOnClickListener
+            }
+
+            if (binding.im0516Yy.text.toString().trim().isEmpty()) {
+                binding.im0516Yy.requestFocus()
+                binding.im0516Yy.error = "Enter Year"
+                return@setOnClickListener
+            }
+
+            if (!binding.im0516Yy.isRangeTextValidate) {
+                binding.im0516Yy.requestFocus()
+                binding.im0516Yy.error = "The range is from 2015 to 2020"
+                return@setOnClickListener
+            }
+            
             if (binding.im07.checkedRadioButtonId == -1) {
                 binding.im072.requestFocus()
                 binding.im072.error = "RadioButton Not Selected"
