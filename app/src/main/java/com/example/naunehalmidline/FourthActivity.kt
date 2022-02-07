@@ -769,7 +769,7 @@ class FourthActivity : AppCompatActivity() {
                 return@setOnClickListener
             }*/
 
-            if (binding.im0501Dd.text.toString() == "44" || binding.im0501Dd.text.toString() == ){
+            if (binding.im0501Dd.text.toString() == "44" || binding.im0501Dd.text.toString() == "77" ){
                 binding.im0501Mm.isEnabled = false
                 binding.im0501Yy.isEnabled = false
                 binding.im0501Mm.error = null

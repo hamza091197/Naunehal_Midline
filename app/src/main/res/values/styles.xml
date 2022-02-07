@@ -82,16 +82,21 @@
         <item name="colorControlActivated">@android:color/holo_orange_dark</item>
     </style>
 
-
+<style name="EditText">
+    <item name="android:background">@color/dullWhiteOverlay</item>
+</style>
 
 
 
     <style name="textInputName" parent="Widget.AppCompat.EditText">
         <item name="android:layout_width">match_parent</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="startIconDrawable">@drawable/ic_baseline_person_24</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
         <item name="android:drawable">@drawable/et_style</item>
         <item name="android:background">@color/dullWhiteOverlay</item>
+        <item name="background">@drawable/bottom</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">15sp</item>
         <item name="android:padding">4dp</item>

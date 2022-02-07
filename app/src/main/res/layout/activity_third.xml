@@ -52,8 +52,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs01"
-                            android:textStyle="bold" />
+                            android:text="@string/cs01"/>
 
                     </LinearLayout>
 
@@ -101,8 +100,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/cs02"
-                            android:textStyle="bold" />
+                            android:text="@string/cs02"/>
 
                     </LinearLayout>
 
@@ -147,8 +145,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs02a"
-                            android:textStyle="bold" />
+                            android:text="@string/cs02a"/>
 
                     </LinearLayout>
 
@@ -214,8 +211,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/cs02b"
-                            android:textStyle="bold" />
+                            android:text="@string/cs02b"/>
 
                     </LinearLayout>
 
@@ -260,8 +256,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs03"
-                            android:textStyle="bold" />
+                            android:text="@string/cs03"/>
 
                     </LinearLayout>
 
@@ -314,8 +309,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs04"
-                            android:textStyle="bold" />
+                            android:text="@string/cs04"/>
 
                     </LinearLayout>
 
@@ -394,8 +388,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs05"
-                            android:textStyle="bold" />
+                            android:text="@string/cs05"/>
 
                     </LinearLayout>
 
@@ -474,8 +467,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs06"
-                            android:textStyle="bold" />
+                            android:text="@string/cs06"/>
 
                     </LinearLayout>
 
@@ -528,8 +520,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs07"
-                            android:textStyle="bold" />
+                            android:text="@string/cs07"/>
 
                     </LinearLayout>
 
@@ -700,8 +691,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs08"
-                            android:textStyle="bold" />
+                            android:text="@string/cs08"/>
 
                     </LinearLayout>
 
@@ -840,8 +830,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs08a"
-                            android:textStyle="bold" />
+                            android:text="@string/cs08a"/>
 
                     </LinearLayout>
 
@@ -894,8 +883,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs08b"
-                            android:textStyle="bold" />
+                            android:text="@string/cs08b"/>
 
                     </LinearLayout>
 
@@ -945,8 +933,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs09"
-                            android:textStyle="bold" />
+                            android:text="@string/cs09"/>
 
                     </LinearLayout>
 
@@ -1035,8 +1022,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs10"
-                            android:textStyle="bold" />
+                            android:text="@string/cs10"/>
 
                     </LinearLayout>
 
@@ -1089,8 +1075,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs11"
-                            android:textStyle="bold" />
+                            android:text="@string/cs11"/>
 
                     </LinearLayout>
 
@@ -1143,8 +1128,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs12"
-                            android:textStyle="bold" />
+                            android:text="@string/cs12"/>
 
                     </LinearLayout>
 
@@ -1197,8 +1181,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs13"
-                            android:textStyle="bold" />
+                            android:text="@string/cs13"/>
 
                     </LinearLayout>
 
@@ -1251,8 +1234,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs14"
-                            android:textStyle="bold" />
+                            android:text="@string/cs14"/>
 
                     </LinearLayout>
 
@@ -1305,8 +1287,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs15"
-                            android:textStyle="bold" />
+                            android:text="@string/cs15"/>
 
                     </LinearLayout>
 
@@ -1383,8 +1364,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs16"
-                            android:textStyle="bold" />
+                            android:text="@string/cs16"/>
 
                     </LinearLayout>
 
@@ -1437,8 +1417,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs17"
-                            android:textStyle="bold" />
+                            android:text="@string/cs17"/>
 
                     </LinearLayout>
 
@@ -1603,8 +1582,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs17a"
-                            android:textStyle="bold" />
+                            android:text="@string/cs17a"/>
 
                     </LinearLayout>
 
@@ -1657,8 +1635,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs17b"
-                            android:textStyle="bold" />
+                            android:text="@string/cs17b"/>
 
                     </LinearLayout>
 
@@ -1708,8 +1685,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs18"
-                            android:textStyle="bold" />
+                            android:text="@string/cs18"/>
 
                     </LinearLayout>
 
@@ -1813,8 +1789,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs19"
-                            android:textStyle="bold" />
+                            android:text="@string/cs19"/>
 
                     </LinearLayout>
 
@@ -1904,8 +1879,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs20"
-                            android:textStyle="bold" />
+                            android:text="@string/cs20"/>
 
                     </LinearLayout>
 
@@ -1963,8 +1937,7 @@
                             android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
                             android:padding="15dp"
-                            android:text="@string/cs21"
-                            android:textStyle="bold" />
+                            android:text="@string/cs21"/>
 
                     </LinearLayout>
 

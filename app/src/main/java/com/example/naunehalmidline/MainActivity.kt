@@ -339,8 +339,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnThird.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnFourth.setOnClickListener {
+            val intent = Intent(this, FourthActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnFourthtwo.setOnClickListener {
             val intent = Intent(this, FourthActivity2::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
             startActivity(intent)
         }
 
