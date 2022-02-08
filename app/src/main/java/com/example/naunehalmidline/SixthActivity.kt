@@ -462,11 +462,79 @@ class SixthActivity : AppCompatActivity() {
             else {
                 binding.bf1698.error = null
             }
+
+            if(binding.bf18.checkedRadioButtonId == -1){
+                binding.bf1898.requestFocus()
+                binding.bf1898.error = "RadioButton Not selected"
+                return@setOnClickListener
+            }
+            else {
+                binding.bf1898.error = null
+            }
+
+
+            if (binding.bf19.checkedRadioButtonId == -1){
+                binding.bf1901.requestFocus()
+                binding.bf1901.error = "RadioButton Not Selected"
+                return@setOnClickListener
+            }else {
+                binding.bf1901.error = null
+            }
+
+            if (binding.bf1996.isChecked &&
+                binding.bf1996x.text.toString().trim().isEmpty()){
+                binding.bf1996x.requestFocus()
+                binding.bf1996x.error = "Other Please Specify"
+                return@setOnClickListener
+            }
+
+            if (binding.bf20.checkedRadioButtonId == -1){
+                binding.bf2098.requestFocus()
+                binding.bf2098.error = "RadioButton Not Selected"
+                return@setOnClickListener
+            }
+            else {
+                binding.bf2098.error = null
+            }
+
+
         }
+
+        binding.bf1798.setOnCheckedChangeListener { compoundButton, b ->
+
+            if (binding.bf1798.isChecked){
+                binding.bf1701x.error = null
+                binding.bf1701x.text = null
+                binding.bf1701x.setEnabled(false)
+
+            }
+            else{
+                binding.bf1701x.setEnabled(true)
+            }
+
+        }
+
+        binding.bf1701x.addTextChangedListener(
+            object : TextWatcher{
+
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                }
+
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                }
+
+                override fun afterTextChanged(p0: Editable?) {
+                    binding.bf1798.isChecked = !binding.bf1701x.text.toString().isNotEmpty()
+                }
+
+
+            })
 
         binding.bf0501.setOnCheckedChangeListener { compoundButton, b ->
 
-            if (binding.bf0501.isChecked){
+            if (b){
                 binding.bf0502.error = null
                 binding.bf0503.error = null
                 binding.bf0502.text = null
@@ -475,8 +543,8 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf0502.isEnabled = false
             }
             else{
-                binding.bf0502.isEnabled
-                binding.bf0503.isEnabled
+                binding.bf0502.isEnabled = true
+                binding.bf0503.isEnabled = true
             }
         }
 
@@ -489,16 +557,10 @@ class SixthActivity : AppCompatActivity() {
 
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
-
                 }
 
                 override fun afterTextChanged(p0: Editable?) {
-                    if (binding.bf0502.text.toString().isNotEmpty()){
-                        binding.bf0501.isChecked = false
-                    }
-                    else {
-                        binding.bf0501.isChecked = true
-                    }
+                    binding.bf0501.isChecked = !binding.bf0502.text.toString().isNotEmpty()
                 }
             })
 
@@ -522,8 +584,6 @@ class SixthActivity : AppCompatActivity() {
                         binding.bf0501.isChecked = true
                     }
                 }
-
-
             })
 
         binding.bf14b02.setOnCheckedChangeListener { compoundButton, b ->

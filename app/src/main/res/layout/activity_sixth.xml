@@ -175,12 +175,13 @@
                                     android:text="Year" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
+                                    style="@style/EditText"
                                     android:id="@+id/bf3y"
                                     android:layout_marginLeft="5dp"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Year"
                                     android:inputType="number"
@@ -208,12 +209,13 @@
                                     android:text="Month" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
+                                    style="@style/EditText"
                                     android:id="@+id/bf03m"
                                     android:layout_marginLeft="5dp"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Month"
                                     android:inputType="number"
@@ -240,12 +242,13 @@
                                     android:text="Years" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
+                                    style="@style/EditText"
                                     android:id="@+id/bf3d"
                                     android:layout_marginLeft="5dp"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Date"
                                     android:inputType="number"
@@ -318,12 +321,13 @@
                                     android:text="Month" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
+                                    style="@style/EditText"
                                     android:id="@+id/bf03a01"
                                     android:layout_marginLeft="5dp"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Month"
                                     android:inputType="number"
@@ -351,12 +355,13 @@
                                     android:text="Years" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
+                                    style="@style/EditText"
                                     android:id="@+id/bf03a02"
                                     android:layout_marginLeft="5dp"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Years"
                                     android:inputType="number"
@@ -510,7 +515,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Hours"
                                     android:inputType="number"
@@ -543,7 +548,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="Days"
                                     android:inputType="number"
@@ -1255,7 +1260,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"
@@ -1357,7 +1362,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"
@@ -1581,7 +1586,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:background="@color/dullWhiteOverlay"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"

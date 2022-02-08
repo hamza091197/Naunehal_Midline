@@ -99,12 +99,7 @@ class FourthActivity2 : AppCompatActivity() {
                 }
 
                 override fun afterTextChanged(p0: Editable?) {
-                    if (binding.im121x.text.toString().isNotEmpty()){
-                        binding.im1298.isChecked = false
-                    }
-                    else {
-                        binding.im1298.isChecked = true
-                    }
+                    binding.im1298.isChecked = !binding.im121x.text.toString().isNotEmpty()
                 }
 
 
@@ -136,12 +131,7 @@ class FourthActivity2 : AppCompatActivity() {
                 }
 
                 override fun afterTextChanged(p0: Editable?) {
-                    if (binding.im12a1x.text.toString().isNotEmpty()){
-                        binding.im12a98.isChecked = false
-                    }
-                    else {
-                        binding.im12a98.isChecked = true
-                    }
+                    binding.im12a98.isChecked = !binding.im12a1x.text.toString().isNotEmpty()
                 }
 
 
