@@ -317,7 +317,7 @@ class SecondActivity : AppCompatActivity() {
                     val def = launch { Clear.clearAllFields(binding.GrpName) }
                     def.join()
                     /*startActivity(Intent(this@MainActivity, MainActivity::class.java))*/
-                    binding.Grp1.fullScroll(View.FOCUS_UP)
+                    binding.Grp2.fullScroll(View.FOCUS_UP)
                 }
             }
             setNegativeButton("Cancel") { dialog, which ->

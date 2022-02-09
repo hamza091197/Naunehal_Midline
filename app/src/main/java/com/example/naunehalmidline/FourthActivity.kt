@@ -142,7 +142,7 @@ class FourthActivity : AppCompatActivity() {
                 }
                 if (!binding.im0502Mm.isRangeTextValidate) {
                     binding.im0502Mm.error =
-                        "The range is from ${binding.im0502Mm.minvalue} to ${binding.im0502Mm.maxvalue}"
+                        "The range is from ${binding.im0502Mm.minvalue.toInt()} to ${binding.im0502Mm.maxvalue.toInt()}"
                     return@setOnClickListener
                 }
 
@@ -153,7 +153,7 @@ class FourthActivity : AppCompatActivity() {
                 }
                 if (!binding.im0502Yy.isRangeTextValidate) {
                     binding.im0502Yy.error =
-                        "The range is from ${binding.im0502Yy.minvalue} to ${binding.im0502Yy.maxvalue}"
+                        "The range is from ${binding.im0502Yy.minvalue.toInt()} to ${binding.im0502Yy.maxvalue.toInt()}"
                     return@setOnClickListener
                 }
             }
@@ -167,7 +167,7 @@ class FourthActivity : AppCompatActivity() {
 
             if (!binding.im0503Dd.isRangeTextValidate) {
                 binding.im0503Dd.requestFocus()
-                binding.im0503Dd.error = "The range is from 1 to 31"
+                binding.im0503Dd.error = "${binding.im0503Dd.minvalue.toInt()} to ${binding.im0503Dd.maxvalue.toInt()}"
                 return@setOnClickListener
             }
 
@@ -752,6 +752,19 @@ class FourthActivity : AppCompatActivity() {
                 binding.im10a96x.error = "Other"
                 return@setOnClickListener
             }
+            /*44 66 88 97*/
+            if (binding.im0502Dd.text.toString() == "44" ||
+                    binding.im0502Dd.text.toString() == "88" ||
+                    binding.im0502Dd.text.toString() == "66" ||
+                    binding.im0502Dd.text.toString() == "97") {
+                binding.im0502Mm.error = null
+                binding.im0502Yy.error = null
+            }
+            else {
+                binding.im0502Mm.error = "Enter Month"
+                binding.im0502Yy.error = "Enter Years"
+                return@setOnClickListener
+            }
 
             /*if (!binding.im0501Dd.isEnabled) {
                 if (binding.im0501Dd.text.toString() == "44" ||
@@ -831,6 +844,8 @@ class FourthActivity : AppCompatActivity() {
                 val value = s.toString()
                 if (value == "44" || value == "66" || value == "88" || value == "97") {
                     binding.im0502Dd.rangedefaultvalue = value.toFloat()
+                    binding.im0502Mm.error = null
+                    binding.im0502Yy.error = null
                     binding.im0502Mm.text = null
                     binding.im0502Yy.text = null
                     binding.im0502Mm.setEnabled(false)
@@ -838,6 +853,7 @@ class FourthActivity : AppCompatActivity() {
                 } else {
                     binding.im0502Mm.setEnabled(true)
                     binding.im0502Yy.setEnabled(true)
+
                 }
 
             }

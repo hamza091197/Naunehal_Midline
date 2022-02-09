@@ -132,7 +132,8 @@
 
                     </LinearLayout>
 
-                    <androidx.cardview.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -1759,6 +1760,15 @@
                 android:background="@color/green"
                 android:textColor="@color/white"
                 android:text="Sixth" />
+
+            <Button
+                android:id="@+id/btn_seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:text="Seven" />
 
 
 

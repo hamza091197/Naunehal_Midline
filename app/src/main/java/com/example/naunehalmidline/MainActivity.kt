@@ -364,10 +364,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnSeven.setOnClickListener {
+            val intent = Intent(this, SevenActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnEnd.setOnClickListener {
             createDialog()
-
-
         }
 
 

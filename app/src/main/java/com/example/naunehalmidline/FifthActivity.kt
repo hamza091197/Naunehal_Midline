@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.widget.CheckBox
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -15,6 +17,7 @@ import com.example.naunehalmidline.fifth.Fifth
 import com.example.naunehalmidline.fifth.FifthDatabase
 import com.example.naunehalmidline.third.Third
 import com.example.naunehalmidline.third.ThirdDatabase
+import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -429,6 +432,10 @@ class FifthActivity : AppCompatActivity() {
             RoomExplorer.show(this, FifthDatabase::class.java, "fifthDB")
         }
 
+    binding.btnEnd.setOnClickListener {
+        createDialog()
+    }
+
         binding.pd0798.setOnCheckedChangeListener { compoundButton, b ->
 
             if (binding.pd0798.isChecked){
@@ -466,8 +473,32 @@ class FifthActivity : AppCompatActivity() {
 
 
             })
+
+
     }
 
+    private fun createDialog() {
+        AlertDialog.Builder(this@FifthActivity).apply {
+            setCancelable(true)
+            setTitle("Alert Dialog")
+            setMessage("Are you sure you want to clear this form?")
+            setPositiveButton("Yes") { dialog, id ->
+                //Action for "Delete".
+                Log.e("click", "positive")
+
+                lifecycleScope.launch {
+                    val def = launch { Clear.clearAllFields(binding.GrpName) }
+                    def.join()
+                    /*startActivity(Intent(this@MainActivity, MainActivity::class.java))*/
+                    binding.Grp5.fullScroll(View.FOCUS_UP)
+                }
+            }
+            setNegativeButton("Cancel") { dialog, which ->
+                //Action for "Cancel".
+                Log.e("click", "Negative")
+            }
+        }.create().show()
+    }
 
     fun insertFifth() {
         lifecycleScope.launch {

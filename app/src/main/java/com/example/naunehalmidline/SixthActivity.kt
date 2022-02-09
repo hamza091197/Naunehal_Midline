@@ -1,20 +1,36 @@
 package com.example.naunehalmidline
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
+import android.view.View
 import android.widget.CheckBox
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySixthBinding
+import com.example.naunehalmidline.fifth.Fifth
+import com.example.naunehalmidline.fifth.FifthDatabase
+import com.example.naunehalmidline.sixth.Sixth
+import com.example.naunehalmidline.sixth.SixthDatabase
+import com.validatorcrawler.aliazaz.Clear
+import com.wajahatkarim3.roomexplorer.RoomExplorer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SixthActivity : AppCompatActivity() {
     lateinit var binding: ActivitySixthBinding
+    lateinit var database: SixthDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sixth)
         binding.callback
+        database = SixthDatabase.getDatabase(this)
 
         binding.btnContinue.setOnClickListener {
 
@@ -498,6 +514,19 @@ class SixthActivity : AppCompatActivity() {
             }
 
 
+            val refresh = Intent(this, SixthActivity::class.java)
+            startActivity(refresh)
+
+            insertSixth()
+            updateSixth()
+        }
+
+        binding.fab6.setOnClickListener {
+            RoomExplorer.show(this, SixthDatabase::class.java, "sixthDB")
+        }
+
+        binding.btnEnd.setOnClickListener {
+        createDialog()
         }
 
         binding.bf1798.setOnCheckedChangeListener { compoundButton, b ->
@@ -594,7 +623,7 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf14b01.isEnabled = false
             }
             else{
-                binding.bf14b01.isEnabled
+                binding.bf14b01.isEnabled = true
             }
         }
 
@@ -606,7 +635,7 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf14b01.isEnabled = false
             }
             else{
-                binding.bf14b01.isEnabled
+                binding.bf14b01.isEnabled = true
             }
         }
 
@@ -618,7 +647,7 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf14c01.isEnabled = false
             }
             else{
-                binding.bf14c01.isEnabled
+                binding.bf14c01.isEnabled = true
             }
         }
 
@@ -630,7 +659,7 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf14c01.isEnabled = false
             }
             else{
-                binding.bf14c01.isEnabled
+                binding.bf14c01.isEnabled = true
             }
         }
 
@@ -642,7 +671,7 @@ class SixthActivity : AppCompatActivity() {
                binding.bf14f01.isEnabled = false
             }
             else{
-                binding.bf14f01.isEnabled
+                binding.bf14f01.isEnabled = true
             }
         }
 
@@ -654,9 +683,680 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf14f01.isEnabled = false
             }
             else{
-                binding.bf14f01.isEnabled
+                binding.bf14f01.isEnabled = true
             }
         }
 
     }
+
+    private fun createDialog() {
+        AlertDialog.Builder(this@SixthActivity).apply {
+            setCancelable(true)
+            setTitle("Alert Dialog")
+            setMessage("Are you sure you want to clear this form?")
+            setPositiveButton("Yes") { dialog, id ->
+                //Action for "Delete".
+                Log.e("click", "positive")
+
+                lifecycleScope.launch {
+                    val def = launch { Clear.clearAllFields(binding.GrpName) }
+                    def.join()
+                    /*startActivity(Intent(this@MainActivity, MainActivity::class.java))*/
+                    binding.Grp6.fullScroll(View.FOCUS_UP)
+                }
+            }
+            setNegativeButton("Cancel") { dialog, which ->
+                //Action for "Cancel".
+                Log.e("click", "Negative")
+            }
+        }.create().show()
+    }
+
+    fun insertSixth() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.SixthDao().insert(
+                    Sixth(
+                        0,
+                        bf01 = binding.bf01.text.toString(),
+                        bf02 = binding.bf02.text.toString(),
+                        bf3y = binding.bf3y.text.toString(),
+                        bf03m = binding.bf03m.text.toString(),
+                        bf3d = binding.bf3d.text.toString(),
+                        bf03a01 = binding.bf03a01.text.toString(),
+                        bf03a02 = binding.bf03a02.text.toString(),
+                        bf0502 = binding.bf0502.text.toString(),
+                        bf0503 = binding.bf0503.text.toString(),
+                        bf0796x = binding.bf0796x.text.toString(),
+                        bf0996x = binding.bf0996x.text.toString(),
+                        bf14b01 = binding.bf14b01.text.toString(),
+                        bf14c01 = binding.bf14c01.text.toString(),
+                        bf14f01 = binding.bf14f01.text.toString(),
+                        bf1701x = binding.bf1701x.text.toString(),
+
+                        bf04 = (when {
+                            binding.bf0401.isChecked -> "1"
+                            binding.bf0402.isChecked -> "2"
+                            binding.bf0498.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+
+                        bf05 = (when  {
+                            binding.bf0501.isChecked -> "1"
+                            else -> "-1"
+                        }),
+
+                        bf06 = (when {
+                            binding.bf0601.isChecked -> "1"
+                            binding.bf0602.isChecked -> "2"
+                            binding.bf0698.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf07 = (when {
+                            binding.bf0701.isChecked -> "1"
+                            binding.bf0702.isChecked -> "2"
+                            binding.bf0703.isChecked -> "3"
+                            binding.bf0796.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf08 = (when {
+                            binding.bf0801.isChecked -> "1"
+                            binding.bf0802.isChecked -> "2"
+                            binding.bf0898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+
+
+                        bf09 = (when {
+                            binding.bf0901.isChecked -> "1"
+                            binding.bf0902.isChecked -> "2"
+                            binding.bf0903.isChecked -> "3"
+                            binding.bf0904.isChecked -> "4"
+                            binding.bf0906.isChecked -> "6"
+                            binding.bf0907.isChecked -> "7"
+                            binding.bf0908.isChecked -> "8"
+                            binding.bf0909.isChecked -> "9"
+                            binding.bf0910.isChecked -> "10"
+                            binding.bf0999.isChecked -> "99"
+                            binding.bf0996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf10 = (when {
+                            binding.bf1001.isChecked -> "1"
+                            binding.bf1002.isChecked -> "2"
+                            binding.bf1096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf11 = (when {
+                            binding.bf1101.isChecked -> "1"
+                            binding.bf1102.isChecked -> "2"
+                            binding.bf1198.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf12 = (when {
+                            binding.bf1201.isChecked -> "1"
+                            binding.bf1202.isChecked -> "2"
+                            binding.bf1298.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf13 = (when {
+                            binding.bf1301.isChecked -> "1"
+                            binding.bf1302.isChecked -> "2"
+                            binding.bf1398.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14a = (when {
+                            binding.bf14a01.isChecked -> "1"
+                            binding.bf14a02.isChecked -> "2"
+                            binding.bf14a98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14b = (when {
+                            binding.bf14b02.isChecked -> "2"
+                            binding.bf14b98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14c = (when {
+                            binding.bf14c02.isChecked -> "2"
+                            binding.bf14c98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14d = (when {
+                            binding.bf14d01.isChecked -> "1"
+                            binding.bf14d02.isChecked -> "2"
+                            binding.bf14d98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14e = (when {
+                            binding.bf14e01.isChecked -> "1"
+                            binding.bf14e02.isChecked -> "2"
+                            binding.bf14e98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14f = (when {
+                            binding.bf14f02.isChecked -> "2"
+                            binding.bf14f98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14g = (when {
+                            binding.bf14g01.isChecked -> "1"
+                            binding.bf14g02.isChecked -> "2"
+                            binding.bf14g98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14h = (when {
+                            binding.bf14h01.isChecked -> "1"
+                            binding.bf14h02.isChecked -> "2"
+                            binding.bf14h98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14i = (when {
+                            binding.bf14i01.isChecked -> "1"
+                            binding.bf14i02.isChecked -> "2"
+                            binding.bf14i98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15a = (when {
+                            binding.bf15a01.isChecked -> "1"
+                            binding.bf15a02.isChecked -> "2"
+                            binding.bf15a98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15b = (when {
+                            binding.bf15b01.isChecked -> "1"
+                            binding.bf15b02.isChecked -> "2"
+                            binding.bf15b98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15c = (when {
+                            binding.bf15c01.isChecked -> "1"
+                            binding.bf15c02.isChecked -> "2"
+                            binding.bf15c98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15d = (when {
+                            binding.bf15d01.isChecked -> "1"
+                            binding.bf15d02.isChecked -> "2"
+                            binding.bf15d98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15e = (when {
+                            binding.bf15e01.isChecked -> "1"
+                            binding.bf15e02.isChecked -> "2"
+                            binding.bf15e98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15f = (when {
+                            binding.bf15f01.isChecked -> "1"
+                            binding.bf15f02.isChecked -> "2"
+                            binding.bf15f98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15g = (when {
+                            binding.bf15g01.isChecked -> "1"
+                            binding.bf15g02.isChecked -> "2"
+                            binding.bf15g98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15h = (when {
+                            binding.bf15h01.isChecked -> "1"
+                            binding.bf15h02.isChecked -> "2"
+                            binding.bf15h98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15i = (when {
+                            binding.bf15i01.isChecked -> "1"
+                            binding.bf15i02.isChecked -> "2"
+                            binding.bf15i98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15j = (when {
+                            binding.bf15j01.isChecked -> "1"
+                            binding.bf15j02.isChecked -> "2"
+                            binding.bf15j98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15k = (when {
+                            binding.bf15k01.isChecked -> "1"
+                            binding.bf15k02.isChecked -> "2"
+                            binding.bf15k98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15l = (when {
+                            binding.bf15l01.isChecked -> "1"
+                            binding.bf15l02.isChecked -> "2"
+                            binding.bf15l98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15m = (when {
+                            binding.bf15m01.isChecked -> "1"
+                            binding.bf15m02.isChecked -> "2"
+                            binding.bf15m98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15n = (when {
+                            binding.bf15n01.isChecked -> "1"
+                            binding.bf15n02.isChecked -> "2"
+                            binding.bf15n98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15o = (when {
+                            binding.bf15o01.isChecked -> "1"
+                            binding.bf15o02.isChecked -> "2"
+                            binding.bf15o98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15p = (when {
+                            binding.bf15p01.isChecked -> "1"
+                            binding.bf15p02.isChecked -> "2"
+                            binding.bf15p98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15q = (when {
+                            binding.bf15q01.isChecked -> "1"
+                            binding.bf15q02.isChecked -> "2"
+                            binding.bf15q98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf16 = (when {
+                            binding.bf1601.isChecked -> "1"
+                            binding.bf1602.isChecked -> "2"
+                            binding.bf1698.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf17 = (when {
+                            binding.bf1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf18 = (when {
+                            binding.bf1801.isChecked -> "1"
+                            binding.bf1802.isChecked -> "2"
+                            binding.bf1898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf19 = (when {
+                            binding.bf1901.isChecked -> "1"
+                            binding.bf1902.isChecked -> "2"
+                            binding.bf1903.isChecked -> "3"
+                            binding.bf1996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf20 = (when {
+                            binding.bf2001.isChecked -> "1"
+                            binding.bf2002.isChecked -> "2"
+                            binding.bf2098.isChecked -> "98"
+                            else -> "-1"
+                        }),
+                    )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateSixth() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.SixthDao().update(
+                    Sixth(
+                        0,
+                        bf01 = binding.bf01.text.toString(),
+                        bf02 = binding.bf02.text.toString(),
+                        bf3y = binding.bf3y.text.toString(),
+                        bf03m = binding.bf03m.text.toString(),
+                        bf3d = binding.bf3d.text.toString(),
+                        bf03a01 = binding.bf03a01.text.toString(),
+                        bf03a02 = binding.bf03a02.text.toString(),
+                        bf0502 = binding.bf0502.text.toString(),
+                        bf0503 = binding.bf0503.text.toString(),
+                        bf0796x = binding.bf0796x.text.toString(),
+                        bf0996x = binding.bf0996x.text.toString(),
+                        bf14b01 = binding.bf14b01.text.toString(),
+                        bf14c01 = binding.bf14c01.text.toString(),
+                        bf14f01 = binding.bf14f01.text.toString(),
+                        bf1701x = binding.bf1701x.text.toString(),
+
+                        bf04 = (when {
+                            binding.bf0401.isChecked -> "1"
+                            binding.bf0402.isChecked -> "2"
+                            binding.bf0498.isChecked -> "98"
+                           else -> "-1"
+                        }),
+                        
+
+                        bf05 = (when  {
+                            binding.bf0501.isChecked -> "1"
+                            else -> "-1"
+                        }),
+
+                        bf06 = (when {
+                            binding.bf0601.isChecked -> "1"
+                            binding.bf0602.isChecked -> "2"
+                            binding.bf0698.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf07 = (when {
+                            binding.bf0701.isChecked -> "1"
+                            binding.bf0702.isChecked -> "2"
+                            binding.bf0703.isChecked -> "3"
+                            binding.bf0796.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf08 = (when {
+                            binding.bf0801.isChecked -> "1"
+                            binding.bf0802.isChecked -> "2"
+                            binding.bf0898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf09 = (when {
+                            binding.bf0901.isChecked -> "1"
+                            binding.bf0902.isChecked -> "2"
+                            binding.bf0903.isChecked -> "3"
+                            binding.bf0904.isChecked -> "4"
+                            binding.bf0906.isChecked -> "6"
+                            binding.bf0907.isChecked -> "7"
+                            binding.bf0908.isChecked -> "8"
+                            binding.bf0909.isChecked -> "9"
+                            binding.bf0910.isChecked -> "10"
+                            binding.bf0999.isChecked -> "99"
+                            binding.bf0996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf10 = (when {
+                            binding.bf1001.isChecked -> "1"
+                            binding.bf1002.isChecked -> "2"
+                            binding.bf1096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf11 = (when {
+                            binding.bf1101.isChecked -> "1"
+                            binding.bf1102.isChecked -> "2"
+                            binding.bf1198.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf12 = (when {
+                            binding.bf1201.isChecked -> "1"
+                            binding.bf1202.isChecked -> "2"
+                            binding.bf1298.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf13 = (when {
+                            binding.bf1301.isChecked -> "1"
+                            binding.bf1302.isChecked -> "2"
+                            binding.bf1398.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14a = (when {
+                            binding.bf14a01.isChecked -> "1"
+                            binding.bf14a02.isChecked -> "2"
+                            binding.bf14a98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14b = (when {
+                            binding.bf14b02.isChecked -> "2"
+                            binding.bf14b98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14c = (when {
+                            binding.bf14c02.isChecked -> "2"
+                            binding.bf14c98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14d = (when {
+                            binding.bf14d01.isChecked -> "1"
+                            binding.bf14d02.isChecked -> "2"
+                            binding.bf14d98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14e = (when {
+                            binding.bf14e01.isChecked -> "1"
+                            binding.bf14e02.isChecked -> "2"
+                            binding.bf14e98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14f = (when {
+                            binding.bf14f02.isChecked -> "2"
+                            binding.bf14f98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14g = (when {
+                            binding.bf14g01.isChecked -> "1"
+                            binding.bf14g02.isChecked -> "2"
+                            binding.bf14g98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14h = (when {
+                            binding.bf14h01.isChecked -> "1"
+                            binding.bf14h02.isChecked -> "2"
+                            binding.bf14h98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf14i = (when {
+                            binding.bf14i01.isChecked -> "1"
+                            binding.bf14i02.isChecked -> "2"
+                            binding.bf14i98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15a = (when {
+                            binding.bf15a01.isChecked -> "1"
+                            binding.bf15a02.isChecked -> "2"
+                            binding.bf15a98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15b = (when {
+                            binding.bf15b01.isChecked -> "1"
+                            binding.bf15b02.isChecked -> "2"
+                            binding.bf15b98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15c = (when {
+                            binding.bf15c01.isChecked -> "1"
+                            binding.bf15c02.isChecked -> "2"
+                            binding.bf15c98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15d = (when {
+                            binding.bf15d01.isChecked -> "1"
+                            binding.bf15d02.isChecked -> "2"
+                            binding.bf15d98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15e = (when {
+                            binding.bf15e01.isChecked -> "1"
+                            binding.bf15e02.isChecked -> "2"
+                            binding.bf15e98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15f = (when {
+                            binding.bf15f01.isChecked -> "1"
+                            binding.bf15f02.isChecked -> "2"
+                            binding.bf15f98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15g = (when {
+                            binding.bf15g01.isChecked -> "1"
+                            binding.bf15g02.isChecked -> "2"
+                            binding.bf15g98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15h = (when {
+                            binding.bf15h01.isChecked -> "1"
+                            binding.bf15h02.isChecked -> "2"
+                            binding.bf15h98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15i = (when {
+                            binding.bf15i01.isChecked -> "1"
+                            binding.bf15i02.isChecked -> "2"
+                            binding.bf15i98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15j = (when {
+                            binding.bf15j01.isChecked -> "1"
+                            binding.bf15j02.isChecked -> "2"
+                            binding.bf15j98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15k = (when {
+                            binding.bf15k01.isChecked -> "1"
+                            binding.bf15k02.isChecked -> "2"
+                            binding.bf15k98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15l = (when {
+                            binding.bf15l01.isChecked -> "1"
+                            binding.bf15l02.isChecked -> "2"
+                            binding.bf15l98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15m = (when {
+                            binding.bf15m01.isChecked -> "1"
+                            binding.bf15m02.isChecked -> "2"
+                            binding.bf15m98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15n = (when {
+                            binding.bf15n01.isChecked -> "1"
+                            binding.bf15n02.isChecked -> "2"
+                            binding.bf15n98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15o = (when {
+                            binding.bf15o01.isChecked -> "1"
+                            binding.bf15o02.isChecked -> "2"
+                            binding.bf15o98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15p = (when {
+                            binding.bf15p01.isChecked -> "1"
+                            binding.bf15p02.isChecked -> "2"
+                            binding.bf15p98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf15q = (when {
+                            binding.bf15q01.isChecked -> "1"
+                            binding.bf15q02.isChecked -> "2"
+                            binding.bf15q98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf16 = (when {
+                            binding.bf1601.isChecked -> "1"
+                            binding.bf1602.isChecked -> "2"
+                            binding.bf1698.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf17 = (when {
+                            binding.bf1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf18 = (when {
+                            binding.bf1801.isChecked -> "1"
+                            binding.bf1802.isChecked -> "2"
+                            binding.bf1898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        bf19 = (when {
+                            binding.bf1901.isChecked -> "1"
+                            binding.bf1902.isChecked -> "2"
+                            binding.bf1903.isChecked -> "3"
+                            binding.bf1996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        bf20 = (when {
+                            binding.bf2001.isChecked -> "1"
+                            binding.bf2002.isChecked -> "2"
+                            binding.bf2098.isChecked -> "98"
+                            else -> "-1"
+                        }),
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+
 }
