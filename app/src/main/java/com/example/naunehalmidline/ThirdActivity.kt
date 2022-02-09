@@ -31,6 +31,8 @@ class ThirdActivity : AppCompatActivity() {
         binding.callback
         database = ThirdDatabase.getDatabase(this)
 
+
+
         binding.btnContinue.setOnClickListener {
 
             /*if (binding.cs01.text.toString().trim().isEmpty()){

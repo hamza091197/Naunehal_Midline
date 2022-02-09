@@ -11,7 +11,8 @@
         android:theme="@style/Theme.NaunehalMidline">
         <activity
             android:name=".SevenActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SixthActivity"
             android:exported="false"

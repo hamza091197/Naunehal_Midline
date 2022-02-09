@@ -105,9 +105,10 @@ class FifthActivity : AppCompatActivity() {
             if (!binding.pd0798.isChecked) {
                 if (binding.pd0701x.text.toString().trim().isEmpty()) {
                     binding.pd0701x.requestFocus()
-                    binding.pd0701x.error = "Number Of Times"
+                    binding.pd0701x.error = "Other Please Specify"
                     return@setOnClickListener
                 }
+            }
 
                 if (!binding.pd0701x.isRangeTextValidate) {
                     binding.pd0701x.requestFocus()
