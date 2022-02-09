@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NaunehalMidline">
+
         <activity
             android:name=".SevenActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SixthActivity"
             android:exported="false"
@@ -38,6 +39,10 @@
             android:exported="false"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

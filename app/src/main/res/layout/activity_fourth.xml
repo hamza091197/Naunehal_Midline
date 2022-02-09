@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/im1_title1"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
             </LinearLayout>
 
@@ -2920,16 +2920,18 @@
                             style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/im08b" />
+                            android:text="@string/im08b"/>
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+                        style="@style/EditTextNum"
+                        android:gravity="center"
                         android:id="@+id/im08b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bottom"
-                        android:hint="@string/im08b"
+                        android:hint="####"
                         android:inputType="number"
                         android:maxLength="1"
                         app:maxValue="5"

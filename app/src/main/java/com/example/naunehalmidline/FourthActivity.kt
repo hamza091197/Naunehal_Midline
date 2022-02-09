@@ -85,9 +85,9 @@ class FourthActivity : AppCompatActivity() {
                  binding.im04Yy.requestFocus()
                  binding.im04Yy.error = "Enter Year"
                  return@setOnClickListener
-             }*/
+             }
 
-            /*  if (binding.im0501Dd.text.toString().trim().isEmpty()) {
+              if (binding.im0501Dd.text.toString().trim().isEmpty()) {
                   binding.im0501Dd.requestFocus()
                   binding.im0501Dd.error = "Enter Day"
                   return@setOnClickListener
@@ -99,6 +99,7 @@ class FourthActivity : AppCompatActivity() {
                   return@setOnClickListener
               }
 
+              if (binding.im0502Mm.isEnabled) {
               if (binding.im0501Mm.text.toString().trim().isEmpty()) {
                   binding.im0501Mm.requestFocus()
                   binding.im0501Mm.error = "Enter Month"
@@ -120,7 +121,7 @@ class FourthActivity : AppCompatActivity() {
               if (!binding.im0501Yy.isRangeTextValidate) {
                   binding.im0501Yy.requestFocus()
                   binding.im0501Yy.error = "The range is from 2015 to 2020"
-                  return@setOnClickListener
+                  return@setOnClickListener }
               }*/
 
             if (binding.im0502Dd.text.toString().isEmpty()) {

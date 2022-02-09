@@ -112,6 +112,7 @@
             </LinearLayout>
 
                 <com.edittextpicker.aliazaz.EditTextPicker
+                    style="@style/EditTextNum"
                     android:id="@+id/im12_1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -174,6 +175,7 @@
             </LinearLayout>
 
             <com.edittextpicker.aliazaz.EditTextPicker
+                style="@style/EditTextNum"
                     android:id="@+id/im12a1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -365,6 +367,7 @@
 
 
                 <com.edittextpicker.aliazaz.EditTextPicker
+                    style="@style/EditTextNum"
                     android:id="@+id/im15_1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -484,6 +487,7 @@
 
 
                 <com.edittextpicker.aliazaz.EditTextPicker
+                    style="@style/EditTextNum"
                     android:id="@+id/im17_1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -605,6 +609,7 @@
 
 
                 <com.edittextpicker.aliazaz.EditTextPicker
+                    style="@style/EditTextNum"
                     android:id="@+id/im19_1x"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
