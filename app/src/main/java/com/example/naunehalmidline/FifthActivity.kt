@@ -30,7 +30,6 @@ class FifthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fifth)
         binding.callback
-
         database = FifthDatabase.getDatabase(this)
         binding.btnContinue.setOnClickListener {
 
@@ -39,13 +38,13 @@ class FifthActivity : AppCompatActivity() {
             binding.pd01.error = "Enter Child's Line Number"
             return@setOnClickListener
             }
-            
+
             if (!binding.pd01.isRangeTextValidate){
                 binding.pd01.requestFocus()
                 binding.pd01.error = "The range is from 1 to 99"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd02.text.toString().trim().isEmpty()){
                 binding.pd02.requestFocus()
                 binding.pd02.error = "WRA's Name"
@@ -60,7 +59,7 @@ class FifthActivity : AppCompatActivity() {
             else {
                 binding.pd0301.error = null
             }
-            
+
             if (binding.pd04.checkedRadioButtonId == -1){
                 binding.pd0498.requestFocus()
                 binding.pd0498.error = "RadioButton Not selected"
@@ -69,7 +68,7 @@ class FifthActivity : AppCompatActivity() {
             else {
                 binding.pd0498.error = null
             }
-            
+
             if (binding.pd05.checkedRadioButtonId == -1){
                 binding.pd0501.requestFocus()
                 binding.pd0501.error = "RadioButton Not Selected"
@@ -105,10 +104,9 @@ class FifthActivity : AppCompatActivity() {
             if (!binding.pd0798.isChecked) {
                 if (binding.pd0701x.text.toString().trim().isEmpty()) {
                     binding.pd0701x.requestFocus()
-                    binding.pd0701x.error = "Other Please Specify"
+                    binding.pd0701x.error = "Number Of Times"
                     return@setOnClickListener
                 }
-            }
 
                 if (!binding.pd0701x.isRangeTextValidate) {
                     binding.pd0701x.requestFocus()
@@ -117,7 +115,7 @@ class FifthActivity : AppCompatActivity() {
                 }
 
             }
-            
+
             if (binding.pd08.checkedRadioButtonId == -1){
                 binding.pd0801.requestFocus()
                 binding.pd0801.error = "RadioButton Not Selected"
@@ -149,19 +147,19 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd08a96x.error = "Other PLease Specify"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd08b.checkedRadioButtonId == -1){
                 binding.pd08b98.requestFocus()
                 binding.pd08b98.error = "RadioButton Not Selected"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd08c.text.toString().trim().isEmpty()){
                 binding.pd08c.requestFocus()
                 binding.pd08c.error = "How many times did you receive tetanus injection?"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd09.checkedRadioButtonId == -1){
                 binding.pd0902.requestFocus()
                 binding.pd0902.error = "RadioButton Not Selected"
@@ -179,7 +177,7 @@ class FifthActivity : AppCompatActivity() {
             else {
                 binding.pd1001.error = null
             }
-            
+
             if (binding.pd1101.text.toString().trim().isEmpty()){
                 binding.pd1101.requestFocus()
                 binding.pd1101.error = "Months"
@@ -203,7 +201,7 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd1102.error = "The range is from 0 to 30"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd12.checkedRadioButtonId == -1){
                 binding.pd1201.requestFocus()
                 binding.pd1201.error = "RadioButton Not Selected"
@@ -235,7 +233,7 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd13962x.error = "Other Please Specify"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd14.checkedRadioButtonId == -1){
                 binding.pd1401.requestFocus()
                 binding.pd1401.error = "RadioButton Not Selected"
@@ -251,7 +249,7 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd1496x.error = "Other Please Specify"
                 return@setOnClickListener
             }
-            
+
             if (binding.pd15.checkedRadioButtonId == -1){
                 binding.pd1502.requestFocus()
                 binding.pd1502.error = "RadioButton Not Selected"
