@@ -10,6 +10,7 @@ import android.view.Menu
 import android.view.View
 import android.widget.EditText
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -40,6 +41,8 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar?.title = "Identification Information (HH)"
+
+        Toast.makeText(this, "Identification Information (HH)", Toast.LENGTH_SHORT).show()
 
         binding.btnContinue.setOnClickListener {
 
@@ -366,6 +369,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnSeven.setOnClickListener {
             val intent = Intent(this, SevenActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnEight.setOnClickListener {
+            val intent = Intent(this, EightActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnEight2.setOnClickListener {
+            val intent = Intent(this, EightActivity2::class.java)
             startActivity(intent)
         }
 

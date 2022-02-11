@@ -188,12 +188,6 @@
                                 android:text="@string/im03_1" />
 
                             <RadioButton
-                                android:id="@+id/im03_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/im03_2" />
-
-                            <RadioButton
                                 android:id="@+id/im03_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -393,6 +387,12 @@
                         android:layout_height="wrap_content"
                         android:text="@string/im05_title1"
                         android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/im03_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/im03_2" />
 
                 </LinearLayout>
 

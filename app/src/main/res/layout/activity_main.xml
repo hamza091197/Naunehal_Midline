@@ -1770,6 +1770,26 @@
                 android:textColor="@color/white"
                 android:text="Seven" />
 
+            <Button
+                android:id="@+id/btn_eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:text="Eight" />
+
+            <Button
+                android:id="@+id/btn_eight2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:text="Eight2" />
+
+
+
 
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
