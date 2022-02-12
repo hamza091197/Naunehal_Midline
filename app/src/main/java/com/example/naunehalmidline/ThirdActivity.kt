@@ -113,6 +113,13 @@ class ThirdActivity : AppCompatActivity() {
                 binding.cs0701.error = null
             }
 
+            if (binding.cs07961.isChecked &&
+                binding.cs07961x.text.toString().trim().isEmpty()){
+                binding.cs07961x.requestFocus()
+                binding.cs07961x.error = "Other PLease Specify"
+                return@setOnClickListener
+            }
+
             if (binding.cs07962.isChecked &&
                 binding.cs07962x.text.toString().trim().isEmpty()){
                 binding.cs07962x.requestFocus()

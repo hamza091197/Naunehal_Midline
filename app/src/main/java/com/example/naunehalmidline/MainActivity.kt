@@ -1,18 +1,33 @@
 package com.example.naunehalmidline
 
+import android.Manifest.permission.CAMERA
 import android.app.DatePickerDialog
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Color.parseColor
+import android.graphics.Insets.add
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
+import android.webkit.PermissionRequest
 import android.widget.EditText
 import android.widget.SearchView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.Insets.add
+import androidx.core.view.*
+import androidx.core.view.OneShotPreDrawListener.add
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import androidx.room.RoomDatabase
@@ -24,25 +39,43 @@ import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.jar.Manifest
 
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var database: ContactDatabase
     lateinit var binding: ActivityMainBinding
+    private val CAMERA_PERMISSION_CODE=123
+    private val STORAGE_PERMISSION_CODE=113
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.callback
         database = ContactDatabase.getDatabase(this)
+        checkPermission(android.Manifest.permission.CAMERA,CAMERA_PERMISSION_CODE)
+        checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
 
-
-        val actionBar = supportActionBar
+        /*val actionBar = supportActionBar
         actionBar?.title = "Identification Information (HH)"
+        window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.darkBlue)
+       *//* window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.statusBarColor = getResources().getColor(R.color.darkPink);*//*
+        window.navigationBarColor = getResources().getColor(R.color.black);
+       *//* Toast.makeText(this, "Identification Information (HH)", Toast.LENGTH_SHORT).show()*/
 
-        Toast.makeText(this, "Identification Information (HH)", Toast.LENGTH_SHORT).show()
+        title = "Identification Information (HH)"
+        val window: Window = this@MainActivity.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.year)
+        window.navigationBarColor = resources.getColor(R.color.year)
+
+
+
 
         binding.btnContinue.setOnClickListener {
 
@@ -403,7 +436,7 @@ class MainActivity : AppCompatActivity() {
                 binding.hh1796x.error = null
             }
         }
-        
+
     }
 
     private fun createDialog() {
@@ -695,4 +728,41 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-}
+
+    private fun checkPermission(permission:String,requestCode:Int){
+        if (ContextCompat.checkSelfPermission(this@MainActivity,permission)==PackageManager.PERMISSION_DENIED){
+            //Take Permissions
+
+            ActivityCompat.requestPermissions(this@MainActivity, arrayOf(permission), requestCode )
+        }
+
+        else {
+      /*  Toast.makeText(this@MainActivity, "Permission Granted Already", Toast.LENGTH_LONG).show()*/
+    }
+
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == CAMERA_PERMISSION_CODE) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(this@MainActivity, "Camera Permission Granted", Toast.LENGTH_SHORT).show()
+            } else {
+                /*Toast.makeText(this@MainActivity, "Camera Permission Denied", Toast.LENGTH_SHORT).show()*/
+            }
+        }
+
+            if (requestCode == STORAGE_PERMISSION_CODE) {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    Toast.makeText(this@MainActivity, "Storage Permission Granted", Toast.LENGTH_SHORT).show()
+                } else {
+                    /*Toast.makeText(this@MainActivity, "Storage Permission Denied", Toast.LENGTH_SHORT).show()*/
+                }
+            }
+
+    }
+    }
