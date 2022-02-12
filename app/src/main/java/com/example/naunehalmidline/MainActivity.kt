@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.year)
-        window.navigationBarColor = resources.getColor(R.color.year)
+       /* window.navigationBarColor = resources.getColor(R.color.year)*/
 
 
 
