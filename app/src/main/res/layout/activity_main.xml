@@ -33,11 +33,11 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/HeadingTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/hh01_title1"
-                        style="@style/HeadingTitle"
-                        android:textSize="25sp"/>
+                        android:textSize="25sp" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -76,11 +76,11 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh01"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:clickable="true"
                         android:cursorVisible="false"
                         android:focusable="false"
@@ -128,12 +128,11 @@
                             android:fontFamily="@font/roboto"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh02"/>
+                            android:text="@string/hh02" />
 
                     </LinearLayout>
 
-                    <androidx.cardview.widget.CardView
-                        style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -141,9 +140,9 @@
                             android:orientation="vertical">
 
                             <LinearLayout
-                                android:layout_marginBottom="2dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -154,11 +153,11 @@
                                     android:text="Hours" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    style="@style/EditText"
                                     android:id="@+id/hh0201"
-                                    android:layout_marginLeft="5dp"
+                                    style="@style/EditText"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
                                     android:layout_weight="1"
                                     android:background="@drawable/bottom"
                                     android:gravity="center"
@@ -175,9 +174,9 @@
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginBottom="2dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
                                 android:orientation="horizontal">
 
                                 <TextView
@@ -188,13 +187,13 @@
                                     android:text="Minutes" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    android:background="@drawable/bottom"
                                     android:id="@+id/hh0202"
-                                    android:layout_marginLeft="5dp"
+                                    style="@style/EditText"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
                                     android:layout_weight="1"
-                                    style="@style/EditText"
+                                    android:background="@drawable/bottom"
                                     android:gravity="center"
                                     android:hint="##"
                                     android:inputType="number"
@@ -240,16 +239,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh03"/>
+                            android:text="@string/hh03" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh03"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="####"
                         android:inputType="number"
@@ -290,18 +289,17 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh04"/>
+                            android:text="@string/hh04" />
 
                     </LinearLayout>
 
 
-
                     <EditText
-                        android:background="@drawable/bottom"
-                        style="@style/textInputName"
                         android:id="@+id/hh04"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                         android:gravity="center"
                         android:hint="@string/hh04"
@@ -337,7 +335,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh05"/>
+                            android:text="@string/hh05" />
 
                     </LinearLayout>
 
@@ -393,16 +391,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh06"/>
+                            android:text="@string/hh06" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh06"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="###"
                         android:inputType="number"
@@ -442,16 +440,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh07"/>
+                            android:text="@string/hh07" />
 
                     </LinearLayout>
 
                     <EditText
-                        android:background="@drawable/bottom"
-                        style="@style/textInputName"
                         android:id="@+id/hh07"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                         android:gravity="center"
                         android:hint="@string/hh07"
@@ -487,16 +485,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh08"/>
+                            android:text="@string/hh08" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh08"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="######"
                         android:inputType="number"
@@ -536,16 +534,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh09"/>
+                            android:text="@string/hh09" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh09"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="####"
                         android:inputType="number"
@@ -585,16 +583,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh10"/>
+                            android:text="@string/hh10" />
 
                     </LinearLayout>
 
                     <EditText
-                        android:background="@drawable/bottom"
-                        style="@style/textInputName"
                         android:id="@+id/hh10"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                         android:gravity="center"
                         android:hint="@string/hh10"
@@ -630,7 +628,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh11"/>
+                            android:text="@string/hh11" />
 
                     </LinearLayout>
 
@@ -641,8 +639,8 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            style="@style/hradiogroup"
                             android:id="@+id/hh1101"
+                            style="@style/hradiogroup"
                             android:text="@string/hh1101"
 
                             />
@@ -683,16 +681,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh12"/>
+                            android:text="@string/hh12" />
 
                     </LinearLayout>
 
                     <EditText
-                        android:background="@drawable/bottom"
-                        style="@style/textInputName"
                         android:id="@+id/hh12"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                         android:gravity="center"
                         android:hint="@string/hh12"
@@ -728,16 +726,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh13"/>
+                            android:text="@string/hh13" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh13"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -776,7 +774,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh14"/>
+                            android:text="@string/hh14" />
 
                     </LinearLayout>
 
@@ -829,13 +827,13 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh15"/>
+                            android:text="@string/hh15" />
 
                     </LinearLayout>
 
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/hh15"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -907,16 +905,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh16"/>
+                            android:text="@string/hh16" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh16"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -956,13 +954,13 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh17"/>
+                            android:text="@string/hh17" />
 
                     </LinearLayout>
 
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/hh17"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -1105,7 +1103,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh18"/>
+                            android:text="@string/hh18" />
 
                     </LinearLayout>
 
@@ -1117,12 +1115,12 @@
 
                         <RadioButton
                             android:id="@+id/hh1801"
-                          style="@style/hradiogroup"
+                            style="@style/hradiogroup"
                             android:text="@string/hh1801" />
 
                         <RadioButton
                             android:id="@+id/hh1802"
-                           style="@style/hradiogroup"
+                            style="@style/hradiogroup"
                             android:text="@string/hh1802" />
 
                     </RadioGroup>
@@ -1158,16 +1156,16 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh19"/>
+                            android:text="@string/hh19" />
 
                     </LinearLayout>
 
                     <EditText
-                        android:background="@drawable/bottom"
-                        style="@style/textInputName"
                         android:id="@+id/hh19"
+                        style="@style/textInputName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
                         android:gravity="center"
                         android:hint="@string/hh04"
@@ -1203,13 +1201,13 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh20"/>
+                            android:text="@string/hh20" />
 
                     </LinearLayout>
 
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/hh20"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -1347,21 +1345,21 @@
                             android:text="hh21" />
 
                         <TextView
-                            android:layout_width="match_parent"
                             style="@style/textview"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh21"/>
+                            android:text="@string/hh21" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh21"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -1397,21 +1395,21 @@
                             android:text="hh22" />
 
                         <TextView
+                            style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            style="@style/textview"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh22"/>
+                            android:text="@string/hh22" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh22"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -1446,21 +1444,21 @@
                             android:text="hh23" />
 
                         <TextView
+                            style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            style="@style/textview"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh23"/>
+                            android:text="@string/hh23" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh23"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -1495,21 +1493,21 @@
                             android:text="hh24" />
 
                         <TextView
+                            style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            style="@style/textview"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh24"/>
+                            android:text="@string/hh24" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh24"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -1544,21 +1542,21 @@
                             android:text="hh25" />
 
                         <TextView
+                            style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
-                            style="@style/textview"
                             android:paddingStart="10dp"
-                            android:text="@string/hh25"/>
+                            android:text="@string/hh25" />
 
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:background="@drawable/bottom"
-                        style="@style/EditTextNum"
                         android:id="@+id/hh25"
+                        style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
                         android:gravity="center"
                         android:hint="##"
                         android:inputType="number"
@@ -1594,18 +1592,18 @@
                             android:text="hh26" />
 
                         <TextView
-                            android:layout_width="match_parent"
                             style="@style/textview"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingStart="10dp"
-                            android:text="@string/hh26"/>
+                            android:text="@string/hh26" />
 
                     </LinearLayout>
 
                     <RadioGroup
-                        style="@style/radiobutton0"
                         android:id="@+id/hh26"
+                        style="@style/radiobutton0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -1713,8 +1711,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Second" />
+                android:text="Second"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_third"
@@ -1722,8 +1720,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Third" />
+                android:text="Third"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_fourth"
@@ -1731,8 +1729,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Fourth" />
+                android:text="Fourth"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_fourthtwo"
@@ -1740,8 +1738,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Fourth 2" />
+                android:text="Fourth 2"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_fifth"
@@ -1749,8 +1747,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Fifth" />
+                android:text="Fifth"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_sixth"
@@ -1758,8 +1756,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Sixth" />
+                android:text="Sixth"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_seven"
@@ -1767,8 +1765,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Seven" />
+                android:text="Seven"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_eight"
@@ -1776,8 +1774,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Eight" />
+                android:text="Eight"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/btn_eight2"
@@ -1785,12 +1783,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:background="@color/green"
-                android:textColor="@color/white"
-                android:text="Eight2" />
-
-
-
-
+                android:text="Eight2"
+                android:textColor="@color/white" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -1798,8 +1792,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
                 android:layout_margin="16dp"
-                android:src="@drawable/ic_baseline_add_24"
-                />
+                android:src="@drawable/ic_baseline_add_24" />
         </LinearLayout>
     </ScrollView>
 </layout>

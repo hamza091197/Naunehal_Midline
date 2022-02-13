@@ -541,12 +541,6 @@ class EightActivity2 : AppCompatActivity() {
             else{
                 binding.se4098.error = null
             }
-
-
-
-
-
-
         }
     }
 }

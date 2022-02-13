@@ -387,7 +387,7 @@ class EightActivity : AppCompatActivity() {
             updateEight()
         }
         binding.fab8.setOnClickListener {
-            RoomExplorer.show(this, ContactDatabase::class.java, "eightDB")
+            RoomExplorer.show(this, EightDatabase::class.java, "eightDB")
         }
 
         binding.btnEnd.setOnClickListener {

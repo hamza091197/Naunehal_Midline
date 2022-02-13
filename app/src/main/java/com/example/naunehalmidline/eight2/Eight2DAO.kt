@@ -15,7 +15,7 @@ interface Eight2DAO {
    /* @Delete
     fun delete(fifth: Fifth)*/
 
-    @Query("Select * FROM Eight")
+    @Query("Select * FROM Eight2")
     fun getcontact() : LiveData<List<Eight2>>
 
 }
