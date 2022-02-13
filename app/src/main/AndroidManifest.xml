@@ -19,9 +19,11 @@
 
         <activity
             android:name=".EightActivity2"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".EightActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
