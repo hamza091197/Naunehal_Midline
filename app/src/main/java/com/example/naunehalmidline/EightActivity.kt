@@ -402,20 +402,20 @@ class EightActivity : AppCompatActivity() {
                 val count = database.EightDao().insert(
                     Eight(
                         0,
-                        se0196 = binding.se0196.text.toString(),
-                        se0296 = binding.se0296.text.toString(),
-                        se0396 = binding.se0396.text.toString(),
-                        se0496 = binding.se0496.text.toString(),
-                        se0596 = binding.se0596.text.toString(),
+                        se0196x = binding.se0196x.text.toString(),
+                        se0296x = binding.se0296x.text.toString(),
+                        se0396x = binding.se0396x.text.toString(),
+                        se0496x = binding.se0496x.text.toString(),
+                        se0596x = binding.se0596x.text.toString(),
                         se06a = binding.se06a.text.toString(),
                         se07a = binding.se07a.text.toString(),
-                        se0896 = binding.se0896.text.toString(),
-                        se1099 = binding.se1099.text.toString(),
-                        se1196 = binding.se1196.text.toString(),
-                        se1296 = binding.se1296.text.toString(),
-                        se1996 = binding.se1996.text.toString(),
-                        se2096 = binding.se2096.text.toString(),
-                        se2196 = binding.se2196.text.toString(),
+                        se0896x = binding.se0896x.text.toString(),
+                        se1099x = binding.se1099x.text.toString(),
+                        se1196x = binding.se1196x.text.toString(),
+                        se1296x = binding.se1296x.text.toString(),
+                        se1996x = binding.se1996x.text.toString(),
+                        se2096x = binding.se2096x.text.toString(),
+                        se2196x = binding.se2196x.text.toString(),
 
                         se01 = (when  {
                             binding.se0101.isChecked -> "1"
@@ -703,20 +703,20 @@ class EightActivity : AppCompatActivity() {
                 val count = database.EightDao().update(
                     Eight(
                         0,
-                        se0196 = binding.se0196.text.toString(),
-                        se0296 = binding.se0296.text.toString(),
-                        se0396 = binding.se0396.text.toString(),
-                        se0496 = binding.se0496.text.toString(),
-                        se0596 = binding.se0596.text.toString(),
+                        se0196x = binding.se0196x.text.toString(),
+                        se0296x = binding.se0296x.text.toString(),
+                        se0396x = binding.se0396x.text.toString(),
+                        se0496x = binding.se0496x.text.toString(),
+                        se0596x = binding.se0596x.text.toString(),
                         se06a = binding.se06a.text.toString(),
                         se07a = binding.se07a.text.toString(),
-                        se0896 = binding.se0896.text.toString(),
-                        se1099 = binding.se1099.text.toString(),
-                        se1196 = binding.se1196.text.toString(),
-                        se1296 = binding.se1296.text.toString(),
-                        se1996 = binding.se1996.text.toString(),
-                        se2096 = binding.se2096.text.toString(),
-                        se2196 = binding.se2196.text.toString(),
+                        se0896x = binding.se0896x.text.toString(),
+                        se1099x = binding.se1099x.text.toString(),
+                        se1196x = binding.se1196x.text.toString(),
+                        se1296x = binding.se1296x.text.toString(),
+                        se1996x = binding.se1996x.text.toString(),
+                        se2096x = binding.se2096x.text.toString(),
+                        se2196x = binding.se2196x.text.toString(),
 
                         se01 = (when  {
                             binding.se0101.isChecked -> "1"
@@ -998,6 +998,7 @@ class EightActivity : AppCompatActivity() {
         }
 
     }
+
     private fun createDialog() {
         AlertDialog.Builder(this@EightActivity).apply {
             setCancelable(true)

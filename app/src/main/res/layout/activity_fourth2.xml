@@ -123,7 +123,7 @@
                         android:inputType="number"
                         android:maxLength="2"
                         android:tag="im12_1"
-                        app:maxValue="97"
+                        app:maxValue="96"
                         app:minValue="1"
                         app:type="range" />
 
@@ -178,7 +178,7 @@
                     </LinearLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/im12a1x"
+                        android:id="@+id/im12a1"
                         style="@style/EditTextNum"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -205,8 +205,6 @@
                             android:text="@string/im12a98" />
 
                     </LinearLayout>
-
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -363,32 +361,34 @@
 
                     </LinearLayout>
 
-                    <RadioGroup
-                        android:id="@+id/im15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/im15_1x"
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/im15_1"
                             style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/im15_1"
                             android:inputType="number"
-                            android:maxLength="1"
+                            android:maxLength="2"
                             android:tag="im15_1"
-                            app:maxValue="0"
-                            app:minValue="0"
+                            app:maxValue="96"
+                            app:minValue="1"
                             app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/im15_98"
+                    <LinearLayout
+                        android:id="@+id/im15check"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
+
+                        <CheckBox
+                            android:id="@+id/im1598"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/im15_98" />
 
-                    </RadioGroup>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -483,14 +483,8 @@
 
                     </LinearLayout>
 
-                    <RadioGroup
-                        android:id="@+id/im17"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/im17_1x"
+                   <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/im17_1"
                             style="@style/EditTextNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -498,17 +492,25 @@
                             android:inputType="number"
                             android:maxLength="1"
                             android:tag="im17_1"
-                            app:maxValue="0"
-                            app:minValue="0"
+                            app:maxValue="97"
+                            app:minValue="1"
                             app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/im17_98"
+                    <LinearLayout
+                        android:id="@+id/im17check"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
+
+                        <CheckBox
+                            android:id="@+id/im1798"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/im17_98" />
 
-                    </RadioGroup>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -604,13 +606,7 @@
 
                     </LinearLayout>
 
-                    <RadioGroup
-                        android:id="@+id/im19"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                    <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/im19_1x"
                             style="@style/EditTextNum"
                             android:layout_width="match_parent"
@@ -623,14 +619,22 @@
                             app:minValue="0"
                             app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/im19_98"
+                    <LinearLayout
+                        android:id="@+id/im19check"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
+
+                        <CheckBox
+                            android:id="@+id/im1998"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/im19_98" />
 
-                    </RadioGroup>
-                </LinearLayout>
+                    </LinearLayout>
+                        </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- im20  Radio   -->
@@ -786,13 +790,7 @@
 
                     </LinearLayout>
 
-                    <RadioGroup
-                        android:id="@+id/im22"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                     <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/im22_1x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -804,15 +802,22 @@
                             app:minValue="0"
                             app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/im22_98"
+                    <LinearLayout
+                        android:id="@+id/im22check"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
+
+                        <CheckBox
+                            android:id="@+id/im2298"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/im22_98" />
 
-
-                    </RadioGroup>
-                </LinearLayout>
+                    </LinearLayout>
+                       </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- im23  Radio   -->
@@ -847,6 +852,7 @@
 
 
                     <RadioGroup
+                        style="@style/radiobutton0"
                         android:id="@+id/im23"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -947,6 +953,7 @@
                                 </LinearLayout>
 
                                 <RadioGroup
+                                    style="@style/radiobutton0"
                                     android:id="@+id/im23a"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
@@ -1062,7 +1069,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_marginLeft="5dp"
                                                 android:layout_weight="1"
-                                                android:background="@color/dullWhiteOverlay"
+                                                android:background="#99AA9898"
                                                 android:gravity="center"
                                                 android:hint="##"
                                                 android:inputType="number"
@@ -1094,7 +1101,7 @@
                                                 android:layout_height="match_parent"
                                                 android:layout_marginLeft="5dp"
                                                 android:layout_weight="1"
-                                                android:background="@color/dullWhiteOverlay"
+                                                android:background="#99AA9898"
                                                 android:gravity="center"
                                                 android:hint="##"
                                                 android:inputType="number"
@@ -1147,6 +1154,7 @@
                                 </LinearLayout>
 
                                 <RadioGroup
+                                    style="@style/radiobutton0"
                                     android:id="@+id/im24"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
@@ -1312,6 +1320,7 @@
                                 </LinearLayout>
 
                                 <RadioGroup
+                                    style="@style/radiobutton0"
                                     android:id="@+id/im25"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
@@ -1348,7 +1357,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
             <!--EndButton LinearLayout-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1365,7 +1376,6 @@
                     android:text="Cancel"
                     android:textColor="@color/white" />
 
-
                 <Button
                     android:id="@+id/btn_Continue_2"
                     android:layout_width="wrap_content"
@@ -1375,15 +1385,6 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_fifth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Fifth"
-                android:textColor="@color/white" />
-        </LinearLayout>
+            </LinearLayout>
     </ScrollView>
 </layout>

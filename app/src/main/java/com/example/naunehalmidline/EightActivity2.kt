@@ -1,19 +1,35 @@
 package com.example.naunehalmidline
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.CheckBox
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityEight2Binding
+import com.example.naunehalmidline.eight.Eight
+import com.example.naunehalmidline.eight.EightDatabase
+import com.example.naunehalmidline.eight2.Eight2
+import com.example.naunehalmidline.eight2.Eight2Database
+import com.validatorcrawler.aliazaz.Clear
+import com.wajahatkarim3.roomexplorer.RoomExplorer
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class EightActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityEight2Binding
+    lateinit var database: Eight2Database
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_eight2)
         binding.callback
-        
+        database = Eight2Database.getDatabase(this)
+
         binding.btnContinue2.setOnClickListener {
             if (binding.se2204.checkedRadioButtonId == -1){
                 binding.se2204.requestFocus()
@@ -541,6 +557,707 @@ class EightActivity2 : AppCompatActivity() {
             else{
                 binding.se4098.error = null
             }
+
+            val refresh = Intent(this, EightActivity2::class.java)
+            startActivity(refresh)
+
+            binding.fab82.setOnClickListener {
+                RoomExplorer.show(this, Eight2Database::class.java, "eight2DB")
+            }
+
+            insertEight2()
+            updateEight2()
+        }
+
+        binding.btnEnd2.setOnClickListener {
+            createDialog()
         }
     }
+
+    fun insertEight2() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.Eight2Dao().insert(
+                    Eight2(
+                        0,
+                        se24 = binding.se24.text.toString(),
+                        se25 = binding.se25.text.toString(),
+                        se26 = binding.se26.text.toString(),
+                        se3096x = binding.se3096x.text.toString(),
+                        se3196x = binding.se3196x.text.toString(),
+                        se3302 = binding.se3302.text.toString(),
+                        se3301 = binding.se3301.text.toString(),
+                        se4296x = binding.se4296x.text.toString(),
+                        se4396x = binding.se4396x.text.toString(),
+                        se4496x = binding.se4496x.text.toString(),
+                        se4696x = binding.se4696x.text.toString(),
+                        se4796x = binding.se4796x.text.toString(),
+                        se4996x = binding.se4996x.text.toString(),
+                        se5096x = binding.se5096x.text.toString(),
+                        se3402 = binding.se3302.text.toString(),
+                        se3401 = binding.se3301.text.toString(),
+                        se3796x = binding.se3796x.text.toString(),
+
+
+                        se2204 = (when {
+                            binding.se220401.isChecked -> "1"
+                            binding.se220402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2205 = (when {
+                            binding.se220501.isChecked -> "1"
+                            binding.se220502.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2206 = (when {
+                            binding.se220601.isChecked -> "1"
+                            binding.se220602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2207 = (when {
+                            binding.se220701.isChecked -> "1"
+                            binding.se220702.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2208 = (when {
+                            binding.se220801.isChecked -> "1"
+                            binding.se220802.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2209 = (when {
+                            binding.se220901.isChecked -> "1"
+                            binding.se220902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2210 = (when {
+                            binding.se221001.isChecked -> "1"
+                            binding.se221002.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2211 = (when {
+                            binding.se221101.isChecked -> "1"
+                            binding.se221102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2212 = (when {
+                            binding.se221201.isChecked -> "1"
+                            binding.se221202.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2213 = (when {
+                            binding.se221301.isChecked -> "1"
+                            binding.se221302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2214 = (when {
+                            binding.se221401.isChecked -> "1"
+                            binding.se221402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2215 = (when {
+                            binding.se221501.isChecked -> "1"
+                            binding.se221502.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2216 = (when {
+                            binding.se221601.isChecked -> "1"
+                            binding.se221602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2217 = (when {
+                            binding.se221701.isChecked -> "1"
+                            binding.se221702.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2218 = (when {
+                            binding.se221801.isChecked -> "1"
+                            binding.se221802.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se23 = (when {
+                            binding.se2301.isChecked -> "1"
+                            binding.se2302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se27 = (when {
+                            binding.se2701.isChecked -> "1"
+                            binding.se2702.isChecked -> "2"
+                            binding.se2703.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+
+                        se28 = (when {
+                            binding.se2801.isChecked -> "1"
+                            binding.se2802.isChecked -> "2"
+                            binding.se2803.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+                        se29 = (when {
+                            binding.se2901.isChecked -> "1"
+                            binding.se2902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se30 = (when  {
+                            binding.se3001.isChecked -> "1"
+                            binding.se3002.isChecked -> "2"
+                            binding.se3003.isChecked -> "3"
+                            binding.se3096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se31 = (when  {
+                            binding.se3101.isChecked -> "1"
+                            binding.se3102.isChecked -> "2"
+                            binding.se3196.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se32 = (when {
+                            binding.se3201.isChecked -> "1"
+                            binding.se3202.isChecked -> "2"
+                            binding.se3203.isChecked -> "3"
+                            binding.se3204.isChecked -> "4"
+                            binding.se3205.isChecked -> "5"
+                            binding.se3206.isChecked -> "6"
+                            binding.se3207.isChecked -> "7"
+                            binding.se3208.isChecked -> "8"
+                            binding.se3209.isChecked -> "9"
+                            else -> "-1"
+                        }),
+
+                        se41 = (when {
+                            binding.se4101.isChecked -> "1"
+                            binding.se4102.isChecked -> "2"
+                            binding.se4198.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se42 = (when {
+                            binding.se4201.isChecked -> "1"
+                            binding.se4202.isChecked -> "2"
+                            binding.se4203.isChecked -> "3"
+                            binding.se4204.isChecked -> "4"
+                            binding.se4205.isChecked -> "5"
+                            binding.se4298.isChecked -> "98"
+                            binding.se4296.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se43 = (when {
+                            binding.se4301.isChecked -> "1"
+                            binding.se4302.isChecked -> "2"
+                            binding.se4303.isChecked -> "3"
+                            binding.se4304.isChecked -> "4"
+                            binding.se4305.isChecked -> "5"
+                            binding.se4306.isChecked -> "6"
+                            binding.se4307.isChecked -> "7"
+                            binding.se4308.isChecked -> "8"
+                            binding.se4309.isChecked -> "9"
+                            binding.se4310.isChecked -> "10"
+                            binding.se4311.isChecked -> "11"
+                            binding.se4396.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se44 = (when {
+                            binding.se4401.isChecked -> "1"
+                            binding.se4402.isChecked -> "2"
+                            binding.se4403.isChecked -> "3"
+                            binding.se4404.isChecked -> "4"
+                            binding.se4496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se45 = (when {
+                            binding.se4501.isChecked -> "1"
+                            binding.se4502.isChecked -> "2"
+                            binding.se4598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se46 = (when {
+                            binding.se4601.isChecked -> "1"
+                            binding.se4602.isChecked -> "2"
+                            binding.se4603.isChecked -> "3"
+                            binding.se4604.isChecked -> "4"
+                            binding.se4605.isChecked -> "5"
+                            binding.se4606.isChecked -> "6"
+                            binding.se4696.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se47 = (when {
+                            binding.se4701.isChecked -> "1"
+                            binding.se4702.isChecked -> "2"
+                            binding.se4703.isChecked -> "3"
+                            binding.se4704.isChecked -> "4"
+                            binding.se4705.isChecked -> "5"
+                            binding.se4706.isChecked -> "6"
+                            binding.se4707.isChecked -> "7"
+                            binding.se4796.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se48 = (when {
+                            binding.se4801.isChecked -> "1"
+                            binding.se4802.isChecked -> "2"
+                            binding.se4898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se49 = (when {
+                            binding.se4901.isChecked -> "1"
+                            binding.se4902.isChecked -> "2"
+                            binding.se4903.isChecked -> "3"
+                            binding.se4904.isChecked -> "4"
+                            binding.se4998.isChecked -> "98"
+                            binding.se4996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se50 = (when {
+                            binding.se5001.isChecked -> "1"
+                            binding.se5002.isChecked -> "2"
+                            binding.se5003.isChecked -> "3"
+                            binding.se5098.isChecked -> "98"
+                            binding.se5096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se35 = (when {
+                            binding.se3501.isChecked -> "1"
+                            binding.se3502.isChecked -> "2"
+                            binding.se3598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se36 = (when {
+                            binding.se3601.isChecked -> "1"
+                            binding.se3602.isChecked -> "2"
+                            binding.se3698.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se37 = (when {
+                            binding.se3701.isChecked -> "1"
+                            binding.se3702.isChecked -> "2"
+                            binding.se3703.isChecked -> "3"
+                            binding.se3704.isChecked -> "4"
+                            binding.se3705.isChecked -> "5"
+                            binding.se3706.isChecked -> "6"
+                            binding.se3707.isChecked -> "7"
+                            binding.se3708.isChecked -> "8"
+                            binding.se3709.isChecked -> "9"
+                            binding.se3710.isChecked -> "10"
+                            binding.se3796.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+
+                        se38 = (when {
+                            binding.se3801.isChecked -> "1"
+                            binding.se3802.isChecked -> "2"
+                            binding.se3803.isChecked -> "3"
+                            binding.se3804.isChecked -> "4"
+                            binding.se3805.isChecked -> "5"
+                            binding.se3898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se39 = (when {
+                            binding.se3901.isChecked -> "1"
+                            binding.se3902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se40 = (when {
+                            binding.se4001.isChecked -> "1"
+                            binding.se4002.isChecked -> "2"
+                            binding.se4098.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+    fun updateEight2() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.Eight2Dao().update(
+                    Eight2(
+                        0,
+                        se24 = binding.se24.text.toString(),
+                        se25 = binding.se25.text.toString(),
+                        se26 = binding.se26.text.toString(),
+                        se3096x = binding.se3096x.text.toString(),
+                        se3196x = binding.se3196x.text.toString(),
+                        se3302 = binding.se3302.text.toString(),
+                        se3301 = binding.se3301.text.toString(),
+                        se4296x = binding.se4296x.text.toString(),
+                        se4396x = binding.se4396x.text.toString(),
+                        se4496x = binding.se4496x.text.toString(),
+                        se4696x = binding.se4696x.text.toString(),
+                        se4796x = binding.se4796x.text.toString(),
+                        se4996x = binding.se4996x.text.toString(),
+                        se5096x = binding.se5096x.text.toString(),
+                        se3402 = binding.se3302.text.toString(),
+                        se3401 = binding.se3301.text.toString(),
+                        se3796x = binding.se3796x.text.toString(),
+
+
+                        se2204 = (when {
+                            binding.se220401.isChecked -> "1"
+                            binding.se220402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2205 = (when {
+                            binding.se220501.isChecked -> "1"
+                            binding.se220502.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2206 = (when {
+                            binding.se220601.isChecked -> "1"
+                            binding.se220602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2207 = (when {
+                            binding.se220701.isChecked -> "1"
+                            binding.se220702.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2208 = (when {
+                            binding.se220801.isChecked -> "1"
+                            binding.se220802.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2209 = (when {
+                            binding.se220901.isChecked -> "1"
+                            binding.se220902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2210 = (when {
+                            binding.se221001.isChecked -> "1"
+                            binding.se221002.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2211 = (when {
+                            binding.se221101.isChecked -> "1"
+                            binding.se221102.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2212 = (when {
+                            binding.se221201.isChecked -> "1"
+                            binding.se221202.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2213 = (when {
+                            binding.se221301.isChecked -> "1"
+                            binding.se221302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2214 = (when {
+                            binding.se221401.isChecked -> "1"
+                            binding.se221402.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2215 = (when {
+                            binding.se221501.isChecked -> "1"
+                            binding.se221502.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2216 = (when {
+                            binding.se221601.isChecked -> "1"
+                            binding.se221602.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2217 = (when {
+                            binding.se221701.isChecked -> "1"
+                            binding.se221702.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se2218 = (when {
+                            binding.se221801.isChecked -> "1"
+                            binding.se221802.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se23 = (when {
+                            binding.se2301.isChecked -> "1"
+                            binding.se2302.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se27 = (when {
+                            binding.se2701.isChecked -> "1"
+                            binding.se2702.isChecked -> "2"
+                            binding.se2703.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+
+                        se28 = (when {
+                            binding.se2801.isChecked -> "1"
+                            binding.se2802.isChecked -> "2"
+                            binding.se2803.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+                        se29 = (when {
+                            binding.se2901.isChecked -> "1"
+                            binding.se2902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se30 = (when  {
+                            binding.se3001.isChecked -> "1"
+                            binding.se3002.isChecked -> "2"
+                            binding.se3003.isChecked -> "3"
+                            binding.se3096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se31 = (when  {
+                            binding.se3101.isChecked -> "1"
+                            binding.se3102.isChecked -> "2"
+                            binding.se3196.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se32 = (when {
+                            binding.se3201.isChecked -> "1"
+                            binding.se3202.isChecked -> "2"
+                            binding.se3203.isChecked -> "3"
+                            binding.se3204.isChecked -> "4"
+                            binding.se3205.isChecked -> "5"
+                            binding.se3206.isChecked -> "6"
+                            binding.se3207.isChecked -> "7"
+                            binding.se3208.isChecked -> "8"
+                            binding.se3209.isChecked -> "9"
+                            else -> "-1"
+                        }),
+
+                        se41 = (when {
+                            binding.se4101.isChecked -> "1"
+                            binding.se4102.isChecked -> "2"
+                            binding.se4198.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se42 = (when {
+                            binding.se4201.isChecked -> "1"
+                            binding.se4202.isChecked -> "2"
+                            binding.se4203.isChecked -> "3"
+                            binding.se4204.isChecked -> "4"
+                            binding.se4205.isChecked -> "5"
+                            binding.se4298.isChecked -> "98"
+                            binding.se4296.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se43 = (when {
+                            binding.se4301.isChecked -> "1"
+                            binding.se4302.isChecked -> "2"
+                            binding.se4303.isChecked -> "3"
+                            binding.se4304.isChecked -> "4"
+                            binding.se4305.isChecked -> "5"
+                            binding.se4306.isChecked -> "6"
+                            binding.se4307.isChecked -> "7"
+                            binding.se4308.isChecked -> "8"
+                            binding.se4309.isChecked -> "9"
+                            binding.se4310.isChecked -> "10"
+                            binding.se4311.isChecked -> "11"
+                            binding.se4396.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se44 = (when {
+                            binding.se4401.isChecked -> "1"
+                            binding.se4402.isChecked -> "2"
+                            binding.se4403.isChecked -> "3"
+                            binding.se4404.isChecked -> "4"
+                            binding.se4496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se45 = (when {
+                            binding.se4501.isChecked -> "1"
+                            binding.se4502.isChecked -> "2"
+                            binding.se4598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se46 = (when {
+                            binding.se4601.isChecked -> "1"
+                            binding.se4602.isChecked -> "2"
+                            binding.se4603.isChecked -> "3"
+                            binding.se4604.isChecked -> "4"
+                            binding.se4605.isChecked -> "5"
+                            binding.se4606.isChecked -> "6"
+                            binding.se4696.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se47 = (when {
+                            binding.se4701.isChecked -> "1"
+                            binding.se4702.isChecked -> "2"
+                            binding.se4703.isChecked -> "3"
+                            binding.se4704.isChecked -> "4"
+                            binding.se4705.isChecked -> "5"
+                            binding.se4706.isChecked -> "6"
+                            binding.se4707.isChecked -> "7"
+                            binding.se4796.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se48 = (when {
+                            binding.se4801.isChecked -> "1"
+                            binding.se4802.isChecked -> "2"
+                            binding.se4898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se49 = (when {
+                            binding.se4901.isChecked -> "1"
+                            binding.se4902.isChecked -> "2"
+                            binding.se4903.isChecked -> "3"
+                            binding.se4904.isChecked -> "4"
+                            binding.se4998.isChecked -> "98"
+                            binding.se4996.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se50 = (when {
+                            binding.se5001.isChecked -> "1"
+                            binding.se5002.isChecked -> "2"
+                            binding.se5003.isChecked -> "3"
+                            binding.se5098.isChecked -> "98"
+                            binding.se5096.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        se35 = (when {
+                            binding.se3501.isChecked -> "1"
+                            binding.se3502.isChecked -> "2"
+                            binding.se3598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se36 = (when {
+                            binding.se3601.isChecked -> "1"
+                            binding.se3602.isChecked -> "2"
+                            binding.se3698.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se37 = (when {
+                            binding.se3701.isChecked -> "1"
+                            binding.se3702.isChecked -> "2"
+                            binding.se3703.isChecked -> "3"
+                            binding.se3704.isChecked -> "4"
+                            binding.se3705.isChecked -> "5"
+                            binding.se3706.isChecked -> "6"
+                            binding.se3707.isChecked -> "7"
+                            binding.se3708.isChecked -> "8"
+                            binding.se3709.isChecked -> "9"
+                            binding.se3710.isChecked -> "10"
+                            binding.se3796.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+
+                        se38 = (when {
+                            binding.se3801.isChecked -> "1"
+                            binding.se3802.isChecked -> "2"
+                            binding.se3803.isChecked -> "3"
+                            binding.se3804.isChecked -> "4"
+                            binding.se3805.isChecked -> "5"
+                            binding.se3898.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        se39 = (when {
+                            binding.se3901.isChecked -> "1"
+                            binding.se3902.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        se40 = (when {
+                            binding.se4001.isChecked -> "1"
+                            binding.se4002.isChecked -> "2"
+                            binding.se4098.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    private fun createDialog() {
+        AlertDialog.Builder(this@EightActivity2).apply {
+            setCancelable(true)
+            setTitle("Alert Dialog")
+            setMessage("Are you sure you want to clear this form?")
+            setPositiveButton("Yes") { dialog, id ->
+                //Action for "Delete".
+                Log.e("click", "positive")
+
+                lifecycleScope.launch {
+                    val def = launch { Clear.clearAllFields(binding.GrpName) }
+                    def.join()
+                    /*startActivity(Intent(this@MainActivity, MainActivity::class.java))*/
+                    binding.Grp82.fullScroll(View.FOCUS_UP)
+                }
+            }
+            setNegativeButton("Cancel") { dialog, which ->
+                //Action for "Cancel".
+                Log.e("click", "Negative")
+            }
+        }.create().show()
+    }
+
 }
