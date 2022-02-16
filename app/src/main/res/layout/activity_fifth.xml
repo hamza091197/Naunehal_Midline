@@ -24,23 +24,13 @@
             android:orientation="vertical">
 
             <!-- pd_title1  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVpd_title1"
+            <TextView
+                android:textSize="15sp"
                 style="@style/HeadingTitle"
-                android:textSize="20sp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pd_title1" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pd_title1" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
             <!-- pd01  Input-Numeric   -->
             <androidx.cardview.widget.CardView

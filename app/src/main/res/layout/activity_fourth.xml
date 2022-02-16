@@ -3371,15 +3371,6 @@
                     android:textColor="@color/white" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btn_fourth2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Fourth 2"
-                android:textColor="@color/white" />
-
-        </LinearLayout>
+           </LinearLayout>
     </ScrollView>
 </layout>

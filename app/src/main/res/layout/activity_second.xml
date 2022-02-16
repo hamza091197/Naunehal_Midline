@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <import type="android.view.View" />
 
         <variable
             name="callback"
             type="com.example.naunehalmidline.SecondActivity" />
     </data>
-
 
     <ScrollView
         android:id="@+id/Grp_2"
@@ -197,7 +195,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            <!-- cb04  Input   -->
+            <!-- cb04  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcb04"
                 style="@style/cardView">
@@ -223,114 +221,126 @@
                             style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
-                            android:padding="15dp"
-                            android:text="@string/cb04"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"
+                            android:text="@string/cb04" />
 
                     </LinearLayout>
+
+                    <androidx.cardview.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/subtextview"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Days" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/cb04dd"
+                                    style="@style/EditText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bottom"
+                                    android:gravity="center"
+                                    android:hint="####"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:paddingStart="10dp"
+                                    app:defaultValue="999"
+                                    app:maxValue="29"
+                                    app:minValue="1"
+                                    app:required="true"
+                                    app:type="range" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/subtextview"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Months" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/cb04mm"
+                                    style="@style/EditText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bottom"
+                                    android:gravity="center"
+                                    android:hint="####"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:paddingStart="10dp"
+                                    app:defaultValue="999"
+                                    app:maxValue="11"
+                                    app:minValue="1"
+                                    app:required="true"
+                                    app:type="range" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/subtextview"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Year" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/cb04yy"
+                                    style="@style/EditText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bottom"
+                                    android:gravity="center"
+                                    android:hint="####"
+                                    android:inputType="number"
+                                    android:maxLength="4"
+                                    android:paddingStart="10dp"
+                                    app:defaultValue="999"
+                                    app:maxValue="2021"
+                                    app:minValue="2015"
+                                    app:required="true"
+                                    app:type="range" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVcb0401"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/quesNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="1"
-                            android:text="@string/cb04dd"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb04dd"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="##"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:paddingStart="10dp"
-                            app:defaultValue="999"
-                            app:maxValue="29"
-                            app:minValue="1"
-                            app:required="true"
-                            app:type="range" />
-
-                        <TextView
-                            style="@style/quesNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="1"
-                            android:text="@string/cb04mm" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb04mm"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="##"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:paddingStart="10dp"
-                            app:maxValue="11"
-                            app:minValue="1"
-                            app:type="range" />
-
-                        <TextView
-                            style="@style/quesNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="1"
-                            android:text="@string/cb04yy" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb04yy"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="####"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            android:paddingStart="10dp"
-                            app:maxValue="2021"
-                            app:minValue="2015"
-                            app:type="range" />
-                    </LinearLayout>
-
-
-                </androidx.cardview.widget.CardView>
-
-
-            </LinearLayout>
-
-
-            <!-- cb05  Input   -->
+            <!-- cb05  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVcb05"
                 style="@style/cardView">
@@ -356,89 +366,93 @@
                             style="@style/textview"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
                             android:fontFamily="@font/roboto"
-                            android:padding="15dp"
-                            android:text="@string/cb05"
-                            android:textStyle="bold" />
+                            android:gravity="center_vertical"
+                            android:paddingStart="10dp"
+                            android:text="@string/cb05" />
 
                     </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        style="@style/cardView">
 
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVcb0501"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bottom"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            style="@style/quesNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="1"
-                            android:text="@string/cb0501"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb0501"
-                            style="@style/EditTextNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="##"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:paddingStart="10dp"
-                            app:defaultValue="999"
-                            app:maxValue="5"
-                            app:minValue="1"
-                            app:required="true"
-                            app:type="range" />
-
-                        <TextView
-                            style="@style/quesNum"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:layout_weight="1"
-                            android:text="@string/cb0502" />
-
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/cb0502"
-                            style="@style/EditTextNum"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:hint="##"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:paddingStart="10dp"
-                            app:maxValue="11"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:orientation="vertical">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal">
 
-                    </LinearLayout>
+                                <TextView
+                                    style="@style/subtextview"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="Year" />
 
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/cb0501"
+                                    style="@style/EditText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bottom"
+                                    android:gravity="center"
+                                    android:hint="####"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:paddingStart="10dp"
+                                    app:defaultValue="999"
+                                    app:maxValue="5"
+                                    app:minValue="1"
+                                    app:required="true"
+                                    app:type="range" />
 
-                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:orientation="horizontal">
 
-            </LinearLayout>
+                                <TextView
+                                    style="@style/subtextview"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Months" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/cb0502"
+                                    style="@style/EditText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bottom"
+                                    android:gravity="center"
+                                    android:hint="####"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:paddingStart="10dp"
+                                    app:defaultValue="999"
+                                    app:maxValue="11"
+                                    app:minValue="1"
+                                    app:required="true"
+                                    app:type="range" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- cb06  Radio   -->
             <androidx.cardview.widget.CardView
@@ -1307,7 +1321,9 @@
                             android:visibility="@{cb1496.checked ? View.VISIBLE : View.GONE}" />/>
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+            </androidx.cardview.widget.CardView>
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1333,15 +1349,6 @@
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_Third"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/blue"
-                android:text="Third"
-                android:textColor="@color/white" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_2"

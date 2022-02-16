@@ -2,12 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.naunehalmidline">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -16,15 +15,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NaunehalMidline">
-
+        <activity
+            android:name=".MainActivity1"
+            android:exported="false" />
         <activity
             android:name=".EightActivity2"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".EightActivity"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".EightActivity"
-            android:screenOrientation="portrait"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SevenActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreen"
             android:exported="true"
@@ -38,27 +42,33 @@
         </activity>
         <activity
             android:name=".SevenActivity"
+            android:parentActivityName=".SixthActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SixthActivity"
             android:exported="false"
+            android:parentActivityName=".FifthActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FifthActivity"
             android:exported="false"
+            android:parentActivityName=".FourthActivity2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FourthActivity2"
             android:exported="false"
+            android:parentActivityName=".FourthActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FourthActivity"
             android:exported="false"
+            android:parentActivityName=".ThirdActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ThirdActivity"
             android:exported="false"
+            android:parentActivityName=".SevenActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SecondActivity"
@@ -67,7 +77,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
+            android:exported="false"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
 
         <meta-data

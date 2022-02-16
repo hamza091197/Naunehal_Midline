@@ -185,7 +185,6 @@
                         android:hint="@string/im12a1"
                         android:inputType="number"
                         android:maxLength="2"
-                        android:tag="im12a1"
                         app:maxValue="96"
                         app:minValue="1"
                         app:type="range" />
@@ -905,22 +904,19 @@
                 android:id="@+id/skip_231"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="@{im231.checked ? View.GONE : View.VISIBLE}">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/skip_232"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="@{im232.checked ? View.GONE : View.VISIBLE}">
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:id="@+id/skip_233"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="@{im233.checked ? View.GONE : View.VISIBLE}">
+                        android:orientation="vertical">
 
                         <!-- im23a  Radio   -->
                         <androidx.cardview.widget.CardView

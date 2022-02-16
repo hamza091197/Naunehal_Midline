@@ -7,8 +7,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -31,6 +34,15 @@ class FifthActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fifth)
         binding.callback
         database = FifthDatabase.getDatabase(this)
+
+
+        val window: Window = this@FifthActivity.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@FifthActivity, R.color.selectedBlue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
+
+
         binding.btnContinue.setOnClickListener {
 
             if (binding.pd01.text.toString().trim().isEmpty()){
@@ -476,6 +488,10 @@ class FifthActivity : AppCompatActivity() {
 
     }
 
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
     private fun createDialog() {
         AlertDialog.Builder(this@FifthActivity).apply {
             setCancelable(true)

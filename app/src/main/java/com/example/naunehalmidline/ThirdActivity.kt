@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -32,6 +35,11 @@ class ThirdActivity : AppCompatActivity() {
         database = ThirdDatabase.getDatabase(this)
 
 
+        val window: Window = this@ThirdActivity.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@ThirdActivity, R.color.selectedBlue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
 
         binding.btnContinue.setOnClickListener {
 
@@ -358,6 +366,10 @@ class ThirdActivity : AppCompatActivity() {
         binding.btnEnd.setOnClickListener {
             createDialog()
         }
+    }
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
     }
 
     private fun createDialog() {

@@ -4,8 +4,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
+import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
+import android.widget.EditText
+import android.widget.RadioGroup
+import androidx.core.content.ContextCompat
+import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityFourth2Binding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class FourthActivity2 : AppCompatActivity() {
@@ -15,6 +27,12 @@ class FourthActivity2 : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fourth2)
         binding.callback
 
+
+        val window: Window = this@FourthActivity2.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@FourthActivity2, R.color.selectedBlue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
         binding.btnContinue2.setOnClickListener {
 
 
@@ -51,7 +69,7 @@ class FourthActivity2 : AppCompatActivity() {
                     return@setOnClickListener
                 }
 
-                if (binding.im12a1.isRangeTextValidate){
+                if (!binding.im12a1.isRangeTextValidate){
                     binding.im12a1.requestFocus()
                     binding.im12a1.error = "The range is from 1 to 96"
                     return@setOnClickListener
@@ -76,8 +94,6 @@ class FourthActivity2 : AppCompatActivity() {
                 binding.im143.error = null
             }
 
-
-
             if (!binding.im1598.isChecked){
 
                 if (binding.im151.text.toString().trim().isEmpty()){
@@ -86,7 +102,7 @@ class FourthActivity2 : AppCompatActivity() {
                     return@setOnClickListener
                 }
 
-                if (binding.im151.isRangeTextValidate){
+                if (!binding.im151.isRangeTextValidate){
                     binding.im151.requestFocus()
                     binding.im151.error = "The range is from 1 to 96"
                     return@setOnClickListener
@@ -109,7 +125,7 @@ class FourthActivity2 : AppCompatActivity() {
                     return@setOnClickListener
                 }
 
-                if (binding.im171.isRangeTextValidate){
+                if (!binding.im171.isRangeTextValidate){
                     binding.im171.requestFocus()
                     binding.im171.error = "The range is from 1 to 96"
                     return@setOnClickListener
@@ -117,7 +133,13 @@ class FourthActivity2 : AppCompatActivity() {
             }
 
         }
+        im2()
+    }
 
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
+    private fun im2(){
         binding.im1298.setOnCheckedChangeListener { compoundButton, b ->
 
             if (binding.im1298.isChecked){
@@ -243,20 +265,8 @@ class FourthActivity2 : AppCompatActivity() {
             })
 
 
-        binding.im23.setOnCheckedChangeListener { radioGroup, i ->
+        /*binding.im23.setOnCheckedChangeListener { radioGroup, i ->
             if (binding.im234.isChecked){
-                binding.im23a.clearCheck()
-                binding.im23a96x.text = null
-                binding.im23b1.text = null
-                binding.im23b2.text = null
-                binding.im24.clearCheck()
-                binding.im2496x.text = null
-                binding.im25.clearCheck()
-            }
-        }
-
-       /* binding.im23.setOnCheckedChangeListener { radioGroup, i ->
-            if (binding.im236.isChecked){
                 binding.im23a.clearCheck()
                 binding.im23a96x.text = null
                 binding.im23b1.text = null
@@ -267,6 +277,59 @@ class FourthActivity2 : AppCompatActivity() {
             }
         }*/
 
+
+
+        /* binding.im23.setOnCheckedChangeListener { radioGroup, i ->
+             if (binding.im236.isChecked){
+                 binding.im23a.clearCheck()
+                 binding.im23a96x.text = null
+                 binding.im23b1.text = null
+                 binding.im23b2.text = null
+                 binding.im24.clearCheck()
+                 binding.im2496x.text = null
+                 binding.im25.clearCheck()
+             }
+         }*/
+
+
         /*binding.im12a1x.setOnCh*/
+        binding.im23.setOnCheckedChangeListener { radioGroup, i ->
+            if (i == binding.im231.id && i == binding.im232.id && i == binding.im233.id) {
+                binding.skip231.visibility = View.GONE
+                binding.skip232.visibility = View.GONE
+                binding.skip233.visibility = View.GONE
+                lifecycleScope.launch {
+                    val skip231 = binding.skip231
+                    val skip232 = binding.skip232
+                    val skip233 = binding.skip233
+                    clearingFields(skip231)
+                    clearingFields(skip232)
+                    clearingFields(skip233)
+                }
+            } else{
+                binding.skip231.visibility = View.VISIBLE
+                binding.skip232.visibility = View.VISIBLE
+                binding.skip233.visibility = View.VISIBLE
+            }
+        }
+    }
+
+    private suspend fun clearingFields(root: ViewGroup) {
+        withContext(Dispatchers.Main) {
+            val children = root.children
+            children.forEach { view ->
+                when (view) {
+                    is RadioGroup -> {
+                        view.clearCheck()
+                    }
+                    is EditText -> {
+                        view.text = null
+                    }
+                    is ViewGroup -> {
+                        clearingFields(view)
+                    }
+                }
+            }
+        }
     }
 }

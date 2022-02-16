@@ -1703,88 +1703,8 @@
                     android:fontFamily="@font/roboto"
                     android:text="Save"
                     android:textColor="@color/white" />
+
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_Second"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Second"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_third"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Third"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_fourth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Fourth"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_fourthtwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Fourth 2"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_fifth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Fifth"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_sixth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Sixth"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_seven"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Seven"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_eight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Eight"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_eight2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:background="@color/green"
-                android:text="Eight2"
-                android:textColor="@color/white" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"

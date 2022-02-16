@@ -9,8 +9,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySecondBinding
@@ -33,9 +36,16 @@ class SecondActivity : AppCompatActivity() {
         binding.callback
         database = SecondDatabase.getDatabase(this)
 
-        val actionBar = supportActionBar
+       /* val actionBar = supportActionBar
         actionBar?.title = "Child Basic Information"
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        actionBar?.setDisplayHomeAsUpEnabled(true)*/
+
+        title ="Child Basic Information"
+        val window: Window = this@SecondActivity.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@SecondActivity, R.color.selectedBlue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
         /*supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#146775")))*/
 
 
@@ -269,10 +279,7 @@ class SecondActivity : AppCompatActivity() {
             updateSecond()
         }
 
-        binding.btnThird.setOnClickListener {
-            val intent = Intent(this, ThirdActivity::class.java)
-            startActivity(intent)
-        }
+
 
         binding.fab2.setOnClickListener {
             RoomExplorer.show(this, SecondDatabase::class.java, "secondDB")
@@ -303,6 +310,10 @@ class SecondActivity : AppCompatActivity() {
             }
         }
     }*/
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
 
     private fun createDialog() {
         AlertDialog.Builder(this@SecondActivity).apply {

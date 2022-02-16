@@ -6,10 +6,13 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
@@ -27,10 +30,11 @@ class FourthActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fourth)
         binding.callback
 
-        binding.btnFourth2.setOnClickListener {
-            val intent = Intent(this, FourthActivity2::class.java)
-            startActivity(intent)
-        }
+        val window: Window = this@FourthActivity.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@FourthActivity, R.color.selectedBlue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
 
         binding.btnContinue.setOnClickListener {
 
@@ -794,6 +798,9 @@ class FourthActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
     private fun im() {
         binding.im0501Dd.addTextChangedListener(object : TextWatcher {
 

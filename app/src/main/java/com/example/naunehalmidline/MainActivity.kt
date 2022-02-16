@@ -1,14 +1,17 @@
 package com.example.naunehalmidline
 
 import android.Manifest.permission.CAMERA
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.graphics.Color.parseColor
 import android.graphics.Insets.add
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -26,6 +29,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.Insets.add
+import androidx.core.graphics.alpha
 import androidx.core.view.*
 import androidx.core.view.OneShotPreDrawListener.add
 import androidx.databinding.DataBindingUtil
@@ -46,7 +50,8 @@ import java.util.jar.Manifest
 
 
 class MainActivity : AppCompatActivity() {
-
+    private var needSave: Boolean = false
+    private var backPressedTime = 0L
     lateinit var database: ContactDatabase
     lateinit var binding: ActivityMainBinding
     private val CAMERA_PERMISSION_CODE=123
@@ -56,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.callback
         database = ContactDatabase.getDatabase(this)
-        checkPermission(android.Manifest.permission.CAMERA,CAMERA_PERMISSION_CODE)
+        checkPermission(CAMERA,CAMERA_PERMISSION_CODE)
         checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
 
         /*val actionBar = supportActionBar
@@ -71,11 +76,9 @@ class MainActivity : AppCompatActivity() {
         val window: Window = this@MainActivity.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.year)
-       /* window.navigationBarColor = resources.getColor(R.color.year)*/
-
-
-
+        window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.blue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
+        /*getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)*/
 
         binding.btnContinue.setOnClickListener {
 
@@ -363,69 +366,75 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
-
-
         binding.fab.setOnClickListener {
             RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
         }
 
-        binding.btnSecond.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
-        }
 
-        binding.btnThird.setOnClickListener {
-            val intent = Intent(this, ThirdActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnFourth.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnFourthtwo.setOnClickListener {
-            val intent = Intent(this, FourthActivity2::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnFifth.setOnClickListener {
-            val intent = Intent(this, FifthActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnSixth.setOnClickListener {
-            val intent = Intent(this, SixthActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnSeven.setOnClickListener {
-            val intent = Intent(this, SevenActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnEight.setOnClickListener {
-            val intent = Intent(this, EightActivity::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnEight2.setOnClickListener {
-            val intent = Intent(this, EightActivity2::class.java)
-            startActivity(intent)
-        }
 
         binding.btnEnd.setOnClickListener {
             createDialog()
         }
 
-
         binding.hh01.transformIntoDatePicker(this, "dd/MM/yyyy", Date())
 
         Child_Basic_Information()
-
+        setTransparentStatusBar()
+        /*onBackPressed()*/
 
     }
+
+    fun Activity.setTransparentStatusBar() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.navigationBarColor = Color.TRANSPARENT
+
+    }
+    /*override fun onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()){
+            super.onBackPressed()
+        }
+        else {
+            Toast.makeText(applicationContext, "press back again to exit app", Toast.LENGTH_SHORT).show()
+        }
+        backPressedTime = System.currentTimeMillis()
+    }*/
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+        .setTitle("Exit App")
+            .setMessage("Are you sure you want exit the app?")
+            .setPositiveButton(android.R.string.ok) { dialog, whichButton ->
+                super.onBackPressed()
+            }
+            .setNegativeButton(android.R.string.cancel) { dialog, whichButton ->
+
+            }
+            .show()
+    }
+
+
+    /* override fun onBackPressed() {
+         val builder = AlertDialog.Builder(this)
+         builder.setTitle("Save Or Not")
+         builder.setMessage("Do you want to save this? ")
+         builder.setPositiveButton("Save") { dialog, id ->
+             savedStateRegistry
+             super@MainActivity.onBackPressed()
+         }
+         builder.setNegativeButton(
+             "Discard"
+         ) { dialog, id -> super@MainActivity.onBackPressed() }
+         builder.show()
+     }*/
+
+
+
+
 
     private fun Child_Basic_Information() {
 
@@ -436,7 +445,6 @@ class MainActivity : AppCompatActivity() {
                 binding.hh1796x.error = null
             }
         }
-
     }
 
     private fun createDialog() {
@@ -732,14 +740,11 @@ class MainActivity : AppCompatActivity() {
     private fun checkPermission(permission:String,requestCode:Int){
         if (ContextCompat.checkSelfPermission(this@MainActivity,permission)==PackageManager.PERMISSION_DENIED){
             //Take Permissions
-
             ActivityCompat.requestPermissions(this@MainActivity, arrayOf(permission), requestCode )
         }
-
         else {
       /*  Toast.makeText(this@MainActivity, "Permission Granted Already", Toast.LENGTH_LONG).show()*/
     }
-
     }
 
     override fun onRequestPermissionsResult(

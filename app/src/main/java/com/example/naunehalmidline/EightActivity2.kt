@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -29,6 +32,13 @@ class EightActivity2 : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_eight2)
         binding.callback
         database = Eight2Database.getDatabase(this)
+
+
+        val window: Window = this@EightActivity2.window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.statusBarColor = ContextCompat.getColor(this@EightActivity2, R.color.selectedBlue)
+        window.navigationBarColor = resources.getColor(R.color.gray)
 
         binding.btnContinue2.setOnClickListener {
             if (binding.se2204.checkedRadioButtonId == -1){
@@ -574,6 +584,10 @@ class EightActivity2 : AppCompatActivity() {
         }
     }
 
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
     fun insertEight2() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {

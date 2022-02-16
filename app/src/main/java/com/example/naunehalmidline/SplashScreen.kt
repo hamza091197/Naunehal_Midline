@@ -7,6 +7,9 @@ import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Suppress("DEPRECATION")
 class SplashScreen : AppCompatActivity() {
@@ -29,10 +32,13 @@ class SplashScreen : AppCompatActivity() {
 
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.
-        Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+        lifecycleScope.launch {
+            delay(3000)// 3000 is the delayed time in milliseconds.
+            val intent = Intent(this@SplashScreen, MainActivity1::class.java)
             startActivity(intent)
             finish()
-        }, 3000) // 3000 is the delayed time in milliseconds.
+        }
+
     }
+
 }
