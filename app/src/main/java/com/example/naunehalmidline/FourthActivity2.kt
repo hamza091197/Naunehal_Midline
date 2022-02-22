@@ -307,7 +307,7 @@ class FourthActivity2 : AppCompatActivity() {
 
         /*binding.im12a1x.setOnCh*/
         binding.im23.setOnCheckedChangeListener { radioGroup, i ->
-            if (i == binding.im231.id && i == binding.im232.id && i == binding.im233.id) {
+            if (i == binding.im231.id || i == binding.im232.id || i == binding.im233.id) {
                 binding.skip231.visibility = View.GONE
                 binding.skip232.visibility = View.GONE
                 binding.skip233.visibility = View.GONE
