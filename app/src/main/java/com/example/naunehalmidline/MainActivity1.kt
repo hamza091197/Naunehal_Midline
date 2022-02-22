@@ -6,6 +6,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
 import com.example.naunehalmidline.databinding.ActivityMain1Binding
@@ -19,6 +20,7 @@ class MainActivity1 : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main1)
         binding.callback
 
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
        /* binding.btnMain.visibility = View.GONE
         binding.btnSecond.visibility = View.GONE
 
@@ -103,4 +105,22 @@ class MainActivity1 : AppCompatActivity() {
         window.navigationBarColor = Color.TRANSPARENT
 
     }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Exit App")
+            .setMessage("Are you sure you want exit the app?")
+            .setPositiveButton(android.R.string.ok) { dialog, whichButton ->
+                super.onBackPressed()
+            }
+            .setNegativeButton(android.R.string.cancel) { dialog, whichButton ->
+
+            }
+            .show()
+    }
+
 }

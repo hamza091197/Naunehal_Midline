@@ -1,6 +1,8 @@
 package com.example.naunehalmidline
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +12,7 @@ import android.view.WindowManager
 import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -39,6 +42,9 @@ class EightActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@EightActivity, R.color.selectedBlue)
         window.navigationBarColor = resources.getColor(R.color.gray)
+        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         binding.btnContinue.setOnClickListener{
 
@@ -57,7 +63,7 @@ class EightActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            /*if (binding.se02.checkedRadioButtonId == -1){
+            if (binding.se02.checkedRadioButtonId == -1){
                 binding.se0211.requestFocus()
                 binding.se0211.error = "RadioButton Not Selected"
                 return@setOnClickListener
@@ -388,7 +394,7 @@ class EightActivity : AppCompatActivity() {
             }
             else{
                 binding.se220302.error = null
-            }*/
+            }
 
             val refresh = Intent(this, EightActivity::class.java)
             startActivity(refresh)
@@ -403,8 +409,14 @@ class EightActivity : AppCompatActivity() {
         binding.btnEnd.setOnClickListener {
             createDialog()
         }
+        setTransparentStatusBar()
     }
 
+    fun Activity.setTransparentStatusBar() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.navigationBarColor = Color.TRANSPARENT
+
+    }
 
     override fun onBackPressed() {
         //super.onBackPressed()

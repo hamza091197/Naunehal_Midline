@@ -1,6 +1,8 @@
 package com.example.naunehalmidline
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -13,6 +15,7 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.children
 import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
@@ -35,10 +38,13 @@ class FourthActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@FourthActivity, R.color.selectedBlue)
         window.navigationBarColor = resources.getColor(R.color.gray)
+        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.im01.checkedRadioButtonId == -1){
+            if (binding.im01.checkedRadioButtonId == -1){
                 binding.im01.requestFocus()
                 binding.im012.error = "RadioButton Not Selected"
                 return@setOnClickListener
@@ -47,7 +53,6 @@ class FourthActivity : AppCompatActivity() {
                 binding.im012.error = null
             }
 
-
             if (binding.im02.checkedRadioButtonId == -1){
                 binding.im02.requestFocus()
                 binding.im022.error = "RadioButton Not Selected"
@@ -55,9 +60,9 @@ class FourthActivity : AppCompatActivity() {
             }
             else {
                 binding.im022.error = null
-            }*/
+            }
 
-            /* if (binding.im03.checkedRadioButtonId == -1) {
+             if (binding.im03.checkedRadioButtonId == -1) {
                  binding.im03.requestFocus()
                  binding.im031.error = "RadioButton Not Selected"
                  return@setOnClickListener
@@ -89,7 +94,7 @@ class FourthActivity : AppCompatActivity() {
                  binding.im04Yy.requestFocus()
                  binding.im04Yy.error = "Enter Year"
                  return@setOnClickListener
-             }*/
+             }
 
               if (binding.im0501Dd.text.toString().trim().isEmpty()) {
                   binding.im0501Dd.requestFocus()
@@ -795,6 +800,13 @@ class FourthActivity : AppCompatActivity() {
         }
 
         im()
+        setTransparentStatusBar()
+
+    }
+
+    fun Activity.setTransparentStatusBar() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.navigationBarColor = Color.TRANSPARENT
 
     }
 

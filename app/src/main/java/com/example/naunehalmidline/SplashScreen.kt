@@ -34,7 +34,7 @@ class SplashScreen : AppCompatActivity() {
         // to send a message with a delayed time.
         lifecycleScope.launch {
             delay(3000)// 3000 is the delayed time in milliseconds.
-            val intent = Intent(this@SplashScreen, MainActivity1::class.java)
+            val intent = Intent(this@SplashScreen, Login::class.java)
             startActivity(intent)
             finish()
         }

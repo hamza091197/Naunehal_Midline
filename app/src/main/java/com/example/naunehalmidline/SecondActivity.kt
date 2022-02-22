@@ -1,8 +1,10 @@
 package com.example.naunehalmidline
 
+import android.app.Activity
 import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -14,6 +16,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySecondBinding
@@ -46,6 +49,9 @@ class SecondActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@SecondActivity, R.color.selectedBlue)
         window.navigationBarColor = resources.getColor(R.color.gray)
+        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         /*supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#146775")))*/
 
 
@@ -72,7 +78,7 @@ class SecondActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener { 
             
-            /*if (binding.cb01.text.toString().trim().isEmpty()){
+            if (binding.cb01.text.toString().trim().isEmpty()){
                 binding.cb01.requestFocus()
                 binding.cb01.error = " Line no"
                 return@setOnClickListener
@@ -249,7 +255,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb13.requestFocus()
                 binding.cb13.error = "The range is from 1 to 17"
                 return@setOnClickListener
-            }*/
+            }
 
             if (binding.cb14.checkedRadioButtonId == -1){
                 binding.cb14.requestFocus()
@@ -259,8 +265,6 @@ class SecondActivity : AppCompatActivity() {
             else {
                 binding.cb1401.error = null
             }
-
-
 
             if (binding.cb1496.isChecked &&
                 binding.cb1496x.text.toString().trim().isEmpty()){
@@ -279,18 +283,21 @@ class SecondActivity : AppCompatActivity() {
             updateSecond()
         }
 
-
-
         binding.fab2.setOnClickListener {
             RoomExplorer.show(this, SecondDatabase::class.java, "secondDB")
         }
 
         binding.btnEnd.setOnClickListener {
             createDialog()
-
-
         }
+
+        setTransparentStatusBar()
         /*Child_Basic_Information()*/
+    }
+
+    fun Activity.setTransparentStatusBar() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.navigationBarColor = Color.TRANSPARENT
     }
     /*private fun Child_Basic_Information() {
 

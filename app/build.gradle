@@ -58,6 +58,7 @@ dependencies {
 
     implementation 'com.wajahatkarim3:roomexplorer:0.0.2'
 
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     def roomVersion = "2.3.0"
 

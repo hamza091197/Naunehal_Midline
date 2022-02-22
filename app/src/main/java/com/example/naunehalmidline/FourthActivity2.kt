@@ -1,5 +1,7 @@
 package com.example.naunehalmidline
 
+import android.app.Activity
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -11,6 +13,7 @@ import android.view.WindowManager
 import android.widget.EditText
 import android.widget.RadioGroup
 import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
@@ -33,10 +36,14 @@ class FourthActivity2 : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@FourthActivity2, R.color.selectedBlue)
         window.navigationBarColor = resources.getColor(R.color.gray)
+        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+
+
         binding.btnContinue2.setOnClickListener {
 
-
-          /*  if (binding.im11.checkedRadioButtonId == -1){
+          if (binding.im11.checkedRadioButtonId == -1){
                 binding.im11.requestFocus()
                 binding.im113.error = "RadioButton Not Selected"
                 return@setOnClickListener
@@ -44,7 +51,7 @@ class FourthActivity2 : AppCompatActivity() {
             else {
                 binding.im113.error = null
 
-            }*/
+            }
 
             if (!binding.im1298.isChecked) {
                 if (binding.im121x.text.toString().trim().isEmpty()) {
@@ -134,6 +141,12 @@ class FourthActivity2 : AppCompatActivity() {
 
         }
         im2()
+        setTransparentStatusBar()
+    }
+    fun Activity.setTransparentStatusBar() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.navigationBarColor = Color.TRANSPARENT
+
     }
 
     override fun onBackPressed() {

@@ -3,38 +3,24 @@ package com.example.naunehalmidline
 import android.Manifest.permission.CAMERA
 import android.app.Activity
 import android.app.DatePickerDialog
-import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
-import android.graphics.Color.parseColor
-import android.graphics.Insets.add
-import android.graphics.drawable.ColorDrawable
-import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.webkit.PermissionRequest
 import android.widget.EditText
-import android.widget.SearchView
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.Insets.add
-import androidx.core.graphics.alpha
-import androidx.core.view.*
-import androidx.core.view.OneShotPreDrawListener.add
+import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
-import androidx.room.RoomDatabase
 import com.example.naunehalmidline.databinding.ActivityMainBinding
 import com.example.naunehalmidline.main.Contact
 import com.example.naunehalmidline.main.ContactDatabase
@@ -43,10 +29,8 @@ import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
-import java.util.jar.Manifest
 
 
 class MainActivity : AppCompatActivity() {
@@ -79,9 +63,10 @@ class MainActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.blue)
         window.navigationBarColor = resources.getColor(R.color.gray)
         /*getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)*/
+        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         binding.btnContinue.setOnClickListener {
-
 
             if (binding.hh01.text.toString().trim().isEmpty()) {
                 binding.hh01.requestFocus()
@@ -89,8 +74,7 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-
-            /*if (binding.hh0201.text.toString().trim().isEmpty()) {
+            if (binding.hh0201.text.toString().trim().isEmpty()) {
                 binding.hh0201.requestFocus()
                 binding.hh0201.error = "Hours"
                 return@setOnClickListener
@@ -339,7 +323,6 @@ class MainActivity : AppCompatActivity() {
                 binding.hh25.error = "The range is from 1 to 20"
                 return@setOnClickListener
             }
-*/
 
             if (binding.hh26.checkedRadioButtonId == -1) {
                 binding.hh2601.requestFocus()
@@ -370,8 +353,6 @@ class MainActivity : AppCompatActivity() {
             RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
         }
 
-
-
         binding.btnEnd.setOnClickListener {
             createDialog()
         }
@@ -389,17 +370,12 @@ class MainActivity : AppCompatActivity() {
         window.navigationBarColor = Color.TRANSPARENT
 
     }
-    /*override fun onBackPressed() {
-        if (backPressedTime + 2000 > System.currentTimeMillis()){
-            super.onBackPressed()
-        }
-        else {
-            Toast.makeText(applicationContext, "press back again to exit app", Toast.LENGTH_SHORT).show()
-        }
-        backPressedTime = System.currentTimeMillis()
-    }*/
 
-    override fun onSupportNavigateUp(): Boolean {
+    override fun onBackPressed() {
+        //super.onBackPressed()
+    }
+
+    /*override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
     }
@@ -415,25 +391,7 @@ class MainActivity : AppCompatActivity() {
 
             }
             .show()
-    }
-
-
-    /* override fun onBackPressed() {
-         val builder = AlertDialog.Builder(this)
-         builder.setTitle("Save Or Not")
-         builder.setMessage("Do you want to save this? ")
-         builder.setPositiveButton("Save") { dialog, id ->
-             savedStateRegistry
-             super@MainActivity.onBackPressed()
-         }
-         builder.setNegativeButton(
-             "Discard"
-         ) { dialog, id -> super@MainActivity.onBackPressed() }
-         builder.show()
-     }*/
-
-
-
+    }*/
 
 
     private fun Child_Basic_Information() {
