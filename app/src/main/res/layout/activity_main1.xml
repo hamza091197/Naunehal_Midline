@@ -24,6 +24,8 @@
         android:orientation="vertical">
 
 
+
+
         <androidx.cardview.widget.CardView
             style="@style/cardView">
 
@@ -41,6 +43,14 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/quesNum"
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main Menu"
+            android:textSize="25sp" />
 
         <androidx.cardview.widget.CardView
             style="@style/cardView">
