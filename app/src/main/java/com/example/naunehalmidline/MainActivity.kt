@@ -3,16 +3,19 @@ package com.example.naunehalmidline
 import android.Manifest.permission.CAMERA
 import android.app.Activity
 import android.app.DatePickerDialog
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -68,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.hh01.text.toString().trim().isEmpty()) {
+            /*if (binding.hh01.text.toString().trim().isEmpty()) {
                 binding.hh01.requestFocus()
                 binding.hh01.error = "Enter Date of Interview"
                 return@setOnClickListener
@@ -322,7 +325,7 @@ class MainActivity : AppCompatActivity() {
                 binding.hh25.requestFocus()
                 binding.hh25.error = "The range is from 1 to 20"
                 return@setOnClickListener
-            }
+            }*/
 
             if (binding.hh26.checkedRadioButtonId == -1) {
                 binding.hh2601.requestFocus()
@@ -331,8 +334,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 binding.hh2601.error = null
             }
-
-
+            val prg = ProgressDialog(this)
+            prg.setMessage("Please Wait....")
+            Handler().postDelayed({prg.dismiss()}, 3000)
+            prg.show()
 
             /*val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)*/

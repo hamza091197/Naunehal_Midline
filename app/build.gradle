@@ -60,6 +60,10 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
+    implementation 'com.github.chaya222:AndroidOtpView:0.0.2'
+
+   implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
     def roomVersion = "2.3.0"
 
     implementation("androidx.room:room-runtime:$roomVersion")
