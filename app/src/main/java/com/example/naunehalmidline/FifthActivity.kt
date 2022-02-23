@@ -46,7 +46,7 @@ class FifthActivity : AppCompatActivity() {
         window.navigationBarColor = resources.getColor(R.color.gray)
         getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
                 View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        /*window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN*/
 
 
         binding.btnContinue.setOnClickListener {
