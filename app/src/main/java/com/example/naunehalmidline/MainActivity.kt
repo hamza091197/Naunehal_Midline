@@ -8,8 +8,10 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
+import android.os.Vibrator
 import android.util.Log
 import android.view.View
 import android.view.Window
@@ -72,21 +74,24 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.hh01.text.toString().trim().isEmpty()) {
+            if (binding.hh01.text.toString().trim().isEmpty()) {
                 binding.hh01.requestFocus()
                 binding.hh01.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh0201.text.toString().trim().isEmpty()) {
                 binding.hh0201.requestFocus()
                 binding.hh0201.error = "Hours"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh0201.isRangeTextValidate) {
                 binding.hh0201.requestFocus()
                 binding.hh0201.error = "The range is from 1 to 23"
+                sound()
                 return@setOnClickListener
             }
 
@@ -94,36 +99,42 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh0202.text.toString().trim().isEmpty()) {
                 binding.hh0202.requestFocus()
                 binding.hh0202.error = "Hours"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh0202.isRangeTextValidate) {
                 binding.hh0202.requestFocus()
                 binding.hh0202.error = "The range is from 1 to 59"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh03.text.toString().trim().isEmpty()) {
                 binding.hh03.requestFocus()
                 binding.hh03.error = "Code of Interviewer"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh03.isRangeTextValidate) {
                 binding.hh03.requestFocus()
                 binding.hh03.error = "The range is from 1 to 9999"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh04.text.toString().trim().isEmpty()) {
                 binding.hh04.requestFocus()
                 binding.hh04.error = "Name of Interviewer"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh05.checkedRadioButtonId == -1) {
                 binding.hh0501.requestFocus()
                 binding.hh0501.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh0501.error = null
@@ -132,54 +143,63 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh06.text.toString().trim().isEmpty()) {
                 binding.hh06.requestFocus()
                 binding.hh06.error = "Enter Union Council"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh06.isRangeTextValidate) {
                 binding.hh06.requestFocus()
                 binding.hh06.error = "The range is from 1 to 999"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh07.text.toString().trim().isEmpty()) {
                 binding.hh07.requestFocus()
                 binding.hh07.error = "Enter Block, Street, Colony, Village Name"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh08.text.toString().trim().isEmpty()) {
                 binding.hh08.requestFocus()
                 binding.hh08.error = "Cluster Number"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh08.isRangeTextValidate) {
                 binding.hh08.requestFocus()
                 binding.hh08.error = "The range is from 1 99999"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh09.text.toString().trim().isEmpty()) {
                 binding.hh09.requestFocus()
                 binding.hh09.error = "Enter Household number"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh09.isRangeTextValidate) {
                 binding.hh09.requestFocus()
                 binding.hh09.error = "The range is from 1 to 9999"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh10.text.toString().trim().isEmpty()) {
                 binding.hh10.requestFocus()
                 binding.hh10.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh11.checkedRadioButtonId == -1) {
                 binding.hh1102.requestFocus()
                 binding.hh1102.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh1102.error = null
@@ -188,24 +208,28 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh12.text.toString().trim().isEmpty()) {
                 binding.hh12.requestFocus()
                 binding.hh12.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh13.text.toString().trim().isEmpty()) {
                 binding.hh13.requestFocus()
                 binding.hh13.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh13.isRangeTextValidate) {
                 binding.hh13.requestFocus()
                 binding.hh13.error = "the range is from 15 to 99"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh14.checkedRadioButtonId == -1) {
                 binding.hh1402.requestFocus()
                 binding.hh1402.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh1402.error = null
@@ -215,6 +239,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh15.checkedRadioButtonId == -1) {
                 binding.hh1501.requestFocus()
                 binding.hh1501.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh1501.error = null
@@ -224,18 +249,21 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh16.text.toString().trim().isEmpty()) {
                 binding.hh16.requestFocus()
                 binding.hh16.error = ""
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.hh16.isRangeTextValidate) {
                 binding.hh16.requestFocus()
                 binding.hh16.error = "The range is from 1 to 17"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh17.checkedRadioButtonId == -1) {
                 binding.hh1701.requestFocus()
                 binding.hh1701.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh1701.error = null
@@ -244,6 +272,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh18.checkedRadioButtonId == -1) {
                 binding.hh1801.requestFocus()
                 binding.hh1801.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh1801.error = null
@@ -252,12 +281,14 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh19.text.toString().trim().isEmpty()) {
                 binding.hh19.requestFocus()
                 binding.hh19.error = "Enter Name of Head of Household"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh20.checkedRadioButtonId == -1) {
                 binding.hh2001.requestFocus()
                 binding.hh2001.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh2001.error = null
@@ -266,6 +297,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.hh21.text.toString().trim().isEmpty()) {
                 binding.hh21.requestFocus()
                 binding.hh21.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
@@ -273,12 +305,14 @@ class MainActivity : AppCompatActivity() {
             if (!binding.hh21.isRangeTextValidate) {
                 binding.hh21.requestFocus()
                 binding.hh21.error = "The range is from 1 to 60"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh22.text.toString().trim().isEmpty()) {
                 binding.hh22.requestFocus()
                 binding.hh22.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
@@ -286,12 +320,14 @@ class MainActivity : AppCompatActivity() {
             if (!binding.hh22.isRangeTextValidate) {
                 binding.hh22.requestFocus()
                 binding.hh22.error = "The range is from 1 to 20"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh23.text.toString().trim().isEmpty()) {
                 binding.hh23.requestFocus()
                 binding.hh23.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
@@ -299,12 +335,14 @@ class MainActivity : AppCompatActivity() {
             if (!binding.hh23.isRangeTextValidate) {
                 binding.hh23.requestFocus()
                 binding.hh23.error = "The range is from 1 to 20"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh24.text.toString().trim().isEmpty()) {
                 binding.hh24.requestFocus()
                 binding.hh24.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
@@ -312,12 +350,14 @@ class MainActivity : AppCompatActivity() {
             if (!binding.hh24.isRangeTextValidate) {
                 binding.hh24.requestFocus()
                 binding.hh24.error = "The range is from 1 to 20"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.hh25.text.toString().trim().isEmpty()) {
                 binding.hh25.requestFocus()
                 binding.hh25.error = "Enter Date of Interview"
+                sound()
                 return@setOnClickListener
             }
 
@@ -325,12 +365,14 @@ class MainActivity : AppCompatActivity() {
             if (!binding.hh25.isRangeTextValidate) {
                 binding.hh25.requestFocus()
                 binding.hh25.error = "The range is from 1 to 20"
+                sound()
                 return@setOnClickListener
-            }*/
+            }
 
             if (binding.hh26.checkedRadioButtonId == -1) {
                 binding.hh2601.requestFocus()
                 binding.hh2601.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             } else {
                 binding.hh2601.error = null
@@ -360,6 +402,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnEnd.setOnClickListener {
+val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
             createDialog()
         }
 
@@ -371,6 +417,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun sound(){
+        val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
+    }
+    
     fun Activity.setTransparentStatusBar() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.navigationBarColor = Color.TRANSPARENT

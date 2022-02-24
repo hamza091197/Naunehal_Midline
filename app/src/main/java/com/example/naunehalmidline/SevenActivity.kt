@@ -1,10 +1,13 @@
 package com.example.naunehalmidline
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.util.Log
 import android.view.View
 import android.view.Window
@@ -51,12 +54,14 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv01a.text.toString().trim().isEmpty()){
                 binding.cv01a.requestFocus()
                 binding.cv01a.error = "Name of respondent"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv01.checkedRadioButtonId == -1){
                 binding.cv0102.requestFocus()
                 binding.cv0102.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -66,6 +71,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv02.checkedRadioButtonId == -1){
                 binding.cv0201.requestFocus()
                 binding.cv0201.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -75,6 +81,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv03.checkedRadioButtonId == -1){
                 binding.cv0302.requestFocus()
                 binding.cv0302.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -84,6 +91,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv04.checkedRadioButtonId == -1){
                 binding.cv0401.requestFocus()
                 binding.cv0401.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -100,6 +108,7 @@ class SevenActivity : AppCompatActivity() {
             if (!cv05Flag){
                 binding.cv0501.error = "CheckBox Not Selected"
                 binding.cv0501.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -110,6 +119,7 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv0596x.text.toString().trim().isEmpty()){
                 binding.cv0596x.requestFocus()
                 binding.cv0596x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
@@ -123,6 +133,7 @@ class SevenActivity : AppCompatActivity() {
             if (!cv06Flag){
                 binding.cv0601.error = "CheckBox Not Selected"
                 binding.cv0601.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -133,12 +144,14 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv0696x.text.toString().trim().isEmpty()){
                 binding.cv0696x.requestFocus()
                 binding.cv0696x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv07.checkedRadioButtonId == -1){
                 binding.cv0798.requestFocus()
                 binding.cv0798.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -155,6 +168,7 @@ class SevenActivity : AppCompatActivity() {
             if (!cv08Flag){
                 binding.cv0801.error = "CheckBox Not Selected"
                 binding.cv0801.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -165,6 +179,7 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv0896x.text.toString().trim().isEmpty()){
                 binding.cv0896x.requestFocus()
                 binding.cv0896x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
@@ -178,6 +193,7 @@ class SevenActivity : AppCompatActivity() {
             if (!cv09Flag){
                 binding.cv0901.error = "CheckBox Not Selected"
                 binding.cv0901.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -188,6 +204,7 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv0996x.text.toString().trim().isEmpty()){
                 binding.cv0996x.requestFocus()
                 binding.cv0996x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
@@ -201,6 +218,7 @@ class SevenActivity : AppCompatActivity() {
             if (!cv10Flag){
                 binding.cv1001.error = "CheckBox Not Selected"
                 binding.cv1001.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -211,12 +229,14 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv1096x.text.toString().trim().isEmpty()){
                 binding.cv1096x.requestFocus()
                 binding.cv1096x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv11.checkedRadioButtonId == -1){
                 binding.cv1102.requestFocus()
                 binding.cv1102.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -226,6 +246,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv12.checkedRadioButtonId == -1){
                 binding.cv1201.requestFocus()
                 binding.cv1201.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -236,12 +257,14 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv1296x.text.toString().trim().isEmpty()){
                 binding.cv1296x.requestFocus()
                 binding.cv1296x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv13.checkedRadioButtonId == -1){
                 binding.cv1302.requestFocus()
                 binding.cv1302.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -251,6 +274,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv14.checkedRadioButtonId == -1){
                 binding.cv1402.requestFocus()
                 binding.cv1402.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -260,6 +284,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv15.checkedRadioButtonId == -1){
                 binding.cv1502.requestFocus()
                 binding.cv1502.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -269,6 +294,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv16.checkedRadioButtonId == -1){
                 binding.cv1601.requestFocus()
                 binding.cv1601.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -279,12 +305,14 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv1696x.text.toString().trim().isEmpty()){
                 binding.cv1696x.requestFocus()
                 binding.cv1696x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv17.checkedRadioButtonId == -1){
                 binding.cv1702.requestFocus()
                 binding.cv1702.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -294,6 +322,7 @@ class SevenActivity : AppCompatActivity() {
             if (binding.cv18.checkedRadioButtonId == -1){
                 binding.cv1801.requestFocus()
                 binding.cv1801.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -304,12 +333,14 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv1896x.text.toString().trim().isEmpty()){
                 binding.cv1896x.requestFocus()
                 binding.cv1896x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv19.checkedRadioButtonId == -1){
                 binding.cv1901.requestFocus()
                 binding.cv1901.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -320,12 +351,14 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv1996x.text.toString().trim().isEmpty()){
                 binding.cv1996x.requestFocus()
                 binding.cv1996x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cv20.checkedRadioButtonId == -1){
                 binding.cv2002.requestFocus()
                 binding.cv2002.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -343,6 +376,7 @@ class SevenActivity : AppCompatActivity() {
             if (!cv21Flag){
                 binding.cv2101.error = "CheckBox Not Selected"
                 binding.cv2101.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -353,6 +387,7 @@ class SevenActivity : AppCompatActivity() {
                 binding.cv2196x.text.toString().trim().isEmpty()){
                 binding.cv2196x.requestFocus()
                 binding.cv2196x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
@@ -368,9 +403,20 @@ class SevenActivity : AppCompatActivity() {
         }
 
         binding.btnEnd.setOnClickListener {
+val mediaPlayer = MediaPlayer.create(this@SevenActivity, R.raw.sound)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
             createDialog()
         }
         setTransparentStatusBar()
+    }
+
+    fun sound(){
+        val mediaPlayer = MediaPlayer.create(this@SevenActivity, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
     }
 
     fun Activity.setTransparentStatusBar() {

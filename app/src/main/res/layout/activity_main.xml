@@ -75,7 +75,17 @@
 
                     </LinearLayout>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
+                    <EditText
+                        android:id="@+id/hh01"
+                        style="@style/textInputName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                        android:gravity="center"
+                        android:hint="@string/hh01"
+                        android:padding="15dp" />
+                    <!--<com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/hh01"
                         style="@style/EditTextNum"
                         android:layout_width="match_parent"
@@ -93,7 +103,7 @@
                         app:maxValue="0"
                         app:minValue="0"
                         app:required="true"
-                        app:type="range" />
+                        app:type="range" />-->
 
                 </LinearLayout>
 

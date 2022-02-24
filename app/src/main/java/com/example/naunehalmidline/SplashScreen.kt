@@ -1,6 +1,7 @@
 package com.example.naunehalmidline
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
@@ -37,6 +38,8 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this@SplashScreen, MainActivity1::class.java)
             startActivity(intent)
             finish()
+            val mediaPlayer = MediaPlayer.create(this@SplashScreen, R.raw.magic)
+            mediaPlayer.start() // no need to call prepare(); create() does that for you
         }
 
     }

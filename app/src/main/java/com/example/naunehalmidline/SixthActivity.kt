@@ -1,10 +1,13 @@
 package com.example.naunehalmidline
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -53,48 +56,56 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf01.text.toString().trim().isEmpty()){
                 binding.bf01.requestFocus()
                 binding.bf01.error = "Enter Child's line number"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf02.text.toString().trim().isEmpty()){
                 binding.bf02.requestFocus()
                 binding.bf02.error = "WRA's Name"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf3y.text.toString().trim().isEmpty()){
                 binding.bf3y.requestFocus()
                 binding.bf3y.error = "Enter Years"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf03m.text.toString().trim().isEmpty()){
                 binding.bf03m.requestFocus()
                 binding.bf03m.error = "Enter Months"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf3d.text.toString().trim().isEmpty()){
                 binding.bf3d.requestFocus()
                 binding.bf3d.error = "Enter Days"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf03a01.text.toString().trim().isEmpty()){
                 binding.bf03a01.requestFocus()
                 binding.bf03a01.error = "Enter Months"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf03a02.text.toString().trim().isEmpty()){
                 binding.bf03a02.requestFocus()
                 binding.bf03a02.error = "Enter Years"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf04.checkedRadioButtonId == -1){
                 binding.bf0401.requestFocus()
                 binding.bf0498.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -105,29 +116,34 @@ class SixthActivity : AppCompatActivity() {
                 if (binding.bf0502.text.toString().trim().isEmpty()){
                     binding.bf0502.requestFocus()
                     binding.bf0502.error = "Enter Hours"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
                 if (!binding.bf0502.isRangeTextValidate){
                     binding.bf0502.requestFocus()
                     binding.bf0502.error = "The range is from 1 to 24"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
 
                 if (binding.bf0503.text.toString().trim().isEmpty()){
                     binding.bf0503.requestFocus()
                     binding.bf0503.error = "Enter Hours"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
                 if (!binding.bf0503.isRangeTextValidate){
                     binding.bf0503.requestFocus()
                     binding.bf0503.error = "The range is from 1 to 24"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
 
             if (binding.bf06.checkedRadioButtonId == -1){
                 binding.bf0601.requestFocus()
                 binding.bf0698.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -137,6 +153,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf07.checkedRadioButtonId == -1){
                 binding.bf0701.requestFocus()
                 binding.bf0701.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -148,12 +165,14 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf0796x.text.toString().trim().isEmpty()){
                 binding.bf0796x.requestFocus()
                 binding.bf0796x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf08.checkedRadioButtonId == -1){
                 binding.bf0801.requestFocus()
                 binding.bf0898.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -171,6 +190,7 @@ class SixthActivity : AppCompatActivity() {
             if (!bf09Flag){
                 binding.bf0901.error = "CheckBox Not Selected"
                 binding.bf0901.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -181,12 +201,14 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf0996x.text.toString().trim().isEmpty()){
                 binding.bf0996x.requestFocus()
                 binding.bf0996x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf10.checkedRadioButtonId == -1){
                 binding.bf1096.requestFocus()
                 binding.bf1096.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -197,6 +219,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf12.checkedRadioButtonId == -1){
                 binding.bf1298.requestFocus()
                 binding.bf1298.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -207,6 +230,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf13.checkedRadioButtonId == -1){
                 binding.bf1398.requestFocus()
                 binding.bf1398.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -217,6 +241,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf14a.checkedRadioButtonId == -1){
                 binding.bf14a98.requestFocus()
                 binding.bf14a98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -228,12 +253,14 @@ class SixthActivity : AppCompatActivity() {
                 if (binding.bf14b01.text.toString().trim().isEmpty()){
                     binding.bf14b01.requestFocus()
                     binding.bf14b01.error = ""
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
                 if (!binding.bf14b01.isRangeTextValidate){
                     binding.bf14b01.requestFocus()
                     binding.bf14b01.error = "The range is from 1 to 23"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
 
@@ -242,18 +269,21 @@ class SixthActivity : AppCompatActivity() {
                 if (binding.bf14c01.text.toString().trim().isEmpty()){
                     binding.bf14c01.requestFocus()
                     binding.bf14c01.error = ""
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
                 if (!binding.bf14c01.isRangeTextValidate){
                     binding.bf14c01.requestFocus()
                     binding.bf14c01.error = "The range is from 1 to 23"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
 
             if (binding.bf14d.checkedRadioButtonId == -1){
                 binding.bf14d98.requestFocus()
                 binding.bf14d98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -264,6 +294,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf14e.checkedRadioButtonId == -1){
                 binding.bf14e98.requestFocus()
                 binding.bf14e98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -275,18 +306,21 @@ class SixthActivity : AppCompatActivity() {
                 if (binding.bf14f01.text.toString().trim().isEmpty()){
                     binding.bf14f01.requestFocus()
                     binding.bf14f01.error = "Enter Hours"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
                 if (!binding.bf14f01.isRangeTextValidate){
                     binding.bf14f01.requestFocus()
                     binding.bf14f01.error = "The range is from 1 to 23"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
 
             if (binding.bf14g.checkedRadioButtonId == -1){
                 binding.bf14g98.requestFocus()
                 binding.bf14g98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -297,6 +331,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf14h.checkedRadioButtonId == -1){
                 binding.bf14h98.requestFocus()
                 binding.bf14h98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -307,6 +342,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf14i.checkedRadioButtonId == -1){
                 binding.bf14i98.requestFocus()
                 binding.bf14i98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -317,6 +353,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15a.checkedRadioButtonId == -1){
                 binding.bf15a98.requestFocus()
                 binding.bf15a98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -327,6 +364,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15b.checkedRadioButtonId == -1){
                 binding.bf15b98.requestFocus()
                 binding.bf15b98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -337,6 +375,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15c.checkedRadioButtonId == -1){
                 binding.bf15c98.requestFocus()
                 binding.bf15c98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -347,6 +386,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15d.checkedRadioButtonId == -1){
                 binding.bf15d98.requestFocus()
                 binding.bf15d98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -357,6 +397,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15e.checkedRadioButtonId == -1){
                 binding.bf15e98.requestFocus()
                 binding.bf15e98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -367,6 +408,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15f.checkedRadioButtonId == -1){
                 binding.bf15f98.requestFocus()
                 binding.bf15f98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -377,6 +419,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15g.checkedRadioButtonId == -1){
                 binding.bf15g98.requestFocus()
                 binding.bf15g98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -387,6 +430,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15h.checkedRadioButtonId == -1){
                 binding.bf15h98.requestFocus()
                 binding.bf15h98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -397,6 +441,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15i.checkedRadioButtonId == -1){
                 binding.bf15i98.requestFocus()
                 binding.bf15i98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -407,6 +452,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15j.checkedRadioButtonId == -1){
                 binding.bf15j98.requestFocus()
                 binding.bf15j98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -417,6 +463,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15k.checkedRadioButtonId == -1){
                 binding.bf15k98.requestFocus()
                 binding.bf15k98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -427,6 +474,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15l.checkedRadioButtonId == -1){
                 binding.bf15l98.requestFocus()
                 binding.bf15l98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -437,6 +485,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15m.checkedRadioButtonId == -1){
                 binding.bf15m98.requestFocus()
                 binding.bf15m98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -447,6 +496,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15n.checkedRadioButtonId == -1){
                 binding.bf15n98.requestFocus()
                 binding.bf15n98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -457,6 +507,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15o.checkedRadioButtonId == -1){
                 binding.bf15o98.requestFocus()
                 binding.bf15o98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -467,6 +518,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15p.checkedRadioButtonId == -1){
                 binding.bf15p98.requestFocus()
                 binding.bf15p98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -477,6 +529,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf15q.checkedRadioButtonId == -1){
                 binding.bf15q98.requestFocus()
                 binding.bf15q98.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -487,6 +540,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf16.checkedRadioButtonId == -1){
                 binding.bf1698.requestFocus()
                 binding.bf1698.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -497,6 +551,7 @@ class SixthActivity : AppCompatActivity() {
             if(binding.bf18.checkedRadioButtonId == -1){
                 binding.bf1898.requestFocus()
                 binding.bf1898.error = "RadioButton Not selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -507,6 +562,7 @@ class SixthActivity : AppCompatActivity() {
             if (binding.bf19.checkedRadioButtonId == -1){
                 binding.bf1901.requestFocus()
                 binding.bf1901.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }else {
                 binding.bf1901.error = null
@@ -516,12 +572,14 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf1996x.text.toString().trim().isEmpty()){
                 binding.bf1996x.requestFocus()
                 binding.bf1996x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.bf20.checkedRadioButtonId == -1){
                 binding.bf2098.requestFocus()
                 binding.bf2098.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -541,7 +599,11 @@ class SixthActivity : AppCompatActivity() {
         }
 
         binding.btnEnd.setOnClickListener {
-        createDialog()
+            val mediaPlayer = MediaPlayer.create(this@SixthActivity, R.raw.sound)
+            mediaPlayer.start() // no need to call prepare(); create() does that for you
+            val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            vibratorService.vibrate(150)
+            createDialog()
         }
 
         binding.bf1798.setOnCheckedChangeListener { compoundButton, b ->
@@ -705,6 +767,13 @@ class SixthActivity : AppCompatActivity() {
     setTransparentStatusBar()
     }
 
+    fun sound(){
+        val mediaPlayer = MediaPlayer.create(this@SixthActivity, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
+    }
+    
     fun Activity.setTransparentStatusBar() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.navigationBarColor = Color.TRANSPARENT

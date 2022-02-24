@@ -1,10 +1,13 @@
 package com.example.naunehalmidline
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.util.Log
 import android.view.View
 import android.view.Window
@@ -51,6 +54,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se01.checkedRadioButtonId == -1){
                 binding.se0101.requestFocus()
                 binding.se0101.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -60,12 +64,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se0196.isChecked && binding.se0196x.text.toString().trim().isEmpty()){
                 binding.se0196x.requestFocus()
                 binding.se0196x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se02.checkedRadioButtonId == -1){
                 binding.se0211.requestFocus()
                 binding.se0211.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -75,12 +81,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se0296.isChecked && binding.se0296x.text.toString().trim().isEmpty()){
                 binding.se0296x.requestFocus()
                 binding.se0296x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se03.checkedRadioButtonId == -1){
                 binding.se0301.requestFocus()
                 binding.se0301.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -90,12 +98,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se0396.isChecked && binding.se0396x.text.toString().trim().isEmpty()){
                 binding.se0396x.requestFocus()
                 binding.se0396x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se04.checkedRadioButtonId == -1){
                 binding.se0401.requestFocus()
                 binding.se0401.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -105,12 +115,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se0496.isChecked && binding.se0496x.text.toString().trim().isEmpty()){
                 binding.se0496x.requestFocus()
                 binding.se0496x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se05.checkedRadioButtonId == -1){
                 binding.se0501.requestFocus()
                 binding.se0501.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -120,24 +132,28 @@ class EightActivity : AppCompatActivity() {
             if (binding.se0596.isChecked && binding.se0596x.text.toString().trim().isEmpty()){
                 binding.se0596x.requestFocus()
                 binding.se0596x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se06a.text.toString().trim().isEmpty()){
                 binding.se06a.requestFocus()
                 binding.se06a.error = "Rupees"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se07a.text.toString().trim().isEmpty()){
                 binding.se07a.requestFocus()
                 binding.se07a.error = "Rupees"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se08.checkedRadioButtonId == -1){
                 binding.se0801.requestFocus()
                 binding.se0801.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -147,12 +163,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se0896.isChecked && binding.se0896x.text.toString().trim().isEmpty()){
                 binding.se0896x.requestFocus()
                 binding.se0896x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se09.checkedRadioButtonId == -1){
                 binding.se0998.requestFocus()
                 binding.se0998.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -162,6 +180,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se10.checkedRadioButtonId == -1){
                 binding.se1001.requestFocus()
                 binding.se1001.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -171,12 +190,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1099.isChecked && binding.se1099x.text.toString().trim().isEmpty()){
                 binding.se1099x.requestFocus()
                 binding.se1099x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se11.checkedRadioButtonId == -1){
                 binding.se1101.requestFocus()
                 binding.se1101.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -186,12 +207,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1196.isChecked && binding.se1196x.text.toString().trim().isEmpty()){
                 binding.se1196x.requestFocus()
                 binding.se1196x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se12.checkedRadioButtonId == -1){
                 binding.se1201.requestFocus()
                 binding.se1201.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -201,12 +224,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1296.isChecked && binding.se1296x.text.toString().trim().isEmpty()){
                 binding.se1296x.requestFocus()
                 binding.se1296x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se13.checkedRadioButtonId == -1){
                 binding.se1301.requestFocus()
                 binding.se1301.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -216,6 +241,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se14.checkedRadioButtonId == -1){
                 binding.se1402.requestFocus()
                 binding.se1402.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -225,6 +251,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se15.checkedRadioButtonId == -1){
                 binding.se1501.requestFocus()
                 binding.se1501.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -234,6 +261,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se16.checkedRadioButtonId == -1){
                 binding.se1601.requestFocus()
                 binding.se1601.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -250,6 +278,7 @@ class EightActivity : AppCompatActivity() {
             if (!se17Flag){
                 binding.se1701.error = "CheckBox Not Selected"
                 binding.se1701.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -259,6 +288,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1801.checkedRadioButtonId == -1){
                 binding.se180102.requestFocus()
                 binding.se180102.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -268,6 +298,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1802.checkedRadioButtonId == -1){
                 binding.se180202.requestFocus()
                 binding.se180202.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -277,6 +308,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1803.checkedRadioButtonId == -1){
                 binding.se180302.requestFocus()
                 binding.se180302.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -286,6 +318,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1804.checkedRadioButtonId == -1){
                 binding.se180402.requestFocus()
                 binding.se180402.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -295,6 +328,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1805.checkedRadioButtonId == -1){
                 binding.se180502.requestFocus()
                 binding.se180502.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -304,6 +338,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1896.checkedRadioButtonId == -1){
                 binding.se189602.requestFocus()
                 binding.se189602.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -313,6 +348,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se19.checkedRadioButtonId == -1){
                 binding.se1901.requestFocus()
                 binding.se1901.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -322,6 +358,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se1996.isChecked && binding.se1996x.text.toString().trim().isEmpty()){
                 binding.se1996x.requestFocus()
                 binding.se1996x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
@@ -335,6 +372,7 @@ class EightActivity : AppCompatActivity() {
             if (!se20Flag){
                 binding.se2001.error = "CheckBox Not Selected"
                 binding.se2001.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -344,6 +382,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se2096.isChecked && binding.se2096x.text.toString().trim().isEmpty()){
                 binding.se2096x.requestFocus()
                 binding.se2096x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
@@ -357,6 +396,7 @@ class EightActivity : AppCompatActivity() {
             if (!se21Flag){
                 binding.se2101.error = "CheckBox Not Selected"
                 binding.se2101.requestFocus()
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -366,12 +406,14 @@ class EightActivity : AppCompatActivity() {
             if (binding.se2196.isChecked && binding.se2196x.text.toString().trim().isEmpty()){
                 binding.se2196x.requestFocus()
                 binding.se2196x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.se2201.checkedRadioButtonId == -1){
                 binding.se220102.requestFocus()
                 binding.se220102.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -381,6 +423,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se2202.checkedRadioButtonId == -1){
                 binding.se220202.requestFocus()
                 binding.se220202.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -390,6 +433,7 @@ class EightActivity : AppCompatActivity() {
             if (binding.se2203.checkedRadioButtonId == -1){
                 binding.se220302.requestFocus()
                 binding.se220302.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else{
@@ -407,11 +451,22 @@ class EightActivity : AppCompatActivity() {
         }
 
         binding.btnEnd.setOnClickListener {
+val mediaPlayer = MediaPlayer.create(this@EightActivity, R.raw.sound)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
             createDialog()
         }
         setTransparentStatusBar()
     }
 
+    fun sound(){
+        val mediaPlayer = MediaPlayer.create(this@EightActivity, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
+    }
+    
     fun Activity.setTransparentStatusBar() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.navigationBarColor = Color.TRANSPARENT

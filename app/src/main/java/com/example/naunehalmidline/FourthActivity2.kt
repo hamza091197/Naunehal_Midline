@@ -1,23 +1,29 @@
 package com.example.naunehalmidline
 
 import android.app.Activity
+import android.content.Context
 import android.graphics.Color
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import android.widget.EditText
 import android.widget.RadioGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityFourth2Binding
+import com.validatorcrawler.aliazaz.Clear
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -46,6 +52,7 @@ class FourthActivity2 : AppCompatActivity() {
           if (binding.im11.checkedRadioButtonId == -1){
                 binding.im11.requestFocus()
                 binding.im113.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -57,13 +64,15 @@ class FourthActivity2 : AppCompatActivity() {
                 if (binding.im121x.text.toString().trim().isEmpty()) {
                     binding.im121x.requestFocus()
                     binding.im121x.error = "Number Of Times"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
 
                 if (!binding.im121x.isRangeTextValidate) {
                     binding.im121x.requestFocus()
                     binding.im121x.error = "The range is from 1 to 96"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
 
             }
@@ -73,19 +82,22 @@ class FourthActivity2 : AppCompatActivity() {
                 if (binding.im12a1.text.toString().trim().isEmpty()){
                     binding.im12a1.requestFocus()
                     binding.im12a1.error = "Number of Times"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
 
                 if (!binding.im12a1.isRangeTextValidate){
                     binding.im12a1.requestFocus()
                     binding.im12a1.error = "The range is from 1 to 96"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
 
             if (binding.im13.checkedRadioButtonId == -1){
                 binding.im133.requestFocus()
                 binding.im133.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -95,6 +107,7 @@ class FourthActivity2 : AppCompatActivity() {
             if (binding.im14.checkedRadioButtonId == -1){
                 binding.im143.requestFocus()
                 binding.im143.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -106,18 +119,21 @@ class FourthActivity2 : AppCompatActivity() {
                 if (binding.im151.text.toString().trim().isEmpty()){
                     binding.im151.requestFocus()
                     binding.im151.error = "Number of Times"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
 
                 if (!binding.im151.isRangeTextValidate){
                     binding.im151.requestFocus()
                     binding.im151.error = "The range is from 1 to 96"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
             if (binding.im16.checkedRadioButtonId == -1){
                 binding.im163.requestFocus()
                 binding.im163.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -129,20 +145,55 @@ class FourthActivity2 : AppCompatActivity() {
                 if (binding.im171.text.toString().trim().isEmpty()){
                     binding.im171.requestFocus()
                     binding.im171.error = "Number of Times"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
 
                 if (!binding.im171.isRangeTextValidate){
                     binding.im171.requestFocus()
                     binding.im171.error = "The range is from 1 to 96"
-                    return@setOnClickListener
+                    sound()
+                return@setOnClickListener
                 }
             }
 
         }
+
+        binding.btnEnd2.setOnClickListener {
+            val mediaPlayer = MediaPlayer.create(this@FourthActivity2, R.raw.sound)
+            mediaPlayer.start() // no need to call prepare(); create() does that for you
+            val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            vibratorService.vibrate(150)
+            createDialog()
+        }
+
         im2()
         setTransparentStatusBar()
     }
+
+    private fun createDialog() {
+        AlertDialog.Builder(this@FourthActivity2).apply {
+            setCancelable(true)
+            setTitle("Alert Dialog")
+            setMessage("Are you sure you want to clear this form?")
+            setPositiveButton("Yes") { dialog, id ->
+                //Action for "Delete".
+                Log.e("click", "Positive")
+
+                lifecycleScope.launch {
+                    val def = launch { Clear.clearAllFields(binding.GrpName2) }
+                    def.join()
+                    /*startActivity(Intent(this@MainActivity, MainActivity::class.java))*/
+                    binding.Grp2.fullScroll(View.FOCUS_UP)
+                }
+            }
+            setNegativeButton("Cancel") { dialog, which ->
+                //Action for "Cancel".
+                Log.e("click", "Negative")
+            }
+        }.create().show()
+    }
+
     fun Activity.setTransparentStatusBar() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.navigationBarColor = Color.TRANSPARENT
@@ -344,5 +395,11 @@ class FourthActivity2 : AppCompatActivity() {
                 }
             }
         }
+    }
+    fun sound(){
+        val mediaPlayer = MediaPlayer.create(this@FourthActivity2, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
     }
 }

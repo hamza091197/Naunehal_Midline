@@ -5,8 +5,10 @@ import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -81,18 +83,21 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb01.text.toString().trim().isEmpty()){
                 binding.cb01.requestFocus()
                 binding.cb01.error = " Line no"
+                sound()
                 return@setOnClickListener
             }
             
             if (binding.cb02.text.toString().trim().isEmpty()){
                 binding.cb02.requestFocus()
                 binding.cb02.error = " Name"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb03.checkedRadioButtonId == -1){
                 binding.cb03.requestFocus()
                 binding.cb0302.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -102,66 +107,77 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb04dd.text.toString().trim().isEmpty()){
                 binding.cb04dd.requestFocus()
                 binding.cb04dd.error = " Days"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb04dd.isRangeTextValidate){
                 binding.cb04dd.requestFocus()
                 binding.cb04dd.error = "The range is from 1 to 29"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb04mm.text.toString().trim().isEmpty()){
                 binding.cb04mm.requestFocus()
                 binding.cb04mm.error = " Months"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb04mm.isRangeTextValidate){
                 binding.cb04mm.requestFocus()
                 binding.cb04mm.error = "The range is from 1 to 11"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb04yy.text.toString().trim().isEmpty()){
                 binding.cb04yy.requestFocus()
                 binding.cb04yy.error = " Year"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb04yy.isRangeTextValidate){
                 binding.cb04yy.requestFocus()
                 binding.cb04yy.error = "The range is from 2015 to 2021"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb0501.text.toString().trim().isEmpty()){
                 binding.cb0501.requestFocus()
                 binding.cb0501.error = " Year"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb0501.isRangeTextValidate){
                 binding.cb0501.requestFocus()
                 binding.cb0501.error = "The range is from 1 to 5"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb0502.text.toString().trim().isEmpty()){
                 binding.cb0502.requestFocus()
                 binding.cb0502.error = " Months"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb0502.isRangeTextValidate){
                 binding.cb0502.requestFocus()
                 binding.cb0502.error = "The range is from 1 to 11"
+                sound()
                 return@setOnClickListener
             }
             
             if (binding.cb06.checkedRadioButtonId == -1){
                 binding.cb06.requestFocus()
                 binding.cb0601.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -171,18 +187,21 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb15.text.toString().trim().isEmpty()){
                 binding.cb15.requestFocus()
                 binding.cb15.error = "Birth weight (kg)"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb15.isRangeTextValidate){
                 binding.cb15.requestFocus()
                 binding.cb15.error = "The range is from 0.5 to 9.0"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb17.checkedRadioButtonId == -1){
                 binding.cb17.requestFocus()
                 binding.cb1701.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -192,36 +211,42 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb07.text.toString().trim().isEmpty()){
                 binding.cb07.requestFocus()
                 binding.cb07.error = "Name of Mother"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb08.text.toString().trim().isEmpty()){
                 binding.cb08.requestFocus()
                 binding.cb08.error = "Age"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb08.isRangeTextValidate){
                 binding.cb08.requestFocus()
                 binding.cb08.error = "The range is from 12 to 99"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb09.text.toString().trim().isEmpty()){
                 binding.cb09.requestFocus()
                 binding.cb09.error = "Education Qualification of respondent Mention completed years of education; Code: 55 for uneducated, and 22 for only religious studies"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb09.isRangeTextValidate){
                 binding.cb09.requestFocus()
                 binding.cb09.error = "The range is from 1 to 17"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb16.checkedRadioButtonId == -1){
                 binding.cb1603.requestFocus()
                 binding.cb1603.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -231,6 +256,7 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb10.checkedRadioButtonId == -1){
                 binding.cb10.requestFocus()
                 binding.cb1001.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
 
@@ -239,6 +265,7 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb11.checkedRadioButtonId == -1){
                 binding.cb11.requestFocus()
                 binding.cb1102.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -248,18 +275,21 @@ class SecondActivity : AppCompatActivity() {
             if (binding.cb13.text.toString().trim().isEmpty()){
                 binding.cb13.requestFocus()
                 binding.cb13.error = "Education Qualification of Father Mention completed years of education; Code: 55 for uneducated, and 22 for only religious studies"
+                sound()
                 return@setOnClickListener
             }
 
             if (!binding.cb13.isRangeTextValidate){
                 binding.cb13.requestFocus()
                 binding.cb13.error = "The range is from 1 to 17"
+                sound()
                 return@setOnClickListener
             }
 
             if (binding.cb14.checkedRadioButtonId == -1){
                 binding.cb14.requestFocus()
                 binding.cb1401.error = "RadioButton Not Selected"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -270,6 +300,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb1496x.text.toString().trim().isEmpty()){
                 binding.cb1496x.requestFocus()
                 binding.cb1496x.error = "Other Please Specify"
+                sound()
                 return@setOnClickListener
             }
             else {
@@ -288,11 +319,22 @@ class SecondActivity : AppCompatActivity() {
         }
 
         binding.btnEnd.setOnClickListener {
+val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.sound)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
             createDialog()
         }
 
         setTransparentStatusBar()
         /*Child_Basic_Information()*/
+    }
+
+    fun sound(){
+        val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        vibratorService.vibrate(150)
     }
 
     fun Activity.setTransparentStatusBar() {

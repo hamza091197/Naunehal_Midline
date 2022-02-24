@@ -64,6 +64,8 @@ dependencies {
 
    implementation 'com.google.android.gms:play-services-auth:20.1.0'
 
+    implementation 'com.mikhaellopez:circularprogressbar:3.0.2'
+
     def roomVersion = "2.3.0"
 
     implementation("androidx.room:room-runtime:$roomVersion")
