@@ -16,8 +16,8 @@ import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         database = ContactDatabase.getDatabase(this)
         checkPermission(CAMERA,CAMERA_PERMISSION_CODE)
         checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
+
+
 
         /*val actionBar = supportActionBar
         actionBar?.title = "Identification Information (HH)"
@@ -414,6 +416,7 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
         Child_Basic_Information()
         setTransparentStatusBar()
         /*onBackPressed()*/
+
 
     }
 

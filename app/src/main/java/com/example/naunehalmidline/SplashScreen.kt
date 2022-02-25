@@ -38,8 +38,7 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this@SplashScreen, MainActivity1::class.java)
             startActivity(intent)
             finish()
-            val mediaPlayer = MediaPlayer.create(this@SplashScreen, R.raw.magic)
-            mediaPlayer.start() // no need to call prepare(); create() does that for you
+
         }
 
     }

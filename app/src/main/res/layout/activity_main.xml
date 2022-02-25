@@ -14,7 +14,8 @@
     <ScrollView
         android:id="@+id/Grp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/sublogin">
 
         <LinearLayout
             android:id="@+id/GrpName"
