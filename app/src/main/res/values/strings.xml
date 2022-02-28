@@ -1415,5 +1415,9 @@
     <string name="se4002">No</string>
     <string name="se4098">Don’t know</string>
 
-
+    <string-array name="text">
+        <item>Main Screen</item>
+        <item>Main Screen</item>
+    </string-array>
 </resources>
+

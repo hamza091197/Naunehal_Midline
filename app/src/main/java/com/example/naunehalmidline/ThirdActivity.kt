@@ -1,12 +1,14 @@
 package com.example.naunehalmidline
 
 import android.app.Activity
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.os.Vibrator
 import android.util.Log
 import android.view.View
@@ -389,6 +391,10 @@ class ThirdActivity : AppCompatActivity() {
             else{
                 binding.cs2101.error = null
             }
+            val prg = ProgressDialog(this)
+            prg.setMessage("Please Wait....")
+            Handler().postDelayed({prg.dismiss()}, 3000)
+            prg.show()
 
             val refresh = Intent(this, ThirdActivity::class.java)
             startActivity(refresh)
@@ -418,8 +424,8 @@ val mediaPlayer = MediaPlayer.create(this@ThirdActivity, R.raw.sound)
     }
 
     fun sound(){
-        val mediaPlayer = MediaPlayer.create(this@ThirdActivity, R.raw.beep)
-        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        /*val mediaPlayer = MediaPlayer.create(this@ThirdActivity, R.raw.beep)
+        mediaPlayer.start()*/ // no need to call prepare(); create() does that for you
         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         vibratorService.vibrate(150)
     }

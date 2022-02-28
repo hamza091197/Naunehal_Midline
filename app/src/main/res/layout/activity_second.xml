@@ -14,7 +14,8 @@
     <ScrollView
         android:id="@+id/Grp_2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/sublogin">
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -23,11 +24,7 @@
             android:orientation="vertical">
 
             <!-- cb01_title1  Title   -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVcb01_title1"
-                style="@style/cardView">
-
-                <LinearLayout
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
@@ -39,7 +36,6 @@
                         android:text="@string/cb01_title1"
                         android:textSize="20sp" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
             <!-- cb01  Input-Numeric   -->
             <androidx.cardview.widget.CardView

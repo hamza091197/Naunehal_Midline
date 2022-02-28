@@ -2,12 +2,14 @@ package com.example.naunehalmidline
 
 import android.app.Activity
 import android.app.PendingIntent.getActivity
+import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.os.Vibrator
 import android.text.Editable
 import android.text.TextWatcher
@@ -51,32 +53,10 @@ class SecondActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.statusBarColor = ContextCompat.getColor(this@SecondActivity, R.color.selectedBlue)
         window.navigationBarColor = resources.getColor(R.color.gray)
-        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
-                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         /*window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN*/
         /*supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#146775")))*/
 
-
-       /* binding.cb01.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-
-                if (binding.cb1096.isClickable && binding.cb1096x.text.toString().trim().isEmpty()){
-                    binding.cb1096x.error = "Empty EditText"
-                }
-            }
-
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-
-
-            }
-        })*/
 
         binding.btnContinue.setOnClickListener { 
             
@@ -306,6 +286,10 @@ class SecondActivity : AppCompatActivity() {
             else {
                 binding.cb1496x.error = null
             }
+            val prg = ProgressDialog(this)
+            prg.setMessage("Please Wait....")
+            Handler().postDelayed({prg.dismiss()}, 3000)
+            prg.show()
 
             val refresh = Intent(this, SecondActivity::class.java)
             startActivity(refresh)
@@ -331,8 +315,8 @@ val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.sound)
     }
 
     fun sound(){
-        val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.beep)
-        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        /*val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.beep)
+        mediaPlayer.start()*/ // no need to call prepare(); create() does that for you
         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         vibratorService.vibrate(150)
     }
@@ -341,24 +325,6 @@ val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.sound)
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.navigationBarColor = Color.TRANSPARENT
     }
-    /*private fun Child_Basic_Information() {
-
-        binding.cb10.setOnCheckedChangeListener { radioGroup, i ->
-            if (binding.cb1096.isChecked && binding.cb1096x.text.toString().trim().isEmpty()) {
-                binding.cb1096x.error = "Empty EditText"
-            } else {
-                binding.cb1096x.error = null
-            }
-        }
-
-        binding.cb14.setOnCheckedChangeListener { radioGroup, i ->
-            if (binding.cb1496.isClickable && binding.cb1496x.text.toString().trim().isEmpty()) {
-                binding.cb1496x.error = "Empty EditText"
-            } else {
-                binding.cb1496x.error = null
-            }
-        }
-    }*/
 
     override fun onBackPressed() {
         //super.onBackPressed()

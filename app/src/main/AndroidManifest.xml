@@ -28,12 +28,12 @@
         <activity
             android:name=".EightActivity2"
             android:exported="false"
-            android:parentActivityName=".EightActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".EightActivity"
             android:exported="false"
-            android:parentActivityName=".SevenActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreen"
@@ -49,37 +49,37 @@
         <activity
             android:name=".SevenActivity"
             android:exported="false"
-            android:parentActivityName=".SixthActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SixthActivity"
             android:exported="false"
-            android:parentActivityName=".FifthActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FifthActivity"
             android:exported="false"
-            android:parentActivityName=".FourthActivity2"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FourthActivity2"
             android:exported="false"
-            android:parentActivityName=".FourthActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".FourthActivity"
             android:exported="false"
-            android:parentActivityName=".ThirdActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ThirdActivity"
             android:exported="false"
-            android:parentActivityName=".SevenActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".SecondActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MainActivity1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"

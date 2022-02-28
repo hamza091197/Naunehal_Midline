@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         /*val actionBar = supportActionBar
         actionBar?.title = "Identification Information (HH)"
         window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.darkBlue)
@@ -75,7 +76,6 @@ class MainActivity : AppCompatActivity() {
         /*/*window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN*/*/
 
         binding.btnContinue.setOnClickListener {
-
             if (binding.hh01.text.toString().trim().isEmpty()) {
                 binding.hh01.requestFocus()
                 binding.hh01.error = "Enter Date of Interview"
@@ -413,7 +413,6 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
 
         binding.hh01.transformIntoDatePicker(this, "dd/MM/yyyy", Date())
 
-        Child_Basic_Information()
         setTransparentStatusBar()
         /*onBackPressed()*/
 
@@ -421,8 +420,8 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
     }
 
     fun sound(){
-        val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
-        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        /*val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
+        mediaPlayer.start()*/ // no need to call prepare(); create() does that for you
         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         vibratorService.vibrate(150)
     }
@@ -456,16 +455,7 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
     }*/
 
 
-    private fun Child_Basic_Information() {
 
-        binding.hh17.setOnCheckedChangeListener { radioGroup, i ->
-            if (binding.hh1796.isClickable && binding.hh1796x.text.toString().trim().isEmpty()) {
-                binding.hh1796x.error = "Empty EditText"
-            } else {
-                binding.hh1796x.error = null
-            }
-        }
-    }
 
     private fun createDialog() {
         AlertDialog.Builder(this@MainActivity).apply {
