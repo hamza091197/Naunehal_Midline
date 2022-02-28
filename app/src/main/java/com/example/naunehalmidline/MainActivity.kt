@@ -413,6 +413,7 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
 
         binding.hh01.transformIntoDatePicker(this, "dd/MM/yyyy", Date())
 
+        Child_Basic_Information()
         setTransparentStatusBar()
         /*onBackPressed()*/
 
@@ -420,8 +421,8 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
     }
 
     fun sound(){
-        /*val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
-        mediaPlayer.start()*/ // no need to call prepare(); create() does that for you
+        val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
+        mediaPlayer.start() // no need to call prepare(); create() does that for you
         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         vibratorService.vibrate(150)
     }
@@ -455,7 +456,16 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
     }*/
 
 
+    private fun Child_Basic_Information() {
 
+        binding.hh17.setOnCheckedChangeListener { radioGroup, i ->
+            if (binding.hh1796.isClickable && binding.hh1796x.text.toString().trim().isEmpty()) {
+                binding.hh1796x.error = "Empty EditText"
+            } else {
+                binding.hh1796x.error = null
+            }
+        }
+    }
 
     private fun createDialog() {
         AlertDialog.Builder(this@MainActivity).apply {
