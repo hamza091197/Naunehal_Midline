@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="14dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_main"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="A"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_second"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="CB"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_third"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="CS"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_fourth"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="IM"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_fourth2"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="IM 2"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_fifth"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="PD"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_sixth"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="BF"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_seven"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="G5"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_eight"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="SE"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_eight2"
+                    style="@style/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightBlue"
+                    android:onClick="sound"
+                    android:text="SE 2"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
+
+                <Button
+                    android:id="@+id/idBtnDismiss"
+                    style="@style/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end|bottom"
+                    android:text="Dismiss dialog"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

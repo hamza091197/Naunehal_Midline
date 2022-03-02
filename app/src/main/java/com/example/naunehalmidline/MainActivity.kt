@@ -54,8 +54,6 @@ class MainActivity : AppCompatActivity() {
         checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
 
 
-
-
         /*val actionBar = supportActionBar
         actionBar?.title = "Identification Information (HH)"
         window.statusBarColor = ContextCompat.getColor(this@MainActivity, R.color.darkBlue)

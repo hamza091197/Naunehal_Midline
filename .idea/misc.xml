@@ -52,12 +52,15 @@
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/drawable/loginedittext.xml" value="0.1555" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/drawable/progressbar.xml" value="0.1" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_barcode.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_bottom_sheet_dialog.xml" value="0.17239583333333333" />
+        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_eight.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_eight2.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_fifth.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_fourth.xml" value="0.1" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_fourth2.xml" value="0.14732510288065845" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_main1.xml" value="0.22" />
+        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_main.xml" value="0.14251592356687898" />
+        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_main1.xml" value="0.16" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_registration.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_second.xml" value="0.1798994974874372" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_seven.xml" value="0.18645833333333334" />
@@ -65,6 +68,7 @@
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/activity_third.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/bottom.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/bottom_sheet.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/bottom_sheet_dialog.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/bottomsheet.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/content_main.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/hk952/AndroidStudioProjects/Naunehal_Midline/app/src/main/res/layout/custom_dialog.xml" value="0.22" />
