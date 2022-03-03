@@ -419,8 +419,8 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
     }
 
     fun sound(){
-        val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.beep)
-        mediaPlayer.start() // no need to call prepare(); create() does that for you
+        /*val mediaPlayer = MediaPlayer.create(this@MainActivity1, R.raw.sound)
+        mediaPlayer.start()*/ // no need to call prepare(); create() does that for you
         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         vibratorService.vibrate(150)
     }
