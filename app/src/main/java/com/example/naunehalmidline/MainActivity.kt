@@ -415,7 +415,6 @@ val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
         setTransparentStatusBar()
         /*onBackPressed()*/
 
-
     }
 
     fun sound(){

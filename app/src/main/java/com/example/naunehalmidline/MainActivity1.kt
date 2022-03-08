@@ -247,7 +247,6 @@ lateinit var binding: ActivityMain1Binding
     fun Activity.setTransparentStatusBar() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         window.navigationBarColor = Color.TRANSPARENT
-
     }
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
