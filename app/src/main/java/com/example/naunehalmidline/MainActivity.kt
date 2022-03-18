@@ -1,5 +1,6 @@
 package com.example.naunehalmidline
 
+import android.Manifest
 import android.Manifest.permission.CAMERA
 import android.app.Activity
 import android.app.DatePickerDialog
@@ -25,6 +26,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityMainBinding
 import com.example.naunehalmidline.main.Contact
@@ -51,7 +53,9 @@ class MainActivity : AppCompatActivity() {
         binding.callback
         database = ContactDatabase.getDatabase(this)
         checkPermission(CAMERA,CAMERA_PERMISSION_CODE)
-        checkPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
+        checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
+
+
 
 
         /*val actionBar = supportActionBar
@@ -74,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         /*/*window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN*/*/
 
         binding.btnContinue.setOnClickListener {
-            if (binding.hh01.text.toString().trim().isEmpty()) {
+            /*if (binding.hh01.text.toString().trim().isEmpty()) {
                 binding.hh01.requestFocus()
                 binding.hh01.error = "Enter Date of Interview"
                 sound()
@@ -367,7 +371,7 @@ class MainActivity : AppCompatActivity() {
                 binding.hh25.error = "The range is from 1 to 20"
                 sound()
                 return@setOnClickListener
-            }
+            }*/
 
             if (binding.hh26.checkedRadioButtonId == -1) {
                 binding.hh2601.requestFocus()
@@ -389,7 +393,7 @@ class MainActivity : AppCompatActivity() {
             finish()
             startActivity(intent)*/
 
-            val refresh = Intent(this, MainActivity::class.java)
+            val refresh = Intent(this, SecondActivity::class.java)
             startActivity(refresh)
 
             insertContact()
@@ -404,7 +408,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnEnd.setOnClickListener {
 val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)
         mediaPlayer.start() // no need to call prepare(); create() does that for you
-        val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        val vibratorService = getSystemService(VIBRATOR_SERVICE) as Vibrator
         vibratorService.vibrate(150)
             createDialog()
         }
