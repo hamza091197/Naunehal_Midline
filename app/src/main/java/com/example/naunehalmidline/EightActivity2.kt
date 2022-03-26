@@ -21,9 +21,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityEight2Binding
 import com.example.naunehalmidline.eight.Eight
-import com.example.naunehalmidline.eight.EightDatabase
 import com.example.naunehalmidline.eight2.Eight2
-import com.example.naunehalmidline.eight2.Eight2Database
+import com.example.naunehalmidline.main.ContactDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
@@ -32,12 +31,12 @@ import kotlinx.coroutines.withContext
 
 class EightActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityEight2Binding
-    lateinit var database: Eight2Database
+    lateinit var database: ContactDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_eight2)
         binding.callback
-        database = Eight2Database.getDatabase(this)
+        database = ContactDatabase.getDatabase(this)
 
 
         val window: Window = this@EightActivity2.window
@@ -50,7 +49,8 @@ class EightActivity2 : AppCompatActivity() {
         /*window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN*/
 
         binding.btnContinue2.setOnClickListener {
-            if (binding.se2204.checkedRadioButtonId == -1){
+
+            /*if (binding.se2204.checkedRadioButtonId == -1){
                 binding.se2204.requestFocus()
                 binding.se220402.error = "RadioButton Not Selected"
                 sound()
@@ -625,7 +625,7 @@ class EightActivity2 : AppCompatActivity() {
             }
             else{
                 binding.se3902.error = null
-            }
+            }*/
 
             if (binding.se40.checkedRadioButtonId == -1){
                 binding.se4098.requestFocus()
@@ -637,11 +637,11 @@ class EightActivity2 : AppCompatActivity() {
                 binding.se4098.error = null
             }
 
-            val refresh = Intent(this, EightActivity2::class.java)
-            startActivity(refresh)
+            /*val refresh = Intent(this, EightActivity2::class.java)
+            startActivity(refresh)*/
 
             binding.fab82.setOnClickListener {
-                RoomExplorer.show(this, Eight2Database::class.java, "eight2DB")
+                RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
             }
 
             insertEight2()
@@ -678,7 +678,7 @@ class EightActivity2 : AppCompatActivity() {
     fun insertEight2() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.Eight2Dao().insert(
+                val count = database.ContactDao().insert(
                     Eight2(
                         0,
                         se24 = binding.se24.text.toString(),
@@ -1009,7 +1009,7 @@ class EightActivity2 : AppCompatActivity() {
     fun updateEight2() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.Eight2Dao().update(
+                val count = database.ContactDao().update(
                     Eight2(
                         0,
                         se24 = binding.se24.text.toString(),

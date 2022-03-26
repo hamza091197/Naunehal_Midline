@@ -1,7 +1,6 @@
 package com.example.naunehalmidline
 
 import android.app.Activity
-import android.app.PendingIntent.getActivity
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
@@ -11,23 +10,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Vibrator
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySecondBinding
-import com.example.naunehalmidline.main.Contact
 import com.example.naunehalmidline.main.ContactDatabase
 import com.example.naunehalmidline.second.Second
-import com.example.naunehalmidline.second.SecondDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
@@ -35,13 +29,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class SecondActivity : AppCompatActivity() {
-    lateinit var database: SecondDatabase
+    lateinit var database: ContactDatabase
     lateinit var binding: ActivitySecondBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_second)
         binding.callback
-        database = SecondDatabase.getDatabase(this)
+        database = ContactDatabase.getDatabase(this)
 
        /* val actionBar = supportActionBar
         actionBar?.title = "Child Basic Information"
@@ -60,7 +54,7 @@ class SecondActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener { 
             
-            if (binding.cb01.text.toString().trim().isEmpty()){
+            /*if (binding.cb01.text.toString().trim().isEmpty()){
                 binding.cb01.requestFocus()
                 binding.cb01.error = " Line no"
                 sound()
@@ -274,7 +268,7 @@ class SecondActivity : AppCompatActivity() {
             }
             else {
                 binding.cb1401.error = null
-            }
+            }*/
 
             if (binding.cb1496.isChecked &&
                 binding.cb1496x.text.toString().trim().isEmpty()){
@@ -286,21 +280,20 @@ class SecondActivity : AppCompatActivity() {
             else {
                 binding.cb1496x.error = null
             }
+
             val prg = ProgressDialog(this)
             prg.setMessage("Please Wait....")
             Handler().postDelayed({prg.dismiss()}, 3000)
             prg.show()
 
-            val refresh = Intent(this, SecondActivity::class.java)
-            startActivity(refresh)
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
 
             insertSecond()
             updateSecond()
         }
 
-        binding.fab2.setOnClickListener {
-            RoomExplorer.show(this, SecondDatabase::class.java, "secondDB")
-        }
+
 
         binding.btnEnd.setOnClickListener {
 val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.sound)
@@ -356,7 +349,7 @@ val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.sound)
     fun insertSecond() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.SecondDao().insert(
+                val count = database.ContactDao().insert(
                     Second(
                         0,
                         cb01 = binding.cb01.text.toString(),
@@ -461,7 +454,7 @@ val mediaPlayer = MediaPlayer.create(this@SecondActivity, R.raw.sound)
     fun updateSecond() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.SecondDao().update(
+                val count = database.ContactDao().update(
                     Second(
                         0,
                         cb01 = binding.cb01.text.toString(),

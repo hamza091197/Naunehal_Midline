@@ -49,7 +49,7 @@ class FourthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.im01.checkedRadioButtonId == -1){
+            /*if (binding.im01.checkedRadioButtonId == -1){
                 binding.im01.requestFocus()
                 binding.im012.error = "RadioButton Not Selected"
                 sound()
@@ -870,7 +870,7 @@ class FourthActivity : AppCompatActivity() {
                 sound()
                 return@setOnClickListener
             }
-            /*44 66 88 97*/
+            *//*44 66 88 97*//*
             if (binding.im0502Dd.text.toString() == "44" ||
                     binding.im0502Dd.text.toString() == "88" ||
                     binding.im0502Dd.text.toString() == "66" ||
@@ -887,7 +887,7 @@ class FourthActivity : AppCompatActivity() {
 
 
 
-            /*if (!binding.im0501Dd.isEnabled) {
+            *//*if (!binding.im0501Dd.isEnabled) {
                 if (binding.im0501Dd.text.toString() == "44" ||
                     binding.im0501Dd.text.toString() == "66" ||
                     binding.im0501Dd.text.toString() == "88" ||
@@ -902,10 +902,10 @@ class FourthActivity : AppCompatActivity() {
                 binding.im0501Yy.error = "Enter Years"
                 sound()
                 return@setOnClickListener
-            }*/
+            }*//*
 
 
-            /*if (binding.im0502Dd.text.toString() == "44" ||
+            *//*if (binding.im0502Dd.text.toString() == "44" ||
                 binding.im0502Dd.text.toString() == "66" ||
                 binding.im0502Dd.text.toString() == "88" ||
                 binding.im0502Dd.text.toString() == "97"){
@@ -918,8 +918,11 @@ class FourthActivity : AppCompatActivity() {
                 binding.im0502Yy.error = "Enter Years"
                 sound()
                 return@setOnClickListener
-            }*/
+            }*//*
+*/
 
+            val intent = Intent(this, FourthActivity2::class.java)
+            startActivity(intent)
 
         }
 

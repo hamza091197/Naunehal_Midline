@@ -2,6 +2,7 @@ package com.example.naunehalmidline
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -49,7 +50,7 @@ class FourthActivity2 : AppCompatActivity() {
 
         binding.btnContinue2.setOnClickListener {
 
-          if (binding.im11.checkedRadioButtonId == -1){
+          /*if (binding.im11.checkedRadioButtonId == -1){
                 binding.im11.requestFocus()
                 binding.im113.error = "RadioButton Not Selected"
                 sound()
@@ -155,7 +156,10 @@ class FourthActivity2 : AppCompatActivity() {
                     sound()
                 return@setOnClickListener
                 }
-            }
+            }*/
+
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
 
         }
 

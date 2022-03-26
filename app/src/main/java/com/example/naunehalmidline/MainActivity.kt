@@ -52,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.callback
         database = ContactDatabase.getDatabase(this)
+
+
         checkPermission(CAMERA,CAMERA_PERMISSION_CODE)
         checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE,STORAGE_PERMISSION_CODE)
 
@@ -381,29 +383,31 @@ class MainActivity : AppCompatActivity() {
             } else {
                 binding.hh2601.error = null
             }
+
+
             val prg = ProgressDialog(this)
             prg.setMessage("Please Wait....")
             Handler().postDelayed({prg.dismiss()}, 3000)
             prg.show()
 
-            /*val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)*/
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
 
             /*val intent = intent
             finish()
             startActivity(intent)*/
 
-            val refresh = Intent(this, SecondActivity::class.java)
-            startActivity(refresh)
+            /*val refresh = Intent(this, SecondActivity::class.java)
+            startActivity(refresh)*/
 
             insertContact()
             updateContact()
 
+
+
         }
 
-        binding.fab.setOnClickListener {
-            RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
-        }
+
 
         binding.btnEnd.setOnClickListener {
 val mediaPlayer = MediaPlayer.create(this@MainActivity, R.raw.sound)

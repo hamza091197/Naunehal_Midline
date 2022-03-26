@@ -26,7 +26,6 @@ import com.example.naunehalmidline.databinding.ActivityThirdBinding
 import com.example.naunehalmidline.main.Contact
 import com.example.naunehalmidline.main.ContactDatabase
 import com.example.naunehalmidline.third.Third
-import com.example.naunehalmidline.third.ThirdDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
@@ -34,13 +33,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ThirdActivity : AppCompatActivity() {
-    lateinit var database: ThirdDatabase
+    lateinit var database: ContactDatabase
     lateinit var binding: ActivityThirdBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_third)
         binding.callback
-        database = ThirdDatabase.getDatabase(this)
+        database = ContactDatabase.getDatabase(this)
 
 
         val window: Window = this@ThirdActivity.window
@@ -396,17 +395,15 @@ class ThirdActivity : AppCompatActivity() {
             Handler().postDelayed({prg.dismiss()}, 3000)
             prg.show()
 
-            val refresh = Intent(this, ThirdActivity::class.java)
-            startActivity(refresh)
+            val intent = Intent(this, FourthActivity::class.java)
+            startActivity(intent)
 
             insertThird()
             updateThird()
 
         }
 
-        binding.fab3.setOnClickListener {
-            RoomExplorer.show(this, ThirdDatabase::class.java, "thirdDB")
-        }
+
 
         binding.btnFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
@@ -465,7 +462,7 @@ val mediaPlayer = MediaPlayer.create(this@ThirdActivity, R.raw.sound)
     fun insertThird() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.ThirdDao().insert(
+                val count = database.ContactDao().insert(
                     Third(
                         0,
                         cs01 = binding.cs01.text.toString(),
@@ -705,7 +702,7 @@ val mediaPlayer = MediaPlayer.create(this@ThirdActivity, R.raw.sound)
     fun updateThird() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.ThirdDao().update(
+                val count = database.ContactDao().update(
                     Third(
                         0,
                         cs01 = binding.cs01.text.toString(),

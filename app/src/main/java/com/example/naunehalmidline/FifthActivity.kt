@@ -23,9 +23,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityFifthBinding
 import com.example.naunehalmidline.fifth.Fifth
-import com.example.naunehalmidline.fifth.FifthDatabase
+import com.example.naunehalmidline.main.ContactDatabase
 import com.example.naunehalmidline.third.Third
-import com.example.naunehalmidline.third.ThirdDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
@@ -34,12 +33,12 @@ import kotlinx.coroutines.withContext
 
 class FifthActivity : AppCompatActivity() {
     lateinit var binding: ActivityFifthBinding
-    lateinit var database: FifthDatabase
+    lateinit var database: ContactDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fifth)
         binding.callback
-        database = FifthDatabase.getDatabase(this)
+        database = ContactDatabase.getDatabase(this)
 
 
         val window: Window = this@FifthActivity.window
@@ -54,7 +53,7 @@ class FifthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.pd01.text.toString().trim().isEmpty()){
+            /*if (binding.pd01.text.toString().trim().isEmpty()){
             binding.pd01.requestFocus()
             binding.pd01.error = "Enter Child's Line Number"
             sound()
@@ -471,7 +470,7 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd22.error = "The range is from 1 to 20"
                 sound()
                 return@setOnClickListener
-            }
+            }*/
 
             var pd24Flag = false
             binding.pd24check.children.forEach{
@@ -490,16 +489,14 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd2401.error = null
             }
 
-            val refresh = Intent(this, FifthActivity::class.java)
-            startActivity(refresh)
+            val intent = Intent(this, SixthActivity::class.java)
+            startActivity(intent)
 
             insertFifth()
             updateFifth()
         }
 
-        binding.fab5.setOnClickListener {
-            RoomExplorer.show(this, FifthDatabase::class.java, "fifthDB")
-        }
+
 
         binding.btnEnd.setOnClickListener {
             val mediaPlayer = MediaPlayer.create(this@FifthActivity, R.raw.sound)
@@ -590,7 +587,7 @@ class FifthActivity : AppCompatActivity() {
     fun insertFifth() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.FifthDao().insert(
+                val count = database.ContactDao().insert(
                     Fifth(
                         0,
                         pd01 = binding.pd01.text.toString(),
@@ -820,7 +817,7 @@ class FifthActivity : AppCompatActivity() {
     fun updateFifth() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.FifthDao().update(
+                val count = database.ContactDao().update(
                     Fifth(
                         0,
                         pd01 = binding.pd01.text.toString(),

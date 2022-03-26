@@ -23,9 +23,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySixthBinding
 import com.example.naunehalmidline.fifth.Fifth
-import com.example.naunehalmidline.fifth.FifthDatabase
+import com.example.naunehalmidline.main.ContactDatabase
 import com.example.naunehalmidline.sixth.Sixth
-import com.example.naunehalmidline.sixth.SixthDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
@@ -34,12 +33,12 @@ import kotlinx.coroutines.withContext
 
 class SixthActivity : AppCompatActivity() {
     lateinit var binding: ActivitySixthBinding
-    lateinit var database: SixthDatabase
+    lateinit var database: ContactDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sixth)
         binding.callback
-        database = SixthDatabase.getDatabase(this)
+        database = ContactDatabase.getDatabase(this)
 
 
         val window: Window = this@SixthActivity.window
@@ -53,7 +52,7 @@ class SixthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.bf01.text.toString().trim().isEmpty()){
+            /*if (binding.bf01.text.toString().trim().isEmpty()){
                 binding.bf01.requestFocus()
                 binding.bf01.error = "Enter Child's line number"
                 sound()
@@ -574,7 +573,7 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf1996x.error = "Other Please Specify"
                 sound()
                 return@setOnClickListener
-            }
+            }*/
 
             if (binding.bf20.checkedRadioButtonId == -1){
                 binding.bf2098.requestFocus()
@@ -587,16 +586,14 @@ class SixthActivity : AppCompatActivity() {
             }
 
 
-            val refresh = Intent(this, SixthActivity::class.java)
-            startActivity(refresh)
+            val intent = Intent(this, SevenActivity::class.java)
+            startActivity(intent)
 
             insertSixth()
             updateSixth()
         }
 
-        binding.fab6.setOnClickListener {
-            RoomExplorer.show(this, SixthDatabase::class.java, "sixthDB")
-        }
+
 
         binding.btnEnd.setOnClickListener {
             val mediaPlayer = MediaPlayer.create(this@SixthActivity, R.raw.sound)
@@ -810,7 +807,7 @@ class SixthActivity : AppCompatActivity() {
     fun insertSixth() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.SixthDao().insert(
+                val count = database.ContactDao().insert(
                     Sixth(
                         0,
                         bf01 = binding.bf01.text.toString(),
@@ -1134,7 +1131,7 @@ class SixthActivity : AppCompatActivity() {
     fun updateSixth() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.SixthDao().update(
+                val count = database.ContactDao().update(
                     Sixth(
                         0,
                         bf01 = binding.bf01.text.toString(),

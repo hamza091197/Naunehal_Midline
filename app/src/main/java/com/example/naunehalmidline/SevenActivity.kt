@@ -20,9 +20,8 @@ import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySevenBinding
-import com.example.naunehalmidline.fifth.FifthDatabase
+import com.example.naunehalmidline.main.ContactDatabase
 import com.example.naunehalmidline.seven.Seven
-import com.example.naunehalmidline.seven.SevenDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
@@ -31,12 +30,12 @@ import kotlinx.coroutines.withContext
 
 class SevenActivity : AppCompatActivity() {
     lateinit var binding: ActivitySevenBinding
-    lateinit var database: SevenDatabase
+    lateinit var database: ContactDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_seven)
         binding.callback
-        database = SevenDatabase.getDatabase(this)
+        database = ContactDatabase.getDatabase(this)
 
 
         val window: Window = this@SevenActivity.window
@@ -51,7 +50,7 @@ class SevenActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            if (binding.cv01a.text.toString().trim().isEmpty()){
+            /*if (binding.cv01a.text.toString().trim().isEmpty()){
                 binding.cv01a.requestFocus()
                 binding.cv01a.error = "Name of respondent"
                 sound()
@@ -381,7 +380,7 @@ class SevenActivity : AppCompatActivity() {
             }
             else {
                 binding.cv2101.error = null
-            }
+            }*/
 
             if (binding.cv2196.isChecked &&
                 binding.cv2196x.text.toString().trim().isEmpty()){
@@ -391,16 +390,13 @@ class SevenActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val refresh = Intent(this, SevenActivity::class.java)
-            startActivity(refresh)
+            val intent = Intent(this, EightActivity::class.java)
+            startActivity(intent)
 
             insertSeven()
             updateSeven()
         }
 
-        binding.fab7.setOnClickListener {
-            RoomExplorer.show(this, SevenDatabase::class.java, "sevenDB")
-        }
 
         binding.btnEnd.setOnClickListener {
 val mediaPlayer = MediaPlayer.create(this@SevenActivity, R.raw.sound)
@@ -454,7 +450,7 @@ val mediaPlayer = MediaPlayer.create(this@SevenActivity, R.raw.sound)
     fun insertSeven() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.SevenDao().insert(
+                val count = database.ContactDao().insert(
                     Seven(
                         0,
                         cv01a = binding.cv01a.text.toString(),
@@ -684,7 +680,7 @@ val mediaPlayer = MediaPlayer.create(this@SevenActivity, R.raw.sound)
     fun updateSeven() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.SevenDao().update(
+                val count = database.ContactDao().update(
                     Seven(
                         0,
                         cv01a = binding.cv01a.text.toString(),
