@@ -640,9 +640,7 @@ class EightActivity2 : AppCompatActivity() {
             /*val refresh = Intent(this, EightActivity2::class.java)
             startActivity(refresh)*/
 
-            binding.fab82.setOnClickListener {
-                RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
-            }
+
 
             insertEight2()
             updateEight2()
@@ -654,6 +652,10 @@ class EightActivity2 : AppCompatActivity() {
             val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
             vibratorService.vibrate(150)
             createDialog()
+        }
+
+        binding.fab82.setOnClickListener {
+            RoomExplorer.show(this, ContactDatabase::class.java, "contactDB")
         }
         setTransparentStatusBar()
     }

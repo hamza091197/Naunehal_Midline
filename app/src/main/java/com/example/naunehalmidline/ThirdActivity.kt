@@ -129,7 +129,7 @@ class ThirdActivity : AppCompatActivity() {
             }
             else {
                 binding.cs0602.error = null
-            }*/
+            }
 
             if (binding.cs07.checkedRadioButtonId == -1){
                 binding.cs0701.requestFocus()
@@ -379,7 +379,7 @@ class ThirdActivity : AppCompatActivity() {
             }
             else{
                 binding.cs2098.error = null
-            }
+            }*/
 
             if (binding.cs21.checkedRadioButtonId == -1){
                 binding.cs2101.requestFocus()
@@ -405,10 +405,7 @@ class ThirdActivity : AppCompatActivity() {
 
 
 
-        binding.btnFourth.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            startActivity(intent)
-        }
+
 
         binding.btnEnd.setOnClickListener {
 val mediaPlayer = MediaPlayer.create(this@ThirdActivity, R.raw.sound)

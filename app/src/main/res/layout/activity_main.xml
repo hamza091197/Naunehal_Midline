@@ -13,8 +13,8 @@
 
     <ScrollView
         android:id="@+id/Grp"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fillViewport="true"
         android:background="@drawable/sublogin">
 
@@ -32,10 +32,6 @@
                         android:layout_height="wrap_content"
                         android:text="@string/hh01_title1"
                         android:textSize="25sp" />
-
-
-
-
 
             <!-- hh01  Input-Numeric   -->
             <androidx.cardview.widget.CardView
@@ -1687,7 +1683,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -1711,14 +1707,6 @@
                     android:textColor="@color/white" />
 
             </LinearLayout>
-
-            <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
-                android:layout_margin="16dp"
-                android:src="@drawable/ic_baseline_add_24" /-->>
         </LinearLayout>
     </ScrollView>
 </layout>

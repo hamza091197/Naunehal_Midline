@@ -258,7 +258,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb13.error = "The range is from 1 to 17"
                 sound()
                 return@setOnClickListener
-            }
+            }*/
 
             if (binding.cb14.checkedRadioButtonId == -1){
                 binding.cb14.requestFocus()
@@ -268,7 +268,7 @@ class SecondActivity : AppCompatActivity() {
             }
             else {
                 binding.cb1401.error = null
-            }*/
+            }
 
             if (binding.cb1496.isChecked &&
                 binding.cb1496x.text.toString().trim().isEmpty()){

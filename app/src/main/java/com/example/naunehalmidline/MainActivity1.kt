@@ -40,10 +40,13 @@ lateinit var binding: ActivityMain1Binding
         binding.text.translationY = -1000f
         binding.text.animate().translationY(0f).duration = 3000
 
+        binding.cardview.translationY = -1000f
+        binding.cardview.animate().translationY(0f).duration = 3000
+
 
         // val dialogView = layoutInflater.inflate(R.layout.progress_dialog, null)
 
-        /*binding.btnMain.setOnClickListener {
+        binding.btnMain.setOnClickListener {
             prg()
             val intent = Intent(this@MainActivity1, MainActivity::class.java)
             startActivity(intent)
@@ -118,9 +121,9 @@ lateinit var binding: ActivityMain1Binding
             prg()
             val intent = Intent(this@MainActivity1, EightActivity2::class.java)
             startActivity(intent)
-        }*/
+        }
 
-       binding.btnShowBottomSheet.setOnClickListener {
+       /*binding.btnShowBottomSheet.setOnClickListener {
 
             // on below line we are creating a new bottom sheet dialog.
             val dialog = BottomSheetDialog(this)
@@ -129,19 +132,19 @@ lateinit var binding: ActivityMain1Binding
             val bind = BottomSheetDialogBinding.inflate(layoutInflater, view as ViewGroup, false)
             // on below line we are creating a variable for our button
             // which we are using to dismiss our dialog.
-            /*val btnClose = view.findViewById<Button>(R.id.idBtnDismiss)
-            val btnmain = view.findViewById<Button>(R.id.btn_main)*/
+            *//*val btnClose = view.findViewById<Button>(R.id.idBtnDismiss)
+            val btnmain = view.findViewById<Button>(R.id.btn_main)*//*
 
-            /*binding.btnSecond.setOnClickListener {
+            *//*binding.btnSecond.setOnClickListener {
                 prg()
                 val intent = Intent(this@MainActivity1, MainActivity::class.java)
                 startActivity(intent)
-            }*/
-            /*btnmain.setOnClickListener {
+            }*//*
+            *//*btnmain.setOnClickListener {
                 prg()
                 val intent = Intent(this@MainActivity1, SecondActivity::class.java)
                 startActivity(intent)
-            }*/
+            }*//*
 
                bind.btnMain.setOnClickListener {
                    prg()
@@ -237,7 +240,7 @@ lateinit var binding: ActivityMain1Binding
             // on below line we are calling
             // a show method to display a dialog.
             dialog.show()
-        }
+        }*/
         setTransparentStatusBar()
 
     }
