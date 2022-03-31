@@ -1,4 +1,4 @@
-package com.example.naunehalmidline.eight
+package com.example.naunehalmidline.Entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

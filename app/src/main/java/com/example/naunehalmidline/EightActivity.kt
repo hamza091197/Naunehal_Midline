@@ -19,8 +19,8 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
+import com.example.naunehalmidline.Entities.Eight
 import com.example.naunehalmidline.databinding.ActivityEightBinding
-import com.example.naunehalmidline.eight.Eight
 import com.example.naunehalmidline.main.Contact
 import com.example.naunehalmidline.main.ContactDatabase
 import com.validatorcrawler.aliazaz.Clear

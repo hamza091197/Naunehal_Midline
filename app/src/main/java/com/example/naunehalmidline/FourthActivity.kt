@@ -14,6 +14,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
@@ -846,7 +847,7 @@ class FourthActivity : AppCompatActivity() {
                 binding.im103.error = "RadioButton Not Selected"
                 sound()
                 return@setOnClickListener
-            }
+            }*/
 
             var im10aFlag = false
             binding.im10acheck.children.forEach {
@@ -872,7 +873,7 @@ class FourthActivity : AppCompatActivity() {
                 sound()
                 return@setOnClickListener
             }
-            *//*44 66 88 97*//*
+            /*44 66 88 97*//*
             if (binding.im0502Dd.text.toString() == "44" ||
                     binding.im0502Dd.text.toString() == "88" ||
                     binding.im0502Dd.text.toString() == "66" ||
@@ -926,6 +927,9 @@ class FourthActivity : AppCompatActivity() {
             val intent = Intent(this, FourthActivity2::class.java)
             startActivity(intent)
 
+            insertFourth()
+            updateFourth()
+
         }
 
         binding.btnEnd.setOnClickListener {
@@ -940,11 +944,13 @@ class FourthActivity : AppCompatActivity() {
         setTransparentStatusBar()
 
     }
+
     fun insertFourth() {
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                val count = database.ContactDao().insert(
+                val count = database.ContactDao().insert (
                     Fourth(
+                        id = 1,
                         im04Dd = binding.im04Dd.text.toString(),
                         im04Mm = binding.im04Mm.text.toString(),
                         im04Yy = binding.im04Yy.text.toString(),
@@ -1002,13 +1008,13 @@ class FourthActivity : AppCompatActivity() {
                         im10a96x = binding.im10a96x.text.toString(),
 
 
-                        im01 = (when {
+                        im01 = when {
                             binding.im011.isChecked -> "1"
                             binding.im022.isChecked -> "2"
-                           else -> "-1"
-                        }),
+                            else -> "-1"
+                        },
 
-                        im02 = (when  {
+                        im02 = (when {
                             binding.im021.isChecked -> "1"
                             binding.im022.isChecked -> "2"
                             else -> "-1"
@@ -1095,7 +1101,175 @@ class FourthActivity : AppCompatActivity() {
                             binding.im10a98.isChecked -> "98"
                             binding.im10a96.isChecked -> "96"
                             else -> "-1"
+                        })
+
+                    )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateFourth() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ContactDao().update(
+                    Fourth(
+                        0,
+                        im04Dd = binding.im04Dd.text.toString(),
+                        im04Mm = binding.im04Mm.text.toString(),
+                        im04Yy = binding.im04Yy.text.toString(),
+                        im0501Dd = binding.im0501Dd.text.toString(),
+                        im0501Mm = binding.im0501Mm.text.toString(),
+                        im0501Yy = binding.im0501Yy.text.toString(),
+                        im0502Dd = binding.im0502Dd.text.toString(),
+                        im0502Mm = binding.im0502Mm.text.toString(),
+                        im0502Yy = binding.im0502Yy.text.toString(),
+                        im0503Dd = binding.im0503Dd.text.toString(),
+                        im0503Mm = binding.im0503Mm.text.toString(),
+                        im0503Yy = binding.im0503Yy.text.toString(),
+                        im0504Dd = binding.im0504Dd.text.toString(),
+                        im0504Mm = binding.im0504Mm.text.toString(),
+                        im0504Yy = binding.im0504Yy.text.toString(),
+                        im0505Dd = binding.im0505Dd.text.toString(),
+                        im0505Mm = binding.im0505Mm.text.toString(),
+                        im0505Yy = binding.im0505Yy.text.toString(),
+                        im0506Dd = binding.im0506Dd.text.toString(),
+                        im0506Mm = binding.im0506Mm.text.toString(),
+                        im0506Yy = binding.im0506Yy.text.toString(),
+                        im0507Dd = binding.im0507Dd.text.toString(),
+                        im0507Mm = binding.im0507Mm.text.toString(),
+                        im0507Yy = binding.im0507Yy.text.toString(),
+                        im0508Dd = binding.im0508Dd.text.toString(),
+                        im0508Mm = binding.im0508Mm.text.toString(),
+                        im0508Yy = binding.im0508Yy.text.toString(),
+                        im0509Dd = binding.im0509Dd.text.toString(),
+                        im0509Mm = binding.im0509Mm.text.toString(),
+                        im0509Yy = binding.im0509Yy.text.toString(),
+                        im0510Dd = binding.im0510Dd.text.toString(),
+                        im0510Mm = binding.im0510Mm.text.toString(),
+                        im0510Yy = binding.im0510Yy.text.toString(),
+                        im0511Dd = binding.im0511Dd.text.toString(),
+                        im0511Mm = binding.im0511Mm.text.toString(),
+                        im0511Yy = binding.im0511Yy.text.toString(),
+                        im0512Dd = binding.im0512Dd.text.toString(),
+                        im0512Mm = binding.im0512Mm.text.toString(),
+                        im0512Yy = binding.im0512Yy.text.toString(),
+                        im0513Dd = binding.im0513Dd.text.toString(),
+                        im0513Mm = binding.im0513Mm.text.toString(),
+                        im0513Yy = binding.im0513Yy.text.toString(),
+                        im0514Dd = binding.im0514Dd.text.toString(),
+                        im0514Mm = binding.im0514Mm.text.toString(),
+                        im0514Yy = binding.im0514Yy.text.toString(),
+                        im0515Dd = binding.im0515Dd.text.toString(),
+                        im0515Mm = binding.im0515Mm.text.toString(),
+                        im0515Yy = binding.im0515Yy.text.toString(),
+                        im0516Dd = binding.im0516Dd.text.toString(),
+                        im0516Mm = binding.im0516Mm.text.toString(),
+                        im0516Yy = binding.im0516Yy.text.toString(),
+                        im08b = binding.im08b.text.toString(),
+                        im0896x = binding.im0896x.text.toString(),
+                        im0396x = binding.im0396x.text.toString(),
+                        im10a96x = binding.im10a96x.text.toString(),
+
+
+                        im01 = (when {
+                            binding.im011.isChecked -> "1"
+                            binding.im022.isChecked -> "2"
+                            else -> "-1"
                         }),
+
+                        im02 = (when {
+                            binding.im021.isChecked -> "1"
+                            binding.im022.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        im03 = (when {
+                            binding.im031.isChecked -> "1"
+                            binding.im032.isChecked -> "2"
+                            binding.im033.isChecked -> "3"
+                            binding.im034.isChecked -> "4"
+                            binding.im035.isChecked -> "5"
+                            binding.im036.isChecked -> "6"
+                            binding.im0396.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im07 = (when {
+                            binding.im071.isChecked -> "1"
+                            binding.im072.isChecked -> "2"
+                            else -> "-1"
+                        }),
+
+                        im08 = (when {
+                            binding.im081.isChecked -> "1"
+                            binding.im082.isChecked -> "2"
+                            binding.im083.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im08a = (when {
+                            binding.im08a1.isChecked -> "1"
+                            binding.im08a2.isChecked -> "2"
+                            binding.im08a3.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im08c = (when {
+                            binding.im08c01.isChecked -> "1"
+                            binding.im08c02.isChecked -> "2"
+                            binding.im08c03.isChecked -> "3"
+                            binding.im08c04.isChecked -> "4"
+                            binding.im08c05.isChecked -> "5"
+                            binding.im08c06.isChecked -> "6"
+                            binding.im08c07.isChecked -> "7"
+                            binding.im08c08.isChecked -> "8"
+                            binding.im08c09.isChecked -> "9"
+                            binding.im08c10.isChecked -> "10"
+                            binding.im08c11.isChecked -> "11"
+                            binding.im08c12.isChecked -> "12"
+                            binding.im08c13.isChecked -> "13"
+                            binding.im08c98.isChecked -> "98"
+                            binding.im0896.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im09 = (when {
+                            binding.im091.isChecked -> "1"
+                            binding.im092.isChecked -> "2"
+                            binding.im093.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im10 = (when {
+                            binding.im101.isChecked -> "1"
+                            binding.im102.isChecked -> "2"
+                            binding.im103.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im10a = (when {
+                            binding.im10a01.isChecked -> "1"
+                            binding.im10a02.isChecked -> "2"
+                            binding.im10a03.isChecked -> "3"
+                            binding.im10a04.isChecked -> "4"
+                            binding.im10a05.isChecked -> "5"
+                            binding.im10a06.isChecked -> "6"
+                            binding.im10a07.isChecked -> "7"
+                            binding.im10a08.isChecked -> "8"
+                            binding.im10a09.isChecked -> "9"
+                            binding.im10a10.isChecked -> "10"
+                            binding.im10a11.isChecked -> "11"
+                            binding.im10a12.isChecked -> "12"
+                            binding.im10a13.isChecked -> "13"
+                            binding.im10a98.isChecked -> "98"
+                            binding.im10a96.isChecked -> "96"
+                            else -> "-1"
+                        })
 
                         )
                 )
@@ -1140,6 +1314,7 @@ class FourthActivity : AppCompatActivity() {
     override fun onBackPressed() {
         //super.onBackPressed()
     }
+
     private fun im() {
         binding.im0501Dd.addTextChangedListener(object : TextWatcher {
 
@@ -1572,7 +1747,8 @@ class FourthActivity : AppCompatActivity() {
             }
         }
     }
-    fun sound(){
+
+    fun sound() {
         /*val mediaPlayer = MediaPlayer.create(this@MainActivity1, R.raw.sound)
         mediaPlayer.start()*/ // no need to call prepare(); create() does that for you
         val vibratorService = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator

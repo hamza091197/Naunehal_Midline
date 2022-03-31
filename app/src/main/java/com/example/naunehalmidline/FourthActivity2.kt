@@ -23,7 +23,9 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
+import com.example.naunehalmidline.Fourth.Fourth2
 import com.example.naunehalmidline.databinding.ActivityFourth2Binding
+import com.example.naunehalmidline.main.ContactDatabase
 import com.validatorcrawler.aliazaz.Clear
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -32,11 +34,12 @@ import kotlinx.coroutines.withContext
 
 class FourthActivity2 : AppCompatActivity() {
     lateinit var binding: ActivityFourth2Binding
+    lateinit var database: ContactDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_fourth2)
         binding.callback
-
+        database = ContactDatabase.getDatabase(this)
 
         val window: Window = this@FourthActivity2.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
@@ -50,7 +53,7 @@ class FourthActivity2 : AppCompatActivity() {
 
         binding.btnContinue2.setOnClickListener {
 
-          if (binding.im11.checkedRadioButtonId == -1){
+          /*if (binding.im11.checkedRadioButtonId == -1){
                 binding.im11.requestFocus()
                 binding.im113.error = "RadioButton Not Selected"
                 sound()
@@ -279,7 +282,7 @@ class FourthActivity2 : AppCompatActivity() {
             }
             else {
                 binding.im2496x.error = null
-            }
+            }*/
 
             if (binding.im25.checkedRadioButtonId == -1){
                 binding.im251.requestFocus()
@@ -294,6 +297,10 @@ class FourthActivity2 : AppCompatActivity() {
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
 
+            insertFourth2()
+            updateFourth2()
+
+
         }
 
         binding.btnEnd2.setOnClickListener {
@@ -306,6 +313,326 @@ class FourthActivity2 : AppCompatActivity() {
 
         im2()
         setTransparentStatusBar()
+    }
+
+    fun insertFourth2() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ContactDao().insert(
+                    Fourth2(
+                        0,
+                        im121x = binding.im121x.text.toString(),
+                        im12a1 = binding.im12a1.text.toString(),
+                        im151  = binding.im151.text.toString(),
+                        im171 = binding.im171.text.toString(),
+                        im191x = binding.im171.text.toString(),
+                        im221x = binding.im221x.text.toString(),
+                        im236x = binding.im236x.text.toString(),
+                        im23a96x = binding.im23a96x.text.toString(),
+                        im23b1 = binding.im23b1.text.toString(),
+                        im23b2 = binding.im23b2.text.toString(),
+                        im2496x = binding.im2496x.text.toString(),
+
+
+
+
+                        im11 = (when {
+                            binding.im111.isChecked -> "1"
+                            binding.im112.isChecked -> "2"
+                            binding.im113.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+                        im1298 = (when  {
+                            binding.im1298.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im12a98 = (when  {
+                            binding.im12a98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+
+
+                        im13 = (when {
+                            binding.im131.isChecked -> "1"
+                            binding.im132.isChecked -> "2"
+                            binding.im133.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im14 = (when {
+                            binding.im141.isChecked -> "1"
+                            binding.im142.isChecked -> "2"
+                            binding.im143.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im1598 = (when  {
+                            binding.im1598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im16 = (when {
+                            binding.im161.isChecked -> "1"
+                            binding.im162.isChecked -> "2"
+                            binding.im163.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im1798 = (when  {
+                            binding.im1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im18 = (when {
+                            binding.im181.isChecked -> "1"
+                            binding.im182.isChecked -> "2"
+                            binding.im183.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im1998 = (when  {
+                            binding.im1998.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im20 = (when {
+                            binding.im201.isChecked -> "1"
+                            binding.im202.isChecked -> "2"
+                            binding.im203.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im21 = (when {
+                            binding.im211.isChecked -> "1"
+                            binding.im212.isChecked -> "2"
+                            binding.im213.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im2298 = (when  {
+                            binding.im2298.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im23 = (when {
+                            binding.im231.isChecked -> "1"
+                            binding.im232.isChecked -> "2"
+                            binding.im233.isChecked -> "3"
+                            binding.im234.isChecked -> "4"
+                            binding.im236.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im23a = (when {
+                            binding.im23a1.isChecked -> "1"
+                            binding.im23a2.isChecked -> "2"
+                            binding.im23a3.isChecked -> "3"
+                            binding.im23a04.isChecked -> "4"
+                            binding.im23a05.isChecked -> "5"
+                            binding.im23a96.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im24 = (when {
+                            binding.im241.isChecked -> "1"
+                            binding.im242.isChecked -> "2"
+                            binding.im243.isChecked -> "3"
+                            binding.im244.isChecked -> "4"
+                            binding.im246.isChecked -> "6"
+                            binding.im247.isChecked -> "7"
+                            binding.im248.isChecked -> "8"
+                            binding.im249.isChecked -> "9"
+                            binding.im2410.isChecked -> "10"
+                            binding.im2411.isChecked -> "11"
+                            binding.im2412.isChecked -> "12"
+                            binding.im2413.isChecked -> "13"
+                            binding.im2414.isChecked -> "14"
+                            binding.im2415.isChecked -> "15"
+                            binding.im2416.isChecked -> "16"
+                            binding.im2417.isChecked -> "17"
+                            binding.im2498.isChecked -> "98"
+                            binding.im2496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im25 = (when {
+                            binding.im251.isChecked -> "1"
+                            binding.im252.isChecked -> "2"
+                            binding.im253.isChecked -> "3"
+                            binding.im254.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
+    }
+
+    fun updateFourth2() {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                val count = database.ContactDao().update(
+                    Fourth2(
+                        0,
+                        im121x = binding.im121x.text.toString(),
+                        im12a1 = binding.im12a1.text.toString(),
+                        im151  = binding.im151.text.toString(),
+                        im171 = binding.im171.text.toString(),
+                        im191x = binding.im171.text.toString(),
+                        im221x = binding.im221x.text.toString(),
+                        im236x = binding.im236x.text.toString(),
+                        im23a96x = binding.im23a96x.text.toString(),
+                        im23b1 = binding.im23b1.text.toString(),
+                        im23b2 = binding.im23b2.text.toString(),
+                        im2496x = binding.im2496x.text.toString(),
+
+
+                        im11 = (when {
+                            binding.im111.isChecked -> "1"
+                            binding.im112.isChecked -> "2"
+                            binding.im113.isChecked -> "3"
+                            else -> "-1"
+                        }),
+
+                        im1298 = (when  {
+                            binding.im1298.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im12a98 = (when  {
+                            binding.im12a98.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+
+
+                        im13 = (when {
+                            binding.im131.isChecked -> "1"
+                            binding.im132.isChecked -> "2"
+                            binding.im133.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im14 = (when {
+                            binding.im141.isChecked -> "1"
+                            binding.im142.isChecked -> "2"
+                            binding.im143.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im1598 = (when  {
+                            binding.im1598.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im16 = (when {
+                            binding.im161.isChecked -> "1"
+                            binding.im162.isChecked -> "2"
+                            binding.im163.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im1798 = (when  {
+                            binding.im1798.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im18 = (when {
+                            binding.im181.isChecked -> "1"
+                            binding.im182.isChecked -> "2"
+                            binding.im183.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im1998 = (when  {
+                            binding.im1998.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im20 = (when {
+                            binding.im201.isChecked -> "1"
+                            binding.im202.isChecked -> "2"
+                            binding.im203.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im21 = (when {
+                            binding.im211.isChecked -> "1"
+                            binding.im212.isChecked -> "2"
+                            binding.im213.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im2298 = (when  {
+                            binding.im2298.isChecked -> "98"
+                            else -> "-1"
+                        }),
+
+                        im23 = (when {
+                            binding.im231.isChecked -> "1"
+                            binding.im232.isChecked -> "2"
+                            binding.im233.isChecked -> "3"
+                            binding.im234.isChecked -> "4"
+                            binding.im236.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im23a = (when {
+                            binding.im23a1.isChecked -> "1"
+                            binding.im23a2.isChecked -> "2"
+                            binding.im23a3.isChecked -> "3"
+                            binding.im23a04.isChecked -> "4"
+                            binding.im23a05.isChecked -> "5"
+                            binding.im23a96.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im24 = (when {
+                            binding.im241.isChecked -> "1"
+                            binding.im242.isChecked -> "2"
+                            binding.im243.isChecked -> "3"
+                            binding.im244.isChecked -> "4"
+                            binding.im246.isChecked -> "6"
+                            binding.im247.isChecked -> "7"
+                            binding.im248.isChecked -> "8"
+                            binding.im249.isChecked -> "9"
+                            binding.im2410.isChecked -> "10"
+                            binding.im2411.isChecked -> "11"
+                            binding.im2412.isChecked -> "12"
+                            binding.im2413.isChecked -> "13"
+                            binding.im2414.isChecked -> "14"
+                            binding.im2415.isChecked -> "15"
+                            binding.im2416.isChecked -> "16"
+                            binding.im2417.isChecked -> "17"
+                            binding.im2498.isChecked -> "98"
+                            binding.im2496.isChecked -> "96"
+                            else -> "-1"
+                        }),
+
+                        im25 = (when {
+                            binding.im251.isChecked -> "1"
+                            binding.im252.isChecked -> "2"
+                            binding.im253.isChecked -> "3"
+                            binding.im254.isChecked -> "4"
+                            else -> "-1"
+                        }),
+
+                        )
+                )
+
+                Log.e("getData: ", count.toString())
+
+            }
+        }
+
     }
 
     private fun createDialog() {

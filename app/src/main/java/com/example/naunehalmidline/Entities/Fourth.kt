@@ -3,8 +3,12 @@ package com.example.naunehalmidline.Fourth
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Fourth")
+@Entity
 data class Fourth(
+
+    @PrimaryKey(autoGenerate = true)
+    val id:Long,
+
     val im01: String,
 
     val im02: String,
@@ -70,5 +74,5 @@ data class Fourth(
     val im09: String,
     val im10: String,
     val im10a: String,
-    val im10a96x: String,
+    val im10a96x: String
     )

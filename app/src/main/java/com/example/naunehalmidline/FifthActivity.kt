@@ -22,11 +22,9 @@ import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityFifthBinding
-import com.example.naunehalmidline.fifth.Fifth
+import com.example.naunehalmidline.Entities.Fifth
 import com.example.naunehalmidline.main.ContactDatabase
-import com.example.naunehalmidline.third.Third
 import com.validatorcrawler.aliazaz.Clear
-import com.wajahatkarim3.roomexplorer.RoomExplorer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

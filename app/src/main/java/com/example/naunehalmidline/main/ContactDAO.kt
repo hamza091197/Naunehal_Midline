@@ -2,11 +2,11 @@ package com.example.naunehalmidline.main
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.naunehalmidline.Entities.Eight
+import com.example.naunehalmidline.Entities.Eight2
 import com.example.naunehalmidline.Fourth.Fourth
 import com.example.naunehalmidline.Fourth.Fourth2
-import com.example.naunehalmidline.eight.Eight
-import com.example.naunehalmidline.eight.Eight2
-import com.example.naunehalmidline.fifth.Fifth
+import com.example.naunehalmidline.Entities.Fifth
 import com.example.naunehalmidline.second.Second
 import com.example.naunehalmidline.seven.Seven
 import com.example.naunehalmidline.sixth.Sixth
@@ -79,6 +79,6 @@ interface ContactDAO {
     fun delete(contact: Contact)*/
 
     @Query("Select * FROM Contact")
-    fun getcontact() : LiveData<List<Contact>>
+    fun getContact() : LiveData<List<Contact>>
 
 }
