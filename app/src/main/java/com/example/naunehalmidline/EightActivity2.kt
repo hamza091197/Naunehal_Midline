@@ -2,7 +2,6 @@ package com.example.naunehalmidline
 
 import android.app.Activity
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -12,16 +11,13 @@ import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
-import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivityEight2Binding
-import com.example.naunehalmidline.eight.Eight
-import com.example.naunehalmidline.eight2.Eight2
+import com.example.naunehalmidline.eight.Eight2
 import com.example.naunehalmidline.main.ContactDatabase
 import com.validatorcrawler.aliazaz.Clear
 import com.wajahatkarim3.roomexplorer.RoomExplorer
