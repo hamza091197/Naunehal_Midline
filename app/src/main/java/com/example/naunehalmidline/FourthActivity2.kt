@@ -50,7 +50,7 @@ class FourthActivity2 : AppCompatActivity() {
 
         binding.btnContinue2.setOnClickListener {
 
-          /*if (binding.im11.checkedRadioButtonId == -1){
+          if (binding.im11.checkedRadioButtonId == -1){
                 binding.im11.requestFocus()
                 binding.im113.error = "RadioButton Not Selected"
                 sound()
@@ -156,7 +156,140 @@ class FourthActivity2 : AppCompatActivity() {
                     sound()
                 return@setOnClickListener
                 }
-            }*/
+            }
+
+            if (binding.im18.checkedRadioButtonId == -1){
+                binding.im183.requestFocus()
+                binding.im183.error = "RadioButton Not Selected"
+            } else{
+                binding.im183.error = null
+            }
+
+            if (!binding.im1998.isChecked){
+
+                if (binding.im191x.text.toString().trim().isEmpty()){
+                    binding.im191x.requestFocus()
+                    binding.im191x.error = "Number of Times"
+                    sound()
+                    return@setOnClickListener
+                }
+
+                if (!binding.im191x.isRangeTextValidate){
+                    binding.im191x.requestFocus()
+                    binding.im191x.error = "The range is from 1 to 96"
+                    sound()
+                    return@setOnClickListener
+                }
+            }
+
+            if (binding.im20.checkedRadioButtonId == -1){
+                binding.im203.requestFocus()
+                binding.im203.error = "RadioButton Not Selected"
+            } else{
+                binding.im203.error = null
+            }
+
+            if (binding.im21.checkedRadioButtonId == -1){
+                binding.im213.requestFocus()
+                binding.im213.error = "RadioButton Not Selected"
+            } else{
+                binding.im213.error = null
+            }
+
+            if (!binding.im2298.isChecked){
+
+                if (binding.im221x.text.toString().trim().isEmpty()){
+                    binding.im221x.requestFocus()
+                    binding.im221x.error = "Number of Times"
+                    sound()
+                    return@setOnClickListener
+                }
+
+                if (!binding.im221x.isRangeTextValidate){
+                    binding.im221x.requestFocus()
+                    binding.im221x.error = "The range is from 1 to 96"
+                    sound()
+                    return@setOnClickListener
+                }
+            }
+
+            if (binding.im23.checkedRadioButtonId == -1){
+                binding.im231.requestFocus()
+                binding.im231.error = "RadioButton Not Selected"
+            } else {
+                binding.im231.error = null
+            }
+
+            if (binding.im236.isChecked &&
+                binding.im236x.text.toString().trim().isEmpty()){
+                binding.im236x.requestFocus()
+                binding.im236x.error = "Other Please Specify"
+                sound()
+                return@setOnClickListener
+            }
+            else {
+                binding.im236x.error = null
+            }
+
+            if (binding.im23a.checkedRadioButtonId == -1){
+                binding.im23a1.requestFocus()
+                binding.im23a1.error = "RadioButton Not Selected"
+            } else {
+                binding.im23a1.error = null
+            }
+
+            if (binding.im23a96.isChecked &&
+                binding.im23a96x.text.toString().trim().isEmpty()){
+                binding.im23a96x.requestFocus()
+                binding.im23a96x.error = "Other Please Specify"
+                sound()
+                return@setOnClickListener
+            }
+            else {
+                binding.im23a96x.error = null
+            }
+
+            if (binding.im23b1.text.toString().trim().isEmpty()){
+                binding.im23b1.requestFocus()
+                binding.im23b1.error = "Enter Day"
+                sound()
+                return@setOnClickListener
+            }
+
+            if (binding.im23b2.text.toString().trim().isEmpty()){
+                binding.im23b2.requestFocus()
+                binding.im23b2.error = "Enter Day"
+                sound()
+                return@setOnClickListener
+            }
+
+            if (binding.im24.checkedRadioButtonId == -1){
+                binding.im241.requestFocus()
+                binding.im241.error = "RadioButton Not Selected"
+            } else {
+                binding.im241.error = null
+            }
+
+            if (binding.im2496.isChecked &&
+                binding.im2496x.text.toString().trim().isEmpty()){
+                binding.im2496x.requestFocus()
+                binding.im2496x.error = "Other Please Specify"
+                sound()
+                return@setOnClickListener
+            }
+            else {
+                binding.im2496x.error = null
+            }
+
+            if (binding.im25.checkedRadioButtonId == -1){
+                binding.im251.requestFocus()
+                binding.im251.error = "RadioButton Not Selected"
+            } else {
+                binding.im251.error = null
+            }
+
+
+
 
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
@@ -328,6 +461,68 @@ class FourthActivity2 : AppCompatActivity() {
 
                 override fun afterTextChanged(p0: Editable?) {
                     binding.im1798.isChecked = !binding.im171.text.toString().isNotEmpty()
+                }
+
+            })
+
+        binding.im1998.setOnCheckedChangeListener { compoundButton, b ->
+
+            if (binding.im1998.isChecked){
+                binding.im191x.error = null
+                binding.im191x.text = null
+                binding.im191x.setEnabled(false)
+
+            }
+            else{
+                binding.im191x.setEnabled(true)
+            }
+
+        }
+
+        binding.im191x.addTextChangedListener(
+            object : TextWatcher{
+
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                }
+
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                }
+
+                override fun afterTextChanged(p0: Editable?) {
+                    binding.im1998.isChecked = !binding.im191x.text.toString().isNotEmpty()
+                }
+
+            })
+
+        binding.im2298.setOnCheckedChangeListener { compoundButton, b ->
+
+            if (binding.im2298.isChecked){
+                binding.im221x.error = null
+                binding.im221x.text = null
+                binding.im191x.setEnabled(false)
+
+            }
+            else{
+                binding.im221x.setEnabled(true)
+            }
+
+        }
+
+        binding.im221x.addTextChangedListener(
+            object : TextWatcher{
+
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                }
+
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+                }
+
+                override fun afterTextChanged(p0: Editable?) {
+                    binding.im2298.isChecked = !binding.im221x.text.toString().isNotEmpty()
                 }
 
             })

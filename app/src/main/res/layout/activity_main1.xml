@@ -48,7 +48,8 @@
 <!--            android:textSize="25sp"-->
 <!--            app:texts="@array/text"-->
 <!--            app:timeout="500" />-->
-        <TextView
+
+       <!-- <TextView
             android:background="@drawable/gradient"
             android:padding="15sp"
             style="@style/HeadingTitle"
@@ -57,7 +58,7 @@
             android:layout_height="wrap_content"
             android:text="Main Screen"
             android:textSize="25sp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"/>-->
 
 
         <androidx.cardview.widget.CardView
@@ -76,6 +77,16 @@
                 android:orientation="vertical">
 
 
+                <TextView
+                    android:background="@drawable/gradient"
+                    android:padding="15sp"
+                    style="@style/HeadingTitle"
+                    android:id="@id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Main Screen"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"

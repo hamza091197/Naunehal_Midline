@@ -618,8 +618,8 @@
                             android:inputType="number"
                             android:maxLength="1"
                             android:tag="im19_1"
-                            app:maxValue="0"
-                            app:minValue="0"
+                            app:maxValue="96"
+                            app:minValue="1"
                             app:type="range" />
 
                     <LinearLayout
@@ -801,8 +801,8 @@
                             android:inputType="number"
                             android:maxLength="1"
                             android:tag="im22_1"
-                            app:maxValue="0"
-                            app:minValue="0"
+                            app:maxValue="96"
+                            app:minValue="1"
                             app:type="range" />
 
                     <LinearLayout

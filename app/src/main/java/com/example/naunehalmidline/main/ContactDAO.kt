@@ -3,6 +3,7 @@ package com.example.naunehalmidline.main
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.naunehalmidline.Fourth.Fourth
+import com.example.naunehalmidline.Fourth.Fourth2
 import com.example.naunehalmidline.eight.Eight
 import com.example.naunehalmidline.eight.Eight2
 import com.example.naunehalmidline.fifth.Fifth
@@ -67,6 +68,12 @@ interface ContactDAO {
 
     @Update
     fun update(fourth: Fourth)
+
+    @Insert
+    fun insert(fourth2: Fourth2)
+
+    @Update
+    fun update(fourth2: Fourth2)
 
     /*@Delete
     fun delete(contact: Contact)*/

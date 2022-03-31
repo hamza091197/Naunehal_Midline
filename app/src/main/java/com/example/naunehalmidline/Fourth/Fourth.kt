@@ -5,13 +5,11 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Fourth")
 data class Fourth(
-    @PrimaryKey(autoGenerate = true)
-    val id : Long,
-
     val im01: String,
+
     val im02: String,
     val im03: String,
-    val im0396: String,
+    val im0396x: String,
     val im04Dd: String,
     val im04Mm: String,
     val im04Yy: String,
@@ -68,7 +66,9 @@ data class Fourth(
     val im08a: String,
     val im08b: String,
     val im08c: String,
+    val im0896x: String,
     val im09: String,
     val im10: String,
     val im10a: String,
+    val im10a96x: String,
     )
