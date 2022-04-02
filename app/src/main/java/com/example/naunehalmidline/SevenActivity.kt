@@ -50,7 +50,7 @@ class SevenActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.cv01a.text.toString().trim().isEmpty()){
+            if (binding.cv01a.text.toString().trim().isEmpty()){
                 binding.cv01a.requestFocus()
                 binding.cv01a.error = "Name of respondent"
                 sound()
@@ -380,7 +380,7 @@ class SevenActivity : AppCompatActivity() {
             }
             else {
                 binding.cv2101.error = null
-            }*/
+            }
 
             if (binding.cv2196.isChecked &&
                 binding.cv2196x.text.toString().trim().isEmpty()){

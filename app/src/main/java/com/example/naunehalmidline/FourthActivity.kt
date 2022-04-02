@@ -52,7 +52,7 @@ class FourthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.im01.checkedRadioButtonId == -1){
+            if (binding.im01.checkedRadioButtonId == -1){
                 binding.im01.requestFocus()
                 binding.im012.error = "RadioButton Not Selected"
                 sound()
@@ -847,7 +847,7 @@ class FourthActivity : AppCompatActivity() {
                 binding.im103.error = "RadioButton Not Selected"
                 sound()
                 return@setOnClickListener
-            }*/
+            }
 
             var im10aFlag = false
             binding.im10acheck.children.forEach {

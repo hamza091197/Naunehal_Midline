@@ -50,7 +50,7 @@ class EightActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener{
 
-            /*if (binding.se01.checkedRadioButtonId == -1){
+            if (binding.se01.checkedRadioButtonId == -1){
                 binding.se0101.requestFocus()
                 binding.se0101.error = "RadioButton Not Selected"
                 sound()
@@ -427,7 +427,7 @@ class EightActivity : AppCompatActivity() {
             }
             else{
                 binding.se220202.error = null
-            }*/
+            }
 
             if (binding.se2203.checkedRadioButtonId == -1){
                 binding.se220302.requestFocus()

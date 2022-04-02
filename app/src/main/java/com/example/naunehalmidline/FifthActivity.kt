@@ -51,7 +51,7 @@ class FifthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.pd01.text.toString().trim().isEmpty()){
+            if (binding.pd01.text.toString().trim().isEmpty()){
             binding.pd01.requestFocus()
             binding.pd01.error = "Enter Child's Line Number"
             sound()
@@ -468,7 +468,7 @@ class FifthActivity : AppCompatActivity() {
                 binding.pd22.error = "The range is from 1 to 20"
                 sound()
                 return@setOnClickListener
-            }*/
+            }
 
             var pd24Flag = false
             binding.pd24check.children.forEach{

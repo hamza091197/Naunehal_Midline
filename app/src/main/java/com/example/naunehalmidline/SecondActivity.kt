@@ -54,7 +54,7 @@ class SecondActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener { 
             
-            /*if (binding.cb01.text.toString().trim().isEmpty()){
+            if (binding.cb01.text.toString().trim().isEmpty()){
                 binding.cb01.requestFocus()
                 binding.cb01.error = " Line no"
                 sound()
@@ -258,7 +258,7 @@ class SecondActivity : AppCompatActivity() {
                 binding.cb13.error = "The range is from 1 to 17"
                 sound()
                 return@setOnClickListener
-            }*/
+            }
 
             if (binding.cb14.checkedRadioButtonId == -1){
                 binding.cb14.requestFocus()

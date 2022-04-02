@@ -14,9 +14,11 @@ import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.databinding.ActivitySixthBinding
@@ -48,7 +50,7 @@ class SixthActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.bf01.text.toString().trim().isEmpty()){
+            if (binding.bf01.text.toString().trim().isEmpty()){
                 binding.bf01.requestFocus()
                 binding.bf01.error = "Enter Child's line number"
                 sound()
@@ -569,7 +571,7 @@ class SixthActivity : AppCompatActivity() {
                 binding.bf1996x.error = "Other Please Specify"
                 sound()
                 return@setOnClickListener
-            }*/
+            }
 
             if (binding.bf20.checkedRadioButtonId == -1){
                 binding.bf2098.requestFocus()

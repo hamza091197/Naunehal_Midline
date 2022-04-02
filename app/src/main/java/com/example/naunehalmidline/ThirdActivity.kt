@@ -53,7 +53,7 @@ class ThirdActivity : AppCompatActivity() {
 
         binding.btnContinue.setOnClickListener {
 
-            /*if (binding.cs01.text.toString().trim().isEmpty()){
+            if (binding.cs01.text.toString().trim().isEmpty()){
                 binding.cs01.requestFocus()
                 binding.cs01.error = "Child's Line no"
                 sound()
@@ -379,7 +379,7 @@ class ThirdActivity : AppCompatActivity() {
             }
             else{
                 binding.cs2098.error = null
-            }*/
+            }
 
             if (binding.cs21.checkedRadioButtonId == -1){
                 binding.cs2101.requestFocus()

@@ -80,7 +80,8 @@ class MainActivity : AppCompatActivity() {
         /*/*window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN*/*/
 
         binding.btnContinue.setOnClickListener {
-            /*if (binding.hh01.text.toString().trim().isEmpty()) {
+
+            if (binding.hh01.text.toString().trim().isEmpty()) {
                 binding.hh01.requestFocus()
                 binding.hh01.error = "Enter Date of Interview"
                 sound()
@@ -373,7 +374,7 @@ class MainActivity : AppCompatActivity() {
                 binding.hh25.error = "The range is from 1 to 20"
                 sound()
                 return@setOnClickListener
-            }*/
+            }
 
             if (binding.hh26.checkedRadioButtonId == -1) {
                 binding.hh2601.requestFocus()

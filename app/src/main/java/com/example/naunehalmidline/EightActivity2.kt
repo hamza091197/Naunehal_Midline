@@ -11,9 +11,11 @@ import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.widget.CheckBox
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import androidx.core.view.children
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import com.example.naunehalmidline.Entities.Eight2
@@ -46,7 +48,7 @@ class EightActivity2 : AppCompatActivity() {
 
         binding.btnContinue2.setOnClickListener {
 
-            /*if (binding.se2204.checkedRadioButtonId == -1){
+            if (binding.se2204.checkedRadioButtonId == -1){
                 binding.se2204.requestFocus()
                 binding.se220402.error = "RadioButton Not Selected"
                 sound()
@@ -621,7 +623,7 @@ class EightActivity2 : AppCompatActivity() {
             }
             else{
                 binding.se3902.error = null
-            }*/
+            }
 
             if (binding.se40.checkedRadioButtonId == -1){
                 binding.se4098.requestFocus()
